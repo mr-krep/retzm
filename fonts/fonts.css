@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'NT Somic';
+  src:
+    local('Raleway'),
+    url(./Raleway-Regular.woff2) format('woff2'),
+    url(./Raleway-Regular.woff) format('woff');
+  font-weight:400;
+  font-display: swap;
+}
