@@ -1,9 +1,55 @@
 @font-face {
   font-family: 'NT Somic';
   src:
-    local('Raleway'),
-    url(./Raleway-Regular.woff2) format('woff2'),
-    url(./Raleway-Regular.woff) format('woff');
-  font-weight:400;
+    local('NTSomic'),
+    local('NT Somic'),
+    url('./NTSomic.ttf') format('truetype'),
+    url('./NTSomic.woff2') format('woff2'),
+    url('./NTSomic.woff') format('woff'),
+    url('./NTSomic.svg') format('svg');
+  src: url('./NTSomic.eot');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NT Somic Medium';
+  src:
+    local('NTSomicMedium'),
+    local('NT Somic Medium'),
+    url('./NTSomic-Medium.ttf') format('truetype'),
+    url('./NTSomic-Medium.woff2') format('woff2'),
+    url('./NTSomic-Medium.woff') format('woff'),
+    url('./NTSomic-Medium.svg') format('svg');
+  src: url('./NTSomic-Medium.eot');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NT Somic Semibold';
+  src:
+    local('NTSomicSemibold'),
+    local('NT Somic Semibold'),
+    url('./NTSomic-Semibold.ttf') format('truetype'),
+    url('./NTSomic-Semibold.woff2') format('woff2'),
+    url('./NTSomic-Semibold.woff') format('woff'),
+    url('./NTSomic-Semibold.svg') format('svg');
+  src: url('./NTSomic-Semibold.eot');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NT Somic Bold';
+  src:
+    local('NTSomicBold'),
+    local('NT Somic Bold'),
+    url('./NTSomic-Bold.ttf') format('truetype'),
+    url('./NTSomic-Bold.woff2') format('woff2'),
+    url('./NTSomic-Bold.woff') format('woff'),
+    url('./NTSomic-Bold.svg') format('svg');
+  src: url('./NTSomic-Bold.eot');
+  font-weight: 700;
   font-display: swap;
 }
