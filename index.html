@@ -4,13 +4,464 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TITLE</title>
+    <title>ТехноЗум.рф</title>
     <link href="./fonts/fonts.css" rel="stylesheet" />
-    <link href="./styles/reset.css" rel="stylesheet" />
-    <link href="./styles/style.css" rel="stylesheet" />
-
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
   </head>
   <body>
-
+    <header class="header">
+      <div class="header__top">
+        <div class="header__top__container">
+          <ul class="header__top__container__menu">
+            <li class="header__top__container__menu__item">
+              <a class="header__top__container__menu__item__link" href="#" alt="Контакты">Контакты</a>
+            </li>
+            <li class="header__top__container__menu__item">
+              <a class="header__top__container__menu__item__link" href="#" alt="Гарантия">Гарантия</a>
+            </li>
+            <li class="header__top__container__menu__item">
+              <a class="header__top__container__menu__item__link" href="#" alt="Самовывоз">Самовывоз</a>
+            </li>
+            <li class="header__top__container__menu__item">
+              <a class="header__top__container__menu__item__link" href="#" alt="Доставка">Доставка</a>
+            </li>
+          </ul>
+          <ul class="header__top__container__getintouch">
+            <li class="header__top__container__getintouch__item">
+              <a class="header__top__container__getintouch__item__city" href="#" alt="Выбрать город">Москва</a>
+            </li>
+            <li class="header__top__container__getintouch__item">
+              <a class="header__top__container__getintouch__item__phone phone" href="tel:+74996476144" alt="Телефон">+ 7 499 647-61-44</a>
+            </li>
+            <li class="header__top__container__getintouch__item">
+              <a class="header__top__container__getintouch__item__account" href="#" alt="Личный кабинет">Личный кабинет</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="header__bottom__container">
+          <div class="header__bottom__container__column column__left">
+            <span class="header__bottom__container__column__button">Каталог</span>
+          </div>
+          <div class="header__bottom__container__column column__center">
+            <a class="header__bottom__container__column__logo" href="/"><svg class="header__bottom__container__column__logo__image"><use href="./images/sprite.svg#logo"></use></svg></a>
+          </div>
+          <div class="header__bottom__container__column column__right">
+            <ul class="header__services__list">
+              <li class="header__services__list__item">
+                <a class="header__services__list__item__link services-search" href="#">Поиск</a>
+              </li>
+              <li class="header__services__list__item">
+                <a class="header__services__list__item__link services-favourites" href="#">Избранное</a>
+              </li>
+              <li class="header__services__list__item">
+                <a class="header__services__list__item__link services-cart" href="#">Корзина</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="banner-main">
+        <div class="banner__container">
+          <div class="banner__container__item">
+            <div class="banner__container__item__heading">Apple Watch 6</div>
+            <div class="banner__container__item__text">Надежность и стиль. Теперь в стальном корпусе</div>
+            <a class="banner__container__item__button button" href="#">Купить</a>
+          </div>
+          <div class="banner__container__navigation">
+            <ul class="banner__container__navigation__dots">
+              <li class="banner__container__navigation__dots__item navigation__dots__item navigation__dots__item--active">
+                  <svg><use href="./images/sprite.svg#dot-active"></use></svg>
+              </li>
+              <li class="banner__container__navigation__dots__item navigation__dots__item navigation__dots__item">
+                  <svg><use href="./images/sprite.svg#dot"></use></svg>
+              </li>
+              <li class="banner__container__navigation__dots__item navigation__dots__item navigation__dots__item">
+                  <svg><use href="./images/sprite.svg#dot"></use></svg>
+              </li>            
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="categories">
+        <ul class="categories__tiles">
+          <li class="categories__tiles__item">
+            <a class="categories__tiles__item__link" href="#">
+              <img class="categories__tiles__item__link__image" src="./images/main-tiles/appliances.jpg" alt="Бытовая техника" />
+              <span class="categories__tiles__item__link__text">Бытовая техника</span>
+            </a>
+          </li>
+          <li class="categories__tiles__item">
+            <a class="categories__tiles__item__link" href="#">
+              <img class="categories__tiles__item__link__image" src="./images/main-tiles/phones.png" alt="Смартфоны и гаджеты" />
+              <span class="categories__tiles__item__link__text">Смартфоны и гаджеты</span>
+            </a>
+          </li>
+          <li class="categories__tiles__item">
+            <a class="categories__tiles__item__link" href="#">
+              <img class="categories__tiles__item__link__image" src="./images/main-tiles/pc.png" alt="Компьютеры и ноутбуки" />
+              <span class="categories__tiles__item__link__text">Компьютеры и ноутбуки</span>
+            </a>
+          </li>
+          <li class="categories__tiles__item">
+            <a class="categories__tiles__item__link" href="#">
+              <img class="categories__tiles__item__link__image" src="./images/main-tiles/hobby.png" alt="Развлечения и хобби" />
+              <span class="categories__tiles__item__link__text">Развлечения и хобби</span>
+            </a>
+          </li>
+          <li class="categories__tiles__item">
+            <a class="categories__tiles__item__link" href="#">
+              <img class="categories__tiles__item__link__image" src="./images/main-tiles/beauty.png" alt="Красота и здоровье" />
+              <span class="categories__tiles__item__link__text">Красота и здоровье</span>
+            </a>
+          </li>
+          <li class="categories__tiles__item">
+            <a class="categories__tiles__item__link" href="#">
+              <img class="categories__tiles__item__link__image" src="./images/main-tiles/tv.png" alt="Телевизоры и аксессуары" />
+              <span class="categories__tiles__item__link__text">Телевизоры и аксессуары</span>
+            </a>
+          </li>
+          <li class="categories__tiles__item">
+            <a class="categories__tiles__item__link" href="#">
+              <img class="categories__tiles__item__link__image" src="./images/main-tiles/audio.png" alt="Аудиотехника" />
+              <span class="categories__tiles__item__link__text">Аудиотехника</span>
+            </a>
+          </li>
+          <li class="categories__tiles__item">
+            <a class="categories__tiles__item__link" href="#">
+              <img class="categories__tiles__item__link__image" src="./images/main-tiles/photo.png" alt="Фото и видео" />
+              <span class="categories__tiles__item__link__text">Фото и видео</span>
+            </a>
+          </li>
+          <li class="categories__tiles__item">
+            <a class="categories__tiles__item__link" href="#">
+              <img class="categories__tiles__item__link__image" src="./images/main-tiles/accessories.png" alt="Аксессуары для смартфонов и гаджетов" />
+              <span class="categories__tiles__item__link__text">Аксессуары для смартфонов и гаджетов</span>
+            </a>
+          </li>
+          <li class="categories__tiles__item">
+            <a class="categories__tiles__item__link" href="#">
+              <img class="categories__tiles__item__link__image" src="./images/main-tiles/tourism.png" alt="Туризм" />
+              <span class="categories__tiles__item__link__text">Туризм</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="hero">
+        <div class="hero__container">
+          <img class="hero__container__image" src="./images/heroe.png" />
+        </div>
+      </section>
+      <section class="brands">
+        <ul class="brands__list">
+          <li class="brands__list__item">
+            <img class="brands__list__item__image" src="./images/brands/apple.png" />
+          </li>
+          <li class="brands__list__item">
+            <img class="brands__list__item__image" src="./images/brands/jbl.png" />
+          </li>
+          <li class="brands__list__item">
+            <img class="brands__list__item__image" src="./images/brands/sony.png" />
+          </li>
+          <li class="brands__list__item">
+            <img class="brands__list__item__image" src="./images/brands/beats.png" />
+          </li>
+          <li class="brands__list__item">
+            <img class="brands__list__item__image" src="./images/brands/lego.png" />
+          </li>
+          <li class="brands__list__item">
+            <img class="brands__list__item__image" src="./images/brands/marshall.png" />
+          </li>
+          <li class="brands__list__item">
+            <img class="brands__list__item__image" src="./images/brands/xiaomi.png" />
+          </li>
+          <li class="brands__list__item">
+            <img class="brands__list__item__image" src="./images/brands/dji.png" />
+          </li>
+        </ul>
+      </section>
+      <section class="suggestions">
+        <div class="suggestions__container">
+          <span class="suggestions__container__heading">Выбор покупателей</span>
+          <ul class="suggestions__container__list">
+            <li class="suggestions__container__list__item">
+              <div class="suggestions__container__list__item__images">
+                <a class="suggestions__container__list__item__images__link" href="#">
+                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image--active" src="./images/goods/good-face.jpg" />
+                </a>
+                <a class="suggestions__container__list__item__images__link" href="#">
+                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image" src="./images/goods/good-second.jpg" />
+                </a>
+              </div>
+              <ul class="suggestions__container__list__item__dots">
+                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item--active">
+                  <svg><use href="./images/sprite.svg#dot-active"></use></svg>
+                </li>
+                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item">
+                    <svg><use href="./images/sprite.svg#dot"></use></svg>
+                </li>
+              </ul>
+              <div class="suggestions__container__list__item__info">
+                <span class="suggestions__container__list__item__info__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм</span>
+                <span class="suggestions__container__list__item__info__price">645&nbsp;000&nbsp;₽</span>
+                <span class="suggestions__container__list__item__info__oldprice">667&nbsp;000&nbsp;₽</span>
+                <span class="suggestions__container__list__item__info__label">Уценка</span>
+              </div>
+              <a class="suggestions__container__list__item__add_to_cart" href="#">В корзину</a>
+              <a class="suggestions__container__list__item__add_to_favourites" href="#">
+                <svg><use href="./images/sprite.svg#heart"></use></svg>
+              </a>
+            </li>
+            <li class="suggestions__container__list__item">
+              <div class="suggestions__container__list__item__images">
+                <a class="suggestions__container__list__item__images__link" href="#">
+                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image--active" src="./images/goods/good-face.jpg" />
+                </a>
+                <a class="suggestions__container__list__item__images__link" href="#">
+                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image" src="./images/goods/good-second.jpg" />
+                </a>
+              </div>
+              <ul class="suggestions__container__list__item__dots">
+                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item--active">
+                  <svg><use href="./images/sprite.svg#dot-active"></use></svg>
+                </li>
+                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item">
+                    <svg><use href="./images/sprite.svg#dot"></use></svg>
+                </li>
+              </ul>
+              <div class="suggestions__container__list__item__info">
+                <span class="suggestions__container__list__item__info__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм</span>
+                <span class="suggestions__container__list__item__info__price">645&nbsp;000&nbsp;₽</span>
+                <span class="suggestions__container__list__item__info__oldprice">667&nbsp;000&nbsp;₽</span>
+                <span class="suggestions__container__list__item__info__label">Уценка</span>
+              </div>
+              <a class="suggestions__container__list__item__add_to_cart" href="#">В корзину</a>
+              <a class="suggestions__container__list__item__add_to_favourites" href="#">
+                <svg><use href="./images/sprite.svg#heart"></use></svg>
+              </a>
+            </li>
+            <li class="suggestions__container__list__item">
+              <div class="suggestions__container__list__item__images">
+                <a class="suggestions__container__list__item__images__link" href="#">
+                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image--active" src="./images/goods/good-face.jpg" />
+                </a>
+                <a class="suggestions__container__list__item__images__link" href="#">
+                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image" src="./images/goods/good-second.jpg" />
+                </a>
+              </div>
+              <ul class="suggestions__container__list__item__dots">
+                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item--active">
+                  <svg><use href="./images/sprite.svg#dot-active"></use></svg>
+                </li>
+                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item">
+                    <svg><use href="./images/sprite.svg#dot"></use></svg>
+                </li>
+              </ul>
+              <div class="suggestions__container__list__item__info">
+                <span class="suggestions__container__list__item__info__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм</span>
+                <span class="suggestions__container__list__item__info__price">645&nbsp;000&nbsp;₽</span>
+                <span class="suggestions__container__list__item__info__oldprice">667&nbsp;000&nbsp;₽</span>
+                <span class="suggestions__container__list__item__info__label">Уценка</span>
+              </div>
+              <a class="suggestions__container__list__item__add_to_cart" href="#">В корзину</a>
+              <a class="suggestions__container__list__item__add_to_favourites" href="#">
+                <svg><use href="./images/sprite.svg#heart"></use></svg>
+              </a>
+            </li>
+            <li class="suggestions__container__list__item">
+              <div class="suggestions__container__list__item__images">
+                <a class="suggestions__container__list__item__images__link" href="#">
+                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image--active" src="./images/goods/good-face.jpg" />
+                </a>
+                <a class="suggestions__container__list__item__images__link" href="#">
+                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image" src="./images/goods/good-second.jpg" />
+                </a>
+              </div>
+              <ul class="suggestions__container__list__item__dots">
+                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item--active">
+                  <svg><use href="./images/sprite.svg#dot-active"></use></svg>
+                </li>
+                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item">
+                    <svg><use href="./images/sprite.svg#dot"></use></svg>
+                </li>
+              </ul>
+              <div class="suggestions__container__list__item__info">
+                <span class="suggestions__container__list__item__info__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм</span>
+                <span class="suggestions__container__list__item__info__price">645&nbsp;000&nbsp;₽</span>
+                <span class="suggestions__container__list__item__info__oldprice">667&nbsp;000&nbsp;₽</span>
+                <span class="suggestions__container__list__item__info__label">Уценка</span>
+              </div>
+              <a class="suggestions__container__list__item__add_to_cart" href="#">В корзину</a>
+              <a class="suggestions__container__list__item__add_to_favourites" href="#">
+                <svg><use href="./images/sprite.svg#heart"></use></svg>
+              </a>
+            </li>
+            <li class="suggestions__container__list__item">
+              <div class="suggestions__container__list__item__images">
+                <a class="suggestions__container__list__item__images__link" href="#">
+                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image--active" src="./images/goods/good-face.jpg" />
+                </a>
+                <a class="suggestions__container__list__item__images__link" href="#">
+                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image" src="./images/goods/good-second.jpg" />
+                </a>
+              </div>
+              <ul class="suggestions__container__list__item__dots">
+                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item--active">
+                  <svg><use href="./images/sprite.svg#dot-active"></use></svg>
+                </li>
+                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item">
+                    <svg><use href="./images/sprite.svg#dot"></use></svg>
+                </li>
+              </ul>
+              <div class="suggestions__container__list__item__info">
+                <span class="suggestions__container__list__item__info__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм</span>
+                <span class="suggestions__container__list__item__info__price">645&nbsp;000&nbsp;₽</span>
+                <span class="suggestions__container__list__item__info__oldprice">667&nbsp;000&nbsp;₽</span>
+                <span class="suggestions__container__list__item__info__label">Уценка</span>
+              </div>
+              <a class="suggestions__container__list__item__add_to_cart" href="#">В корзину</a>
+              <a class="suggestions__container__list__item__add_to_favourites" href="#">
+                <svg><use href="./images/sprite.svg#heart"></use></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="sets">
+        <div class="sets__container">
+          <a class="sets__container__item" href="#">
+            <span class="sets__container__item__title">Красота</span>
+            <img class="sets__container__item__image" src="./images/main-sets/beauty.jpg" />
+          </a>
+          <a class="sets__container__item" href="#">
+            <span class="sets__container__item__title">Для геймеров</span>
+            <img class="sets__container__item__image" src="./images/main-sets/gamers.jpg" />
+          </a>
+          <a class="sets__container__item" href="#">
+            <span class="sets__container__item__title">Спортсменам</span>
+            <img class="sets__container__item__image" src="./images/main-sets/sport.jpg" />
+          </a>
+          <a class="sets__container__item" href="#">
+            <span class="sets__container__item__title">Музыка</span>
+            <img class="sets__container__item__image" src="./images/main-sets/music.jpg" />
+          </a>
+        </div>
+      </section>
+      <section class="utp">
+        <div class="utp__container">
+          <div class="utp__container__tile">
+            <svg class="utp__container__tile__image"><use href="./images/sprite.svg#utp-original"></use></svg>
+            <span class="utp__container__tile__heading">Оригинальная продукция</span>
+            <span class="utp__container__tile__text">Продаем только оригинальную продукцию популярных мировых брендов.</span>
+          </div>
+          <div class="utp__container__tile">
+            <svg class="utp__container__tile__image"><use href="./images/sprite.svg#utp-doc"></use></svg>
+            <span class="utp__container__tile__heading">Официальная гарантия</span>
+            <span class="utp__container__tile__text">Соблюдаем закон «О защите прав потребителей», предоставляем все необходимые гарантийные обязательства.</span>
+          </div>
+          <div class="utp__container__tile">
+            <svg class="utp__container__tile__image"><use href="./images/sprite.svg#utp-discount"></use></svg>
+            <span class="utp__container__tile__heading">Низкие цены</span>
+            <span class="utp__container__tile__text">Поддерживаем максимально выгодные предложения.</span>
+          </div>
+          <div class="utp__container__tile">
+            <svg class="utp__container__tile__image"><use href="./images/sprite.svg#utp-check"></use></svg>
+            <span class="utp__container__tile__heading">Контроль качества</span>
+            <span class="utp__container__tile__text">Контролируем качество на каждом этапе: от выбора поставщиков до работы персонала и сервиса.</span>
+          </div>
+          <div class="utp__container__tile">
+            <svg class="utp__container__tile__image"><use href="./images/sprite.svg#utp-box"></use></svg>
+            <span class="utp__container__tile__heading">Самовывоз бесплатно</span>
+            <span class="utp__container__tile__text">Пункт выдачи в центре города. Заказ доступен сразу.</span>
+          </div>
+          <div class="utp__container__tile">
+            <svg class="utp__container__tile__image"><use href="./images/sprite.svg#utp-truck"></use></svg>
+            <span class="utp__container__tile__heading">Быстрая доставка</span>
+            <span class="utp__container__tile__text">Доставим за 1 день.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__navigation">
+        <div class="footer__navigation__catalogue">
+          <span class="footer__navigation__catalogue__heading">Каталог</span>
+          <ul class="footer__navigation__catalogue__menu">
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link" href="#">Бытовая техника</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link" href="#">Компьютеры и ноутбуки</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link" href="#">Красота и здоровье</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link" href="#">Аудиотехника</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link" href="#">Аксессуары для гаджетов</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link" href="#">Смартфоны и гаджеты</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link" href="#">Развлечения и хобби</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link" href="#">Телевизоры и аксессуары</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link" href="#">Фото и видео</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link" href="#">Туризм</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__navigation__help">
+          <span class="footer__navigation__help__heading">Помощь</span>
+          <ul class="footer__navigation__help__menu">
+            <li class="footer__navigation__help__menu__item">
+              <a class="footer__navigation__help__menu__item__link" href="#">Доставка</a>
+            </li>
+            <li class="footer__navigation__help__menu__item">
+              <a class="footer__navigation__help__menu__item__link" href="#">Самовывоз</a>
+            </li>
+            <li class="footer__navigation__help__menu__item">
+              <a class="footer__navigation__help__menu__item__link" href="#">Гарантия</a>
+            </li>
+            <li class="footer__navigation__help__menu__item">
+              <a class="footer__navigation__help__menu__item__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__navigation__about">
+          <span class="footer__navigation__about__heading">О нас</span>
+          <ul class="footer__navigation__about__menu">
+            <li class="footer__navigation__about__menu__item">
+              <a class="footer__navigation__about__menu__item__link" href="#">ТехноЗум</a>
+            </li>
+            <li class="footer__navigation__about__menu__item">
+              <a class="footer__navigation__about__menu__item__link" href="#">Реквизиты</a>
+            </li>
+            <li class="footer__navigation__about__menu__item">
+              <a class="footer__navigation__help__menu__item__link" href="#">Оферта</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__credentials">
+        <div class="footer__credentials__essentials">ИНН 781021149839, ОГРНИП 322784700130448</div>
+        <div class="footer__credentials__copyright">Технозум.рф &copy; 2024</div>
+        <div class="footer__credentials__link">
+          <a class="footer__credentials__link__policy" href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

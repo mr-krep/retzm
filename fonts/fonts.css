@@ -13,7 +13,7 @@
 }
 
 @font-face {
-  font-family: 'NT Somic Medium';
+  font-family: 'NT Somic';
   src:
     local('NTSomicMedium'),
     local('NT Somic Medium'),
@@ -27,7 +27,7 @@
 }
 
 @font-face {
-  font-family: 'NT Somic Semibold';
+  font-family: 'NT Somic';
   src:
     local('NTSomicSemibold'),
     local('NT Somic Semibold'),
@@ -41,7 +41,7 @@
 }
 
 @font-face {
-  font-family: 'NT Somic Bold';
+  font-family: 'NT Somic';
   src:
     local('NTSomicBold'),
     local('NT Somic Bold'),

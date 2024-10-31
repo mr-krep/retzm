@@ -1,5 +1,172 @@
+$font: 'NT Somic', Arial, Helvetica, sans-serif
+$std-size: 1.6rem
+$black: #0A0A0A
+$black-light: #202020
+$grey: #B6B6B6
+$grey-light: #F5F5F5
+$grey-bg: #DBDBDB
+$pink: #FF197A
+$white: #FAFAFA
+$yellow: #FFCF4B
+$violet: #8123FF
+$violet-bg: #D5BBF9
+$beige: #F88D8D
+$beige-bg: #FFF3F3
+$coral-bg: #FF9A9A
+$scarlet-bg: #FF573D
+$green-bg: #3DCF92
+  
+html
+  font-size: 62.5%
+
 body
-  width: 1100px
+  width: 100%
   margin: 0 auto
-  font-family: 'NT Somic', Arial, Helvetica, sans-serif
+  font-family: $font
   font-weight: 400
+  font-size: $std-size
+  line-height: $std-size
+  color: $black
+
+h1, h2, h3, h4, h5, h6
+  font-family: $font
+  font-weight: 700
+  color: $black
+
+h1
+  font-size: 6rem
+  line-height: 6rem
+
+h2
+  font-size: 4rem
+  line-height: 4rem
+
+h3
+  font-size: 2.8rem
+  line-height: 2.8rem
+
+h4
+  font-size: 1.6rem
+  line-height: 1.6rem
+
+h5
+  font-size: 1.4rem
+  line-height: 1.4rem
+
+h6
+  font-size: 1.2rem
+  line-height: 1.2rem
+
+.header, .main, .footer
+  width: 100%
+
+.header__top
+  background-color: $black-light
+  color: $grey-light
+
+.header__top__container,
+.header__bottom__container,
+.banner__container,
+.categories__tiles,
+.hero__container,
+.brands__list,
+.suggestions__container,
+.sets__container,
+.utp__container,
+.footer__navigation,
+.footer__credentials
+  max-width: 135rem
+  margin: 0 auto
+  
+.header__top__container
+  display: flex
+  justify-content: space-between
+
+.header__top__container__menu, .header__top__container__getintouch
+  display: flex
+  gap: 4rem
+  padding: 0.8rem 0
+
+.header__top__container__menu__item__link, 
+.header__top__container__getintouch__item__city, 
+.header__top__container__getintouch__item__phone, 
+.header__top__container__getintouch__item__account, 
+.header__services__list__item__link
+  color: $grey-light
+
+.header__top__menu__item__link, 
+.header__top__getintouch__item__city, 
+.header__top__getintouch__item__phone, 
+.header__top__getintouch__item__account
+  font-size: 1.4rem
+  line-height: 1.8rem
+
+.header__top__container__getintouch__item__city
+  text-decoration: underline
+
+  &:link, &:visited, &:hover
+    text-decoration: underline
+
+.header__top__getintouch__item__account
+  padding-left: 2.4rem
+  background-image: url("../images/tzm-icon.svg")
+  background-position: left center
+  background-repeat: no-repeat
+  background-size: 1.6rem 1.6rem
+
+.header__bottom
+  background-color: $black
+
+.header__bottom__container
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  padding: 0.8rem 0
+
+.header__bottom__container__column
+  display: flex
+  align-items: center
+
+.column__left
+  justify-content: left
+
+.column__center
+  justify-content: center
+
+.column__right
+  justify-content: right
+
+.header__bottom__container__column__button
+  padding: 1rem 1.8rem 1rem 1.8 + 1.6 + 0.5rem
+  color: $white
+  background-color: $pink
+  background-image: url("../images/nav.svg")
+  background-position: 1rem center
+  background-repeat: no-repeat
+  background-size: 1.6rem 1.6rem
+  border-radius: 0.4rem
+  cursor: pointer
+
+.header__bottom__container__column__logo__image
+  width: 9.2rem
+  height: 4.6rem
+
+.header__services__list
+  display: flex
+  gap: 4rem
+
+.header__services__list__item__link
+  padding-left: 2.8rem
+  font-size: 1.6rem
+  line-height: 2rem
+  background-position: left center
+  background-repeat: no-repeat
+  background-size: 2rem 2rem
+
+.services-search
+  background-image: url("../images/search.svg")
+
+.services-favourites
+  background-image: url("../images/heart.svg")
+
+.services-cart
+  background-image: url("../images/cart.svg")
