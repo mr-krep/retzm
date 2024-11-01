@@ -85,16 +85,16 @@
       </div>
     </header>
     <main class="main">
-      <section class="banner-main swiper">
-        <div class="banner__container swiper-wrapper">
-          <div class="banner__container__item swiper-slide" style="background:url('./images/banner.jpg');">
+      <section class="banner">
+        <div class="banner__container">
+          <div class="banner__container__item" style="background:url('./images/banner.jpg');">
             <div class="banner__container__item__content">
               <div class="banner__container__item__content__heading">Apple Watch 6</div>
               <div class="banner__container__item__content__text">Надежность и стиль. Теперь в стальном корпусе</div>
               <a class="banner__container__item__content__button button button--pink" href="#">Купить</a>
             </div>
           </div>
-          <div class="banner__container__item swiper-slide" style="background:url('./images/banner.jpg');">
+          <div class="banner__container__item" style="background:url('./images/banner.jpg');">
             <div class="banner__container__item__content">
               <div class="banner__container__item__content__heading">Apple Watch 7</div>
               <div class="banner__container__item__content__text">Надежность и стиль. Теперь в стальном корпусе</div>
@@ -353,54 +353,55 @@
         </div>
       </section>
       <section class="sets">
+        <div class="sets__heading">Подборки товаров</div>
         <div class="sets__container">
           <a class="sets__container__item" href="#">
             <span class="sets__container__item__title">Красота</span>
-            <img class="sets__container__item__image" src="./images/main-sets/beauty.jpg" />
+            <img class="sets__container__item__image" src="./images/main-sets/beauty.png" />
           </a>
           <a class="sets__container__item" href="#">
             <span class="sets__container__item__title">Для геймеров</span>
-            <img class="sets__container__item__image" src="./images/main-sets/gamers.jpg" />
+            <img class="sets__container__item__image" src="./images/main-sets/gamers.png" />
           </a>
           <a class="sets__container__item" href="#">
             <span class="sets__container__item__title">Спортсменам</span>
-            <img class="sets__container__item__image" src="./images/main-sets/sport.jpg" />
+            <img class="sets__container__item__image" src="./images/main-sets/sport.png" />
           </a>
           <a class="sets__container__item" href="#">
             <span class="sets__container__item__title">Музыка</span>
-            <img class="sets__container__item__image" src="./images/main-sets/music.jpg" />
+            <img class="sets__container__item__image" src="./images/main-sets/music.png" />
           </a>
         </div>
       </section>
       <section class="utp">
         <div class="utp__container">
           <div class="utp__container__tile">
-            <svg class="utp__container__tile__image"><use href="./images/sprite.svg#utp-original"></use></svg>
+            <img class="utp__container__tile__image" src="./images/utp/original.svg" />
             <span class="utp__container__tile__heading">Оригинальная продукция</span>
             <span class="utp__container__tile__text">Продаем только оригинальную продукцию популярных мировых брендов.</span>
           </div>
           <div class="utp__container__tile">
-            <svg class="utp__container__tile__image"><use href="./images/sprite.svg#utp-doc"></use></svg>
+            <img class="utp__container__tile__image" src="./images/utp/doc.svg" />
             <span class="utp__container__tile__heading">Официальная гарантия</span>
             <span class="utp__container__tile__text">Соблюдаем закон «О защите прав потребителей», предоставляем все необходимые гарантийные обязательства.</span>
           </div>
           <div class="utp__container__tile">
-            <svg class="utp__container__tile__image"><use href="./images/sprite.svg#utp-discount"></use></svg>
+            <img class="utp__container__tile__image" src="./images/utp/discount.svg" />
             <span class="utp__container__tile__heading">Низкие цены</span>
             <span class="utp__container__tile__text">Поддерживаем максимально выгодные предложения.</span>
           </div>
           <div class="utp__container__tile">
-            <svg class="utp__container__tile__image"><use href="./images/sprite.svg#utp-check"></use></svg>
+            <img class="utp__container__tile__image" src="./images/utp/check.svg" />
             <span class="utp__container__tile__heading">Контроль качества</span>
             <span class="utp__container__tile__text">Контролируем качество на каждом этапе: от выбора поставщиков до работы персонала и сервиса.</span>
           </div>
           <div class="utp__container__tile">
-            <svg class="utp__container__tile__image"><use href="./images/sprite.svg#utp-box"></use></svg>
+            <img class="utp__container__tile__image" src="./images/utp/box.svg" />
             <span class="utp__container__tile__heading">Самовывоз бесплатно</span>
             <span class="utp__container__tile__text">Пункт выдачи в центре города. Заказ доступен сразу.</span>
           </div>
           <div class="utp__container__tile">
-            <svg class="utp__container__tile__image"><use href="./images/sprite.svg#utp-truck"></use></svg>
+            <img class="utp__container__tile__image" src="./images/utp/truck.svg" />
             <span class="utp__container__tile__heading">Быстрая доставка</span>
             <span class="utp__container__tile__text">Доставим за 1 день.</span>
           </div>
@@ -409,77 +410,77 @@
     </main>
     <footer class="footer">
       <div class="footer__navigation">
-        <div class="footer__navigation__catalogue">
-          <span class="footer__navigation__catalogue__heading">Каталог</span>
-          <ul class="footer__navigation__catalogue__menu">
+        <div class="footer__navigation__catalogue footer__navigation__block">
+          <span class="footer__navigation__catalogue__heading footer__navigation__heading">Каталог</span>
+          <ul class="footer__navigation__catalogue__menu footer__navigation__menu">
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link" href="#">Бытовая техника</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Бытовая техника</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link" href="#">Компьютеры и ноутбуки</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Компьютеры и ноутбуки</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link" href="#">Красота и здоровье</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Красота и здоровье</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link" href="#">Аудиотехника</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Аудиотехника</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link" href="#">Аксессуары для гаджетов</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Аксессуары для гаджетов</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link" href="#">Смартфоны и гаджеты</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Смартфоны и гаджеты</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link" href="#">Развлечения и хобби</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Развлечения и хобби</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link" href="#">Телевизоры и аксессуары</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Телевизоры и аксессуары</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link" href="#">Фото и видео</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Фото и видео</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link" href="#">Туризм</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Туризм</a>
             </li>
           </ul>
         </div>
-        <div class="footer__navigation__help">
-          <span class="footer__navigation__help__heading">Помощь</span>
-          <ul class="footer__navigation__help__menu">
+        <div class="footer__navigation__help footer__navigation__block">
+          <span class="footer__navigation__help__heading footer__navigation__heading">Помощь</span>
+          <ul class="footer__navigation__help__menu footer__navigation__menu">
             <li class="footer__navigation__help__menu__item">
-              <a class="footer__navigation__help__menu__item__link" href="#">Доставка</a>
+              <a class="footer__navigation__help__menu__item__link footer__navigation__menu__link" href="#">Доставка</a>
             </li>
             <li class="footer__navigation__help__menu__item">
-              <a class="footer__navigation__help__menu__item__link" href="#">Самовывоз</a>
+              <a class="footer__navigation__help__menu__item__link footer__navigation__menu__link" href="#">Самовывоз</a>
             </li>
             <li class="footer__navigation__help__menu__item">
-              <a class="footer__navigation__help__menu__item__link" href="#">Гарантия</a>
+              <a class="footer__navigation__help__menu__item__link footer__navigation__menu__link" href="#">Гарантия</a>
             </li>
             <li class="footer__navigation__help__menu__item">
-              <a class="footer__navigation__help__menu__item__link" href="#">Контакты</a>
+              <a class="footer__navigation__help__menu__item__link footer__navigation__menu__link" href="#">Контакты</a>
             </li>
           </ul>
         </div>
-        <div class="footer__navigation__about">
-          <span class="footer__navigation__about__heading">О нас</span>
-          <ul class="footer__navigation__about__menu">
+        <div class="footer__navigation__about footer__navigation__block">
+          <span class="footer__navigation__about__heading footer__navigation__heading">О нас</span>
+          <ul class="footer__navigation__about__menu footer__navigation__menu">
             <li class="footer__navigation__about__menu__item">
-              <a class="footer__navigation__about__menu__item__link" href="#">ТехноЗум</a>
+              <a class="footer__navigation__about__menu__item__link footer__navigation__menu__link" href="#">ТехноЗум</a>
             </li>
             <li class="footer__navigation__about__menu__item">
-              <a class="footer__navigation__about__menu__item__link" href="#">Реквизиты</a>
+              <a class="footer__navigation__about__menu__item__link footer__navigation__menu__link" href="#">Реквизиты</a>
             </li>
             <li class="footer__navigation__about__menu__item">
-              <a class="footer__navigation__help__menu__item__link" href="#">Оферта</a>
+              <a class="footer__navigation__help__menu__item__link footer__navigation__menu__link" href="#">Оферта</a>
             </li>
           </ul>
         </div>
       </div>
       <div class="footer__credentials">
-        <div class="footer__credentials__essentials">ИНН 781021149839, ОГРНИП 322784700130448</div>
-        <div class="footer__credentials__copyright">Технозум.рф &copy; 2024</div>
-        <div class="footer__credentials__link">
+        <div class="footer__credentials__essentials flex-left">ИНН 781021149839, ОГРНИП 322784700130448</div>
+        <div class="footer__credentials__copyright flex-center">Технозум.рф &copy; 2024</div>
+        <div class="footer__credentials__link flex-right">
           <a class="footer__credentials__link__policy" href="#">Политика конфиденциальности</a>
         </div>
       </div>
