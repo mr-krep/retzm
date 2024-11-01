@@ -4,10 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>ТехноЗум.рф</title>
+    <meta name="description" value="DESCRIPTION" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
+    <link rel="mask-icon" href="./images/icon.svg"/>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="ТехноЗум.РФ"/>
+    <meta property="og:image" content="./images/og-logo.svg">
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:site_name" content="ТехноЗум"/>
+    <meta property="og:url" content="https://tehnozum.ru"/>
+    <!-- /Open Graph -->
+
     <link href="./fonts/fonts.css" rel="stylesheet" />
     <link href="./css/reset.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
+    
+    <!-- Библиотеки -->
+    <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
+    <script src="./libs/swiper/swiper-bundle.min.js"></script>
+    <!-- /Библиотеки -->
   </head>
   <body>
     <header class="header">
@@ -65,27 +85,28 @@
       </div>
     </header>
     <main class="main">
-      <section class="banner-main">
-        <div class="banner__container">
-          <div class="banner__container__item">
-            <div class="banner__container__item__heading">Apple Watch 6</div>
-            <div class="banner__container__item__text">Надежность и стиль. Теперь в стальном корпусе</div>
-            <a class="banner__container__item__button button" href="#">Купить</a>
+      <section class="banner-main swiper">
+        <div class="banner__container swiper-wrapper">
+          <div class="banner__container__item swiper-slide" style="background:url('./images/banner.jpg');">
+            <div class="banner__container__item__content">
+              <div class="banner__container__item__content__heading">Apple Watch 6</div>
+              <div class="banner__container__item__content__text">Надежность и стиль. Теперь в стальном корпусе</div>
+              <a class="banner__container__item__content__button button button--pink" href="#">Купить</a>
+            </div>
           </div>
-          <div class="banner__container__navigation">
-            <ul class="banner__container__navigation__dots">
-              <li class="banner__container__navigation__dots__item navigation__dots__item navigation__dots__item--active">
-                  <svg><use href="./images/sprite.svg#dot-active"></use></svg>
-              </li>
-              <li class="banner__container__navigation__dots__item navigation__dots__item navigation__dots__item">
-                  <svg><use href="./images/sprite.svg#dot"></use></svg>
-              </li>
-              <li class="banner__container__navigation__dots__item navigation__dots__item navigation__dots__item">
-                  <svg><use href="./images/sprite.svg#dot"></use></svg>
-              </li>            
-            </ul>
+          <div class="banner__container__item swiper-slide" style="background:url('./images/banner.jpg');">
+            <div class="banner__container__item__content">
+              <div class="banner__container__item__content__heading">Apple Watch 7</div>
+              <div class="banner__container__item__content__text">Надежность и стиль. Теперь в стальном корпусе</div>
+              <a class="banner__container__item__content__button button button--pink" href="#">Купить</a>
+            </div>
           </div>
         </div>
+        <div class="banner__nav_buttons">
+          <div class="banner__nav_buttons-prev"></div>
+          <div class="banner__nav_buttons-next"></div>
+        </div>
+        <div class="banner__pagination"></div>
       </section>
       <section class="categories">
         <ul class="categories__tiles">
@@ -463,5 +484,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/custom.js"></script>
   </body>
 </html>
