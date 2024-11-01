@@ -175,9 +175,9 @@ h6
 .banner__container__item
   display: block
   height: 45rem
-  width: 100%
-  background-size: cover
-  background-repeat: no-repeat
+  width: 100% !important
+  background-size: cover !important
+  background-repeat: no-repeat !important
   background-position-x: 50%
 
 .swiper
@@ -273,3 +273,35 @@ h6
 
 .banner-main
   position: relative
+
+.categories__tiles
+  margin: 6rem auto
+  display: flex
+  flex-wrap: wrap
+  gap: 1rem
+
+.categories__tiles__item
+  width: 26.2rem
+  height: 34rem
+  background-color: $grey-light
+  border-radius: 0.4rem
+  
+.categories__tiles__item__link
+  padding: 2rem
+  display: grid
+  grid: 20.5rem 6.8rem / 1fr
+  gap: 2rem
+  width: 100%
+  height: 100%
+
+.categories__tiles__item__link__image
+  display: block
+  padding: 0.8rem
+
+.categories__tiles__item__link__text
+  margin: auto
+  display: block
+  font-size: 1.8rem
+  font-weight: 500
+  line-height: 2.5rem
+  text-align: center

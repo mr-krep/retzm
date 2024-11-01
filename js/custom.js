@@ -1,7 +1,7 @@
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   loop: true,
-  autoplay: {delay: 5000},
+  // autoplay: {delay: 5000},
   lazyPreloadPrevNext: 1,
 
   // If we need pagination
