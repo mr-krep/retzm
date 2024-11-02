@@ -62,7 +62,6 @@ h6 {
 .banner__container__item__content,
 .categories__tiles,
 .hero__container,
-.brands__list,
 .suggestions__container,
 .sets,
 .utp,
@@ -362,6 +361,13 @@ h6 {
   padding: 6rem 0;
   width: 100%;
   max-width: 135rem;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.brands::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .brands__list {
@@ -376,6 +382,12 @@ h6 {
   margin: 0;
   height: 9rem;
   width: auto;
+}
+
+.brands__list__item__image {
+  height: 9rem;
+  width: auto;
+  max-width: unset;
 }
 
 .suggestions {
