@@ -25,8 +25,11 @@
     <link href="./css/style.css" rel="stylesheet" />
     
     <!-- Библиотеки -->
-    <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
-    <script src="./libs/swiper/swiper-bundle.min.js"></script>
+    <!-- <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
+    <script src="./libs/swiper/swiper-bundle.min.js"></script> -->
+
+    <link rel="stylesheet" href="./libs/tiny-slider/tiny-slider.css" />
+    <script src="./libs/tiny-slider/tiny-slider.js"></script>
     <!-- /Библиотеки -->
   </head>
   <body>
@@ -106,7 +109,10 @@
           <div class="banner__nav_buttons-prev"></div>
           <div class="banner__nav_buttons-next"></div>
         </div>
-        <div class="banner__pagination"></div>
+        <div class="banner__dots">
+          <li class="banner__dots__item"></li>
+          <li class="banner__dots__item"></li>
+        </div>
       </section>
       <section class="categories">
         <ul class="categories__tiles">
@@ -231,144 +237,149 @@
           <span class="suggestions__container__heading">Выбор покупателей</span>
           <ul class="suggestions__container__list">
             <li class="suggestions__container__list__item">
-              <div class="suggestions__container__list__item__images">
+              <div class="suggestions__container__list__item__images product-slider" id="product-slider-1">
                 <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image--active" src="./images/goods/good-face.jpg" />
+                  <img class="suggestions__container__list__item__images__link__image" src="./images/goods/gamepad.png" />
                 </a>
                 <a class="suggestions__container__list__item__images__link" href="#">
                   <img class="suggestions__container__list__item__images__link__image suggestions__container__image" src="./images/goods/good-second.jpg" />
                 </a>
               </div>
-              <ul class="suggestions__container__list__item__dots">
-                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item--active">
-                  <svg><use href="./images/sprite.svg#dot-active"></use></svg>
-                </li>
-                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item">
-                    <svg><use href="./images/sprite.svg#dot"></use></svg>
-                </li>
+              <ul class="suggestions__container__list__item__dots" id="product-slider-1-dots">
+                <li class="suggestions__container__list__item__dots__item"></li>
+                <li class="suggestions__container__list__item__dots__item"></li>
               </ul>
-              <div class="suggestions__container__list__item__info">
-                <span class="suggestions__container__list__item__info__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм</span>
-                <span class="suggestions__container__list__item__info__price">645&nbsp;000&nbsp;₽</span>
-                <span class="suggestions__container__list__item__info__oldprice">667&nbsp;000&nbsp;₽</span>
-                <span class="suggestions__container__list__item__info__label">Уценка</span>
+              <div class="suggestions__container__list__item__text">
+                <span class="suggestions__container__list__item__text__title">Sony DualSense PS5 Controller, «полуночный черный»</span>
+                <div class="suggestions__container__list__item__text__info">
+                  <div class="suggestions__container__list__item__text__info__prices">
+                    <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                    <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                  </div>
+                  <span class="suggestions__container__list__item__text__info__label">Уценка</span>
+                </div>
               </div>
-              <a class="suggestions__container__list__item__add_to_cart" href="#">В корзину</a>
-              <a class="suggestions__container__list__item__add_to_favourites" href="#">
-                <svg><use href="./images/sprite.svg#heart"></use></svg>
+              <a class="suggestions__container__list__item__add_to_cart" href="#">
+                <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                <span class="suggestions__container__list__item__add_to_cart__icon"></span>
               </a>
+              <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="suggestions__container__list__item">
-              <div class="suggestions__container__list__item__images">
+              <div class="suggestions__container__list__item__images product-slider" id="product-slider-2">
                 <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image--active" src="./images/goods/good-face.jpg" />
+                  <img class="suggestions__container__list__item__images__link__image" src="./images/goods/good-face.jpg" />
                 </a>
                 <a class="suggestions__container__list__item__images__link" href="#">
                   <img class="suggestions__container__list__item__images__link__image suggestions__container__image" src="./images/goods/good-second.jpg" />
                 </a>
               </div>
-              <ul class="suggestions__container__list__item__dots">
-                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item--active">
-                  <svg><use href="./images/sprite.svg#dot-active"></use></svg>
-                </li>
-                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item">
-                    <svg><use href="./images/sprite.svg#dot"></use></svg>
-                </li>
+              <ul class="suggestions__container__list__item__dots" id="product-slider-2-dots">
+                <li class="suggestions__container__list__item__dots__item"></li>
+                <li class="suggestions__container__list__item__dots__item"></li>
               </ul>
-              <div class="suggestions__container__list__item__info">
-                <span class="suggestions__container__list__item__info__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм</span>
-                <span class="suggestions__container__list__item__info__price">645&nbsp;000&nbsp;₽</span>
-                <span class="suggestions__container__list__item__info__oldprice">667&nbsp;000&nbsp;₽</span>
-                <span class="suggestions__container__list__item__info__label">Уценка</span>
+              <div class="suggestions__container__list__item__text">
+                <span class="suggestions__container__list__item__text__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</span>
+                <div class="suggestions__container__list__item__text__info">
+                  <div class="suggestions__container__list__item__text__info__prices">
+                    <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                    <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                  </div>
+                  <span class="suggestions__container__list__item__text__info__label">Уценка</span>
+                </div>
               </div>
-              <a class="suggestions__container__list__item__add_to_cart" href="#">В корзину</a>
-              <a class="suggestions__container__list__item__add_to_favourites" href="#">
-                <svg><use href="./images/sprite.svg#heart"></use></svg>
+              <a class="suggestions__container__list__item__add_to_cart" href="#">
+                <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                <span class="suggestions__container__list__item__add_to_cart__icon"></span>
               </a>
+              <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="suggestions__container__list__item">
-              <div class="suggestions__container__list__item__images">
+              <div class="suggestions__container__list__item__images" id="product-slider-3">
                 <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image--active" src="./images/goods/good-face.jpg" />
+                  <img class="suggestions__container__list__item__images__link__image" src="./images/goods/lego.png" />
                 </a>
                 <a class="suggestions__container__list__item__images__link" href="#">
                   <img class="suggestions__container__list__item__images__link__image suggestions__container__image" src="./images/goods/good-second.jpg" />
                 </a>
               </div>
-              <ul class="suggestions__container__list__item__dots">
-                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item--active">
-                  <svg><use href="./images/sprite.svg#dot-active"></use></svg>
-                </li>
-                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item">
-                    <svg><use href="./images/sprite.svg#dot"></use></svg>
-                </li>
+              <ul class="suggestions__container__list__item__dots" id="product-slider-3-dots">
+                <li class="suggestions__container__list__item__dots__item"></li>
+                <li class="suggestions__container__list__item__dots__item"></li>
               </ul>
-              <div class="suggestions__container__list__item__info">
-                <span class="suggestions__container__list__item__info__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм</span>
-                <span class="suggestions__container__list__item__info__price">645&nbsp;000&nbsp;₽</span>
-                <span class="suggestions__container__list__item__info__oldprice">667&nbsp;000&nbsp;₽</span>
-                <span class="suggestions__container__list__item__info__label">Уценка</span>
+              <div class="suggestions__container__list__item__text">
+                <span class="suggestions__container__list__item__text__title">LEGO Minifigures Marvel Series 2</span>
+                <div class="suggestions__container__list__item__text__info">
+                  <div class="suggestions__container__list__item__text__info__prices">
+                    <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                    <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                  </div>
+                  <span class="suggestions__container__list__item__text__info__label">Уценка</span>
+                </div>
               </div>
-              <a class="suggestions__container__list__item__add_to_cart" href="#">В корзину</a>
-              <a class="suggestions__container__list__item__add_to_favourites" href="#">
-                <svg><use href="./images/sprite.svg#heart"></use></svg>
+              <a class="suggestions__container__list__item__add_to_cart" href="#">
+                <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                <span class="suggestions__container__list__item__add_to_cart__icon"></span>
               </a>
+              <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="suggestions__container__list__item">
-              <div class="suggestions__container__list__item__images">
+              <div class="suggestions__container__list__item__images" id="product-slider-4">
                 <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image--active" src="./images/goods/good-face.jpg" />
+                  <img class="suggestions__container__list__item__images__link__image" src="./images/goods/case.png" />
                 </a>
                 <a class="suggestions__container__list__item__images__link" href="#">
                   <img class="suggestions__container__list__item__images__link__image suggestions__container__image" src="./images/goods/good-second.jpg" />
                 </a>
               </div>
-              <ul class="suggestions__container__list__item__dots">
-                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item--active">
-                  <svg><use href="./images/sprite.svg#dot-active"></use></svg>
-                </li>
-                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item">
-                    <svg><use href="./images/sprite.svg#dot"></use></svg>
-                </li>
+              <ul class="suggestions__container__list__item__dots" id="product-slider-4-dots">
+                <li class="suggestions__container__list__item__dots__item"></li>
+                <li class="suggestions__container__list__item__dots__item"></li>
               </ul>
-              <div class="suggestions__container__list__item__info">
-                <span class="suggestions__container__list__item__info__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм</span>
-                <span class="suggestions__container__list__item__info__price">645&nbsp;000&nbsp;₽</span>
-                <span class="suggestions__container__list__item__info__oldprice">667&nbsp;000&nbsp;₽</span>
-                <span class="suggestions__container__list__item__info__label">Уценка</span>
+              <div class="suggestions__container__list__item__text">
+                <span class="suggestions__container__list__item__text__title">Чехол Apple MagSafe для iPhone 12/12 Pro, кожа, золотисто-коричневый</span>
+                <div class="suggestions__container__list__item__text__info">
+                  <div class="suggestions__container__list__item__text__info__prices">
+                    <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                    <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                  </div>
+                  <span class="suggestions__container__list__item__text__info__label">Уценка</span>
+                </div>
               </div>
-              <a class="suggestions__container__list__item__add_to_cart" href="#">В корзину</a>
-              <a class="suggestions__container__list__item__add_to_favourites" href="#">
-                <svg><use href="./images/sprite.svg#heart"></use></svg>
+              <a class="suggestions__container__list__item__add_to_cart" href="#">
+                <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                <span class="suggestions__container__list__item__add_to_cart__icon"></span>
               </a>
+              <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="suggestions__container__list__item">
-              <div class="suggestions__container__list__item__images">
+              <div class="suggestions__container__list__item__images" id="product-slider-5">
                 <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image--active" src="./images/goods/good-face.jpg" />
+                  <img class="suggestions__container__list__item__images__link__image" src="./images/goods/vinil.png" />
                 </a>
                 <a class="suggestions__container__list__item__images__link" href="#">
                   <img class="suggestions__container__list__item__images__link__image suggestions__container__image" src="./images/goods/good-second.jpg" />
                 </a>
               </div>
-              <ul class="suggestions__container__list__item__dots">
-                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item--active">
-                  <svg><use href="./images/sprite.svg#dot-active"></use></svg>
-                </li>
-                <li class="suggestions__container__list__item__dots__item suggestions__container__dots__item">
-                    <svg><use href="./images/sprite.svg#dot"></use></svg>
-                </li>
+              <ul class="suggestions__container__list__item__dots" id="product-slider-5-dots">
+                <li class="suggestions__container__list__item__dots__item"></li>
+                <li class="suggestions__container__list__item__dots__item"></li>
               </ul>
-              <div class="suggestions__container__list__item__info">
-                <span class="suggestions__container__list__item__info__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм</span>
-                <span class="suggestions__container__list__item__info__price">645&nbsp;000&nbsp;₽</span>
-                <span class="suggestions__container__list__item__info__oldprice">667&nbsp;000&nbsp;₽</span>
-                <span class="suggestions__container__list__item__info__label">Уценка</span>
+              <div class="suggestions__container__list__item__text">
+                <span class="suggestions__container__list__item__text__title">Sony PS-LX310BT</span>
+                <div class="suggestions__container__list__item__text__info">
+                  <div class="suggestions__container__list__item__text__info__prices">
+                    <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                    <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                  </div>
+                  <span class="suggestions__container__list__item__text__info__label">Уценка</span>
+                </div>
               </div>
-              <a class="suggestions__container__list__item__add_to_cart" href="#">В корзину</a>
-              <a class="suggestions__container__list__item__add_to_favourites" href="#">
-                <svg><use href="./images/sprite.svg#heart"></use></svg>
+              <a class="suggestions__container__list__item__add_to_cart" href="#">
+                <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                <span class="suggestions__container__list__item__add_to_cart__icon"></span>
               </a>
+              <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
             </li>
           </ul>
         </div>
