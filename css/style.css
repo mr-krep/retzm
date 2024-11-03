@@ -399,6 +399,7 @@ h6 {
 .brands__nav_buttons {
   position: absolute;
   top: 0;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   width: 100%;
@@ -411,16 +412,24 @@ h6 {
   display: none;
   width: 4rem;
   height: 4rem;
-  background-image: url("../images/icons/arrow-slider-left-grey.svg");
+  background-image: url("../images/icons/arrow-slider-left-black.svg");
   cursor: pointer;
+  opacity: 0.5;
+}
+.brands__nav_buttons__left:hover {
+  opacity: 1;
 }
 
 .brands__nav_buttons__right {
   display: none;
   width: 4rem;
   height: 4rem;
-  background-image: url("../images/icons/arrow-slider-right-grey.svg");
+  background-image: url("../images/icons/arrow-slider-right-black.svg");
   cursor: pointer;
+  opacity: 0.5;
+}
+.brands__nav_buttons__right:hover {
+  opacity: 1;
 }
 
 .brands__list {
