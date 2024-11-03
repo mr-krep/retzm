@@ -3,11 +3,10 @@
   src:
     local('NTSomic'),
     local('NT Somic'),
-    url('./NTSomic.ttf') format('truetype'),
-    url('./NTSomic.woff2') format('woff2'),
-    url('./NTSomic.woff') format('woff'),
-    url('./NTSomic.svg') format('svg');
-  src: url('./NTSomic.eot');
+    url('../fonts/NTSomic.ttf') format('truetype'),
+    url('../fonts/NTSomic.woff2') format('woff2'),
+    url('../fonts/NTSomic.woff') format('woff'),
+    url('../fonts/NTSomic.svg') format('svg');
   font-weight: 400;
   font-display: swap;
 }
@@ -21,7 +20,6 @@
     url('./NTSomic-Medium.woff2') format('woff2'),
     url('./NTSomic-Medium.woff') format('woff'),
     url('./NTSomic-Medium.svg') format('svg');
-  src: url('./NTSomic-Medium.eot');
   font-weight: 500;
   font-display: swap;
 }
@@ -35,7 +33,6 @@
     url('./NTSomic-Semibold.woff2') format('woff2'),
     url('./NTSomic-Semibold.woff') format('woff'),
     url('./NTSomic-Semibold.svg') format('svg');
-  src: url('./NTSomic-Semibold.eot');
   font-weight: 600;
   font-display: swap;
 }
@@ -49,7 +46,6 @@
     url('./NTSomic-Bold.woff2') format('woff2'),
     url('./NTSomic-Bold.woff') format('woff'),
     url('./NTSomic-Bold.svg') format('svg');
-  src: url('./NTSomic-Bold.eot');
   font-weight: 700;
   font-display: swap;
 }

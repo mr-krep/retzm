@@ -1,5 +1,6 @@
 $font: 'NT Somic', Arial, Helvetica, sans-serif
 $std-size: 1.6rem
+
 $black: #0A0A0A
 $black-light: #202020
 $grey: #B6B6B6
@@ -334,6 +335,10 @@ h6
   height: 34rem
   background-color: $grey1
   border-radius: 0.4rem
+
+  &:hover
+    background-image: url('../images/main-tiles/tile-bg-hover.svg')
+    color: $white
   
 .categories__tiles__item__link
   padding: 2rem
@@ -359,8 +364,8 @@ h6
   padding-bottom: 6rem
 
 .brands
-  margin: 0 auto
-  padding: 6rem 0
+  position: relative
+  margin: 6rem auto
   width: 100%
   max-width: 135rem
   overflow-x: auto
@@ -370,6 +375,34 @@ h6
   &::-webkit-scrollbar
       width: 0
       height: 0
+
+  &:hover .brands__nav_buttons__left, 
+  &:hover .brands__nav_buttons__right
+    display: block
+
+.brands__nav_buttons
+  position: absolute
+  top: 0
+  display: flex
+  align-items: center
+  width: 100%
+  height: 100%
+  justify-content: space-between
+  z-index: 10
+
+.brands__nav_buttons__left
+  display: none
+  width: 4rem
+  height: 4rem
+  background-image: url('../images/icons/arrow-slider-left-grey.svg')
+  cursor: pointer
+
+.brands__nav_buttons__right
+  display: none
+  width: 4rem
+  height: 4rem
+  background-image: url('../images/icons/arrow-slider-right-grey.svg')
+  cursor: pointer
 
 .brands__list
   display: flex
@@ -415,6 +448,9 @@ h6
   width: 26.2rem
   background-color: #fff
   border-radius: 0.4rem
+
+  &:hover .suggestions__container__list__item__text__title
+    color: $pink
 
 .suggestions__container__list__item__images
   margin: 2.2rem 2.2rem 0
@@ -515,7 +551,7 @@ h6
   height: 5rem
   text-align: center
   align-content: center
-  border-radius: 0 0 0.4rem 0.4rem
+  border-radius: 0.4rem
 
   &:hover
     background-color: $pink
@@ -595,6 +631,12 @@ h6
   background-color: $grey-soft
   border-radius: 0.4rem
 
+  &:hover .sets__container__item__image
+    display: none
+
+  &:hover .sets__container__item__image--hover
+    display: block
+
 .sets__container__item__title
   position: absolute
   display: block
@@ -606,6 +648,9 @@ h6
 
 .sets__container__item__image
   display: block
+
+.sets__container__item__image--hover
+  display: none
 
 .utp
   margin-bottom: 6rem
@@ -667,7 +712,7 @@ h6
   flex-direction: column
   flex-wrap: wrap
   gap: 2rem
-  opacity: 0.5
+  opacity: 0.7
   text-transform: uppercase
 
 .footer__navigation__catalogue__menu

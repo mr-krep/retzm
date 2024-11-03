@@ -27,6 +27,17 @@ var slider = tns({
   navContainer: '.banner__dots',
   controlsContainer: '.banner__nav_buttons'
 });
+
+var slider = tns({
+  container: '.brands__list',
+  items: 8,
+  autoWidth: true,
+  gutter: 20,
+  mouseDrag: true,
+  controls: true,
+  nav: false,
+  controlsContainer: '.brands__nav_buttons'
+});
  
 var product_sliders = document.getElementsByClassName('suggestions__container__list__item__images');
 for (var i=0; i< product_sliders.length; i++ ) {
