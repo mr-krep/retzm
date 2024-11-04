@@ -38,11 +38,23 @@ var slider = tns({
   nav: false,
   controlsContainer: '.brands__nav_buttons'
 });
+
+var slider = tns({
+  container: '.suggestions__container__list',
+  nested: 'outer',
+  items: 5,
+  loop: false,
+  mouseDrag: true,
+  nav: false,
+  controls: true,
+  controlsContainer: '.suggestions__container__nav_buttons'
+});
  
 var product_sliders = document.getElementsByClassName('suggestions__container__list__item__images');
 for (var i=0; i< product_sliders.length; i++ ) {
   var slider = tns({
     container: '#' + product_sliders[i].id,
+    nested: 'inner',
     items: 1,
     mouseDrag: true,
     controls: false,
