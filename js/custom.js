@@ -56,7 +56,7 @@ for (var i=0; i< product_sliders.length; i++ ) {
     container: '#' + product_sliders[i].id,
     nested: 'inner',
     items: 1,
-    mouseDrag: true,
+    mouseDrag: false,
     controls: false,
     nav: true,
     navAsThumbnails: true,
