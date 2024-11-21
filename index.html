@@ -25,9 +25,6 @@
     <link href="./css/style.css" rel="stylesheet" />
     
     <!-- Библиотеки -->
-    <!-- <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
-    <script src="./libs/swiper/swiper-bundle.min.js"></script> -->
-
     <link rel="stylesheet" href="./libs/tiny-slider/tiny-slider.css" />
     <script src="./libs/tiny-slider/tiny-slider.js"></script>
     <!-- /Библиотеки -->
@@ -110,30 +107,30 @@
     </header>
     <main class="main">
       <section class="banner">
-        <div class="banner__container">
-          <div class="banner__container__item" style="background:url('./images/banner.jpg');">
-            <div class="banner__container__item__content">
-              <div class="banner__container__item__content__heading">Apple Watch 6</div>
-              <div class="banner__container__item__content__text">Надежность и стиль. Теперь в стальном корпусе</div>
-              <a class="banner__container__item__content__button button button--pink" href="#">Купить</a>
+          <div class="banner__container">
+            <div class="banner__container__item" style="background:url('./images/banner.jpg');">
+              <div class="banner__container__item__content">
+                <div class="banner__container__item__content__heading">Apple Watch 6</div>
+                <div class="banner__container__item__content__text">Надежность и стиль. Теперь в стальном корпусе</div>
+                <a class="banner__container__item__content__button button button--pink" href="#">Купить</a>
+              </div>
+            </div>
+            <div class="banner__container__item" style="background:url('./images/banner.jpg');">
+              <div class="banner__container__item__content">
+                <div class="banner__container__item__content__heading">Apple Watch 7</div>
+                <div class="banner__container__item__content__text">Надежность и стиль. Теперь в стальном корпусе</div>
+                <a class="banner__container__item__content__button button button--pink" href="#">Купить</a>
+              </div>
             </div>
           </div>
-          <div class="banner__container__item" style="background:url('./images/banner.jpg');">
-            <div class="banner__container__item__content">
-              <div class="banner__container__item__content__heading">Apple Watch 7</div>
-              <div class="banner__container__item__content__text">Надежность и стиль. Теперь в стальном корпусе</div>
-              <a class="banner__container__item__content__button button button--pink" href="#">Купить</a>
-            </div>
-          </div>
-        </div>
         <div class="banner__nav_buttons">
           <div class="banner__nav_buttons-prev"></div>
           <div class="banner__nav_buttons-next"></div>
         </div>
-        <div class="banner__dots">
-          <li class="banner__dots__item"></li>
-          <li class="banner__dots__item"></li>
-        </div>
+        <ul class="banner__dots">
+          <li class="banner__dots__item splide__pagination__page"></li>
+          <li class="banner__dots__item splide__pagination__page"></li>
+        </ul>
       </section>
       <section class="categories">
         <ul class="categories__tiles">
@@ -262,179 +259,158 @@
       <section class="suggestions">
         <div class="suggestions__container">
           <span class="suggestions__container__heading">Выбор покупателей</span>
-          <ul class="suggestions__container__list">
-            <li class="suggestions__container__list__item">
-              <div class="suggestions__container__list__item__images product-slider" id="product-slider-1">
-                <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image" src="./images/goods/gamepad.png" />
-                </a>
-                <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image" src="./images/goods/good-second.jpg" />
-                </a>
-              </div>
-              <ul class="suggestions__container__list__item__dots" id="product-slider-1-dots">
-                <li class="suggestions__container__list__item__dots__item"></li>
-                <li class="suggestions__container__list__item__dots__item"></li>
-              </ul>
-              <div class="suggestions__container__list__item__text">
-                <a class="suggestions__container__list__item__text__title" href="#">Sony DualSense PS5 Controller, «полуночный черный»</a>
-                <div class="suggestions__container__list__item__text__info">
-                  <div class="suggestions__container__list__item__text__info__prices">
-                    <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
-                    <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
-                  </div>
-                  <span class="suggestions__container__list__item__text__info__label">Уценка</span>
+            <ul class="suggestions__container__list">
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images product-slider" id="product-slider-1">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/gamepad.png" />
+                  </a>
                 </div>
-              </div>
-              <a class="suggestions__container__list__item__add_to_cart" href="#">
-                <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
-                <span class="suggestions__container__list__item__add_to_cart__icon"></span>
-              </a>
-              <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
-            </li>
-            <li class="suggestions__container__list__item">
-              <div class="suggestions__container__list__item__images product-slider" id="product-slider-2">
-                <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image" src="./images/goods/good-face.jpg" />
-                </a>
-                <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image" src="./images/goods/good-second.jpg" />
-                </a>
-              </div>
-              <ul class="suggestions__container__list__item__dots" id="product-slider-2-dots">
-                <li class="suggestions__container__list__item__dots__item"></li>
-                <li class="suggestions__container__list__item__dots__item"></li>
-              </ul>
-              <div class="suggestions__container__list__item__text">
-                <a class="suggestions__container__list__item__text__title" href="#">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</a>
-                <div class="suggestions__container__list__item__text__info">
-                  <div class="suggestions__container__list__item__text__info__prices">
-                    <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
-                    <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
-                  </div>
-                  <span class="suggestions__container__list__item__text__info__label">Уценка</span>
-                </div>
-              </div>
-              <a class="suggestions__container__list__item__add_to_cart" href="#">
-                <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
-                <span class="suggestions__container__list__item__add_to_cart__icon"></span>
-              </a>
-              <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
-            </li>
-            <li class="suggestions__container__list__item">
-              <div class="suggestions__container__list__item__images" id="product-slider-3">
-                <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image" src="./images/goods/lego.png" />
-                </a>
-                <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image" src="./images/goods/good-second.jpg" />
-                </a>
-              </div>
-              <ul class="suggestions__container__list__item__dots" id="product-slider-3-dots">
-                <li class="suggestions__container__list__item__dots__item"></li>
-                <li class="suggestions__container__list__item__dots__item"></li>
-              </ul>
-              <div class="suggestions__container__list__item__text">
-                <a class="suggestions__container__list__item__text__title" href="#">LEGO Minifigures Marvel Series 2</a>
-                <div class="suggestions__container__list__item__text__info">
-                  <div class="suggestions__container__list__item__text__info__prices">
-                    <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
-                    <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Sony DualSense PS5 Controller, «полуночный черный»</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                    <span class="suggestions__container__list__item__text__info__label">Уценка</span>
                   </div>
                 </div>
-              </div>
-              <a class="suggestions__container__list__item__add_to_cart" href="#">
-                <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
-                <span class="suggestions__container__list__item__add_to_cart__icon"></span>
-              </a>
-              <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
-            </li>
-            <li class="suggestions__container__list__item">
-              <div class="suggestions__container__list__item__images" id="product-slider-4">
-                <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image" src="./images/goods/case.png" />
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon"></span>
                 </a>
-                <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image" src="./images/goods/good-second.jpg" />
-                </a>
-              </div>
-              <ul class="suggestions__container__list__item__dots" id="product-slider-4-dots">
-                <li class="suggestions__container__list__item__dots__item"></li>
-                <li class="suggestions__container__list__item__dots__item"></li>
-              </ul>
-              <div class="suggestions__container__list__item__text">
-                <a class="suggestions__container__list__item__text__title" href="#">Чехол Apple MagSafe для iPhone 12/12 Pro, кожа, золотисто-коричневый</a>
-                <div class="suggestions__container__list__item__text__info">
-                  <div class="suggestions__container__list__item__text__info__prices">
-                    <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
-                    <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images product-slider" id="product-slider-2">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/good-face.jpg" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                    <span class="suggestions__container__list__item__text__info__label">Уценка</span>
                   </div>
                 </div>
-              </div>
-              <a class="suggestions__container__list__item__add_to_cart" href="#">
-                <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
-                <span class="suggestions__container__list__item__add_to_cart__icon"></span>
-              </a>
-              <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
-            </li>
-            <li class="suggestions__container__list__item">
-              <div class="suggestions__container__list__item__images" id="product-slider-5">
-                <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image" src="./images/goods/vinil.png" />
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon"></span>
                 </a>
-                <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image" src="./images/goods/good-second.jpg" />
-                </a>
-              </div>
-              <ul class="suggestions__container__list__item__dots" id="product-slider-5-dots">
-                <li class="suggestions__container__list__item__dots__item"></li>
-                <li class="suggestions__container__list__item__dots__item"></li>
-              </ul>
-              <div class="suggestions__container__list__item__text">
-                <a class="suggestions__container__list__item__text__title" href="#">Sony PS-LX310BT</a>
-                <div class="suggestions__container__list__item__text__info">
-                  <div class="suggestions__container__list__item__text__info__prices">
-                    <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
-                    <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
-                  </div>
-                  <span class="suggestions__container__list__item__text__info__label">Уценка</span>
+                <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images" id="product-slider-3">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/lego.png" />
+                  </a>
                 </div>
-              </div>
-              <a class="suggestions__container__list__item__add_to_cart" href="#">
-                <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
-                <span class="suggestions__container__list__item__add_to_cart__icon"></span>
-              </a>
-              <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
-            </li>
-            <li class="suggestions__container__list__item">
-              <div class="suggestions__container__list__item__images" id="product-slider-5">
-                <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image" src="./images/goods/vinil.png" />
-                </a>
-                <a class="suggestions__container__list__item__images__link" href="#">
-                  <img class="suggestions__container__list__item__images__link__image suggestions__container__image" src="./images/goods/good-second.jpg" />
-                </a>
-              </div>
-              <ul class="suggestions__container__list__item__dots" id="product-slider-5-dots">
-                <li class="suggestions__container__list__item__dots__item"></li>
-                <li class="suggestions__container__list__item__dots__item"></li>
-              </ul>
-              <div class="suggestions__container__list__item__text">
-                <a class="suggestions__container__list__item__text__title" href="#">Sony PS-LX310BT</a>
-                <div class="suggestions__container__list__item__text__info">
-                  <div class="suggestions__container__list__item__text__info__prices">
-                    <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
-                    <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">LEGO Minifigures Marvel Series 2</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <a class="suggestions__container__list__item__add_to_cart" href="#">
-                <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
-                <span class="suggestions__container__list__item__add_to_cart__icon"></span>
-              </a>
-              <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
-            </li>
-          </ul>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images" id="product-slider-4">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/case.png" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Чехол Apple MagSafe для iPhone 12/12 Pro, кожа, золотисто-коричневый</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images" id="product-slider-5">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/vinil.png" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Sony PS-LX310BT</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                    <span class="suggestions__container__list__item__text__info__label">Уценка</span>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images" id="product-slider-5">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/vinil.png" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Sony PS-LX310BT</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images" id="product-slider-5">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/vinil.png" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Sony PS-LX310BT</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
+              </li>
+            </ul>
           <div class="suggestions__container__nav_buttons">
             <span class="suggestions__container__nav_buttons__left"></span>
             <span class="suggestions__container__nav_buttons__right"></span>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TITLE</title>
+    <link href="./fonts/fonts.css" rel="stylesheet" />
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="./libs/tiny-slider/tiny-slider.css" />
+    <script src="./libs/tiny-slider/tiny-slider.js"></script>
+  </head>
+  <body>
+    <style>
+      .list {
+        display: flex;
+        /* gap: 1rem; */
+      }
+      .item {
+        margin-right: 1rem;
+        background:#ccc;
+        min-width: 262px;
+        height: 100px
+      }
+    </style>
+    <section class="suggestions">
+      <div class="suggestions__container">
+          <ul class="list">
+            <li class="item">
+              test
+            </li>
+            <li class="item">
+              test1
+            </li>
+            <li class="item">
+              test2
+            </li>
+            <li class="item">
+              test3
+            </li>
+            <li class="item">
+              test4
+            </li>
+            <li class="item">
+              test5
+            </li>
+
+          </ul>
+        <div class="suggestions__container__nav_buttons">
+          <span class="suggestions__container__nav_buttons__left"></span>
+          <span class="suggestions__container__nav_buttons__right"></span>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var slider = tns({
+        container: '.list',
+        // nested: 'outer',
+        fixedWidth: 262,
+        // slideBy: 'page',
+        // edgePadding: 20,
+        // items: 5,
+        loop: false,
+        mouseDrag: true,
+        nav: false,
+        controls: true,
+        controlsContainer: '.suggestions__container__nav_buttons',
+        gutter: 10
+        // autoWidth: true
+      });
+    </script>
+  </body>
+</html>
