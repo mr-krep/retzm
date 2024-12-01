@@ -31,39 +31,39 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__top">
-        <div class="header__top__container">
+      <div class="header__top desktop--block section">
+        <div class="header__top__container wrapper--global">
           <ul class="header__top__container__menu">
             <li class="header__top__container__menu__item">
-              <a class="header__top__container__menu__item__link" href="#" alt="Контакты">Контакты</a>
+              <a class="header__top__container__menu__item__link link--grey" href="#" alt="Контакты">Контакты</a>
             </li>
             <li class="header__top__container__menu__item">
-              <a class="header__top__container__menu__item__link" href="#" alt="Гарантия">Гарантия</a>
+              <a class="header__top__container__menu__item__link link--grey" href="#" alt="Гарантия">Гарантия</a>
             </li>
             <li class="header__top__container__menu__item">
-              <a class="header__top__container__menu__item__link" href="#" alt="Самовывоз">Самовывоз</a>
+              <a class="header__top__container__menu__item__link link--grey" href="#" alt="Самовывоз">Самовывоз</a>
             </li>
             <li class="header__top__container__menu__item">
-              <a class="header__top__container__menu__item__link" href="#" alt="Доставка">Доставка</a>
+              <a class="header__top__container__menu__item__link link--grey" href="#" alt="Доставка">Доставка</a>
             </li>
           </ul>
           <ul class="header__top__container__getintouch">
             <li class="header__top__container__getintouch__item">
-              <a class="header__top__container__getintouch__item__city" href="#" alt="Выбрать город">Москва</a>
+              <a class="header__top__getintouch__item__link getintouch__city link--grey" href="#" alt="Выбрать город">Москва</a>
             </li>
             <li class="header__top__container__getintouch__item">
-              <a class="header__top__container__getintouch__item__phone phone" href="tel:+74996476144" alt="Телефон">+ 7 499 647-61-44</a>
+              <a class="header__top__getintouch__item__link link--grey getintouch__phone change_phone" href="tel:+74996476144" alt="Телефон">+ 7 499 647-61-44</a>
             </li>
             <li class="header__top__container__getintouch__item">
-              <a class="header__top__container__getintouch__item__account" href="#" alt="Личный кабинет">Личный кабинет</a>
+              <a class="header__top__getintouch__item__link link--grey link_icon--account getintouch__account" href="#" alt="Личный кабинет">Личный кабинет</a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="header__bottom">
-        <div class="header__bottom__container">
+      <div class="header__bottom desktop--block section">
+        <div class="header__bottom__container wrapper--global">
           <div class="header__bottom__container__column column__left">
-            <span class="header__bottom__container__column__button" alt="Каталог">Каталог</span>
+            <span class="header__bottom__container__column__button button button--pink megamenu_button" alt="Каталог">Каталог</span>
           </div>
           <div class="header__bottom__container__column column__center">
             <a class="header__bottom__container__column__logo" href="/" alt="ТехноЗум">
@@ -71,21 +71,21 @@
             </a>
           </div>
           <div class="header__bottom__container__column column__right">
-            <ul class="header__services__list">
-              <li class="header__services__list__item">
-                <a class="header__services__list__item__link services-search" href="#">Поиск</a>
+            <ul class="header__bottom__container__column__services">
+              <li class="header__bottom__container__column__services__item">
+                <a class="header__bottom__container__column__services__item__link link--grey link_icon--search" href="#">Поиск</a>
               </li>
-              <li class="header__services__list__item">
-                <a class="header__services__list__item__link services-favourites" href="#">Избранное</a>
+              <li class="header__bottom__container__column__services__item">
+                <a class="header__bottom__container__column__services__item__link link--grey link_icon--favourites" href="#">Избранное</a>
               </li>
-              <li class="header__services__list__item">
-                <a class="header__services__list__item__link services-cart" href="#">Корзина</a>
+              <li class="header__bottom__container__column__services__item">
+                <a class="header__bottom__container__column__services__item__link link--grey link_icon--cart" href="#">Корзина</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="header__mobile">
+      <div class="header__mobile mobile--grid">
         <div class="header__mobile__item">
           <span class="header__mobile__item__icon icon--search-white"></span>
         </div>
@@ -108,32 +108,56 @@
     <main class="main">
       <section class="banner">
           <div class="banner__container">
-            <div class="banner__container__item" style="background:url('./images/banner.jpg');">
-              <div class="banner__container__item__content">
-                <div class="banner__container__item__content__heading">Apple Watch 6</div>
+            <div class="banner__container__item">
+              <div class="banner__container__item__content wrapper--global">
+                <div class="banner__container__item__content__heading">Apple Watch 1</div>
                 <div class="banner__container__item__content__text">Надежность и стиль. Теперь в стальном корпусе</div>
                 <a class="banner__container__item__content__button button button--pink" href="#">Купить</a>
               </div>
+              <img class="banner__container__item__image desktop--block" src="./images/banner.jpg" />
+              <img class="banner__container__item__image mobile--block" src="./images/banner-mobile.jpg" />
             </div>
-            <div class="banner__container__item" style="background:url('./images/banner.jpg');">
-              <div class="banner__container__item__content">
-                <div class="banner__container__item__content__heading">Apple Watch 7</div>
+            <div class="banner__container__item">
+              <div class="banner__container__item__content wrapper--global">
+                <div class="banner__container__item__content__heading">Apple Watch 2</div>
                 <div class="banner__container__item__content__text">Надежность и стиль. Теперь в стальном корпусе</div>
                 <a class="banner__container__item__content__button button button--pink" href="#">Купить</a>
               </div>
+              <img class="banner__container__item__image desktop--block" src="./images/banner.jpg" />
+              <img class="banner__container__item__image mobile--block" src="./images/banner-mobile.jpg" />
+            </div>
+            <div class="banner__container__item">
+              <div class="banner__container__item__content wrapper--global">
+                <div class="banner__container__item__content__heading">Apple Watch 3</div>
+                <div class="banner__container__item__content__text">Надежность и стиль. Теперь в стальном корпусе</div>
+                <a class="banner__container__item__content__button button button--pink" href="#">Купить</a>
+              </div>
+              <img class="banner__container__item__image desktop--block" src="./images/banner.jpg" />
+              <img class="banner__container__item__image mobile--block" src="./images/banner-mobile.jpg" />
+            </div>
+            <div class="banner__container__item">
+              <div class="banner__container__item__content wrapper--global">
+                <div class="banner__container__item__content__heading">Apple Watch 4</div>
+                <div class="banner__container__item__content__text">Надежность и стиль. Теперь в стальном корпусе</div>
+                <a class="banner__container__item__content__button button button--pink" href="#">Купить</a>
+              </div>
+              <img class="banner__container__item__image desktop--block" src="./images/banner.jpg" />
+              <img class="banner__container__item__image mobile--block" src="./images/banner-mobile.jpg" />
             </div>
           </div>
-        <div class="banner__nav_buttons">
-          <div class="banner__nav_buttons-prev"></div>
-          <div class="banner__nav_buttons-next"></div>
+        <div class="banner__arrows desktop--block">
+          <div class="banner__arrows__button arrow--left"></div>
+          <div class="banner__arrows__button arrow--right"></div>
         </div>
-        <ul class="banner__dots">
-          <li class="banner__dots__item splide__pagination__page"></li>
-          <li class="banner__dots__item splide__pagination__page"></li>
+        <ul class="banner__dots dots">
+          <li class="banner__dots__item dots__item"></li>
+          <li class="banner__dots__item dots__item"></li>
+          <li class="banner__dots__item dots__item"></li>
+          <li class="banner__dots__item dots__item"></li>
         </ul>
       </section>
       <section class="categories">
-        <ul class="categories__tiles">
+        <ul class="categories__tiles section wrapper--global">
           <li class="categories__tiles__item">
             <a class="categories__tiles__item__link" href="#">
               <img class="categories__tiles__item__link__image" src="./images/main-tiles/appliances.png" alt="Бытовая техника" />
@@ -197,68 +221,98 @@
         </ul>
       </section>
       <section class="hero">
-        <div class="hero__container">
-          <img class="hero__container__image" src="./images/heroe.png" />
-          <img class="hero__container__image-mobile" src="./images/heroe_mobile.png" />
+        <div class="hero__container section wrapper--global">
+          <img class="hero__container__image desktop--block" src="./images/heroe.png" />
+          <img class="hero__container__image mobile--block" src="./images/heroe_mobile.png" />
         </div>
       </section>
-      <section class="brands">
+      <section class="brands section">
         <ul class="brands__list">
           <li class="brands__list__item">
-            <img class="brands__list__item__image" src="./images/brands/apple.png" />
+            <a class="brands__list__item__link" href="#">
+              <img class="brands__list__item__image" src="./images/brands/apple.png" />
+            </a>
           </li>
           <li class="brands__list__item">
-            <img class="brands__list__item__image" src="./images/brands/jbl.png" />
+            <a class="brands__list__item__link" href="#">
+              <img class="brands__list__item__image" src="./images/brands/jbl.png" />
+            </a>
           </li>
           <li class="brands__list__item">
-            <img class="brands__list__item__image" src="./images/brands/sony.png" />
+            <a class="brands__list__item__link" href="#">
+              <img class="brands__list__item__image" src="./images/brands/sony.png" />
+            </a>
           </li>
           <li class="brands__list__item">
-            <img class="brands__list__item__image" src="./images/brands/beats.png" />
+            <a class="brands__list__item__link" href="#">
+              <img class="brands__list__item__image" src="./images/brands/beats.png" />
+            </a>
           </li>
           <li class="brands__list__item">
-            <img class="brands__list__item__image" src="./images/brands/lego.png" />
+            <a class="brands__list__item__link" href="#">
+              <img class="brands__list__item__image" src="./images/brands/lego.png" />
+            </a>
           </li>
           <li class="brands__list__item">
-            <img class="brands__list__item__image" src="./images/brands/marshall.png" />
+            <a class="brands__list__item__link" href="#">
+              <img class="brands__list__item__image" src="./images/brands/marshall.png" />
+            </a>
           </li>
           <li class="brands__list__item">
-            <img class="brands__list__item__image" src="./images/brands/xiaomi.png" />
+            <a class="brands__list__item__link" href="#">
+              <img class="brands__list__item__image" src="./images/brands/xiaomi.png" />
+            </a>
           </li>
           <li class="brands__list__item">
-            <img class="brands__list__item__image" src="./images/brands/dji.png" />
+            <a class="brands__list__item__link" href="#">
+              <img class="brands__list__item__image" src="./images/brands/dji.png" />
+            </a>
           </li>
           <li class="brands__list__item">
-            <img class="brands__list__item__image" src="./images/brands/belkin.png" />
+            <a class="brands__list__item__link" href="#">
+              <img class="brands__list__item__image" src="./images/brands/belkin.png" />
+            </a>
           </li>
           <li class="brands__list__item">
-            <img class="brands__list__item__image" src="./images/brands/samsung.png" />
+            <a class="brands__list__item__link" href="#">
+              <img class="brands__list__item__image" src="./images/brands/samsung.png" />
+            </a>
           </li>
           <li class="brands__list__item">
-            <img class="brands__list__item__image" src="./images/brands/audio-technica.png" />
+            <a class="brands__list__item__link" href="#">
+              <img class="brands__list__item__image" src="./images/brands/audio-technica.png" />
+            </a>
           </li>
           <li class="brands__list__item">
-            <img class="brands__list__item__image" src="./images/brands/bowers_n_wilkins.png" />
+            <a class="brands__list__item__link" href="#">
+              <img class="brands__list__item__image" src="./images/brands/bowers_n_wilkins.png" />
+            </a>
           </li>
           <li class="brands__list__item">
-            <img class="brands__list__item__image" src="./images/brands/logitech.png" />
+            <a class="brands__list__item__link" href="#">
+              <img class="brands__list__item__image" src="./images/brands/logitech.png" />
+            </a>
           </li>
           <li class="brands__list__item">
-            <img class="brands__list__item__image" src="./images/brands/xbox.png" />
+            <a class="brands__list__item__link" href="#">
+              <img class="brands__list__item__image" src="./images/brands/xbox.png" />
+            </a>
           </li>
           <li class="brands__list__item">
-            <img class="brands__list__item__image" src="./images/brands/bose.png" />
+            <a class="brands__list__item__link" href="#">
+              <img class="brands__list__item__image" src="./images/brands/bose.png" />
+            </a>
           </li>
         </ul>
-        <div class="brands__nav_buttons">
-          <span class="brands__nav_buttons__left"></span>
-          <span class="brands__nav_buttons__right"></span>
+        <div class="brands__arrows arrows">
+          <span class="brands__arrows__left arrows--left"></span>
+          <span class="brands__arrows__right arrows--right"></span>
         </div>
 
       </section>
       <section class="suggestions">
-        <div class="suggestions__container">
-          <span class="suggestions__container__heading">Выбор покупателей</span>
+        <div class="suggestions__container section wrapper--global">
+          <span class="suggestions__container__heading section_heading">Выбор покупателей</span>
             <ul class="suggestions__container__list">
               <li class="suggestions__container__list__item">
                 <div class="suggestions__container__list__item__images product-slider" id="product-slider-1">
@@ -278,7 +332,7 @@
                 </div>
                 <a class="suggestions__container__list__item__add_to_cart" href="#">
                   <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
-                  <span class="suggestions__container__list__item__add_to_cart__icon"></span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
                 </a>
                 <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
               </li>
@@ -300,7 +354,7 @@
                 </div>
                 <a class="suggestions__container__list__item__add_to_cart" href="#">
                   <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
-                  <span class="suggestions__container__list__item__add_to_cart__icon"></span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
                 </a>
                 <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
               </li>
@@ -321,7 +375,7 @@
                 </div>
                 <a class="suggestions__container__list__item__add_to_cart" href="#">
                   <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
-                  <span class="suggestions__container__list__item__add_to_cart__icon"></span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
                 </a>
                 <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
               </li>
@@ -342,7 +396,7 @@
                 </div>
                 <a class="suggestions__container__list__item__add_to_cart" href="#">
                   <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
-                  <span class="suggestions__container__list__item__add_to_cart__icon"></span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
                 </a>
                 <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
               </li>
@@ -364,7 +418,7 @@
                 </div>
                 <a class="suggestions__container__list__item__add_to_cart" href="#">
                   <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
-                  <span class="suggestions__container__list__item__add_to_cart__icon"></span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
                 </a>
                 <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
               </li>
@@ -385,7 +439,7 @@
                 </div>
                 <a class="suggestions__container__list__item__add_to_cart" href="#">
                   <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
-                  <span class="suggestions__container__list__item__add_to_cart__icon"></span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
                 </a>
                 <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
               </li>
@@ -406,19 +460,19 @@
                 </div>
                 <a class="suggestions__container__list__item__add_to_cart" href="#">
                   <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
-                  <span class="suggestions__container__list__item__add_to_cart__icon"></span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
                 </a>
                 <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
               </li>
             </ul>
-          <div class="suggestions__container__nav_buttons">
-            <span class="suggestions__container__nav_buttons__left"></span>
-            <span class="suggestions__container__nav_buttons__right"></span>
+          <div class="suggestions__container__arrows arrows">
+            <span class="suggestions__container__arrows__left arrows--left"></span>
+            <span class="suggestions__container__arrows__right arrows--right"></span>
           </div>
         </div>
       </section>
-      <section class="sets">
-        <div class="sets__heading">Подборки товаров</div>
+      <section class="sets section wrapper--global">
+        <div class="sets__heading section_heading">Подборки товаров</div>
         <div class="sets__container">
           <a class="sets__container__item" href="#">
             <span class="sets__container__item__title">Красота</span>
@@ -442,7 +496,7 @@
           </a>
         </div>
       </section>
-      <section class="utp">
+      <section class="utp section wrapper--global">
         <div class="utp__container">
           <div class="utp__container__tile">
             <img class="utp__container__tile__image" src="./images/utp/original.svg" />
@@ -478,78 +532,78 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__navigation">
+      <div class="footer__navigation section wrapper--global">
         <div class="footer__navigation__catalogue footer__navigation__block">
-          <span class="footer__navigation__catalogue__heading footer__navigation__heading">Каталог</span>
-          <ul class="footer__navigation__catalogue__menu footer__navigation__menu">
+          <span class="footer__navigation__catalogue__heading footer__heading">Каталог</span>
+          <ul class="footer__navigation__catalogue__menu footer__menu">
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Бытовая техника</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Бытовая техника</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Компьютеры и ноутбуки</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Компьютеры и ноутбуки</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Красота и здоровье</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Красота и здоровье</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Аудиотехника</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Аудиотехника</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Аксессуары для гаджетов</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Аксессуары для гаджетов</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Смартфоны и гаджеты</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Смартфоны и гаджеты</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Развлечения и хобби</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Развлечения и хобби</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Телевизоры и аксессуары</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Телевизоры и аксессуары</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Фото и видео</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Фото и видео</a>
             </li>
             <li class="footer__navigation__catalogue__menu__item">
-              <a class="footer__navigation__catalogue__menu__item__link footer__navigation__menu__link" href="#">Туризм</a>
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Туризм</a>
             </li>
           </ul>
         </div>
         <div class="footer__navigation__help footer__navigation__block">
-          <span class="footer__navigation__help__heading footer__navigation__heading">Помощь</span>
-          <ul class="footer__navigation__help__menu footer__navigation__menu">
+          <span class="footer__navigation__help__heading footer__heading">Помощь</span>
+          <ul class="footer__navigation__help__menu footer__menu">
             <li class="footer__navigation__help__menu__item">
-              <a class="footer__navigation__help__menu__item__link footer__navigation__menu__link" href="#">Доставка</a>
+              <a class="footer__navigation__help__menu__item__link footer__menu__link" href="#">Доставка</a>
             </li>
             <li class="footer__navigation__help__menu__item">
-              <a class="footer__navigation__help__menu__item__link footer__navigation__menu__link" href="#">Самовывоз</a>
+              <a class="footer__navigation__help__menu__item__link footer__menu__link" href="#">Самовывоз</a>
             </li>
             <li class="footer__navigation__help__menu__item">
-              <a class="footer__navigation__help__menu__item__link footer__navigation__menu__link" href="#">Гарантия</a>
+              <a class="footer__navigation__help__menu__item__link footer__menu__link" href="#">Гарантия</a>
             </li>
             <li class="footer__navigation__help__menu__item">
-              <a class="footer__navigation__help__menu__item__link footer__navigation__menu__link" href="#">Контакты</a>
+              <a class="footer__navigation__help__menu__item__link footer__menu__link" href="#">Контакты</a>
             </li>
           </ul>
         </div>
         <div class="footer__navigation__about footer__navigation__block">
-          <span class="footer__navigation__about__heading footer__navigation__heading">О нас</span>
-          <ul class="footer__navigation__about__menu footer__navigation__menu">
+          <span class="footer__navigation__about__heading footer__heading">О нас</span>
+          <ul class="footer__navigation__about__menu footer__menu">
             <li class="footer__navigation__about__menu__item">
-              <a class="footer__navigation__about__menu__item__link footer__navigation__menu__link" href="#">ТехноЗум</a>
+              <a class="footer__navigation__about__menu__item__link footer__menu__link" href="#">ТехноЗум</a>
             </li>
             <li class="footer__navigation__about__menu__item">
-              <a class="footer__navigation__about__menu__item__link footer__navigation__menu__link" href="#">Реквизиты</a>
+              <a class="footer__navigation__about__menu__item__link footer__menu__link" href="#">Реквизиты</a>
             </li>
             <li class="footer__navigation__about__menu__item">
-              <a class="footer__navigation__help__menu__item__link footer__navigation__menu__link" href="#">Оферта</a>
+              <a class="footer__navigation__help__menu__item__link footer__menu__link" href="#">Оферта</a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="footer__credentials">
-        <div class="footer__credentials__essentials flex-left">ИНН 781021149839, ОГРНИП 322784700130448</div>
-        <div class="footer__credentials__copyright flex-center">Технозум.рф &copy; 2024</div>
-        <div class="footer__credentials__link flex-right">
+      <div class="footer__credentials section wrapper--global">
+        <div class="footer__credentials__essentials">ИНН 781021149839, ОГРНИП 322784700130448</div>
+        <div class="footer__credentials__copyright">Технозум.рф &copy; 2024</div>
+        <div class="footer__credentials__link">
           <a class="footer__credentials__link__policy" href="#">Политика конфиденциальности</a>
         </div>
       </div>

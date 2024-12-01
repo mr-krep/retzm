@@ -1,12 +1,13 @@
 var slider = tns({
   container: '.banner__container',
   items: 1,
+  lazyload: true,
   mouseDrag: true,
   controls: true,
   nav: true,
   navAsThumbnails: true,
   navContainer: '.banner__dots',
-  controlsContainer: '.banner__nav_buttons'
+  controlsContainer: '.banner__arrows'
 });
 
 var slider = tns({
@@ -17,17 +18,23 @@ var slider = tns({
   mouseDrag: true,
   controls: true,
   nav: false,
-  controlsContainer: '.brands__nav_buttons'
+  controlsContainer: '.brands__arrows'
 });
 
 var slider = tns({
   container: '.suggestions__container__list',
-  fixedWidth: 262,
-  items: 5,
+  responsive: {
+    "840": {
+      fixedWidth: 262,
+      items: 5
+    }
+  },
+  fixedWidth: 200,
+  items: 2,
   loop: false,
   mouseDrag: true,
   nav: false,
   controls: true,
-  controlsContainer: '.suggestions__container__nav_buttons',
+  controlsContainer: '.suggestions__container__arrows',
   gutter: 10
 });
