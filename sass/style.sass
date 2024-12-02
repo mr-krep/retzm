@@ -27,32 +27,46 @@ $scarlet-bg: #FF573D
 $green-bg: #3DCF92
   
 /* Common start */
+html
+  font-size: 62.5%
+
+body
+  width: 100%
+  min-width: 39.3rem
+  margin: 0 auto
+  font-family: $font
+  font-weight: 400
+  font-size: $std-size
+  line-height: $std-size
+  color: $black
+  background-color: $white
+
 h1, h2, h3, h4, h5, h6
   font-family: $font
   font-weight: 700
   color: $black
 
-h1
+h1, .h1
   font-size: 6rem
-  line-height: 100%
+  line-height: 130%
 
-h2
+h2, .h2
   font-size: 4rem
-  line-height: 100%
+  line-height: 110%
 
-h3
+h3, .h3
   font-size: 2.8rem
-  line-height: 100%
+  line-height: 130%
 
-h4
+h4, .h4
   font-size: 1.6rem
-  line-height: 100%
+  line-height: 130%
 
-h5
+h5, .h5
   font-size: 1.4rem
-  line-height: 100%
+  line-height: 130%
 
-h6
+h6, .h6
   font-size: 1.2rem
   line-height: 100%
 
@@ -107,6 +121,14 @@ h6
 
   &:hover
     background-color: $black
+
+.button--black
+  color: $white
+  background-color: $black
+  transition: 0.2s linear
+
+  &:hover
+    background-color: $pink
 
 .header,
 .main,
@@ -256,19 +278,27 @@ h6
   background-color: $pink
 /* Carousel end */
 
-html
-  font-size: 62.5%
+/* Breadcrumbs start */
+.breadcrumbs
+  padding: 2rem 1.5rem
 
-body
-  width: 100%
-  min-width: 39.3rem
-  margin: 0 auto
-  font-family: $font
-  font-weight: 400
-  font-size: $std-size
-  line-height: $std-size
-  color: $black
-  background-color: $white
+.breadcrumbs__menu
+  display: flex
+  gap: 0.5rem
+
+.breadcrumbs__menu__item
+  color: $grey-dark1
+  list-style-type: disc
+  margin-left: 2rem
+  font-size: 1.2rem
+  line-height: 130%
+
+.breadcrumbs__menu__item--active
+  color: $violet
+
+.breadcrumbs__menu__item__link
+
+/* Breadcrumbs end */
 
 /* Header start */
 .header__top__container
@@ -376,7 +406,7 @@ body
       height: 5rem
 /* Header end */
 
-/* Banner start */
+/* Main -- Banner start */
 .banner
   position: relative
   height: 45rem
@@ -467,9 +497,9 @@ body
 
 .banner__container__item__content__button
   display: inline-block
-/* Banner end */
+/* Main -- Banner end */
 
-/* Categories start */
+/* Main -- Categories start */
 .categories
   padding: 6rem 0
 
@@ -534,17 +564,17 @@ body
     font-size: 1.4rem
     line-height: 130%
     padding-bottom: 1.6rem
-/* Categories end */
+/* Main -- Categories end */
 
-/* Hero start */
+/* Main -- Hero start */
 .hero
   padding-bottom: 6rem
 
   @media screen and (max-width: $mobile)
     padding-bottom: 0
-/* Hero end */
+/* Main -- Hero end */
 
-/* Brands start */
+/* Main -- Brands start */
 .brands
   position: relative
   margin: 6rem auto
@@ -588,9 +618,9 @@ body
   height: 9rem
   width: auto
   max-width: unset
-/* Brands end */
+/* Main -- Brands end */
 
-/* Suggestions start */
+/* Main -- Suggestions start */
 .suggestions
   margin-bottom: 6rem
   
@@ -812,7 +842,7 @@ body
 
   &:hover
     background-image: url("../images/icons/heart-grey.svg")
-/* Suggestions end */
+/* Main -- Suggestions end */
 
 /* Sets start */  
 .sets
@@ -973,3 +1003,41 @@ body
     gap: 1rem
     justify-content: flex-start
 /* Footer end */
+
+/* Cart epmty start */
+.empty_cart
+  display: flex
+  flex-direction: column
+  gap: 6rem
+  align-items: center
+  padding: 6rem 1.5rem 10rem
+
+  @media screen and (max-width: $tablet)
+    padding: 2rem 1.5rem 4rem
+
+  @media screen and (max-width: $mobile)
+    padding: 4rem 1.5rem
+
+.empty_cart__heading
+  font-size: 4rem
+  line-height: 110%
+
+  @media screen and (max-width: $mobile)
+    font-size: 4rem 1.5rem
+    font-size: 2.8rem
+    line-height: 130%
+
+.empty_cart__image
+  width: 10.4rem
+  height: 11.6rem
+
+.empty_cart__button
+  padding: 1.2rem 4.55rem
+  font-size: 1.6rem
+  font-weight: 500
+  line-height: 130%
+  text-align: center
+
+  @media screen and (max-width: $mobile)
+    width: 100%
+/* Cart epmty end */
