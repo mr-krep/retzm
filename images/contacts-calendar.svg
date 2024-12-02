@@ -1,0 +1,6 @@
+  <svg id="contacts-calendar" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 2.83366H18.5V17.167C18.5 18.6398 17.3061 19.8337 15.8333 19.8337H4.16667C2.69391 19.8337 1.5 18.6398 1.5 17.167V2.83366ZM3.5 4.83366V17.167C3.5 17.5352 3.79848 17.8337 4.16667 17.8337H15.8333C16.2015 17.8337 16.5 17.5352 16.5 17.167V4.83366H3.5Z" fill="#FF197A"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3333 1.16699V6.50033H12.3333V1.16699H14.3333Z" fill="#FF197A"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.66667 1.16699V6.50033H5.66667V1.16699H7.66667Z" fill="#FF197A"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 8.50033L17 8.50032V10.5003L3 10.5003L3 8.50033Z" fill="#FF197A"/>
+  </svg>
