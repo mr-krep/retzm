@@ -168,6 +168,24 @@ h6, .h6
 .icon--add-to-cart-pink
   background-image: url("../images/icons/cart-pink.svg")
 
+.icon--address
+  background-image: url('../images/contacts-geo.svg')
+
+.icon--metro
+  background-image: url('../images/contacts-metro.svg')
+
+.icon--phone
+  background-image: url('../images/contacts-phone.svg')
+
+.icon--email
+  background-image: url('../images/contacts-email.svg')
+
+.icon--days
+  background-image: url('../images/contacts-calendar.svg')
+
+.icon--hours
+  background-image: url('../images/contacts-clock.svg')
+
 .link--grey
   color: $grey1
   transition: 0.2s linear
@@ -235,6 +253,17 @@ h6, .h6
 .flex_columns__item__value
   @media screen and (max-width: $mobile)
     width: 50%
+
+.circle_bg--black
+  display: inline-block
+  width: 2.2rem
+  height: 2.2rem
+  background-color: $black-light
+  color: $white
+  border-radius: 9rem
+  font-size: 1.4rem
+  font-weight: 500
+  text-align: center
 /* Common end */
   
 /* Carousel start */
@@ -305,6 +334,9 @@ h6, .h6
 /* Breadcrumbs start */
 .breadcrumbs
   padding: 2rem 1.5rem
+
+  @media screen and (max-width: $tablet)
+    padding: 1rem 1.5rem
 
 .breadcrumbs__menu
   display: flex
@@ -1169,6 +1201,7 @@ h6, .h6
 
 /* Text end */
 
+/* Реквизиты start */
 .account_details
   padding: 2rem 1.5rem 6rem
   margin: 0 auto
@@ -1207,3 +1240,128 @@ h6, .h6
       font-size: 1.6rem
       line-height: 130%
       text-align: center
+/* Реквизиты end */
+
+/* Contacts start */
+.contacts
+  padding-top: 2rem
+
+  @media screen and (max-width: $tablet)
+    padding-top: 1rem
+
+  h1
+    font-size: 4rem
+    line-height: 110%
+
+    @media screen and (max-width: $tablet)
+      font-size: 2.8rem
+      line-height: 130%
+
+.contacts__info
+  padding: 2rem 0 2rem
+  width: 100%
+  max-width: 100.5rem
+  display: grid
+  grid-auto-flow: column
+  grid-template-rows: 1fr 1fr
+  grid-template-columns: 2fr 1fr 1fr
+  row-gap: 1.2rem
+
+  @media screen and (max-width: $tablet)
+    display: block
+
+.contacts__info__item
+  font-size: 1.6rem
+  line-height: 130%
+  padding-left: 2.6rem
+  background-position: left
+  background-repeat: no-repeat
+  background-size: 2rem 2rem
+
+  @media screen and (max-width: $tablet)
+    display: block
+    margin-bottom: .5rem
+    font-size: 1.4rem
+    padding-left: 2.2rem
+    background-size: 1.6rem 1.6rem
+
+    &:nth-child(even)
+      margin-bottom: 2rem
+
+.contacts__info__map
+  width: 100%
+  height: 68.6rem
+  border-radius: .4rem
+  overflow: hidden
+
+  @media screen and (max-width: $tablet)
+    height: 47.7rem
+
+.route
+  padding-top: 6rem
+
+  @media screen and (max-width: $tablet)
+    padding-top: 4rem
+
+  h2
+    font-size: 2.8rem
+    line-height: 130%
+
+    @media screen and (max-width: $tablet)
+      font-size: 2.2rem
+
+.route__details
+  margin-top: 4rem
+  margin-bottom: 6rem
+  width: 100%
+  display: grid
+  grid-auto-flow: column dense
+  grid-template-columns: 3fr 2fr
+  column-gap: 1rem
+  row-gap: 2.5rem
+
+  @media screen and (max-width: $tablet)
+    margin-top: 2rem
+    margin-bottom: 2rem
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(4, auto)
+    row-gap: 2rem
+
+.route__details__map
+  position: relative
+  grid-row: span 3
+
+  @media screen and (max-width: $tablet)
+    grid-row: 1
+
+.route__details__map__image
+  position: absolute
+  top: 0
+  height: 100%
+  width: 100%
+  object-fit: cover
+  border-radius: .4rem
+
+  @media screen and (max-width: $tablet)
+    position: relative
+    height: unset
+    object-fit: unset
+
+.route__details__step
+  margin-left: 1rem
+
+  @media screen and (max-width: $tablet)
+    margin-left: 0
+    display: grid
+    grid-template: auto auto / 2.2rem auto
+    column-gap: 1rem
+    align-items: center
+
+.route__details__step__image
+  margin-top: 1rem
+  border-radius: .4rem
+  width: 100%
+
+  @media screen and (max-width: $tablet)
+    grid-column: span 2
+/* Contacts end */
