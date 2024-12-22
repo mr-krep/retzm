@@ -166,7 +166,8 @@ h6, .h6
   width: 100%
 
 .section
-  padding: 0 1.5rem
+  @media screen and (max-width: $desktop)
+    padding: 0 1.5rem
 
 .section_heading
   display: block
@@ -1626,3 +1627,36 @@ h6, .h6
 .about_gallery__image
   max-width: 100%
 /* About end */
+
+/* Catalogue start */
+.catalogue_heading
+  padding-bottom: 2rem
+
+.popular
+  display: flex
+  flex-wrap: wrap
+  gap: 1rem
+
+.popular__link
+  padding: 0.4rem 1.6rem 0.6rem
+  color: $black
+  background-color: #fff
+  border-radius: $radius
+  white-space: nowrap
+  font-size: 1.4rem
+  line-height: 110%
+  font-weight: 400
+
+  &:hover
+    color: $pink
+
+.tiles
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+  gap: 1rem
+  padding: 2rem
+
+.tiles__item__text
+
+
+/* Catalogue end*/
