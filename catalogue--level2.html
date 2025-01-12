@@ -144,6 +144,9 @@
         <a class="popular__link" href="#">Label</a>
       </section>
       <section class="catalogue section wrapper--global">
+        <div class="catalogue__filters_mobile">
+          <span class="catalogue__filters_mobile__link">Фильтры</span>
+        </div>
         <div class="catalogue__sorting">
           <span class="catalogue__sorting__active">Популярные</span>
           <ul class="catalogue__sorting__select">
@@ -160,6 +163,10 @@
         </div>
         <div class="catalogue__filters">
           <div class="catalogue__filters__container">
+            <div class="catalogue__filters__container__heading">
+              <span class="catalogue__filters__container__heading__text">Фильтры</span>
+              <span class="catalogue__filters__container__heading__close"></span>
+            </div>
             <div class="catalogue__filters__container__feature checkbox">
               <input class="catalogue__filters__container__feature--checkbox" type="checkbox" id="filter--available" /> 
               <label class="catalogue__filters__container__feature--label" for="filter--available">Наличие</label>
@@ -176,7 +183,7 @@
               <summary class="catalogue__filters__container__feature__heading">Цвет</summary>
               <ul class="catalogue__filters__container__feature__options">
                 <li class="catalogue__filters__container__feature__options__option checkbox">
-                  <input class="catalogue__filters__container__feature--checkbox" type="checkbox" id="filter--year--black" /> 
+                  <input class="catalogue__filters__container__feature--checkbox" type="checkbox" id="filter--color--black" /> 
                   <label class="catalogue__filters__container__feature--label" for="filter--color--black">черный</label>
                 </li>
                 <li class="catalogue__filters__container__feature__options__option checkbox">
@@ -377,16 +384,22 @@
                 </li>
               </ul>
             </details>
-            <span class="catalogue__filters__container__apply button button--pink">Показать</span>
-            <span class="catalogue__filters__container__clear button button--black">Сбросить</span>
+            <div class="catalogue__filters__container__buttons">
+              <span class="catalogue__filters__container__buttons__apply button button--pink">Показать</span>
+              <span class="catalogue__filters__container__buttons__clear button button--black">Сбросить</span>
+            </div>
           </div>
         </div>
         <div class="catalogue__products">
           <ul class="catalogue__products__list">
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-1">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/gamepad.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/gamepad.png" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-face.jpg" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-second.jpg" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -405,21 +418,13 @@
               <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__slider" id="product-slider-2">
+              <div class="catalogue__products__list__item__slider">
                 <a class="catalogue__products__list__item__slider__link" href="#">
-                  <div class="catalogue__products__list__item__slider__link__hover_areas">
-                    <span class="catalogue__products__list__item__slider__link__hover_areas__area" id="area1"></span>
-                    <span class="catalogue__products__list__item__slider__link__hover_areas__area" id="area2"></span>
-                  </div>
                   <div class="catalogue__products__list__item__slider__link__images">
-                    <img class="catalogue__products__list__item__slider__link__images__image" id="img1" src="./images/goods/good-face.jpg" />
-                    <img class="catalogue__products__list__item__slider__link__images__image" id="img2" src="./images/goods/good-second.jpg" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-face.jpg" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-second.jpg" />
                   </div>
                 </a>
-                <div class="catalogue__products__list__item__images__link__navcontainer">
-                  <span class="catalogue__products__list__item__images__link__navcontainer__dot catalogue__products__list__item__images__link__navcontainer__dot--active"></span>
-                  <span class="catalogue__products__list__item__images__link__navcontainer__dot"></span>
-                </div>
               </div>
               <div class="catalogue__products__list__item__text">
                 <a class="catalogue__products__list__item__text__title" href="#">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</a>
@@ -437,9 +442,11 @@
               <a class="catalogue__products__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-3">
-                <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/lego.png" />
+              <div class="catalogue__products__list__item__slider">
+                <a class="catalogue__products__list__item__slider__link" href="#">
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/lego.png" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -457,9 +464,12 @@
               <a class="catalogue__products__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-4">
-                <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/case.png" />
+              <div class="catalogue__products__list__item__slider">
+                <a class="catalogue__products__list__item__slider__link" href="#">
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/case.png" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-second.jpg" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -479,9 +489,11 @@
               <a class="catalogue__products__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-5">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/vinil.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/vinil.png" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -501,9 +513,11 @@
               <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-6">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/good-face.jpg" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/good-face.jpg" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -522,9 +536,11 @@
               <a class="catalogue__products__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-7">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/lego.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/lego.png" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -543,9 +559,11 @@
               <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-8">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/case.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/case.png" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -564,9 +582,11 @@
               <a class="catalogue__products__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-9">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/vinil.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/vinil.png" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -585,9 +605,11 @@
               <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-10">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/gamepad.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/gamepad.png" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -606,9 +628,11 @@
               <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-11">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/gamepad.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/gamepad.png" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -628,9 +652,11 @@
               <a class="catalogue__products__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-12">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/good-face.jpg" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/good-face.jpg" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -650,9 +676,11 @@
               <a class="catalogue__products__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-13">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/lego.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/lego.png" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -671,9 +699,11 @@
               <a class="catalogue__products__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-14">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/case.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/case.png" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -692,9 +722,11 @@
               <a class="catalogue__products__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-15">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/vinil.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/vinil.png" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -713,9 +745,11 @@
               <a class="catalogue__products__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-16">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/gamepad.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/gamepad.png" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -731,9 +765,11 @@
               <a class="catalogue__products__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-17">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/good-face.jpg" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/good-face.jpg" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -749,9 +785,11 @@
               <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-18">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/lego.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/lego.png" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -766,9 +804,13 @@
               <a class="catalogue__products__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-19">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/case.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/case.png" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-face.jpg" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-second.jpg" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -784,9 +826,13 @@
               <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-20">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/vinil.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/vinil.png" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-face.jpg" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-second.jpg" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -802,9 +848,13 @@
               <a class="catalogue__products__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-21">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/gamepad.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/gamepad.png" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-face.jpg" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-second.jpg" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -820,9 +870,13 @@
               <a class="catalogue__products__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-22">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/good-face.jpg" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/good-face.jpg" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-face.jpg" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-second.jpg" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -836,9 +890,13 @@
               <a class="catalogue__products__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-23">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/lego.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/lego.png" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-face.jpg" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-second.jpg" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">
@@ -852,9 +910,13 @@
               <a class="catalogue__products__list__item__add_to_favourites" href="#heart"></a>
             </li>
             <li class="catalogue__products__list__item">
-              <div class="catalogue__products__list__item__images product-slider" id="product-slider-24">
+              <div class="catalogue__products__list__item__images product-slider">
                 <a class="catalogue__products__list__item__images__link" href="#">
-                  <img class="catalogue__products__list__item__images__link__image" src="./images/goods/case.png" />
+                  <div class="catalogue__products__list__item__slider__link__images">
+                    <img class="catalogue__products__list__item__images__link__image" src="./images/goods/case.png" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-face.jpg" />
+                    <img class="catalogue__products__list__item__slider__link__images__image" src="./images/goods/good-second.jpg" />
+                  </div>
                 </a>
               </div>
               <div class="catalogue__products__list__item__text">

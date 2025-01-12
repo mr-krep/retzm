@@ -1730,14 +1730,30 @@ details
   margin-top: 2rem
   margin-bottom: 6rem
 
-  @media screen and (max-width: $desktop)
+  @media screen and (max-width: $desktop) and (min-width: $tablet+1)
     grid-template-columns: 19.1rem auto
 
   @media screen and (max-width: $tablet)
-    grid-template-columns: 1fr
-    grid-template-areas: "sorting" "products"
+    grid-template-columns: 1fr 1fr
+    grid-template-areas: "sorting filters_mobile" "products products"
     row-gap: 1.5rem
-    margin-bottom: 4rem
+
+.catalogue__filters_mobile
+  grid-area: filters_mobile
+  display: none
+  text-align: right
+
+  @media screen and (max-width: $tablet)
+    display: inline-block
+    
+.catalogue__filters_mobile__link
+  background-image: url(../images/icons/filters.svg)
+  background-repeat: no-repeat
+  background-position: left 50%
+  background-size: contain
+  padding-left: 1.8+.4rem
+  color: $pink
+  cursor: pointer
 
 .catalogue__sorting
   grid-area: sorting
@@ -1745,6 +1761,13 @@ details
 .catalogue__sorting__active
   color: $pink
   cursor: pointer
+
+  @media screen and (max-width: $tablet)
+    background-image: url(../images/icons/sorting.svg)
+    background-repeat: no-repeat
+    background-position: left 50%
+    background-size: contain
+    padding-left: 1.8+.4rem
 
 .catalogue__sorting__select
   position: relative
@@ -1759,6 +1782,17 @@ details
   box-shadow: 0.2rem 0.2rem 1.4rem 0 rgba(10, 10, 10, 0.1)
   border-radius: $radius
 
+  @media screen and (max-width: $tablet)
+    position: absolute
+    width: calc(100% - 2*1.4rem)
+
+
+.catalogue__sorting__select__item
+  width: 100%
+  
+  @media screen and (max-width: $tablet)
+    padding: 1rem 0
+
 .catalogue__sorting__select__item__link
   cursor: pointer
 
@@ -1770,6 +1804,17 @@ details
 
   @media screen and (max-width: $tablet)
     display: none
+    position: absolute
+    z-index: 5
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    margin: 0
+    padding: 0
+    box-shadow: 0.2rem 0.2rem 1.4rem 0 rgba(10, 10, 10, 0.1)
+    overscroll-behavior: contain
+    overflow-y: scroll
 
 .catalogue__filters__container
   background-color: #fff
@@ -1778,6 +1823,34 @@ details
   flex-direction: column
   gap: 2rem
   border-radius: $radius
+
+  @media screen and (max-width: $tablet)
+    width: 100%
+    height: 100%
+    border-radius: 0
+    overflow: scroll
+
+.catalogue__filters__container__heading
+  display: none
+
+  @media screen and (max-width: $tablet)
+    display: grid
+    grid-template-columns: 1fr 2rem
+    gap: 2rem
+    padding: 1.5rem 0
+
+.catalogue__filters__container__heading__text
+  font-size: 2.8rem
+  font-weight: 700
+  line-height: 130%
+
+.catalogue__filters__container__heading__close
+  width: 2rem
+  height: 100%
+  background-image: url('../images/icons/close.svg')
+  background-size: contain
+  background-position: right 50%
+  background-repeat: no-repeat
 
 .catalogue__filters__container__feature__fieldset
   display: grid
@@ -1808,16 +1881,28 @@ details
   max-height: 15rem
   scrollbar-color: $grey #fff
 
-.catalogue__filters__container__clear, .catalogue__filters__container__apply
+.catalogue__filters__container__buttons
+  display: flex
+  flex-direction: column
+  gap: .5rem
+  width: 100%
+
+.catalogue__filters__container__buttons__clear, .catalogue__filters__container__buttons__apply
   width: 100%
   text-align: center
+  padding: 2rem
+  font-size: 1.6rem
+  font-weight: 500
+  line-height: 130%
 
-.catalogue__filters__container__apply
+.catalogue__filters__container__buttons__apply
   display: none
+
+  @media screen and (max-width: $tablet)
+    display: block
 
 .catalogue__products
   grid-area: products
-
 
 .catalogue__products__list
   display: grid
@@ -1851,6 +1936,7 @@ details
   justify-content: space-between
   gap: 2rem
   min-width: 25.2rem
+  height: 100%
   background-color: #fff
   background-clip: content-box
   border-radius: $radius
@@ -1883,12 +1969,26 @@ details
   @media screen and (max-width: $tablet)
     padding: 1rem 1rem 0
 
-/* test */
-.catalogue__products__list__item__slider__link__images
+.hvr
+  width: 100%
+
+.hvr__sectors 
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  display: flex
+
+.hvr__sector
+  flex-grow: 1
+
+.catalogue__products__list__item__slider__link__images, .hvr__images
   width: 100%
   
 .catalogue__products__list__item__slider__link__images__image
   display: none
+  width: 100%
 
   &:first-child
     display: block
@@ -1898,45 +1998,28 @@ details
 .catalogue__products__list__item__slider__link
   position: relative
 
-#area2:hover + #img2, #area2:hover ~ #img2
-  display: block
-
-.catalogue__products__list__item__slider__link__hover_areas
-  position: absolute
-  bottom: 0
-  left: 0
-  right: 0
-  top: 0
-  display: flex
-  // z-index: 4
-
-.catalogue__products__list__item__slider__link__hover_areas__area
-  flex: 1 1 auto
-  height: 100%
-  background-color: rgba(0,0,0, 0.1)
-  border: 1px solid $pink
-    
-/* test */
 
 .catalogue__products__list__item__images__link__image
   max-width: unset
   width: 100%
 
-.catalogue__products__list__item__images__link__navcontainer
+.catalogue__products__list__item__images__link__navcontainer, .hvr__dots
   display: flex
   gap: .4rem
-  padding: 0 2.2rem
+  padding: 0
+  margin-top: 1rem
+  min-height: .6rem
 
   @media screen and (max-width: $tablet)
     padding: 1rem 1rem 0
 
-.catalogue__products__list__item__images__link__navcontainer__dot
+.catalogue__products__list__item__images__link__navcontainer__dot, .hvr__dot
   background-color: $grey
   width: .6rem
   height: .6rem
   cursor: pointer
 
-.catalogue__products__list__item__images__link__navcontainer__dot--active
+.catalogue__products__list__item__images__link__navcontainer__dot--active, .hvr__dot--active
   background-color: $pink
 
 .catalogue__products__list__item__text
