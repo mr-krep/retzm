@@ -1,15 +1,15 @@
-// var slider = tns({
-//   container: '#product-slider-2',
-//   // fixedWidth: 200,
-//   items: 1,
-//   loop: true,
-//   mouseDrag: true,
-//   nav: true,
-//   navAsThumbnails: true,
-//   navContainer: '#product-slider-2 > .catalogue__products__list__item__images__link__navcontainer',
-//   controls: false
-// });
-
 new HvrSlider('.catalogue__products__list__item__slider__link__images');
 
-// при открытии модального окна с фильтрами сделать для body — scrollbar-gutter: stable и overflow: hidden
+document.querySelector('.catalogue__filters_mobile__link').addEventListener('click', () => {
+  document.querySelector('.catalogue__filters').showModal()
+  document.body.style.overflowY = 'hidden'
+})
+
+document.querySelector('.catalogue__filters__container__heading__close').addEventListener('click', () => {
+  document.querySelector('.catalogue__filters').close()
+  document.body.style.overflowY = 'auto'
+})
+
+document.querySelector('.catalogue__sorting__active').addEventListener('click', () => {
+  document.querySelector('.catalogue__sorting__select').style.display = (document.querySelector('.catalogue__sorting__select').style.display == 'flex') ? 'none' : 'flex'
+})
