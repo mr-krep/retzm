@@ -1911,40 +1911,44 @@ dialog {
 
 /* line 1336, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .cart_contents__summary {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   margin-bottom: 3rem;
 }
 
-/* line 1342, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
-.cart_contents__summary__sticky {
+/* line 1339, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.cart_contents__summary__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* line 1344, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.cart_contents__summary--sticky {
   position: sticky;
   top: 1rem;
 }
 
-/* line 1346, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
-.cart_contents__summary__sticky__top {
+/* line 1348, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.cart_contents__summary__container__top {
   padding: 2rem;
   background-color: #F5F5F5;
   border-radius: 0.4rem;
 }
 
-/* line 1351, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
-.cart_contents__summary__sticky__top__heading, .cart_contents__summary__sticky__bottom__heading {
+/* line 1353, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.cart_contents__summary__container__top__heading, .cart_contents__summary__container__bottom__heading {
   display: inline-block;
   font-size: 1.6rem;
   line-height: 130%;
   font-weight: 700;
 }
 
-/* line 1357, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
-.cart_contents__summary__sticky__top__heading {
+/* line 1359, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.cart_contents__summary__container__top__heading {
   margin-bottom: 1rem;
 }
 
-/* line 1360, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
-.cart_contents__summary__sticky__top__detalization {
+/* line 1362, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.cart_contents__summary__container__top__detalization {
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-size: 1.2rem;
@@ -1952,30 +1956,30 @@ dialog {
   font-weight: 200;
 }
 
-/* line 1367, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
-.cart_contents__summary__sticky__top__detalization__name {
+/* line 1369, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.cart_contents__summary__container__top__detalization__name {
   justify-self: left;
 }
 
-/* line 1370, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
-.cart_contents__summary__sticky__top__detalization__summ {
+/* line 1372, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.cart_contents__summary__container__top__detalization__summ {
   justify-self: right;
 }
 
-/* line 1373, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
-.cart_contents__summary__sticky__bottom {
+/* line 1375, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.cart_contents__summary__container__bottom {
   padding: 2rem;
   background-color: #fff;
   border-radius: 0.4rem;
 }
 
-/* line 1378, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
-.cart_contents__summary__sticky__bottom__heading {
+/* line 1380, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.cart_contents__summary__container__bottom__heading {
   margin-bottom: 2rem;
 }
 
-/* line 1381, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
-.cart_contents__summary__sticky__bottom__button {
+/* line 1383, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.cart_contents__summary__container__bottom__button {
   width: 100%;
   text-align: center;
   font-size: 1.6rem;
@@ -1985,7 +1989,7 @@ dialog {
 
 /* Cart end */
 /* Cart epmty start */
-/* line 1390, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1392, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .empty_cart {
   display: flex;
   flex-direction: column;
@@ -1995,27 +1999,27 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1390, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1392, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .empty_cart {
     padding: 2rem 1.5rem 4rem;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1390, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1392, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .empty_cart {
     padding: 4rem 1.5rem;
   }
 }
 
-/* line 1403, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1405, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .empty_cart__heading {
   font-size: 4rem;
   line-height: 110%;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1403, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1405, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .empty_cart__heading {
     font-size: 4rem 1.5rem;
     font-size: 2.8rem;
@@ -2023,13 +2027,13 @@ dialog {
   }
 }
 
-/* line 1412, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1414, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .empty_cart__image {
   width: 10.4rem;
   height: 11.6rem;
 }
 
-/* line 1416, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1418, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .empty_cart__button {
   padding: 1.2rem 4.55rem;
   font-size: 1.6rem;
@@ -2039,101 +2043,329 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1416, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1418, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .empty_cart__button {
     width: 100%;
   }
 }
 
 /* Cart epmty end */
+/* Order start */
+/* line 1430, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order {
+  display: grid;
+  grid-template-columns: auto 44rem;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+@media screen and (max-width: 1024px) {
+  /* line 1430, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  .order {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* line 1439, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__subheading {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+/* line 1446, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__city__select {
+  color: #FF197A;
+  padding-right: 2rem;
+  background-image: url("../images/icons/down-pink.svg");
+  background-repeat: no-repeat;
+  background-position: right 70%;
+  cursor: pointer;
+}
+
+/* line 1454, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__delivery {
+  display: flex;
+  gap: 1rem;
+}
+
+/* line 1458, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__delivery__option {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.6rem;
+  width: 50%;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+/* line 1468, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__options__option__heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+/* line 1473, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__options__option__info {
+  font-size: 1.4rem;
+  font-weight: 200;
+  line-height: 130%;
+}
+
+/* line 1478, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__options__option__select {
+  font-size: 1.3rem;
+  font-weight: 200;
+  line-height: 130%;
+  color: #FF197A;
+}
+
+/* line 1484, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__payment {
+  display: flex;
+  gap: 1rem;
+}
+
+/* line 1488, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__payment__option {
+  background-color: #fff;
+  color: #0A0A0A;
+}
+
+/* line 1492, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__payment__option--active {
+  background-color: #0A0A0A;
+  color: #fff;
+}
+
+/* line 1496, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__promo {
+  display: flex;
+  gap: 1rem;
+  margin: 4rem 0;
+}
+
+/* line 1501, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__promo__area {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 28.2rem;
+  font-size: 1.4rem;
+  font-weight: 200;
+  line-height: 130%;
+  color: #0A0A0A;
+  background-color: #F5F5F5;
+  border-radius: 0.4rem;
+}
+
+/* line 1513, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__promo__area__heading {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* line 1518, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__promo__area input {
+  padding: 1.4rem;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  background-image: url("../images/icons/down-purple.svg");
+  background-size: 1.2rem;
+  background-repeat: no-repeat;
+  background-position: right 1.7rem top 50%;
+}
+
+/* line 1527, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__byuer {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: "1fr 1fr";
+  grid-auto-flow: column;
+  max-width: calc(60rem + 1rem);
+}
+
+/* line 1535, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__byuer__textarea {
+  grid-row: span 3;
+}
+
+/* line 1538, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__left__byuer__input, .order__left__byuer__textarea {
+  padding: 1.4rem;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  width: 30rem;
+}
+
+/* line 1544, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__right__products {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  padding: 0 2rem;
+}
+
+/* line 1552, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__right__products__item {
+  display: grid;
+  grid-template-columns: 10rem auto auto;
+  gap: 1rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #F5F5F5;
+}
+
+/* line 1559, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__right__products__item__image {
+  width: 10rem;
+  align-self: center;
+}
+
+/* line 1563, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__right__products__item__name {
+  font-size: 1.4rem;
+  font-weight: 200;
+  line-height: 130%;
+  color: #0A0A0A;
+  align-self: center;
+}
+
+/* line 1570, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__right__products__item__price {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  align-items: end;
+  justify-content: center;
+}
+
+/* line 1577, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__right__products__item__price__total {
+  font-size: 1.6rem;
+  font-weight: 200;
+  line-height: 130%;
+  color: #0A0A0A;
+  white-space: nowrap;
+}
+
+/* line 1584, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.order__right__products__item__price__single {
+  font-size: 1.2rem;
+  font-weight: 200;
+  line-height: 130%;
+  color: #8A8A8A;
+  white-space: nowrap;
+}
+
+/* line 1591, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.cart_contents__summary__container__terms {
+  color: #8A8A8A;
+  font-size: 1.4rem;
+}
+
+/* line 1595, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.cart_contents__summary__container__terms a {
+  color: #FF197A;
+}
+
+/* Order end */
 /* Text start */
-/* line 1428, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1601, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .text, .text--center {
   padding: 2rem 1.5rem 6rem;
   font-size: 1.6rem;
   line-height: 130%;
 }
 
-/* line 1433, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1606, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .text *, .text--center * {
   max-width: 70rem;
 }
 
-/* line 1436, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1609, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .text h1, .text--center h1 {
   font-size: 4rem;
   line-height: 110%;
   padding-bottom: 1.6rem;
 }
 
-/* line 1441, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1614, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .text h2, .text--center h2 {
   font-size: 2.8rem;
   line-height: 130%;
   padding-bottom: 1.4rem;
 }
 
-/* line 1446, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1619, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .text h3, .text--center h3 {
   font-size: 1.6rem;
   line-height: 130%;
   padding-bottom: 1.2rem;
 }
 
-/* line 1451, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1624, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .text h4, .text--center h4 {
   font-size: 1.4rem;
   line-height: 130%;
   padding-bottom: 1rem;
 }
 
-/* line 1456, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1629, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .text h5, .text--center h5 {
   font-size: 1.2rem;
   line-height: 100%;
   padding-bottom: .8rem;
 }
 
-/* line 1461, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1634, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .text h6, .text--center h6 {
   font-size: 1rem;
   line-height: 100%;
   padding-bottom: .6rem;
 }
 
-/* line 1466, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1639, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .text p, .text--center p {
   padding-bottom: 1rem;
 }
 
-/* line 1469, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1642, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .text a, .text--center a {
   color: #FF197A;
   text-decoration: underline;
   cursor: pointer;
 }
 
-/* line 1474, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1647, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .text a:hover, .text--center a:hover {
   text-decoration: none;
 }
 
-/* line 1477, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1650, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .text ol, .text ul, .text--center ol, .text--center ul {
   padding: 0 0 2rem 3rem;
 }
 
-/* line 1480, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1653, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .text ol li, .text ul li, .text--center ol li, .text--center ul li {
   padding-bottom: 0.5rem;
 }
 
-/* line 1484, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1657, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .text ul li, .text--center ul li {
   list-style-type: disc;
 }
 
-/* line 1487, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1660, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .text blockquote, .text--center blockquote {
   padding: 1.5rem;
   background-color: #DBDBDB;
@@ -2141,7 +2373,7 @@ dialog {
   border-radius: 0.4rem;
 }
 
-/* line 1493, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1666, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .text--center {
   max-width: 80rem;
   margin: 0 auto;
@@ -2149,7 +2381,7 @@ dialog {
 
 /* Text end */
 /* Реквизиты start */
-/* line 1499, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1672, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .account_details {
   padding: 2rem 1.5rem 6rem;
   margin: 0 auto;
@@ -2159,38 +2391,38 @@ dialog {
   line-height: 130%;
 }
 
-/* line 1507, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1680, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .account_details h1 {
   padding-bottom: 1.6rem;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1507, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1680, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .account_details h1 {
     padding-bottom: 4rem;
   }
 }
 
-/* line 1513, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1686, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .account_details h2 {
   padding-bottom: 1.2rem;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1513, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1686, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .account_details h2 {
     padding-bottom: 2rem;
   }
 }
 
-/* line 1519, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1692, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .account_details .button {
   margin-top: 4rem;
   display: inline-block;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1519, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1692, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .account_details .button {
     width: 100%;
     padding: 2rem;
@@ -2202,19 +2434,19 @@ dialog {
 
 /* Реквизиты end */
 /* Contacts&Pickup start */
-/* line 1532, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1705, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .contacts {
   padding-top: 2rem;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1532, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1705, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .contacts {
     padding-top: 1rem;
   }
 }
 
-/* line 1538, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1711, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .contacts__conditions {
   margin: 4rem 0;
   padding: 1.4rem 2rem;
@@ -2226,25 +2458,25 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1538, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1711, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .contacts__conditions {
     margin: 2rem 0;
   }
 }
 
-/* line 1550, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1723, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .contacts__conditions__text {
   display: block;
   font-weight: 400;
 }
 
-/* line 1554, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1727, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .contacts__conditions__accent {
   display: block;
   font-weight: 700;
 }
 
-/* line 1558, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1731, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .contacts__info {
   padding: 2rem 0 2rem;
   width: 100%;
@@ -2257,13 +2489,13 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1558, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1731, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .contacts__info {
     display: block;
   }
 }
 
-/* line 1571, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1744, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .contacts__info__item {
   font-size: 1.6rem;
   line-height: 130%;
@@ -2274,7 +2506,7 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1571, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1744, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .contacts__info__item {
     display: block;
     margin-bottom: .5rem;
@@ -2282,13 +2514,13 @@ dialog {
     padding-left: 2.2rem;
     background-size: 1.6rem 1.6rem;
   }
-  /* line 1586, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1759, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .contacts__info__item:nth-child(even) {
     margin-bottom: 2rem;
   }
 }
 
-/* line 1589, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1762, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .contacts__info__map {
   width: 100%;
   height: 68.6rem;
@@ -2297,27 +2529,27 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1589, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1762, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .contacts__info__map {
     height: 47.7rem;
   }
 }
 
-/* line 1598, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1771, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .route {
   margin-top: 6rem;
   margin-bottom: 6rem;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1598, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1771, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .route {
     margin-top: 4rem;
     margin-bottom: 4rem;
   }
 }
 
-/* line 1606, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1779, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .route__details {
   margin-top: 4rem;
   width: 100%;
@@ -2329,7 +2561,7 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1606, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1779, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .route__details {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -2339,20 +2571,20 @@ dialog {
   }
 }
 
-/* line 1622, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1795, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .route__details__map {
   position: relative;
   grid-row: span 3;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1622, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1795, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .route__details__map {
     grid-row: 1;
   }
 }
 
-/* line 1629, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1802, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .route__details__map__image {
   position: absolute;
   top: 0;
@@ -2363,7 +2595,7 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1629, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1802, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .route__details__map__image {
     position: relative;
     height: unset;
@@ -2371,13 +2603,13 @@ dialog {
   }
 }
 
-/* line 1642, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1815, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .route__details__step {
   margin-left: 1rem;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1642, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1815, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .route__details__step {
     margin-left: 0;
     display: grid;
@@ -2387,7 +2619,7 @@ dialog {
   }
 }
 
-/* line 1652, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1825, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .route__details__step__image {
   margin-top: 1rem;
   border-radius: 0.4rem;
@@ -2395,13 +2627,13 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1652, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1825, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .route__details__step__image {
     grid-column: span 2;
   }
 }
 
-/* line 1660, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1833, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .delivery_teaser, .pickup_teaser {
   margin-bottom: 4rem;
   display: flex;
@@ -2410,13 +2642,13 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1660, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1833, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .delivery_teaser, .pickup_teaser {
     flex-direction: column;
   }
 }
 
-/* line 1669, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1842, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .delivery_teaser__banner, .pickup_teaser__banner {
   padding: 11.25rem 4rem;
   display: flex;
@@ -2430,7 +2662,7 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1669, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1842, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .delivery_teaser__banner, .pickup_teaser__banner {
     padding: 2rem;
     height: 31.4rem;
@@ -2439,19 +2671,19 @@ dialog {
   }
 }
 
-/* line 1686, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1859, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .delivery_teaser__banner {
   background-image: url("../images/delivery/delivery_bg.svg");
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1686, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1859, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .delivery_teaser__banner {
     background-image: url("../images/delivery/delivery_bg-mobile.svg");
   }
 }
 
-/* line 1692, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1865, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .delivery_teaser__banner__heading, .pickup_teaser__banner__heading {
   display: inline-block;
   font-size: 4rem;
@@ -2461,24 +2693,24 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1692, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1865, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .delivery_teaser__banner__heading, .pickup_teaser__banner__heading {
     font-size: 2.8rem;
     line-height: 130%;
   }
 }
 
-/* line 1703, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1876, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .delivery_teaser__banner__heading {
   max-width: 45rem;
 }
 
-/* line 1706, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1879, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .pickup_teaser__banner__heading {
   max-width: 59rem;
 }
 
-/* line 1709, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1882, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .delivery_teaser__courier, .pickup_teaser__packing {
   max-width: 39.8rem;
   border-radius: 0.4rem;
@@ -2486,7 +2718,7 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1709, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1882, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .delivery_teaser__courier, .pickup_teaser__packing {
     max-width: 100%;
     height: 41rem;
@@ -2494,13 +2726,13 @@ dialog {
   }
 }
 
-/* line 1719, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1892, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .pickup_teaser__banner {
   background-image: url("../images/delivery/pickup_bg.svg");
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1719, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1892, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .pickup_teaser__banner {
     background-image: url("../images/delivery/pickup_bg-mobile.svg");
   }
@@ -2508,27 +2740,27 @@ dialog {
 
 /* Contacts&Pickup end */
 /* Guarantee start */
-/* line 1727, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1900, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .guarantee {
   margin-top: 6rem;
   margin-bottom: 6rem;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1727, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1900, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .guarantee {
     margin-top: 1rem;
     margin-bottom: 4rem;
   }
 }
 
-/* line 1735, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1908, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .guarantee__container {
   display: flex !important;
   gap: 1rem;
 }
 
-/* line 1739, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1912, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .guarantee__container__tile {
   padding: 2rem;
   text-align: center;
@@ -2536,14 +2768,14 @@ dialog {
   border-radius: 0.4rem;
 }
 
-/* line 1745, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1918, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .guarantee__container__tile__image {
   display: block;
   height: 14.6rem;
   margin: 0 auto;
 }
 
-/* line 1750, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1923, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .guarantee__container__tile__heading {
   display: block;
   margin-top: 1rem;
@@ -2552,7 +2784,7 @@ dialog {
   line-height: 2.6rem;
 }
 
-/* line 1757, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1930, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .guarantee__container__tile__text {
   display: block;
   font-size: 1.6rem;
@@ -2562,18 +2794,18 @@ dialog {
 
 /* Guarantee end */
 /* About start */
-/* line 1765, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1938, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_heading {
   margin-bottom: 6rem;
 }
 
-/* line 1768, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1941, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_utp {
   margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1768, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1941, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .about_utp {
     margin-top: 1rem;
     margin-bottom: 4rem;
@@ -2581,13 +2813,13 @@ dialog {
   }
 }
 
-/* line 1776, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1949, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_utp__container {
   display: flex !important;
   gap: 1rem;
 }
 
-/* line 1780, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1953, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_utp__container__tile {
   padding: 2rem;
   text-align: center;
@@ -2595,14 +2827,14 @@ dialog {
   border-radius: 0.4rem;
 }
 
-/* line 1786, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1959, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_utp__container__tile__image {
   display: block;
   height: 14.6rem;
   margin: 0 auto;
 }
 
-/* line 1791, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1964, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_utp__container__tile__heading {
   display: block;
   margin-top: 1rem;
@@ -2611,7 +2843,7 @@ dialog {
   line-height: 2.6rem;
 }
 
-/* line 1798, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1971, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_utp__container__tile__text {
   display: block;
   font-size: 1.6rem;
@@ -2619,7 +2851,7 @@ dialog {
   line-height: 2.1rem;
 }
 
-/* line 1804, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1977, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_hero {
   padding-top: 2rem;
   padding-bottom: 6rem;
@@ -2627,20 +2859,20 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1804, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1977, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .about_hero {
     padding-bottom: 4rem;
   }
 }
 
-/* line 1812, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1985, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_hero__image {
   width: 65.9rem;
   height: 46rem;
   max-width: 100%;
 }
 
-/* line 1817, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 1990, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_promo {
   margin-bottom: 1rem;
   display: grid;
@@ -2649,7 +2881,7 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1817, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 1990, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .about_promo {
     display: flex;
     flex-direction: column-reverse;
@@ -2658,7 +2890,7 @@ dialog {
   }
 }
 
-/* line 1829, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2002, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_promo__image {
   border-radius: 0.4rem;
   overflow: hidden;
@@ -2669,36 +2901,36 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1829, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2002, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .about_promo__image {
     height: 23rem;
   }
 }
 
-/* line 1840, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2013, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_promo__message {
   padding: 4rem 2rem;
 }
 
-/* line 1843, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2016, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_promo__message p {
   margin-bottom: 1rem;
 }
 
-/* line 1846, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2019, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_promo__message__heading {
   margin-bottom: 2rem;
   display: inline-block;
 }
 
-/* line 1850, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2023, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_promo__message__button {
   margin-top: 2rem;
   text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1850, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2023, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .about_promo__message__button {
     width: 100%;
     padding: 2rem 0;
@@ -2708,7 +2940,7 @@ dialog {
   }
 }
 
-/* line 1861, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2034, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_gallery {
   margin-bottom: 7rem;
   display: grid;
@@ -2717,39 +2949,39 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1861, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2034, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .about_gallery {
     grid-template-columns: 1fr;
   }
 }
 
-/* line 1870, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2043, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .about_gallery__image {
   max-width: 100%;
 }
 
 /* About end */
 /* Catalogue start */
-/* line 1875, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2048, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue_heading {
   padding-bottom: 2rem;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1875, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2048, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue_heading {
     padding-top: 1rem;
   }
 }
 
-/* line 1881, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2054, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .popular {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-/* line 1886, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2059, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .popular__link {
   padding: 0.4rem 1.6rem 0.6rem;
   color: #0A0A0A;
@@ -2761,12 +2993,12 @@ dialog {
   font-weight: 400;
 }
 
-/* line 1896, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2069, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .popular__link:hover {
   color: #FF197A;
 }
 
-/* line 1899, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2072, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .tiles {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -2774,7 +3006,7 @@ dialog {
   padding: 2rem;
 }
 
-/* line 1907, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2080, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue {
   display: grid;
   column-gap: .8rem;
@@ -2787,14 +3019,14 @@ dialog {
 }
 
 @media screen and (max-width: 1350px) and (min-width: 1025px) {
-  /* line 1907, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2080, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue {
     grid-template-columns: 19.1rem auto;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1907, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2080, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "sorting filters_mobile" "products products";
@@ -2802,7 +3034,7 @@ dialog {
   }
 }
 
-/* line 1925, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2098, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__filters_mobile {
   grid-area: filters_mobile;
   display: none;
@@ -2810,13 +3042,13 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1925, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2098, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__filters_mobile {
     display: inline-block;
   }
 }
 
-/* line 1933, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2106, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__filters_mobile__link {
   background-image: url(../images/icons/filters.svg);
   background-repeat: no-repeat;
@@ -2827,19 +3059,19 @@ dialog {
   cursor: pointer;
 }
 
-/* line 1942, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2115, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__sorting {
   grid-area: sorting;
 }
 
-/* line 1945, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2118, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__sorting__active {
   color: #FF197A;
   cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1945, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2118, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__sorting__active {
     background-image: url(../images/icons/sorting.svg);
     background-repeat: no-repeat;
@@ -2849,7 +3081,7 @@ dialog {
   }
 }
 
-/* line 1956, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2129, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__sorting__select {
   position: relative;
   z-index: 10;
@@ -2865,7 +3097,7 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1956, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2129, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__sorting__select {
     position: absolute;
     width: calc(100% - 2*1.4rem);
@@ -2873,35 +3105,35 @@ dialog {
   }
 }
 
-/* line 1975, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2148, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__sorting__select__item {
   width: 100%;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1975, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2148, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__sorting__select__item {
     padding: .5rem 0;
   }
 }
 
-/* line 1981, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2154, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__sorting__select__item__link {
   cursor: pointer;
 }
 
-/* line 1984, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2157, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__sorting__select__item__link:hover {
   color: #FF197A;
 }
 
-/* line 1987, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2160, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__filters {
   grid-area: filters;
 }
 
 @media screen and (min-width: 1025px) {
-  /* line 1987, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2160, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__filters {
     display: block;
     position: relative;
@@ -2909,7 +3141,7 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 1987, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2160, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__filters {
     position: fixed;
     z-index: 5;
@@ -2925,7 +3157,7 @@ dialog {
   }
 }
 
-/* line 2007, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2180, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__filters__container {
   background-color: #fff;
   padding: 2rem;
@@ -2936,7 +3168,7 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 2007, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2180, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__filters__container {
     width: 100%;
     height: 100%;
@@ -2945,13 +3177,13 @@ dialog {
   }
 }
 
-/* line 2021, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2194, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__filters__container__heading {
   display: none;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 2021, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2194, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__filters__container__heading {
     display: grid;
     grid-template-columns: 1fr 2rem;
@@ -2960,14 +3192,14 @@ dialog {
   }
 }
 
-/* line 2030, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2203, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__filters__container__heading__text {
   font-size: 2.8rem;
   font-weight: 700;
   line-height: 130%;
 }
 
-/* line 2035, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2208, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__filters__container__heading__close {
   width: 2rem;
   height: 100%;
@@ -2977,7 +3209,7 @@ dialog {
   background-repeat: no-repeat;
 }
 
-/* line 2043, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2216, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__filters__container__feature__fieldset {
   display: grid;
   gap: .8rem;
@@ -2985,7 +3217,7 @@ dialog {
   margin-top: 1.5rem;
 }
 
-/* line 2049, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2222, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__filters__container__feature__fieldset input {
   width: 100%;
   padding: .6rem 1rem;
@@ -2994,18 +3226,18 @@ dialog {
   font-size: 1.2rem;
 }
 
-/* line 2056, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2229, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__filters__container__feature__heading {
   padding: 0;
   font-weight: 500;
 }
 
-/* line 2060, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2233, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__filters__container__feature__heading:after {
   color: #0A0A0A;
 }
 
-/* line 2063, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2236, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__filters__container__feature__options {
   display: flex;
   flex-direction: column;
@@ -3016,19 +3248,19 @@ dialog {
   scrollbar-color: #B6B6B6 #fff;
 }
 
-/* line 2072, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2245, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__filters__container__feature__heading, .catalogue__filters__container__feature--label {
   font-size: 1.6rem;
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1350px) {
-  /* line 2072, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2245, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__filters__container__feature__heading, .catalogue__filters__container__feature--label {
     font-size: 1.4rem;
   }
 }
 
-/* line 2078, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2251, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__filters__container__buttons {
   display: flex;
   flex-direction: column;
@@ -3036,7 +3268,7 @@ dialog {
   width: 100%;
 }
 
-/* line 2085, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2258, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__filters__container__buttons__clear, .catalogue__filters__container__buttons__apply {
   width: 100%;
   text-align: center;
@@ -3047,37 +3279,37 @@ dialog {
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1350px) {
-  /* line 2085, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2258, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__filters__container__buttons__clear, .catalogue__filters__container__buttons__apply {
     font-size: 1.4rem;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 2085, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2258, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__filters__container__buttons__clear, .catalogue__filters__container__buttons__apply {
     padding: 2rem;
   }
 }
 
-/* line 2099, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2272, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__filters__container__buttons__apply {
   display: none;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 2099, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2272, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__filters__container__buttons__apply {
     display: block;
   }
 }
 
-/* line 2105, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2278, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products {
   grid-area: products;
 }
 
-/* line 2108, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2281, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -3090,14 +3322,14 @@ dialog {
 }
 
 @media screen and (max-width: 1350px) {
-  /* line 2108, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2281, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__products__list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 2108, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2281, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__products__list {
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
@@ -3106,13 +3338,13 @@ dialog {
   }
 }
 
-/* line 2127, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2300, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
 
-/* line 2131, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2304, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item {
   position: relative;
   padding: 0;
@@ -3129,14 +3361,14 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 2131, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2304, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__products__list__item {
     min-width: 17.6rem;
     gap: 1rem;
   }
 }
 
-/* line 2149, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2322, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__images, .catalogue__products__list__item__slider {
   display: flex;
   flex-direction: column;
@@ -3149,13 +3381,13 @@ dialog {
   scrollbar-width: none;
 }
 
-/* line 2160, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2333, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__images::-webkit-scrollbar, .catalogue__products__list__item__slider::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
 
-/* line 2164, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2337, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__images__link, .catalogue__products__list__item__slider__link {
   padding: 2.2rem 2.2rem 0;
   display: flex;
@@ -3164,18 +3396,18 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 2164, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2337, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__products__list__item__images__link, .catalogue__products__list__item__slider__link {
     padding: 1rem 1rem 0;
   }
 }
 
-/* line 2173, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2346, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .hvr {
   width: 100%;
 }
 
-/* line 2176, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2349, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .hvr__sectors {
   position: absolute;
   top: 0;
@@ -3185,41 +3417,41 @@ dialog {
   display: flex;
 }
 
-/* line 2184, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2357, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .hvr__sector {
   flex-grow: 1;
 }
 
-/* line 2187, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2360, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__slider__link__images, .hvr__images {
   width: 100%;
 }
 
-/* line 2190, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2363, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__slider__link__images__image {
   display: none;
   width: 100%;
 }
 
-/* line 2194, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2367, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__slider__link__images__image:first-child {
   display: block;
   max-width: unset;
   width: 100%;
 }
 
-/* line 2199, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2372, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__slider__link {
   position: relative;
 }
 
-/* line 2203, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2376, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__images__link__image {
   max-width: unset;
   width: 100%;
 }
 
-/* line 2207, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2380, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__images__link__navcontainer, .hvr__dots {
   display: flex;
   gap: .4rem;
@@ -3229,13 +3461,13 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 2207, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2380, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__products__list__item__images__link__navcontainer, .hvr__dots {
     padding: 1rem 1rem 0;
   }
 }
 
-/* line 2217, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2390, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__images__link__navcontainer__dot, .hvr__dot {
   background-color: #B6B6B6;
   width: .6rem;
@@ -3243,12 +3475,12 @@ dialog {
   cursor: pointer;
 }
 
-/* line 2223, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2396, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__images__link__navcontainer__dot--active, .hvr__dot--active {
   background-color: #FF197A;
 }
 
-/* line 2226, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2399, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__text {
   padding: 0 2.2rem;
   display: flex;
@@ -3260,13 +3492,13 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 2226, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2399, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__products__list__item__text {
     padding: 0 1rem;
   }
 }
 
-/* line 2238, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2411, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__text__title {
   font-size: 1.4rem;
   font-weight: 500;
@@ -3275,19 +3507,19 @@ dialog {
   transition: 0.2s linear;
 }
 
-/* line 2245, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2418, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__text__title:hover {
   color: #FF197A;
 }
 
-/* line 2248, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2421, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__text__info {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-/* line 2253, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2426, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__text__info__prices {
   display: flex;
   gap: 0.4rem;
@@ -3295,14 +3527,14 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 2253, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2426, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__products__list__item__text__info__prices {
     align-items: flex-start;
     flex-direction: column;
   }
 }
 
-/* line 2262, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2435, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__text__info__prices__price {
   font-size: 1.6rem;
   line-height: 130%;
@@ -3310,7 +3542,7 @@ dialog {
   color: #0A0A0A;
 }
 
-/* line 2268, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2441, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__text__info__prices__oldprice {
   font-size: 1.2rem;
   line-height: 130%;
@@ -3319,7 +3551,7 @@ dialog {
   text-decoration: line-through;
 }
 
-/* line 2275, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2448, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__text__info__label {
   padding: 0.3rem 0.8rem;
   background-color: #F5F5F5;
@@ -3330,7 +3562,7 @@ dialog {
   font-weight: 400;
 }
 
-/* line 2284, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2457, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__add_to_cart {
   display: flex;
   justify-content: center;
@@ -3344,22 +3576,22 @@ dialog {
   transition: 0.2s linear;
 }
 
-/* line 2296, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2469, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__add_to_cart:hover {
   background-color: #FF197A;
 }
 
-/* line 2299, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2472, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__add_to_cart:hover .catalogue__products__list__item__add_to_cart__text {
   color: #FAFAFA;
 }
 
-/* line 2302, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2475, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__add_to_cart:hover .icon--add-to-cart-pink {
   background-image: url("../images/icons/cart-white.svg");
 }
 
-/* line 2305, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2478, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__add_to_cart__text {
   color: #FF197A;
   font-size: 1.6rem;
@@ -3368,7 +3600,7 @@ dialog {
   transition: 0.2s linear;
 }
 
-/* line 2312, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2485, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__add_to_cart__icon {
   display: inline-block;
   width: 1.6rem;
@@ -3378,7 +3610,7 @@ dialog {
   background-size: 1.6rem 1.6rem;
 }
 
-/* line 2320, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2493, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__not_available {
   display: flex;
   justify-content: center;
@@ -3397,7 +3629,7 @@ dialog {
   transition: 0.2s linear;
 }
 
-/* line 2337, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2510, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__add_to_favourites {
   position: absolute;
   display: block;
@@ -3413,12 +3645,12 @@ dialog {
   transition: 0.2s linear;
 }
 
-/* line 2351, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2524, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__add_to_favourites:hover {
   background-image: url("../images/icons/heart-pink.svg");
 }
 
-/* line 2354, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2527, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__add_to_favourites--added {
   position: absolute;
   display: block;
@@ -3434,12 +3666,12 @@ dialog {
   transition: 0.2s linear;
 }
 
-/* line 2368, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2541, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__list__item__add_to_favourites--added:hover {
   background-image: url("../images/icons/heart-grey.svg");
 }
 
-/* line 2371, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2544, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__navigation {
   display: flex;
   flex-direction: column;
@@ -3447,7 +3679,7 @@ dialog {
   margin-top: 1.2rem;
 }
 
-/* line 2377, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2550, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__navigation__more {
   display: block;
   width: 100%;
@@ -3455,42 +3687,42 @@ dialog {
   line-height: 130%;
 }
 
-/* line 2383, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2556, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__navigation__pagination {
   display: flex;
   gap: 1.6rem;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 2383, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2556, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__products__navigation__pagination {
     justify-content: space-between;
   }
 }
 
-/* line 2390, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2563, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__navigation__pagination__item {
   display: inline-block;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 2390, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2563, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__products__navigation__pagination__item {
     display: none;
   }
-  /* line 2396, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2569, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__products__navigation__pagination__item:nth-child(-1n+4), .catalogue__products__navigation__pagination__item:last-child, .catalogue__products__navigation__pagination__item:nth-last-child(2) {
     display: block;
   }
 }
 
-/* line 2399, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2572, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__navigation__pagination__item__link, .catalogue__products__navigation__pagination__item__hidden_pages {
   display: inline-block;
   padding: 1rem 1.8rem;
 }
 
-/* line 2403, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2576, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__navigation__pagination__item__link {
   font-size: 1.4rem;
   line-height: 130%;
@@ -3498,13 +3730,13 @@ dialog {
   font-weight: 700;
 }
 
-/* line 2409, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2582, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__navigation__pagination__item__link:hover {
   background-color: #FF197A;
   color: #FAFAFA;
 }
 
-/* line 2413, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2586, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__navigation__pagination__item__link--arrow_right {
   position: relative;
   display: inline-block;
@@ -3515,12 +3747,12 @@ dialog {
   background-repeat: no-repeat;
 }
 
-/* line 2422, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2595, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__navigation__pagination__item__link--arrow_right:hover {
   background-image: url("../images/icons/arrow-right-pink.svg");
 }
 
-/* line 2425, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2598, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__description {
   margin: 2rem 0 0;
   padding: 3rem;
@@ -3532,26 +3764,26 @@ dialog {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 2425, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2598, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__products__description {
     grid-template-columns: 1fr;
   }
 }
 
-/* line 2438, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2611, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__description__text {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-/* line 2443, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 2616, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .catalogue__products__description__media__image {
   object-fit: contain;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 2443, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  /* line 2616, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
   .catalogue__products__description__media__image {
     display: none;
   }
