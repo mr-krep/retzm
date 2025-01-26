@@ -31,6 +31,9 @@ html
   font-size: 62.5%
 
 body
+  display: grid
+  grid-template-rows: auto 1fr auto
+  min-height: 100vh
   width: 100%
   min-width: 39.3rem
   margin: 0 auto
@@ -1207,6 +1210,183 @@ dialog
     gap: 1rem
     justify-content: flex-start
 /* Footer end */
+
+/* Cart */
+.heading
+  display: block
+  margin-top: 2rem
+  margin-bottom: 4rem
+  
+.cart_contents
+  display: grid
+  grid-template-columns: auto 36rem
+  gap: 1rem
+
+  @media screen and (max-width: $desktop)
+    grid-template-columns: auto 30rem
+
+  @media screen and (max-width: $tablet)
+    grid-template-columns: 1fr
+
+.cart_contents__products
+  display: grid
+  gap: 1rem
+  margin-bottom: 3rem
+
+.cart_contents__products__item
+  display: grid
+  grid-template-columns: 2fr 1fr 15.5rem
+  align-items: center
+  gap: 1rem
+  padding: 1rem
+  background-color: #fff
+  border-radius: $radius
+
+  @media screen and (max-width: $desktop)
+    grid-template-columns: 1fr
+
+.cart_contents__products__item__left
+  display: grid
+  grid-template-columns: 10rem auto
+  align-items: center
+  gap: 1rem
+
+.cart_contents__products__item__image
+  object-fit: contain
+
+.cart_contents__products__item__name
+  font-size: 1.4rem
+  line-height: 130%
+  font-weight: 200
+
+.cart_contents__products__item__middle
+  display: grid
+  grid-template-columns: 10rem auto
+  align-items: center
+  gap: 1rem
+
+.cart_contents__products__item__middle__count
+  display: grid
+  grid-template-columns: 3.2rem auto 3.2rem
+  padding: .4rem .8rem
+  background-color: $white
+  border-radius: $radius
+  
+
+.cart_contents__products__item__icon
+  display: inline-block
+  padding: .8rem
+  width: 3.2rem
+  height: 3.2rem
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  cursor: pointer
+
+.cart_contents__products__item__middle__count__minus
+  background-image: url('../images/icons/minus.svg')
+
+.cart_contents__products__item__middle__count__current
+  justify-self: center
+  align-self: center
+  font-size: 1.4rem
+  line-height: 130%
+  font-weight: 700
+
+.cart_contents__products__item__middle__count__plus
+  background-image: url('../images/icons/plus.svg')
+
+.cart_contents__products__item__middle__price
+  font-size: 1.2rem
+  line-height: 130%
+  font-weight: 200
+  color: $grey-dark2
+
+  @media screen and (max-width: $desktop)
+    justify-self: right
+
+.cart_contents__products__item__right
+  display: grid
+  grid-template-columns: 1fr 3.2rem
+
+.cart_contents__products__item__right__cost
+  display: grid
+  gap: .4rem
+  justify-self: left
+  justify-items: right
+  align-items: center
+
+  @media screen and (max-width: $desktop)
+    display: flex
+
+.cart_contents__products__item__right__cost__current
+  font-size: 1.6rem
+  line-height: 130%
+  font-weight: 700
+  color: $black
+
+.cart_contents__products__item__right__cost__old
+  font-size: 1.2rem
+  line-height: 130%
+  font-weight: 200
+  color: $grey-dark2
+  text-decoration: line-through
+
+.cart_contents__products__item__right__delete
+  justify-self: right
+  background-image: url('../images/icons/trash.svg')
+
+.cart_contents__summary
+  display: flex
+  flex-direction: column
+  gap: 1rem
+  margin-bottom: 3rem
+
+.cart_contents__summary__sticky
+  position: sticky
+  top: 1rem
+
+.cart_contents__summary__sticky__top
+  padding: 2rem
+  background-color: $grey1
+  border-radius: $radius
+
+.cart_contents__summary__sticky__top__heading, .cart_contents__summary__sticky__bottom__heading
+  display: inline-block
+  font-size: 1.6rem
+  line-height: 130%
+  font-weight: 700
+
+.cart_contents__summary__sticky__top__heading
+  margin-bottom: 1rem
+
+.cart_contents__summary__sticky__top__detalization
+  display: grid
+  grid-template-columns: 1fr 1fr
+  font-size: 1.2rem
+  line-height: 130%
+  font-weight: 200
+
+.cart_contents__summary__sticky__top__detalization__name
+  justify-self: left
+
+.cart_contents__summary__sticky__top__detalization__summ
+  justify-self: right
+
+.cart_contents__summary__sticky__bottom
+  padding: 2rem
+  background-color: #fff
+  border-radius: $radius
+
+.cart_contents__summary__sticky__bottom__heading
+  margin-bottom: 2rem
+
+.cart_contents__summary__sticky__bottom__button
+  width: 100%
+  text-align: center
+  font-size: 1.6rem
+  line-height: 130%
+  font-weight: 400
+/* Cart end */  
 
 /* Cart epmty start */
 .empty_cart
