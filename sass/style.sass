@@ -35,7 +35,7 @@ body
   grid-template-rows: auto 1fr auto
   min-height: 100vh
   width: 100%
-  min-width: 39.3rem
+  min-width: 39rem
   margin: 0 auto
   font-family: $font
   font-weight: 400
@@ -1214,6 +1214,9 @@ dialog
   display: block
   margin-top: 2rem
   margin-bottom: 4rem
+
+  @media screen and (max-width: $tablet)
+    margin-bottom: 2rem
   
 .cart_contents
   display: grid
@@ -1450,10 +1453,14 @@ dialog
   background-repeat: no-repeat
   background-position: right 70%
   cursor: pointer
+  white-space: nowrap
   
 .order__left__delivery
   display: flex
   gap: 1rem
+
+  @media screen and (max-width: $tablet)
+    flex-direction: column
 
 .order__left__delivery__option
   display: flex
@@ -1464,6 +1471,9 @@ dialog
   background-color: #fff
   border-radius: $radius
   cursor: pointer
+
+  @media screen and (max-width: $tablet)
+    width: 100%
 
 .order__left__options__option__heading
   font-size: 1.6rem
@@ -1484,6 +1494,10 @@ dialog
 .order__left__payment
   display: flex
   gap: 1rem
+  flex-wrap: wrap
+
+  // @media screen and (max-width: $tablet)
+  //   flex-direction: column
 
 .order__left__payment__option
   background-color: #fff
@@ -1497,18 +1511,25 @@ dialog
   display: flex
   gap: 1rem
   margin: 4rem 0
+  max-width: calc(28.2rem * 2 + 1rem)
+
+  @media screen and (max-width: $tablet)
+    flex-direction: column
 
 .order__left__promo__area
   display: flex
   flex-direction: column
   padding: 2rem
-  width: 28.2rem
+  width: 50%
   font-size: 1.4rem
   font-weight: 200
   line-height: 130%
   color: $black
   background-color: $grey1
   border-radius: $radius
+
+  @media screen and (max-width: $tablet)
+    width: 100%
 
 .order__left__promo__area__heading
   display: inline-block
@@ -1528,9 +1549,13 @@ dialog
   display: grid
   gap: 1rem
   grid-template-rows: repeat(3, 1fr)
-  grid-template-columns: "1fr 1fr"
+  grid-template-columns: 1fr 1fr
   grid-auto-flow: column
   max-width: calc(60rem + 1rem)
+
+  @media screen and (max-width: $tablet)
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(6, 1fr)
 
 .order__left__byuer__textarea
   grid-row: span 3
@@ -1539,7 +1564,10 @@ dialog
   padding: 1.4rem
   background-color: #fff
   border-radius: $radius
-  width: 30rem
+  max-width: 30rem
+
+  @media screen and (max-width: $tablet)
+    max-width: 100%
 
 .order__right__products
   display: flex
