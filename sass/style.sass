@@ -1630,8 +1630,16 @@ dialog
   max-width: 96rem
   text-align: center
 
+  @media screen and (max-width: $tablet)
+    max-width: 100%
+    margin-top: 4rem
+    margin-bottom: 4rem
+
 .success_heading__number
   color: $pink
+
+  @media screen and (max-width: $tablet)
+    display: block
 
 .success_heading__message
   display: inline-block
@@ -1641,6 +1649,9 @@ dialog
   line-height: 130%
   background-color: $grey1
   border-radius: $radius
+
+  @media screen and (max-width: $tablet)
+    width: 100%
 
 .success_heading__image
   display: block
@@ -1654,6 +1665,10 @@ dialog
   display: flex
   gap: 2rem
   margin-bottom: 2rem
+
+  @media screen and (max-width: $tablet)
+    flex-direction: column
+    gap: 1rem
 
 .success_order_info__main__number
   font-size: 1.6rem
@@ -1669,6 +1684,9 @@ dialog
   background-color: $orange
   border-radius: $radius
 
+  @media screen and (max-width: $tablet)
+    width: fit-content
+
 .success_order_info__summary
   display: grid
   grid-template-columns: repeat(3, 1fr)
@@ -1677,6 +1695,9 @@ dialog
   width: 100%
   background-color: #fff
   border-radius: $radius
+
+  @media screen and (max-width: $tablet)
+    grid-template-columns: 1fr
 
 .success_order_info__summary__heading
   font-size: 1.4rem
@@ -1700,7 +1721,7 @@ dialog
 
 .success_order_contents__products__item
   display: grid
-  grid-template-columns: 10rem auto 10rem
+  grid-template-columns: 10rem auto
   gap: 1rem
   padding: 2rem 0
   border-bottom: 1px solid #F5F5F5
@@ -1718,6 +1739,12 @@ dialog
   
   @media screen and (max-width: $desktop)
     display: flex
+
+  @media screen and (max-width: $tablet)
+    grid-column: span 2
+    flex-direction: row
+    justify-self: left
+    align-items: center
 
 .success_order_contents__products__item__cost__current
   font-size: 1.6rem
@@ -1740,6 +1767,10 @@ dialog
   max-width: 33rem
   background-color: $grey1
   border-radius: $radius
+
+  @media screen and (max-width: $tablet)
+    max-width: 100%
+    width: 100%
 
 .success_order_contents__summary__heading
   font-size: 1.4rem
@@ -1795,6 +1826,17 @@ dialog
   margin: 6rem auto
   max-width: 96rem
   text-align: center
+
+  @media screen and (max-width: $tablet)
+    max-width: 100%
+    width: 100%
+
+.buy_more__button
+
+  @media screen and (max-width: $tablet)
+    padding: 2rem
+    width: 100%
+    font-size: 1.6rem
 /* Order end */
 
 /* Text start */
