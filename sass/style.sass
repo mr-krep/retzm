@@ -835,7 +835,8 @@ dialog
   margin: 6rem auto
   width: 100%
   max-width: 138rem
-  overflow-x: auto
+  // overflow-x: auto
+  overflow-x: hidden
   -ms-overflow-style: none
   scrollbar-width: none
 
@@ -1657,6 +1658,34 @@ dialog
   display: block
   margin: 6rem auto
   width: 16.2rem
+
+.success_unpaid
+  margin-bottom: 2rem
+  display: flex
+  align-items: center
+  justify-content: space-between
+  max-width: 96rem
+
+  @media screen and (max-width: $tablet)
+    flex-direction: column
+    gap: 1rem
+    max-width: 100%
+    width: 100%
+
+.success_unpaid__message
+  padding: 1.4rem 2rem
+  font-size: 1.4rem
+  line-height: 130%
+  background-color: $grey1
+  border-radius: $radius
+
+.success_unpaid__button
+  text-align: center
+
+  @media screen and (max-width: $tablet)
+    padding: 2rem
+    width: 100%
+    font-size: 1.6rem
 
 .success_order_info
   max-width: 96rem
@@ -2861,3 +2890,7 @@ dialog
   @media screen and (max-width: $tablet)
     display: none
 /* Catalogue end*/
+
+/* Product start */
+
+/* Product end */
