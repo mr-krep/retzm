@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Страница товара — ТехноЗум.рф</title>
+    <meta name="description" value="DESCRIPTION" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
+    <link rel="mask-icon" href="./images/icon.svg"/>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="ТехноЗум.РФ"/>
+    <meta property="og:image" content="./images/og-logo.svg">
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:site_name" content="ТехноЗум"/>
+    <meta property="og:url" content="https://tehnozum.ru"/>
+    <!-- /Open Graph -->
+
+    <link href="./fonts/fonts.css" rel="stylesheet" />
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    
+    <!-- Библиотеки -->
+    <link rel="stylesheet" href="./libs/tiny-slider/tiny-slider.css" />
+    <script src="./libs/tiny-slider/tiny-slider.js"></script>
+    <!-- /Библиотеки -->
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__top desktop--block">
+        <div class="header__top__container section wrapper--global">
+          <ul class="header__top__container__menu">
+            <li class="header__top__container__menu__item">
+              <a class="header__top__container__menu__item__link link--grey" href="#" alt="Контакты">Контакты</a>
+            </li>
+            <li class="header__top__container__menu__item">
+              <a class="header__top__container__menu__item__link link--grey" href="#" alt="Гарантия">Гарантия</a>
+            </li>
+            <li class="header__top__container__menu__item">
+              <a class="header__top__container__menu__item__link link--grey" href="#" alt="Самовывоз">Самовывоз</a>
+            </li>
+            <li class="header__top__container__menu__item">
+              <a class="header__top__container__menu__item__link link--grey" href="#" alt="Доставка">Доставка</a>
+            </li>
+          </ul>
+          <ul class="header__top__container__getintouch">
+            <li class="header__top__container__getintouch__item">
+              <a class="header__top__getintouch__item__link getintouch__city link--grey" href="#" alt="Выбрать город">Москва</a>
+            </li>
+            <li class="header__top__container__getintouch__item">
+              <a class="header__top__getintouch__item__link link--grey getintouch__phone change_phone" href="tel:+74996476144" alt="Телефон">+ 7 499 647-61-44</a>
+            </li>
+            <li class="header__top__container__getintouch__item">
+              <a class="header__top__getintouch__item__link link--grey link_icon--account getintouch__account" href="#" alt="Личный кабинет">Личный кабинет</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header__bottom desktop--block">
+        <div class="header__bottom__container section wrapper--global">
+          <div class="header__bottom__container__column column__left">
+            <span class="header__bottom__container__column__button button button--pink megamenu_button" alt="Каталог">Каталог</span>
+          </div>
+          <div class="header__bottom__container__column column__center">
+            <a class="header__bottom__container__column__logo" href="/" alt="ТехноЗум">
+              <img class="header__bottom__container__column__logo__image" src="./images/logo.svg" />
+            </a>
+          </div>
+          <div class="header__bottom__container__column column__right">
+            <ul class="header__bottom__container__column__services">
+              <li class="header__bottom__container__column__services__item">
+                <a class="header__bottom__container__column__services__item__link link--grey link_icon--search" href="#">Поиск</a>
+              </li>
+              <li class="header__bottom__container__column__services__item">
+                <a class="header__bottom__container__column__services__item__link link--grey link_icon--favourites" href="#">Избранное</a>
+              </li>
+              <li class="header__bottom__container__column__services__item">
+                <a class="header__bottom__container__column__services__item__link link--grey link_icon--cart" href="#">Корзина</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header__mobile mobile--grid">
+        <div class="header__mobile__item">
+          <span class="header__mobile__item__icon icon--search-white"></span>
+        </div>
+        <div class="header__mobile__item">
+          <span class="header__mobile__item__icon icon--heart-white"></span>
+        </div>
+        <div class="header__mobile__item">
+          <a class="header__mobile__item__logo" href="/" alt="ТехноЗум">
+            <img class="header__mobile__item__logo__image" src="./images/logo.svg" />
+          </a>
+        </div>
+        <div class="header__mobile__item">
+          <span class="header__mobile__item__icon icon--cart-white"></span>
+        </div>
+        <div class="header__mobile__item">
+          <span class="header__mobile__item__icon icon--nav-white"></span>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="breadcrumbs wrapper--global">
+        <ul class="breadcrumbs__menu">
+          <li class="breadcrumbs__menu__item">
+            <a class="breadcrumbs__menu__item__link" href="/">Технозум</a>
+          </li>
+          <li class="breadcrumbs__menu__item">
+            <a class="breadcrumbs__menu__item__link" href="/">Каталог</a>
+          </li>
+          <li class="breadcrumbs__menu__item">
+            <a class="breadcrumbs__menu__item__link" href="/">Смартфоны, планшеты и гаджеты</a>
+          </li>
+          <li class="breadcrumbs__menu__item">
+            <a class="breadcrumbs__menu__item__link" href="/">Смартфоны</a>
+          </li>
+          <li class="breadcrumbs__menu__item breadcrumbs__menu__item--active">
+            Смартфон Apple iPhone 14 Plus, 512 ГБ, «Сияющая звезда»
+          </li>
+        </ul>
+      </section>
+      <section class="product">
+        <h1 class="product__heading">Смартфон Apple iPhone 14 Plus, 512 ГБ, «Cияющая звезда»</h1>
+        <div class="product__helpers">
+          <span class="product__helpers__id">Код товара: 01908</span>
+          <span class="product__helpers__stock">Есть в наличии</span>
+        </div>
+        <div class="product__condition">
+          <span class="product__condition__option product__condition__option--active">Новый</span>
+          <span class="product__condition__option">Уценка</span>
+        </div>
+        <div class="product__guarantee">
+          <span class="product__guarantee__button">Гарантия 1 год</span>
+        </div>
+        <div class="product__gallery">
+          <div class="product__gallery__preview">
+            <span class="product__gallery__preview__up"></span>
+            <img class="product__gallery__preview__image" src="../images/demo/product/product-priview.jpg" />
+            <img class="product__gallery__preview__image" src="../images/demo/product/product-priview.jpg" />
+            <img class="product__gallery__preview__image" src="../images/demo/product/product-priview.jpg" />
+            <img class="product__gallery__preview__image" src="../images/demo/product/product-priview.jpg" />
+            <img class="product__gallery__preview__image" src="../images/demo/product/product-priview.jpg" />
+            <img class="product__gallery__preview__image" src="../images/demo/product/product-priview.jpg" />
+            <span class="product__gallery__preview__down"></span>
+          </div>
+          <img class="product__gallery__image" src="../images/demo/product/product-main.jpg" />
+        </div>
+        <div class="product__options">
+          <div class="product__options__option">
+            <span class="product__options__option__name">Цвет:</span>
+            <div class="product__options__option__values">
+              <span class="product__options__option__values__color option__color--belyi"></span>
+              <span class="product__options__option__values__color option__color--bezhevyi product__options__option__values__color--active"></span>
+              <span class="product__options__option__values__color option__color--seryi"></span>
+              <span class="product__options__option__values__color option__color--zelenyi"></span>
+            </div>
+          </div>
+          <div class="product__options__option">
+            <span class="product__options__option__name">Память:</span>
+            <div class="product__options__option__values">
+              <span class="product__options__option__values__value">256</span>
+              <span class="product__options__option__values__value product__options__option__values__value--active">512</span>
+              <span class="product__options__option__values__value">1024</span>
+            </div>
+          </div>
+          <div class="product__options__option">
+            <span class="product__options__option__name">Поддержка SIM карт:</span>
+            <div class="product__options__option__values">
+              <span class="product__options__option__values__value">2 nano-SIM</span>
+              <span class="product__options__option__values__value product__options__option__values__value--active">1 nano-SIM + 1 eSIM</span>
+            </div>
+          </div>
+        </div>
+        <div class="product__summary">
+          <span class="product__summary__heading">Характеристики:</span>
+          <ul class="product__summary__list">
+            <li class="product__summary__list__item">
+              <span class="product__summary__list__item__name">Артикул</span>
+              <span class="product__summary__list__item__dots"></span>
+              <span class="product__summary__list__item__value">MQ5D3</span>
+            </li>
+            <li class="product__summary__list__item">
+              <span class="product__summary__list__item__name">Бренд</span>
+              <span class="product__summary__list__item__dots"></span>
+              <span class="product__summary__list__item__value">Apple</span>
+            </li>
+            <li class="product__summary__list__item">
+              <span class="product__summary__list__item__name">Цвет</span>
+              <span class="product__summary__list__item__dots"></span>
+              <span class="product__summary__list__item__value">Серебристый</span>
+            </li>
+            <li class="product__summary__list__item">
+              <span class="product__summary__list__item__name">Объем накопителя</span>
+              <span class="product__summary__list__item__dots"></span>
+              <span class="product__summary__list__item__value">512 Гб</span>
+            </li>
+            <li class="product__summary__list__item">
+              <span class="product__summary__list__item__name">Год релиза</span>
+              <span class="product__summary__list__item__dots"></span>
+              <span class="product__summary__list__item__value">2022</span>
+            </li>
+          </ul>
+          <a class="product__summary__more" href="#">Все характеристики</a>
+        </div>
+        <div class="product__buy">
+          <div class="product__buy__prices">
+            <span class="product__buy__prices__current">645 000 ₽</span>
+            <span class="product__buy__prices__old">667 000 ₽</span>
+          </div>
+          <span class="product__buy__add_to_cart button button--pink">Добавить в корзину</span>
+          <span class="product__buy__order button button--white">Заказать в 1 клик</span>
+          <span class="product__buy__favourites"></span>
+        </div>
+        <div class="product__delivery">
+          <div class="product__delivery__location">
+            Наличие и доставка в г. 
+            <span class="product__delivery__location__city">Санкт-Петербург</span>
+          </div>
+          <ul class="product__delivery__options">
+            <li class="product__delivery__options__option">
+              <span class="product__delivery__options__option__heading">Самовывоз - бесплатно</span>
+              <span class="product__delivery__options__option__info">Метро Площадь Восстания, ул. 1-я Советская, 6к2</span>
+              <a class="product__delivery__options__option__link" href="#">Подробнее о пункте выдачи</a>
+            </li>
+            <li class="product__delivery__options__option">
+              <span class="product__delivery__options__option__heading">Достава курьером (1-2 дня) - 200 ₽</span>
+              <span class="product__delivery__options__option__info">До двери</span>
+            </li>
+          </ul>
+        </div>
+        <div class="product__tabs">
+          <span class="product__tabs__tab product__tabs__tab--active">Описание</span>
+          <span class="product__tabs__tab">Характеристики</span>
+          <span class="product__tabs__tab">Отзывы</span>
+        </div>
+        <div class="product__promo">
+          <div class="product__promo__hero">
+            <span class="product__promo__hero__heading">Ощути настоящую силу игр</span>
+            <span class="product__promo__hero__text">Фантастически мощный восьмиядерный процессор в паре с SSD накопителем обеспечивают высокую производительность и быстрый запуск приложений и значительно повышают игровые возможности.</span>
+            <span class="product__promo__hero__accent">Возьмись за приключения!</span>
+            <img class="product__promo__hero__image product__promo__hero__image--accent" src="../images/demo/product/hero-accent.png" />
+            <img class="product__promo__hero__image  product__promo__hero__image--background" src="../images/demo/product/hero-bg.png" />
+          </div>
+          <div class="product__promo__double">
+            <div class="product__promo__double__item">
+              <div class="product__promo__double__item__heading">Молниеносная скорость</div>
+              <div class="product__promo__double__item__text">Новые возможности для творчества благодаря быстрой обработке данных</div>
+              <img class="product__promo__double__item__image" src="../images/demo/product/double-left.png" />
+            </div>
+            <div class="product__promo__double__item">
+              <div class="product__promo__double__item__heading">Полное погружение</div>
+              <div class="product__promo__double__item__text">Новые возможности для творчества благодаря быстрой обработке данных</div>
+              <img class="product__promo__double__item__image" src="../images/demo/product/double-right.png" />
+            </div>
+          </div>
+          <div class="product__promo__store">
+            <span class="product__promo__store__heading">Разнообразие игр</span>
+            <span class="product__promo__store__description">Большой выбор в магазине PlayStation Store</span>
+            <div class="product__promo__store__gallery">
+              <img class="product__promo__store__gallery__image" src="../images/demo/product/g1.jpg" />
+              <img class="product__promo__store__gallery__image" src="../images/demo/product/g2.jpg" />
+              <img class="product__promo__store__gallery__image" src="../images/demo/product/g3.jpg" />
+              <img class="product__promo__store__gallery__image" src="../images/demo/product/g4.jpg" />
+              <img class="product__promo__store__gallery__image" src="../images/demo/product/g5.jpg" />
+              <img class="product__promo__store__gallery__image" src="../images/demo/product/g6.jpg" />
+              <img class="product__promo__store__gallery__image" src="../images/demo/product/g7.jpg" />
+              <img class="product__promo__store__gallery__image" src="../images/demo/product/g8.jpg" />
+              <img class="product__promo__store__gallery__image" src="../images/demo/product/g9.jpg" />
+              <img class="product__promo__store__gallery__image" src="../images/demo/product/g10.jpg" />
+              <img class="product__promo__store__gallery__image" src="../images/demo/product/g11.jpg" />
+              <img class="product__promo__store__gallery__image" src="../images/demo/product/g12.jpg" />
+            </div>
+          </div>
+          <div class="product__promo__tripple">
+            <div class="product__promo__tripple__item">
+              <div class="product__promo__tripple__item__heading">Тактильная отдача</div>
+              <div class="product__promo__tripple__item__text">Контроллер с динамическим сопротивлением спусковых кнопок и тактильной отдачей позволяет окунуться в игровой мир, откликаясь на взаимодействия пользователя с объектами и развивающиеся события в игре.</div>
+              <img class="product__promo__tripple__item__image" src="../images/demo/product/tripple-left.jpg" />
+            </div>
+            <div class="product__promo__tripple__item">
+              <div class="product__promo__tripple__item__heading">Общайтесь с игроками</div>
+              <div class="product__promo__tripple__item__text">Встроенный микрофон позволяет с легкостью начать разговор. Если необходимо сосредоточиться на игре, достаточно нажать специальную кнопку и микрофон выключится.</div>
+              <img class="product__promo__tripple__item__image" src="../images/demo/product/tripple-middle.jpg" />
+            </div>
+            <div class="product__promo__tripple__item">
+              <div class="product__promo__tripple__item__heading">Создавайте моменты и делитесь ими</div>
+              <div class="product__promo__tripple__item__text">Создавайте незабываемые моменты, сохраняйте и делитесь ими благодаря PlayStation Network.</div>
+              <img class="product__promo__tripple__item__image" src="../images/demo/product/tripple-right.jpg" />
+            </div>
+          </div>
+          <div class="product__promo__text-n-img">
+            <div class="product__promo__text-n-img__text">
+              <span class="product__promo__text-n-img__text__heading">Создана для потрясающих визуальных эффектов</span>
+              <span class="product__promo__text-n-img__text__details">Максимально реалистичные тени и отражения в играх достигаются с помощью нового алгоритма вычисления световых лучей.</span>
+            </div>
+            <img class="product__promo__text-n-img__image" src="../images/demo/product/tni-right.png" />
+          </div>
+          <div class="product__promo__text-n-img">
+            <img class="product__promo__text-n-img__image" src="../images/demo/product/tni-left.png" />
+            <div class="product__promo__text-n-img__text">
+              <span class="product__promo__text-n-img__text__heading">Sony PlayStation 5</span>
+              <span class="product__promo__text-n-img__text__details">
+                <ul class="product__promo__text-n-img__text__details__list">
+                  <li class="product__promo__text-n-img__text__details__list__item">Геймпад Sony DualSense</li>
+                  <li class="product__promo__text-n-img__text__details__list__item">Кабель HDMI, кабель питания, кабель USB-C — USB для зарядки контроллера</li>
+                  <li class="product__promo__text-n-img__text__details__list__item">Подставка для горизонтального расположения</li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="product__characteristics"></div>
+        <div class="product__reviews"></div>
+      </section>
+      <section class="suggestions">
+        <div class="suggestions__container section wrapper--global">
+          <span class="suggestions__container__heading section_heading">Похожие товары</span>
+            <ul class="suggestions__container__list carousel_alike">
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images product-slider">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/gamepad.png" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Sony DualSense PS5 Controller, «полуночный черный»</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                    <span class="suggestions__container__list__item__text__info__label">Уценка</span>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images product-slider">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/good-face.jpg" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                    <span class="suggestions__container__list__item__text__info__label">Уценка</span>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/lego.png" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">LEGO Minifigures Marvel Series 2</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/case.png" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Чехол Apple MagSafe для iPhone 12/12 Pro, кожа, золотисто-коричневый</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/vinil.png" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Sony PS-LX310BT</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                    <span class="suggestions__container__list__item__text__info__label">Уценка</span>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/vinil.png" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Sony PS-LX310BT</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/vinil.png" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Sony PS-LX310BT</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
+              </li>
+            </ul>
+          <div class="suggestions__container__arrows arrows carousel_alike__arrows">
+            <span class="suggestions__container__arrows__left arrows--left"></span>
+            <span class="suggestions__container__arrows__right arrows--right"></span>
+          </div>
+        </div>
+      </section>
+      <section class="suggestions">
+        <div class="suggestions__container section wrapper--global">
+          <span class="suggestions__container__heading section_heading">С этим товаром часто покупают</span>
+            <ul class="suggestions__container__list carousel_addon">
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images product-slider">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/gamepad.png" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Sony DualSense PS5 Controller, «полуночный черный»</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                    <span class="suggestions__container__list__item__text__info__label">Уценка</span>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images product-slider">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/good-face.jpg" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                    <span class="suggestions__container__list__item__text__info__label">Уценка</span>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/lego.png" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">LEGO Minifigures Marvel Series 2</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/case.png" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Чехол Apple MagSafe для iPhone 12/12 Pro, кожа, золотисто-коричневый</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/vinil.png" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Sony PS-LX310BT</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                    <span class="suggestions__container__list__item__text__info__label">Уценка</span>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/vinil.png" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Sony PS-LX310BT</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
+              </li>
+              <li class="suggestions__container__list__item">
+                <div class="suggestions__container__list__item__images">
+                  <a class="suggestions__container__list__item__images__link" href="#">
+                    <img class="suggestions__container__list__item__images__link__image" src="./images/goods/vinil.png" />
+                  </a>
+                </div>
+                <div class="suggestions__container__list__item__text">
+                  <a class="suggestions__container__list__item__text__title" href="#">Sony PS-LX310BT</a>
+                  <div class="suggestions__container__list__item__text__info">
+                    <div class="suggestions__container__list__item__text__info__prices">
+                      <span class="suggestions__container__list__item__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                      <span class="suggestions__container__list__item__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="suggestions__container__list__item__add_to_cart" href="#">
+                  <span class="suggestions__container__list__item__add_to_cart__text">В корзину</span>
+                  <span class="suggestions__container__list__item__add_to_cart__icon icon--add-to-cart-pink"></span>
+                </a>
+                <a class="suggestions__container__list__item__add_to_favourites--added" href="#heart"></a>
+              </li>
+            </ul>
+          <div class="suggestions__container__arrows arrows carousel_addon__arrows">
+            <span class="suggestions__container__arrows__left arrows--left"></span>
+            <span class="suggestions__container__arrows__right arrows--right"></span>
+          </div>
+        </div>
+      </section>
+      <section class="utp section wrapper--global">
+        <div class="utp__container">
+          <div class="utp__container__tile">
+            <img class="utp__container__tile__image" src="./images/utp/original.svg" />
+            <span class="utp__container__tile__heading">Оригинальная продукция</span>
+            <span class="utp__container__tile__text">Продаем только оригинальную продукцию популярных мировых брендов.</span>
+          </div>
+          <div class="utp__container__tile">
+            <img class="utp__container__tile__image" src="./images/utp/doc.svg" />
+            <span class="utp__container__tile__heading">Официальная гарантия</span>
+            <span class="utp__container__tile__text">Соблюдаем закон «О защите прав потребителей», предоставляем все необходимые гарантийные обязательства.</span>
+          </div>
+          <div class="utp__container__tile">
+            <img class="utp__container__tile__image" src="./images/utp/discount.svg" />
+            <span class="utp__container__tile__heading">Низкие цены</span>
+            <span class="utp__container__tile__text">Поддерживаем максимально выгодные предложения.</span>
+          </div>
+          <div class="utp__container__tile">
+            <img class="utp__container__tile__image" src="./images/utp/check.svg" />
+            <span class="utp__container__tile__heading">Контроль качества</span>
+            <span class="utp__container__tile__text">Контролируем качество на каждом этапе: от выбора поставщиков до работы персонала и сервиса.</span>
+          </div>
+          <div class="utp__container__tile">
+            <img class="utp__container__tile__image" src="./images/utp/box.svg" />
+            <span class="utp__container__tile__heading">Самовывоз бесплатно</span>
+            <span class="utp__container__tile__text">Пункт выдачи в центре города. Заказ доступен сразу.</span>
+          </div>
+          <div class="utp__container__tile">
+            <img class="utp__container__tile__image" src="./images/utp/truck.svg" />
+            <span class="utp__container__tile__heading">Быстрая доставка</span>
+            <span class="utp__container__tile__text">Доставим за 1 день.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__navigation section wrapper--global">
+        <div class="footer__navigation__catalogue footer__navigation__block">
+          <span class="footer__navigation__catalogue__heading footer__heading">Каталог</span>
+          <ul class="footer__navigation__catalogue__menu footer__menu">
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Бытовая техника</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Компьютеры и ноутбуки</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Красота и здоровье</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Аудиотехника</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Аксессуары для гаджетов</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Смартфоны и гаджеты</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Развлечения и хобби</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Телевизоры и аксессуары</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Фото и видео</a>
+            </li>
+            <li class="footer__navigation__catalogue__menu__item">
+              <a class="footer__navigation__catalogue__menu__item__link footer__menu__link" href="#">Туризм</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__navigation__help footer__navigation__block">
+          <span class="footer__navigation__help__heading footer__heading">Помощь</span>
+          <ul class="footer__navigation__help__menu footer__menu">
+            <li class="footer__navigation__help__menu__item">
+              <a class="footer__navigation__help__menu__item__link footer__menu__link" href="#">Доставка</a>
+            </li>
+            <li class="footer__navigation__help__menu__item">
+              <a class="footer__navigation__help__menu__item__link footer__menu__link" href="#">Самовывоз</a>
+            </li>
+            <li class="footer__navigation__help__menu__item">
+              <a class="footer__navigation__help__menu__item__link footer__menu__link" href="#">Гарантия</a>
+            </li>
+            <li class="footer__navigation__help__menu__item">
+              <a class="footer__navigation__help__menu__item__link footer__menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__navigation__about footer__navigation__block">
+          <span class="footer__navigation__about__heading footer__heading">О нас</span>
+          <ul class="footer__navigation__about__menu footer__menu">
+            <li class="footer__navigation__about__menu__item">
+              <a class="footer__navigation__about__menu__item__link footer__menu__link" href="#">ТехноЗум</a>
+            </li>
+            <li class="footer__navigation__about__menu__item">
+              <a class="footer__navigation__about__menu__item__link footer__menu__link" href="#">Реквизиты</a>
+            </li>
+            <li class="footer__navigation__about__menu__item">
+              <a class="footer__navigation__help__menu__item__link footer__menu__link" href="#">Оферта</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__credentials section wrapper--global">
+        <div class="footer__credentials__essentials">ИНН 781021149839, ОГРНИП 322784700130448</div>
+        <div class="footer__credentials__copyright">Технозум.рф &copy; 2024</div>
+        <div class="footer__credentials__link">
+          <a class="footer__credentials__link__policy" href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/custom.js"></script>
+    <script src="./js/product.js"></script>
+  </body>
+</html>
