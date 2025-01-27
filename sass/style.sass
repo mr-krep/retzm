@@ -1750,10 +1750,14 @@ dialog
 
 .success_order_contents__products__item
   display: grid
-  grid-template-columns: 10rem auto
+  grid-template-columns: 10rem auto 10rem
   gap: 1rem
+  align-items: center
   padding: 2rem 0
   border-bottom: 1px solid #F5F5F5
+
+  @media screen and (max-width: $tablet)
+    grid-template-columns: 10rem auto
 
   &:last-child
     border: none
