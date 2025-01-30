@@ -2905,10 +2905,18 @@ dialog
 /* Catalogue end*/
 
 /* Product start */
+.product
+  display: grid
+  gap: 1rem
+  grid-template-columns: 39% 33% 28%
+  grid-template-rows: 3.2rem 2.6rem calc(2.8rem + 1rem + .6rem) auto auto auto
+  grid-template-areas: "helpers condition condition" "gallery heading heading" "gallery guarantee guarantee" "gallery options buy" "tabs tabs tabs" "promo promo promo"
 
 .product__helpers
+  grid-area: helpers
   display: flex
   gap: .6rem
+  align-items: flex-start
   font-size: 1.2rem
   line-height: 130%
   font-weight: 200
@@ -2926,6 +2934,7 @@ dialog
   border-radius: $radius
 
 .product__condition
+  grid-area: condition
   display: flex
   gap: .6rem
   
@@ -2944,14 +2953,22 @@ dialog
   background-color: $black
 
 .product__heading
+  grid-area: heading
   font-size: 2rem
   font-weight: 700
   line-height: 130%
 
+.product__gallery
+  grid-area: gallery
+  display: grid
+  grid-template-columns: 7.6rem auto
+  gap: 1rem
+  padding-right: 1.6rem
+
 .product__gallery__image
   width: 100%
-  padding: 3.1rem
   cursor: pointer
+  border-radius: $radius
 
 .product__gallery__preview
   display: flex
@@ -2960,8 +2977,8 @@ dialog
 
 .product__gallery__preview__image
   padding: .8rem
-  width: 6rem
-  height: 6rem
+  width: 7.6rem
+  height: 7.6rem
   cursor: pointer
   background-color: #fff
   border-radius: $radius
@@ -2984,7 +3001,13 @@ dialog
   background-position: 50% 50%
   cursor: pointer
 
+.product__guarantee
+  grid-area: guarantee
+  margin-top: .6rem
+  margin-bottom: 1rem
+
 .product__guarantee__button
+  display: inline-block
   padding: .4rem 1.2rem .6rem calc(1.2rem + .4rem + 1.6rem)
   font-size: 1.4rem
   font-weight: 500
@@ -2997,6 +3020,17 @@ dialog
   background-image: url('../images/icons/guarantee.svg')
   background-repeat: no-repeat
   background-position: left 1.2rem top 50%
+
+.product__options
+  grid-area: options
+  display: flex
+  flex-direction: column
+  gap: 2rem
+  margin-right: 3rem
+
+.product__options__option
+  display: grid
+  gap: 1.4rem
 
 .product__options__option__name
   font-size: 1.6rem
@@ -3038,13 +3072,16 @@ dialog
 .product__options__option__values__value--active, .product__options__option__values__color--active
   border: 1px dotted $pink
 
-.product__summary__heading
+.product__options__summary
+  grid-area: summary
+
+.product__options__summary__heading
   font-size: 1.6rem
   font-weight: 500
   line-height: 130%
   color: $black
 
-.product__summary__list
+.product__options__summary__list
   display: flex
   flex-direction: column
   gap: 1.4rem
@@ -3052,7 +3089,7 @@ dialog
   margin-bottom: 1.4rem
   width: 100%
 
-.product__summary__list__item
+.product__options__summary__list__item
   display: flex
   justify-content: space-between
   font-size: 1.4rem
@@ -3060,23 +3097,29 @@ dialog
   line-height: 130%
   color: $grey-dark2
   
-.product__summary__list__item__name
+.product__options__summary__list__item__name
 
-.product__summary__list__item__dots
+.product__options__summary__list__item__dots
   min-width: 1rem
   flex: 1 0
   border-bottom: 1px dotted $grey-dark2
   height: 1rem
   margin: 0.4em
 
-.product__summary__list__item__value
+.product__options__summary__list__item__value
   color: $black
 
-.product__summary__more
+.product__options__summary__more
   font-size: 1.4rem
   font-weight: 500
   line-height: 130%  
   color: $pink
+
+.product__buy
+  grid-area: buy
+  display: flex
+  flex-direction: column
+  gap: 1rem
 
 .product__buy__prices
   gap: 0.4rem
@@ -3103,6 +3146,10 @@ dialog
 
 .product__buy__add_to_cart
   width: 100%
+  font-size: 1.6rem
+  font-weight: 500
+  line-height: 130%
+  text-align: center
 
 .product__buy__row2_buttons
   display: grid
@@ -3112,8 +3159,14 @@ dialog
 .product__buy__row2_buttons__order
   width: 100%
   background-color: #fff
+  font-size: 1.6rem
+  font-weight: 500
+  line-height: 130%
+  text-align: center
 
 .product__buy__row2_buttons__favourites
+  width: 100%
+  height: 100%
   background-image: url('../images/icons/heart-grey.svg')
   background-size: 2rem
   background-position: 50% 50%
@@ -3123,21 +3176,25 @@ dialog
     background-image: url('../images/icons/heart-pink.svg')
     cursor: pointer
 
-.product__delivery__location
+.product__buy__delivery
+  margin-top: auto
+
+.product__buy__delivery__location
+  margin-bottom: 1rem
   font-size: 1.6rem
   line-height: 130%
   font-weight: 500
 
-.product__delivery__location__city
+.product__buy__delivery__location__city
   color: $pink
   cursor: pointer
 
-.product__delivery__options
+.product__buy__delivery__options
   display: flex
   flex-direction: column
   gap: 1rem
 
-.product__delivery__options__option
+.product__buy__delivery__options__option
   display: flex
   flex-direction: column
   gap: 1rem
@@ -3145,27 +3202,29 @@ dialog
   background-color: #fff
   border-radius: $radius
 
-.product__delivery__options__option__heading
+.product__buy__delivery__options__option__heading
   font-size: 1.6rem
   font-weight: 700
   line-height: 130%
   color: $black
 
-.product__delivery__options__option__info
+.product__buy__delivery__options__option__info
   font-size: 1.4rem
   font-weight: 500
   line-height: 130%
   color: $black
 
-.product__delivery__options__option__link
+.product__buy__delivery__options__option__link
   font-size: 1.2rem
   font-weight: 500
   line-height: 130%
   color: $pink
 
 .product__tabs
+  grid-area: tabs
   display: flex
   gap: .6rem
+  padding-top: 1rem
   
 .product__tabs__tab
   padding: .6rem 1.8rem .8rem
@@ -3181,4 +3240,183 @@ dialog
   color: #fff
   background-color: $black
   cursor: default
+
+.product__promo
+  grid-area: promo
+  display: flex
+  flex-direction: column
+  gap: 1rem
+
+.product__promo__hero
+  width: 100%
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 3rem
+  height: 62rem
+
+.product__promo__hero__heading
+  padding: 5rem 5rem 0 5rem
+  font-size: 4rem
+  font-weight: 500
+  line-height: 110%
+  color: $white
+  text-align: center
+
+.product__promo__hero__text
+  padding: 0 5rem
+  font-size: 2rem
+  font-weight: 400
+  line-height: 130%
+  color: $white
+  text-align: center
+
+.product__promo__hero__accent
+  padding: 0 5rem 5rem 5rem
+  font-size: 2rem
+  font-weight: 700
+  line-height: 130%
+  color: #0056FE
+  text-align: center
+  
+.product__promo__hero__image
+  position: absolute
+
+.product__promo__hero__image--accent
+  z-index: -1
+  object-fit: cover
+  bottom: 0
+
+.product__promo__hero__image--background
+  z-index: -2
+  object-fit: cover
+  top: 0
+
+.product__promo__double, .product__promo__tripple
+  display: grid
+  gap: 1rem
+
+.product__promo__double
+  grid-template-columns: 1fr 1fr
+
+.product__promo__tripple
+  grid-template-columns: 1fr 1fr 1fr
+
+.product__promo__double__item, .product__promo__tripple__item
+  position: relative
+  border-radius: $radius
+  overflow: hidden
+
+.product__promo__double__item
+  min-height: 19.6rem
+
+.product__promo__tripple__item
+  min-height: 47.6rem
+  
+.product__promo__double__item__heading, .product__promo__tripple__item__heading
+  padding: 4rem 4rem 2rem 4rem
+  font-size: 4rem
+  font-weight: 500
+  line-height: 110%
+  color: $white
+
+.product__promo__double__item__text, .product__promo__tripple__item__text
+  padding: 0 4rem 4rem 4rem
+  font-size: 2rem
+  font-weight: 500
+  line-height: 130%
+  color: $white
+
+.product__promo__tripple__item__cover
+  position: absolute
+  top: 0
+  z-index: -1
+  width: 100%
+  height: 100%
+  background-image: linear-gradient(#0A0A0A, transparent)
+
+.product__promo__double__item__image, .product__promo__tripple__item__image
+  position: absolute
+  z-index: -2
+  object-fit: fill
+  bottom: 0
+  border-radius: $radius
+  background-color: #000
+
+.product__promo__store
+  display: flex
+  flex-direction: column
+  gap: 3rem
+  text-align: center
+  background-color: $grey1
+  border-radius: $radius
+
+.product__promo__store__heading
+  padding: 4rem 4rem 0 4rem
+  font-size: 4rem
+  font-weight: 500
+  line-height: 110%
+  color: $black
+
+.product__promo__store__description
+  padding: 0 4rem 4rem 4rem
+  font-size: 2rem
+  font-weight: 500
+  line-height: 130%
+  color: $black
+
+.product__promo__store__gallery
+  display: grid
+  grid-template-columns: repeat(6, 1fr)
+  grid-template-rows: 15.8rem 
+  gap: 1rem
+  max-width: 102rem
+  margin: 3rem auto 0
+
+.product__promo__text-n-img
+  position: relative
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 1rem
+
+.product__promo__text-n-img__text
+  display: grid
+  gap: 3rem
+  padding: 5rem
+  background-color: $grey1
+  border-radius: $radius
+
+.product__promo__text-n-img__text__details__list__item__heading
+  font-size: 4rem
+  font-weight: 500
+  line-height: 110%
+  color: $black
+
+.product__promo__text-n-img__text__details
+  font-size: 2rem
+  font-weight: 500
+  line-height: 130%
+  color: $black
+
+.product__promo__text-n-img__image
+  border-radius: $radius
+  background-color: #000
+
+.product__promo__text-n-img__text__details__list
+  display: grid
+  gap: 3rem
+
+.product__promo__text-n-img__text__details__list__item
+
+.product__promo__text-n-img__text__details__list__item__text
+  display: block
+  padding-bottom: 2rem
+  border-bottom: .1rem solid $black
+
+.product__characteristics
+  grid-area: characteristics
+
+.product__reviews
+  grid-area: reviews
+
 /* Product end */
