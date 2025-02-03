@@ -2914,18 +2914,18 @@ dialog
   display: grid
   gap: 1rem
   grid-template-columns: 39% 33% 28%
-  grid-template-rows: 3.2rem 2.6rem calc(2.8rem + 1rem + .6rem) auto auto auto
-  grid-template-areas: "helpers condition condition" "gallery heading heading" "gallery guarantee guarantee" "gallery options buy" "tabs tabs tabs" "promo promo promo"
+  grid-template-rows: 3.2rem 2.6rem calc(2.8rem + 1rem + .6rem) auto auto
+  grid-template-areas: "helpers condition condition" "gallery heading heading" "gallery guarantee guarantee" "gallery options buy" "tabs tabs tabs"
 
   @media screen and (max-width: $desktop)
     grid-template-columns: 53% 47%
-    grid-template-rows: 3.2rem auto calc(2.8rem + 1rem + .6rem) auto auto auto auto
-    grid-template-areas: "helpers condition" "gallery heading" "gallery guarantee" "gallery options" "gallery buy" "tabs tabs" "promo promo"
+    grid-template-rows: 3.2rem auto calc(2.8rem + 1rem + .6rem) auto auto auto
+    grid-template-areas: "helpers condition" "gallery heading" "gallery guarantee" "gallery options" "gallery buy" "tabs tabs"
 
   @media screen and (max-width: $tablet)
     grid-template-columns: 100%
-    grid-template-rows: 3.2rem auto calc(2.8rem + 1rem + .6rem) auto auto auto auto
-    grid-template-areas: "condition" "heading" "guarantee" "helpers" "gallery" "options" "buy" "tabs" "promo"
+    grid-template-rows: 3.2rem auto calc(2.8rem + 1rem + .6rem) auto auto auto
+    grid-template-areas: "condition" "heading" "guarantee" "helpers" "gallery" "options" "buy" "tabs"
 
 .product__helpers
   grid-area: helpers
@@ -3060,11 +3060,17 @@ dialog
   margin-right: 3rem
 
   @media screen and (max-width: $tablet)
+    margin-top: 3rem
     margin-right: 0
 
 .product__options__option
   display: grid
   gap: 1.4rem
+
+  @media screen and (max-width: $tablet)
+    display: flex
+    flex-wrap: wrap
+    align-items: center
 
 .product__options__option__name
   font-size: 1.6rem
@@ -3144,6 +3150,7 @@ dialog
   color: $black
 
 .product__options__summary__more
+  padding: 0
   font-size: 1.4rem
   font-weight: 500
   line-height: 130%  
@@ -3154,6 +3161,9 @@ dialog
   display: flex
   flex-direction: column
   gap: 1rem
+
+  @media screen and (max-width: $tablet)
+    margin-top: 3rem
 
 .product__buy__prices
   gap: 0.4rem
@@ -3185,6 +3195,9 @@ dialog
   line-height: 130%
   text-align: center
 
+  @media screen and (max-width: $tablet)
+    padding: 2rem
+
 .product__buy__row2_buttons
   display: grid
   grid-template-columns: auto 4.8rem
@@ -3198,6 +3211,9 @@ dialog
   line-height: 130%
   text-align: center
 
+  @media screen and (max-width: $tablet)
+    padding: 2rem
+
 .product__buy__row2_buttons__favourites
   width: 100%
   height: 100%
@@ -3206,12 +3222,18 @@ dialog
   background-position: 50% 50%
   background-repeat: no-repeat
 
+  @media screen and (max-width: $tablet)
+    padding: 2rem
+
   &:hover
     background-image: url('../images/icons/heart-pink.svg')
     cursor: pointer
 
 .product__buy__delivery
   margin-top: auto
+
+  @media screen and (max-width: $tablet)
+    margin-top: 3rem
 
 .product__buy__delivery__location
   margin-bottom: 1rem
@@ -3256,31 +3278,76 @@ dialog
 
 .product__tabs
   grid-area: tabs
-  display: flex
-  gap: .6rem
+  display: grid
+  gap: 1rem
+  grid-template-columns: 1fr
+  grid-template-areas: "tabs_navigation" "tab__content"
   padding-top: 1rem
 
   @media screen and (max-width: $tablet)
     margin-top: 4rem
+    margin-bottom: 4rem
     padding-top: 0
-  
-.product__tabs__tab
+
+.product__tabs__list
+  grid-area: tabs_navigation
+  display: flex
+  gap: .6rem
+
+.tabs_label
+  display: inline-block
   padding: .6rem 1.8rem .8rem
   font-size: 1.4rem
   font-weight: 500
   line-height: 130%
   border-radius: $radius
   color: $black
-  background-color: #fff
+  background-color: $white
   cursor: pointer
 
-.product__tabs__tab--active
-  color: #fff
-  background-color: $black
-  cursor: default
+#product__promo:checked ~ .product__tabs__list .product__promo,
+#product__characteristics:checked ~ .product__tabs__list .product__characteristics,
+#product__reviews:checked ~ .product__tabs__list .product__reviews
+  
+  .tabs_label
+    color: #fff
+    background-color: $black
+    cursor: default
+
+.product__tabs__list__tab
+
+  .tabs_label
+
+    &:hover
+      color: #fff
+      background-color: $black
+      cursor: pointer
+
+    &:active
+      color: #fff
+      background-color: $black
+      cursor: pointer
+
+.product__tabs__content
+  grid-area: tab__content
+
+.product__tabs > .product__tabs__radio,
+.product__tabs .product__tabs__content > .product__tabs__content__block
+  display: none
+
+#product__promo:checked ~ .product__tabs__content .product__promo,
+#product__characteristics:checked ~ .product__tabs__content .product__characteristics,
+#product__reviews:checked ~ .product__tabs__content .product__reviews
+  display: flex
+
+.product__characteristics
+  grid-area: tab_content
+
+.product__reviews
+  grid-area: tab_content
 
 .product__promo
-  grid-area: promo
+  grid-area: tab_content
   display: flex
   flex-direction: column
   gap: 1rem
@@ -3309,7 +3376,6 @@ dialog
     padding: 2rem 2rem 0 2rem
     max-width: 100%
     font-size: 2rem
-
 
 .product__promo__hero__text
   margin: 0 auto
@@ -3342,7 +3408,6 @@ dialog
     font-size: 1.6rem
   
 .product__promo__hero__image
-  
 
 .product__promo__hero__image--accent
   margin: 0 auto
@@ -3399,6 +3464,9 @@ dialog
     padding: 2rem 2rem 1rem 2rem
     font-size: 2rem
 
+.product__promo__tripple__item__heading
+  max-width: 70%
+
 .product__promo__double__item__text, .product__promo__tripple__item__text
   padding: 0 4rem 4rem 4rem
   font-size: 2rem
@@ -3429,7 +3497,7 @@ dialog
   background-color: #000
 
 .product__promo__store
-  display: flex
+  display: grid
   flex-direction: column
   gap: 3rem
   text-align: center
@@ -3491,7 +3559,6 @@ dialog
     display: flex
     flex-direction: column-reverse
 
-
 .product__promo__text-n-img__text__heading
   font-size: 4rem
   font-weight: 500
@@ -3509,6 +3576,7 @@ dialog
   border-radius: $radius
 
   @media screen and (max-width: $tablet)
+    padding: 2rem
     font-size: 1.4rem
 
 .product__promo__text-n-img__text__details__list__item__heading
@@ -3555,11 +3623,5 @@ dialog
 
   @media screen and (max-width: $tablet)
     font-size: 1.4rem
-
-.product__characteristics
-  grid-area: characteristics
-
-.product__reviews
-  grid-area: reviews
 
 /* Product end */

@@ -33,3 +33,12 @@ var slider = tns({
   controlsContainer: '.carousel_addon__arrows',
   gutter: 10
 });
+
+// Скролл к характеристикам
+const $link = document.querySelector('.product__options__summary__more');
+const $tab_content = document.querySelector('.product__tabs');
+$link.addEventListener('click', e => {
+  $tab_content.scrollIntoView({ 
+    behavior: 'smooth'
+  });
+});
