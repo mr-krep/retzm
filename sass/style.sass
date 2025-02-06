@@ -278,6 +278,12 @@ dialog
     background-color: $black
     color: #fff
 
+.button--grey
+  color: $white
+  background-color: $grey3
+  transition: 0.2s linear
+  cursor: default
+
 .header,
 .main,
 .footer
@@ -337,6 +343,12 @@ dialog
 
 .icon--hours
   background-image: url('../images/contacts-clock.svg')
+
+.icon__minus
+  background-image: url('../images/icons/minus.svg')
+
+.icon__plus
+  background-image: url('../images/icons/plus.svg')
 
 .link--grey
   color: $grey1
@@ -1308,18 +1320,12 @@ dialog
   background-position: 50% 50%
   cursor: pointer
 
-.cart_contents__products__item__middle__count__minus
-  background-image: url('../images/icons/minus.svg')
-
 .cart_contents__products__item__middle__count__current
   justify-self: center
   align-self: center
   font-size: 1.4rem
   line-height: 130%
   font-weight: 700
-
-.cart_contents__products__item__middle__count__plus
-  background-image: url('../images/icons/plus.svg')
 
 .cart_contents__products__item__middle__price
   font-size: 1.2rem
@@ -2923,18 +2929,18 @@ dialog
   display: grid
   gap: 1rem
   grid-template-columns: 39% 33% 28%
-  grid-template-rows: 3.2rem 2.6rem calc(2.8rem + 1rem + .6rem) auto auto
-  grid-template-areas: "helpers condition condition" "gallery heading heading" "gallery guarantee guarantee" "gallery options buy" "tabs tabs tabs"
+  grid-template-rows: 3.2rem 2.6rem calc(2.8rem + 1rem + .6rem) auto auto auto
+  grid-template-areas: "helpers condition condition" "gallery heading heading" "gallery guarantee guarantee" "gallery markdown markdown" "gallery options buy" "tabs tabs tabs"
 
   @media screen and (max-width: $desktop)
     grid-template-columns: 53% 47%
-    grid-template-rows: 3.2rem auto calc(2.8rem + 1rem + .6rem) auto auto auto
-    grid-template-areas: "helpers condition" "gallery heading" "gallery guarantee" "gallery options" "gallery buy" "tabs tabs"
+    grid-template-rows: 3.2rem auto calc(2.8rem + 1rem + .6rem) auto auto auto auto
+    grid-template-areas: "helpers condition" "gallery heading" "gallery guarantee" "gallery markdown" "gallery options" "gallery buy" "tabs tabs"
 
   @media screen and (max-width: $tablet)
     grid-template-columns: 100%
-    grid-template-rows: 3.2rem auto calc(2.8rem + 1rem + .6rem) auto auto auto
-    grid-template-areas: "condition" "heading" "guarantee" "helpers" "gallery" "options" "buy" "tabs"
+    grid-template-rows: 3.2rem auto calc(2.8rem + 1rem + .6rem) auto auto auto auto
+    grid-template-areas: "condition" "heading" "guarantee" "markdown" "helpers" "gallery" "options" "buy" "tabs"
 
 .product__helpers
   grid-area: helpers
@@ -2957,6 +2963,10 @@ dialog
   background-color: #fff
   border-radius: $radius
 
+.product__helpers__stock--out_of_stock
+  color: $white
+  background-color: $grey-dark1
+  
 .product__condition
   grid-area: condition
   display: flex
@@ -3060,6 +3070,17 @@ dialog
   background-image: url('../images/icons/guarantee.svg')
   background-repeat: no-repeat
   background-position: left 1.2rem top 50%
+
+.product__markdown
+  grid-area: markdown
+  margin-right: .8rem
+  padding: 2rem 1.4rem
+  width: calc(100% - .8rem)
+  font-size: 1.4rem
+  font-weight: 400
+  line-height: 130%
+  background-color: $grey1
+  border-radius: $radius
 
 .product__options
   grid-area: options
@@ -3197,7 +3218,13 @@ dialog
   text-decoration: line-through
   white-space: nowrap
 
-.product__buy__add_to_cart
+.product__buy__cart
+  display: flex
+  flex-direction: row
+  gap: .4rem
+  width: 100%
+
+.product__buy__cart__add_to_cart, .product__buy__cart__out_of_stock
   width: 100%
   font-size: 1.6rem
   font-weight: 500
@@ -3207,12 +3234,41 @@ dialog
   @media screen and (max-width: $tablet)
     padding: 2rem
 
+.product__buy__cart__count
+  display: grid
+  grid-template-columns: 3.2rem auto 3.2rem
+  align-items: center
+  padding: .4rem .8rem
+  width: auto
+  font-size: 1.4rem
+  font-weight: 700
+  line-height: 130%
+  text-align: center
+
+.product__buy__item__icon
+  display: inline-block
+  padding: .8rem
+  width: 3.2rem
+  height: 3.2rem
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  cursor: pointer
+
+.product__buy__cart__count__current
+  justify-self: center
+  align-self: center
+  font-size: 1.4rem
+  line-height: 130%
+  font-weight: 700
+
+
 .product__buy__row2_buttons
   display: grid
   grid-template-columns: auto 4.8rem
   gap: .4rem
 
 .product__buy__row2_buttons__order
+  padding: 1.2rem
   width: 100%
   background-color: #fff
   font-size: 1.6rem
@@ -3302,6 +3358,10 @@ dialog
   grid-area: tabs_navigation
   display: flex
   gap: .6rem
+  overflow-x: scroll
+  scrollbar-gutter: stable
+  scrollbar-width: none
+  scrollbar-color: $white
 
 .tabs_label
   display: inline-block
@@ -3552,6 +3612,9 @@ dialog
     margin: 0 auto
     max-width: 100%
     overflow-x: scroll
+    scrollbar-gutter: stable
+    scrollbar-width: none
+    scrollbar-color: $white
 
 .product__promo__text-n-img
   position: relative
@@ -3711,6 +3774,11 @@ dialog
   border-radius: $radius
 
 .product__tabs__content__block__reviews__button
+  text-align: center
+
+  @media screen and (max-width: $tablet)
+    padding: 2rem
+    width: 100%
 
 .product__tabs__content__block__reviews__rating
   display: flex
@@ -3764,11 +3832,20 @@ dialog
   background-color: #fff
   border-radius: $radius
 
+  @media screen and (max-width: $tablet)
+    grid-template-columns: 1fr
+    grid-template-rows: 1.6rem auto auto
+    grid-template-areas: "review_meta" "review_summary" "review_text"
+
+
 .product__tabs__content__block__reviews__list__item__image
   grid-area: review_image
   margin: .8rem
   width: 6rem
   height: 6rem
+
+  @media screen and (max-width: $tablet)
+    display: none
 
 .product__tabs__content__block__reviews__list__item__summary
   grid-area: review_summary
@@ -3792,6 +3869,9 @@ dialog
 .product__tabs__content__block__reviews__list__item__description__link
   color: $pink
 
+  @media screen and (max-width: $tablet)
+    display: block
+
 .product__tabs__content__block__reviews__list__item__text
   grid-area: review_text
 
@@ -3801,6 +3881,9 @@ dialog
   justify-content: flex-end
   gap: 2rem
   flex-wrap: nowrap
+
+  @media screen and (max-width: $tablet)
+    justify-content: space-between
 
 .product__tabs__content__block__reviews__list__item__meta__source
   font-size: 1.2rem
