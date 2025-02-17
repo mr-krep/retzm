@@ -1,3 +1,33 @@
+/* Закрытие модального окна при клике вне окна */
+function openDialog({
+  target: button
+}) {
+  const dialogElement = document.querySelector(".popup");
+  const dialogElementContainer = document.querySelector(".popup__container");
+
+  setTimeout(() => {
+    document.addEventListener("click", closeDialogOnOutsideClick)
+    dialogElement.addEventListener("close", () =>
+      document.removeEventListener("click", closeDialogOnOutsideClick)
+    )
+  }, 100)
+
+  function closeDialogOnOutsideClick({
+    target
+  }) {
+    const isClickOnDialog = target === dialogElementContainer
+    const isClickOnDialogChildrenNodes = dialogElementContainer.contains(target)
+
+    const isClickOutsideOfDialog = !(
+      isClickOnDialog || isClickOnDialogChildrenNodes
+    );
+
+    if (isClickOutsideOfDialog) {
+      dialogElement.close()
+    }
+  }
+}
+
 class HvrSlider {
   constructor(selector) {
     const elements = document.querySelectorAll(selector);
