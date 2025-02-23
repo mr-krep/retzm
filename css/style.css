@@ -5541,7 +5541,19 @@ dialog {
   outline: none;
 }
 
-/* line 3827, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+@media screen and (max-width: 1024px) {
+  /* line 3815, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  .popup_city {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+    z-index: 1000;
+  }
+}
+
+/* line 3835, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .popup_city__container {
   display: grid;
   grid-template-areas: "city_heading city_close" "none none";
@@ -5552,7 +5564,7 @@ dialog {
   padding: 2rem;
 }
 
-/* line 3836, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 3844, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .popup_city__container__heading {
   grid-area: city_heading;
   font-size: 2rem;
@@ -5560,7 +5572,7 @@ dialog {
   line-height: 130%;
 }
 
-/* line 3842, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 3850, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .popup_city__container__close {
   grid-area: city_close;
   align-self: end;
@@ -5574,7 +5586,7 @@ dialog {
   cursor: pointer;
 }
 
-/* line 3854, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+/* line 3862, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
 .popup_city__container__button {
   width: 100%;
   text-align: center;

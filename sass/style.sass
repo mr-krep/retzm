@@ -3824,6 +3824,14 @@ dialog
   &:focus-visible, &:focus
     outline: none
 
+  @media screen and (max-width: $tablet)
+    position: absolute
+    top: 0
+    width: 100%
+    max-width: 60rem
+    margin: 0 auto
+    z-index: 1000
+
 .popup_city__container
   display: grid
   grid-template-areas: "city_heading city_close" "none none"
