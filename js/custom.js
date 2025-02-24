@@ -28,6 +28,11 @@ function openDialog({
   }
 }
 
+/* Tooltip c корзиной */
+document.querySelector('.link_icon--cart').addEventListener('click', () => {
+  document.querySelector('.header__bottom__container__column__services__item__cart_tooltip').style.display = (document.querySelector('.header__bottom__container__column__services__item__cart_tooltip').style.display == 'flex') ? 'none' : 'flex'
+})
+
 class HvrSlider {
   constructor(selector) {
     const elements = document.querySelectorAll(selector);

@@ -244,6 +244,9 @@ dialog
   line-height: 1.8rem
   cursor: pointer
 
+  @media screen and (max-width: $tablet)
+    padding: 2rem 2.2rem
+
 .button--pink
   color: $white
   background-color: $pink
@@ -343,6 +346,12 @@ dialog
 
 .icon--star--grey
   background-image: url('../images/icons/star-grey.svg')
+
+.icon--delete
+  background-image: url('../images/icons/trash.svg')
+
+.icon--close
+  background-image: url('../images/icons/close.svg')
 
 .link--grey
   color: $grey1
@@ -601,6 +610,9 @@ dialog
   display: flex
   gap: 4rem
 
+.header__bottom__container__column__services__item
+  position: relative
+
 .header__bottom__container__column__services__item__link
   padding-left: 2.8rem
   font-size: 1.6rem
@@ -637,6 +649,108 @@ dialog
     .header__mobile__item__logo__image
       width: 10rem
       height: 5rem
+
+.header__bottom__container__column__services__item__cart_tooltip
+  position: absolute
+  top: 4.5rem
+  right: 0
+  z-index: 1000
+  margin: 0
+  padding: 2rem
+  width: 48.4rem
+  display: none
+  flex-direction: column
+  gap: 3rem
+  background-color: $white
+  box-shadow: $shadow
+  border-radius: $radius
+
+  @media screen and (max-width: $tablet)
+    position: absolute
+    width: calc(100% - 2*1.4rem)
+    gap: 1rem
+
+.header__bottom__container__column__services__item__cart_tooltip__list
+  display: flex
+  flex-direction: column
+  gap: 1rem
+
+.header__bottom__container__column__services__item__cart_tooltip__list__item
+  display: flex
+  gap: 2rem
+  align-items: center
+
+.header__bottom__container__column__services__item__cart_tooltip__list__item__link
+  position: relative
+  padding: .8rem
+  width: 10rem
+  background-color: #fff
+  border-radius: $radius
+  
+.header__bottom__container__column__services__item__cart_tooltip__list__item__link__image
+  width: 100%
+
+.header__bottom__container__column__services__item__cart_tooltip__list__item__link__count
+  position: absolute
+  top: 3.8rem
+  right: -1.3rem
+  width: 2.4rem
+  height: 2.4rem
+  padding: .2rem .5rem .5rem
+  font-size: 1.2rem
+  font-weight: 500
+  color: $white
+  background-color: $black
+  border-radius: 50%
+
+.header__bottom__container__column__services__item__cart_tooltip__list__item__text
+  display: flex
+  flex-direction: column
+  gap: .5rem
+  width: 28.4rem
+  font-size: 1.4rem
+  font-weight: 500
+  color: $black
+
+.header__bottom__container__column__services__item__cart_tooltip__list__item__text__name
+  font-size: 1.4rem
+  font-weight: 500
+  line-height: 130%
+
+.header__bottom__container__column__services__item__cart_tooltip__list__item__text__cost
+        
+.header__bottom__container__column__services__item__cart_tooltip__summary__cost__title,
+.header__bottom__container__column__services__item__cart_tooltip__list__item__text__cost__current,
+.header__bottom__container__column__services__item__cart_tooltip__summary__cost__current
+  font-size: 1.6rem
+  font-weight: 700
+  color: $black
+
+.header__bottom__container__column__services__item__cart_tooltip__list__item__text__cost__old,
+.header__bottom__container__column__services__item__cart_tooltip__summary__cost__old
+  font-size: 1.2rem
+  font-weight: 400
+  text-decoration: line-through
+  color: $grey-dark2
+
+.header__bottom__container__column__services__item__cart_tooltip__list__item__delete
+  display: inline-block
+  padding: .1rem
+  width: 2rem
+  height: 2rem
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  cursor: pointer
+
+.header__bottom__container__column__services__item__cart_tooltip__summary
+  display: flex
+  gap: .5rem
+  justify-content: space-between
+  align-items: center
+
+.header__bottom__container__column__services__item__cart_tooltip__summary__cost
+
+.header__bottom__container__column__services__item__cart_tooltip__summary__button  
 /* Header end */
 
 /* Main -- Banner start */
@@ -1366,7 +1480,6 @@ dialog
 
 .cart_contents__products__item__right__delete
   justify-self: right
-  background-image: url('../images/icons/trash.svg')
 
 .cart_contents__summary
   margin-bottom: 3rem
@@ -3812,6 +3925,187 @@ dialog
 /* Product end */
 
 /*POPUP*/
+.popup_cart
+  // display: grid
+  gap: 1rem
+  margin: 19rem auto
+  width: 31.4rem
+  background-color: $white
+  border-radius: $radius
+  box-shadow: $shadow
+
+  &::backdrop
+    background: rgba(0, 0, 0, 0.5)
+
+  &:focus-visible, &:focus
+    outline: none
+
+  @media screen and (max-width: $tablet)
+    position: absolute
+    top: 0
+    width: 100%
+    max-width: 60rem
+    margin: 0 auto
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+    z-index: 1000
+
+.popup_cart__container
+  display: grid
+  grid-template-areas: "heading close" "product product" "button_cart button_cart" "button_close button_close"
+  grid-template-columns: auto 2rem
+  gap: 1rem
+  padding: 2rem
+
+.popup_cart__container__heading
+  grid-area: heading
+  font-size: 1.6rem
+  font-weight: 700
+  line-height: 130%
+
+.popup_cart__container__close
+  grid-area: close
+  align-self: end
+  margin-left: auto
+  width: 2rem
+  height: 2rem
+  background-size: contain
+  background-position: right 50%
+  background-repeat: no-repeat
+  cursor: pointer
+
+.popup_cart__container__product
+  grid-area: product
+  position: relative
+  display: grid
+  gap: 2rem
+  padding: 2.2rem
+  background-color: #fff
+  border-radius: $radius
+
+.popup_cart__container__product__images
+  display: flex
+  flex-direction: column
+  gap: 1rem
+  flex-wrap: nowrap
+  justify-content: flex-start
+  width: 100%
+  overflow-x: auto
+  -ms-overflow-style: none
+  scrollbar-width: none
+
+  &::-webkit-scrollbar
+      width: 0
+      height: 0
+
+.popup_cart__container__product__images__link
+  display: flex
+  gap: 1rem
+  width: 100%
+
+  @media screen and (max-width: $tablet)
+    padding: 1rem 1rem 0
+
+.popup_cart__container__product__images__link__image
+  max-width: unset
+  width: 100%
+
+.popup_cart__container__product__text
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  margin-top: 2rem
+  flex: 1 0 10rem
+  gap: 1rem
+
+  @media screen and (max-width: $tablet)
+    padding: 0 1rem
+  
+.popup_cart__container__product__text__title
+  font-size: 1.4rem
+  font-weight: 500
+  line-height: 1.8rem
+  width: 100%
+  transition: 0.2s linear
+
+  &:hover
+    color: $pink
+
+.popup_cart__container__product__text__info
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+
+.popup_cart__container__product__text__info__prices
+  display: flex
+  gap: 0.4rem
+  align-items: center
+
+.popup_cart__container__product__text__info__prices__price
+  font-size: 1.6rem
+  line-height: 130%
+  font-weight: 700
+  color: $black
+
+.popup_cart__container__product__text__info__prices__oldprice
+  font-size: 1.2rem
+  line-height: 130%
+  font-weight: 400
+  color: $grey-dark2
+  text-decoration: line-through
+
+.popup_cart__container__product__add_to_favourites
+  position: absolute
+  display: block
+  top: 1.6rem
+  right: 1.6rem
+  width: 1.6rem
+  height: 1.6rem
+  z-index: 10
+  background-image: url("../images/icons/heart-grey.svg")
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  transition: 0.2s linear
+
+  &:hover
+    background-image: url("../images/icons/heart-pink.svg")
+
+.popup_cart__container__product__add_to_favourites--added
+  position: absolute
+  display: block
+  top: 1.6rem
+  right: 1.6rem
+  width: 1.6rem
+  height: 1.6rem
+  z-index: 10
+  background-image: url("../images/icons/heart-pink-filled.svg")
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  transition: 0.2s linear
+
+  &:hover
+    background-image: url("../images/icons/heart-grey.svg")
+
+
+.popup_cart__container__button--order
+  grid-area: button_cart
+  width: 100%
+  text-align: center
+  font-size: 1.6rem
+  font-weight: 500
+  line-height: 130%
+
+.popup_cart__container__button--close
+  grid-area: button_close
+  margin-top: -.5rem
+  width: 100%
+  text-align: center
+  font-size: 1.6rem
+  font-weight: 500
+  line-height: 130%
+
 .popup_city
   margin: 11rem auto
   width: 48.4rem
@@ -3853,7 +4147,6 @@ dialog
   margin-left: auto
   width: 2rem
   height: 2rem
-  background-image: url('../images/icons/close.svg')
   background-size: contain
   background-position: right 50%
   background-repeat: no-repeat

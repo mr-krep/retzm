@@ -219,7 +219,7 @@
             <span class="product__buy__prices__current">645 000 ₽</span>
             <span class="product__buy__prices__old">667 000 ₽</span>
           </div>
-          <span class="product__buy__add_to_cart button button--pink">Добавить в корзину</span>
+          <span class="product__buy__add_to_cart button button--pink" onclick="window.Cart.showModal(); openDialog(event);" aria-controls="Cart" alt="Добавить в корзину">Добавить в корзину</span>
           <div class="product__buy__row2_buttons">
             <span class="product__buy__row2_buttons__order button button--white">Заказать в 1 клик</span>
             <span class="product__buy__row2_buttons__favourites"></span>
@@ -1077,6 +1077,39 @@
         </div>
       </div>
     </footer>
+    <dialog class="popup_city popup" aria-label="Выбор города" id="City">
+      <div class="popup_city__container popup__container">
+        <span class="popup_city__container__heading">Выберите город</span>
+        <span class="popup_city__container__close icon--close" onclick="window.City.close();"></span>
+        <span class="popup_city__container__button button button--black">Москва</span>
+        <span class="popup_city__container__button button button--black">Санкт-Петербург</span>
+      </div>
+    </dialog>
+    <dialog class="popup_cart popup" aria-label="Товар добавлен в корзину" id="Cart">
+      <div class="popup_cart__container popup__container">
+        <span class="popup_cart__container__heading">Товар добавлен в корзину</span>
+        <span class="popup_cart__container__close icon--close" onclick="window.Cart.close();"></span>
+        <div class="popup_cart__container__product">
+          <div class="popup_cart__container__product__images">
+            <a class="popup_cart__container__product__images__link" href="#">
+              <img class="popup_cart__container__product__images__link__image" src="./images/goods/vinil.png" />
+            </a>
+          </div>
+          <div class="popup_cart__container__product__text">
+            <a class="popup_cart__container__product__text__title" href="#">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм </a>
+            <div class="popup_cart__container__product__text__info">
+              <div class="popup_cart__container__product__text__info__prices">
+                <span class="popup_cart__container__product__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                <span class="popup_cart__container__product__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+              </div>
+            </div>
+          </div>
+          <a class="popup_cart__container__product__add_to_favourites--added" href="#heart"></a>
+        </div>
+        <a class="popup_cart__container__button--order button button--pink" href="../cart.html">Перейти в корзину</a>
+        <span class="popup_cart__container__button--close  button button--white" onclick="window.Cart.close();">Остатья в каталоге</span>
+      </div>
+    </dialog>
     <script src="./js/custom.js"></script>
     <script src="./js/product.js"></script>
   </body>
