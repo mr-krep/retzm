@@ -262,7 +262,7 @@
             <span class="product__buy__cart__out_of_stock button button--grey">Нет в наличии</span>
           </div>
           <div class="product__buy__row2_buttons">
-            <span class="product__buy__row2_buttons__order button button--white">Сообщить о поступлении</span>
+            <span class="product__buy__row2_buttons__order button button--white" onclick="window.Notify.showModal();" aria-controls="Notify" alt="Сообщить о поступлении">Сообщить о поступлении</span>
             <span class="product__buy__row2_buttons__favourites"></span>
           </div>
           <div class="product__buy__delivery">
@@ -1126,29 +1126,26 @@
         <span class="popup_city__container__button button button--black">Санкт-Петербург</span>
       </div>
     </dialog>
-    <dialog class="popup_cart popup" aria-label="Товар добавлен в корзину" id="Cart">
-      <div class="popup_cart__container popup__container">
-        <span class="popup_cart__container__heading">Товар добавлен в корзину</span>
-        <span class="popup_cart__container__close icon--close" onclick="window.Cart.close();"></span>
-        <div class="popup_cart__container__product">
-          <div class="popup_cart__container__product__images">
-            <a class="popup_cart__container__product__images__link" href="#">
-              <img class="popup_cart__container__product__images__link__image" src="./images/goods/vinil.png" />
-            </a>
-          </div>
-          <div class="popup_cart__container__product__text">
-            <a class="popup_cart__container__product__text__title" href="#">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм </a>
-            <div class="popup_cart__container__product__text__info">
-              <div class="popup_cart__container__product__text__info__prices">
-                <span class="popup_cart__container__product__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
-                <span class="popup_cart__container__product__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
-              </div>
-            </div>
-          </div>
-          <a class="popup_cart__container__product__add_to_favourites--added" href="#heart"></a>
+    <dialog class="popup_notify popup" aria-label="Заказать в 1 клик" id="Notify">
+      <div class="popup_notify__container popup__container">
+        <span class="popup_notify__container__heading">Сообщить о поступлении</span>
+        <span class="popup_notify__container__close icon--close" onclick="window.Notify.close();"></span>
+        <div class="popup_notify__container__form">
+          <div class="popup_notify__container__message">Сообщим когда можно будет купить Смартфон Apple iPhone 14 Plus, 512 ГБ, «Cияющая звезда»</div>
+          <input class="popup_notify__container__form__input" placeholder="Имя" />
+          <input class="popup_notify__container__form__input" placeholder="Телефон" />
+          <input class="popup_1click__container__form__input" placeholder="Email" />
+          <textarea class="popup_1click__container__form__input" placeholder="Комментарий"></textarea>
+          <div class="popup_notify__container__capcha smart-captcha" data-sitekey="ysc1_2kYyp6Ed1cWDxW0YtkLbN4SJteItmeDe4CvRtbC79209ed88">Капча</div>
+          <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
+          <span class="popup_notify__container__form__button button button--pink" onclick="OneClick_form('popup_notify'); return false;">Отправить</span>
+          <div class="popup_notify__container__terms">Нажимая на кнопку, вы соглашаетесь с <a href="#">Условиями обработки персональных данных</a>, а также c <a href="../oferta.html">Условиями публичной оферты</a>.</div>
         </div>
-        <a class="popup_cart__container__button--order button button--pink" href="../cart.html">Перейти в корзину</a>
-        <span class="popup_cart__container__button--close  button button--white" onclick="window.Cart.close();">Остатья в каталоге</span>
+        <div class="popup_notify__result">
+          <div class="popup_notify__result__message">Спасибо! Сообщим как только товар появится в наличии</div>
+          <img class="popup_notify__result__image" src="../images/clap.svg" />
+          <span class="popup_notify__result__button button button--pink" onclick="window.Notify.close();">Понятно</span>
+        </div>
       </div>
     </dialog>
     <script src="./js/custom.js"></script>
