@@ -1,32 +1,38 @@
-/* Закрытие модального окна при клике вне окна */
-function openDialog({
-  target: button
-}) {
-  const dialogElement = document.querySelector(".popup");
-  const dialogElementContainer = document.querySelector(".popup__container");
-
-  setTimeout(() => {
-    document.addEventListener("click", closeDialogOnOutsideClick)
-    dialogElement.addEventListener("close", () =>
-      document.removeEventListener("click", closeDialogOnOutsideClick)
-    )
-  }, 100)
-
-  function closeDialogOnOutsideClick({
-    target
-  }) {
-    const isClickOnDialog = target === dialogElementContainer
-    const isClickOnDialogChildrenNodes = dialogElementContainer.contains(target)
-
-    const isClickOutsideOfDialog = !(
-      isClickOnDialog || isClickOnDialogChildrenNodes
-    );
-
-    if (isClickOutsideOfDialog) {
-      dialogElement.close()
-    }
-  }
+/* TMP */
+function OneClick_form(element) {
+  document.querySelector('.'+element+'__container__form').style.display = 'none';
+  document.querySelector('.'+element+'__result').style.display = 'flex';
 }
+
+/* Закрытие модального окна при клике вне окна */
+// function openDialog({
+//   target: button
+// }) {
+//   const dialogElement = document.querySelector(".popup");
+//   const dialogElementContainer = document.querySelector(".popup__container");
+
+//   setTimeout(() => {
+//     document.addEventListener("click", closeDialogOnOutsideClick)
+//     dialogElement.addEventListener("close", () =>
+//       document.removeEventListener("click", closeDialogOnOutsideClick)
+//     )
+//   }, 100)
+
+//   function closeDialogOnOutsideClick({
+//     target
+//   }) {
+//     const isClickOnDialog = target === dialogElementContainer
+//     const isClickOnDialogChildrenNodes = dialogElementContainer.contains(target)
+
+//     const isClickOutsideOfDialog = !(
+//       isClickOnDialog || isClickOnDialogChildrenNodes
+//     );
+
+//     if (isClickOutsideOfDialog) {
+//       dialogElement.close()
+//     }
+//   }
+// }
 
 /* Tooltip c корзиной */
 document.querySelector('.link_icon--cart').addEventListener('click', () => {

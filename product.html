@@ -49,7 +49,7 @@
           </ul>
           <ul class="header__top__container__getintouch">
             <li class="header__top__container__getintouch__item">
-              <a class="header__top__getintouch__item__link getintouch__city link--grey" href="#" alt="Выбрать город">Москва</a>
+              <span class="header__top__getintouch__item__link getintouch__city link--grey" onclick="window.City.showModal();" aria-controls="City" alt="Выбрать город">Москва</span>
             </li>
             <li class="header__top__container__getintouch__item">
               <a class="header__top__getintouch__item__link link--grey getintouch__phone change_phone" href="tel:+74996476144" alt="Телефон">+ 7 499 647-61-44</a>
@@ -258,9 +258,9 @@
             <span class="product__buy__prices__current">645 000 ₽</span>
             <span class="product__buy__prices__old">667 000 ₽</span>
           </div>
-          <span class="product__buy__add_to_cart button button--pink" onclick="window.Cart.showModal(); openDialog(event);" aria-controls="Cart" alt="Добавить в корзину">Добавить в корзину</span>
+          <span class="product__buy__add_to_cart button button--pink" onclick="window.Cart.showModal();" aria-controls="Cart" alt="Добавить в корзину">Добавить в корзину</span>
           <div class="product__buy__row2_buttons">
-            <span class="product__buy__row2_buttons__order button button--white">Заказать в 1 клик</span>
+            <span class="product__buy__row2_buttons__order button button--white" onclick="window.OneClick.showModal();" aria-controls="OneClick" alt="Заказать в 1 клик">Заказать в 1 клик</span>
             <span class="product__buy__row2_buttons__favourites"></span>
           </div>
           <div class="product__buy__delivery">
@@ -1120,8 +1120,8 @@
       <div class="popup_city__container popup__container">
         <span class="popup_city__container__heading">Выберите город</span>
         <span class="popup_city__container__close icon--close" onclick="window.City.close();"></span>
-        <span class="popup_city__container__button button button--black">Москва</span>
-        <span class="popup_city__container__button button button--black">Санкт-Петербург</span>
+        <span class="popup_city__container__button button button--black" onclick="window.City.close();">Москва</span>
+        <span class="popup_city__container__button button button--black" onclick="window.City.close();">Санкт-Петербург</span>
       </div>
     </dialog>
     <dialog class="popup_cart popup" aria-label="Товар добавлен в корзину" id="Cart">
@@ -1147,6 +1147,26 @@
         </div>
         <a class="popup_cart__container__button--order button button--pink" href="../cart.html">Перейти в корзину</a>
         <span class="popup_cart__container__button--close  button button--white" onclick="window.Cart.close();">Остатья в каталоге</span>
+      </div>
+    </dialog>
+    <dialog class="popup_1click popup" aria-label="Заказать в 1 клик" id="OneClick">
+      <div class="popup_1click__container popup__container">
+        <span class="popup_1click__container__heading">Заказать в 1 клик</span>
+        <span class="popup_1click__container__close icon--close" onclick="window.OneClick.close();"></span>
+        <div class="popup_1click__container__form">
+          <div class="popup_1click__container__message">Для уточнения других деталей заказа с вами свяжется менеджер</div>
+          <input class="popup_1click__container__form__input" placeholder="Имя" />
+          <input class="popup_1click__container__form__input" placeholder="Телефон" />
+          <div class="popup_1click__container__capcha smart-captcha" data-sitekey="ysc1_2kYyp6Ed1cWDxW0YtkLbN4SJteItmeDe4CvRtbC79209ed88">Капча</div>
+          <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
+          <span class="popup_1click__container__form__button button button--pink" onclick="OneClick_form('popup_1click'); return false;">Отправить</span>
+          <div class="popup_1click__container__terms">Нажимая на кнопку, вы соглашаетесь с <a href="#">Условиями обработки персональных данных</a>, а также c <a href="../oferta.html">Условиями публичной оферты</a>.</div>
+        </div>
+        <div class="popup_1click__result">
+          <div class="popup_1click__result__message">Для уточнения других деталей заказа с вами свяжется менеджер</div>
+          <img class="popup_1click__result__image" src="../images/clap.svg" />
+          <span class="popup_1click__result__button button button--pink" onclick="window.OneClick.close();">Понятно</span>
+        </div>
       </div>
     </dialog>
     <script src="./js/custom.js"></script>

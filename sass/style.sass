@@ -242,6 +242,7 @@ dialog
   font-weight: 400
   font-size: 1.4rem
   line-height: 1.8rem
+  text-align: center
   cursor: pointer
 
   @media screen and (max-width: $tablet)
@@ -3042,7 +3043,7 @@ dialog
 .product
   display: grid
   gap: 1rem
-  grid-template-columns: 39% 33% 28%
+  grid-template-columns: 39% 32% 28%
   grid-template-rows: 3.2rem 2.6rem calc(2.8rem + 1rem + .6rem) auto auto
   grid-template-areas: "helpers condition condition" "gallery heading heading" "gallery guarantee guarantee" "gallery options buy" "tabs tabs tabs"
 
@@ -3925,11 +3926,7 @@ dialog
 /* Product end */
 
 /*POPUP*/
-.popup_cart
-  // display: grid
-  gap: 1rem
-  margin: 19rem auto
-  width: 31.4rem
+.popup
   background-color: $white
   border-radius: $radius
   box-shadow: $shadow
@@ -3950,12 +3947,21 @@ dialog
     border-top-right-radius: 0
     z-index: 1000
 
-.popup_cart__container
+.popup__container
   display: grid
+  padding: 2rem
+  
+.popup_cart
+  gap: 1rem
+
+  @media screen and (min-width: $tablet+1)
+    margin: 19rem auto
+    width: 31.4rem
+
+.popup_cart__container
   grid-template-areas: "heading close" "product product" "button_cart button_cart" "button_close button_close"
   grid-template-columns: auto 2rem
   gap: 1rem
-  padding: 2rem
 
 .popup_cart__container__heading
   grid-area: heading
@@ -4107,33 +4113,17 @@ dialog
   line-height: 130%
 
 .popup_city
-  margin: 11rem auto
-  width: 48.4rem
-  border-radius: $radius
-  box-shadow: $shadow
 
-  &::backdrop
-    background: rgba(0, 0, 0, 0.5)
-
-  &:focus-visible, &:focus
-    outline: none
-
-  @media screen and (max-width: $tablet)
-    position: absolute
-    top: 0
-    width: 100%
-    max-width: 60rem
-    margin: 0 auto
-    z-index: 1000
+  @media screen and (min-width: $tablet+1)
+    margin: 11rem auto
+    width: 48.4rem
 
 .popup_city__container
-  display: grid
   grid-template-areas: "city_heading city_close" "none none"
   grid-template-columns: 1fr 1fr
   grid-template-rows: auto auto
   row-gap: 2rem
   column-gap: 1rem
-  padding: 2rem
 
 .popup_city__container__heading
   grid-area: city_heading
@@ -4156,6 +4146,88 @@ dialog
   width: 100%
   text-align: center
 
-// .scroll-lock
-//   overflow: hidden
+.popup_1click
+
+  @media screen and (min-width: $tablet+1)
+    margin: 15rem auto
+    width: 57.8rem
+
+.popup_1click__container
+  grid-template-areas: "heading close" "form form" "result result"
+  grid-template-columns: auto 2rem
+
+  a
+    color: $pink
+
+.popup_1click__container__heading
+  grid-area: heading
+  font-size: 2.8rem
+  font-weight: 700
+  line-height: 130%
+
+.popup_1click__container__close
+  grid-area: close
+  align-self: end
+  margin-left: auto
+  width: 2rem
+  height: 2rem
+  background-size: contain
+  background-position: right 50%
+  background-repeat: no-repeat
+  cursor: pointer
+
+.popup_1click__container__form
+  grid-area: form
+  display: flex
+  margin-top: 4rem
+  flex-direction: column
+  gap: 1rem
+
+.popup_1click__container__message
+  grid-area: message
+  padding: 1.4rem 2rem
+  font-size: 1.4rem
+  font-weight: 400
+  line-height: 130%
+  color: $black
+  background-color: $grey1
+  border-radius: $radius
+
+.popup_1click__container__form__input
+  padding: 1.4rem
+  font-size: 1.4rem
+  background-color: #fff
+
+.popup_1click__container__form__button
+  width: 100%
+
+.popup_1click__container__capcha
+  margin-bottom: 1rem
+
+.popup_1click__container__terms
+  grid-area: terms
+
+.popup_1click__result
+  grid-area: result
+  display: none
+  flex-direction: column
+  gap: 2rem
+
+.popup_1click__result__message
+  margin-top: 4rem
+  padding: 1.4rem 2rem
+  font-size: 1.4rem
+  font-weight: 400
+  line-height: 130%
+  color: $black
+  background-color: $grey1
+  border-radius: $radius
+
+.popup_1click__result__image
+  margin: 0 auto
+  width: 16.8rem
+
+.popup_1click__result__button
+  margin: 0 auto
+
 /*POPUP*/
