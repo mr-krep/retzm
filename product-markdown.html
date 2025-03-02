@@ -49,7 +49,7 @@
           </ul>
           <ul class="header__top__container__getintouch">
             <li class="header__top__container__getintouch__item">
-              <a class="header__top__getintouch__item__link getintouch__city link--grey" href="#" alt="Выбрать город">Москва</a>
+              <a class="header__top__getintouch__item__link getintouch__city link--grey" href="#" onclick="window.City.showModal();" aria-controls="City" alt="Выбрать город">Москва</a>
             </li>
             <li class="header__top__container__getintouch__item">
               <a class="header__top__getintouch__item__link link--grey getintouch__phone change_phone" href="tel:+74996476144" alt="Телефон">+ 7 499 647-61-44</a>
@@ -260,15 +260,15 @@
             <span class="product__buy__prices__old">667 000 ₽</span>
           </div>
           <div class="product__buy__cart">
-            <span class="product__buy__cart__add_to_cart button button--pink">Добавить в корзину</span>
+            <span class="product__buy__cart__add_to_cart button button--pink" onclick="window.Cart.showModal();" aria-controls="Cart" alt="Добавить в корзину">Добавить в корзину</span>
             <div class="product__buy__cart__count">
-              <span class="product__buy__cart__count__minus icon__minus cart_contents__products__item__icon"></span>
+              <span class="product__buy__cart__count__minus icon--minus cart_contents__products__item__icon"></span>
               <span class="product__buy__cart__count__current">3</span>
-              <span class="product__buy__cart__count__plus icon__plus cart_contents__products__item__icon"></span>
+              <span class="product__buy__cart__count__plus icon--plus cart_contents__products__item__icon"></span>
             </div>
           </div>
           <div class="product__buy__row2_buttons">
-            <span class="product__buy__row2_buttons__order button button--white">Заказать в 1 клик</span>
+            <span class="product__buy__row2_buttons__order button button--white" onclick="window.OneClick.showModal();" aria-controls="OneClick" alt="Заказать в 1 клик">Заказать в 1 клик</span>
             <span class="product__buy__row2_buttons__favourites"></span>
           </div>
           <div class="product__buy__delivery">
@@ -590,7 +590,7 @@
                   Будьте первым!</p>
                 <p><b>Будьте первым!</b></p>
               </div>
-              <span class="product__tabs__content__block__reviews__button button button--yellow">Оставить отзыв</span>
+              <span class="product__tabs__content__block__reviews__button button button--yellow" onclick="window.Review.showModal();">Оставить отзыв</span>
               <div class="product__tabs__content__block__reviews__rating">
                 <span class="product__tabs__content__block__reviews__rating__text">3/5</span>
                 <div class="product__tabs__content__block__reviews__rating__stars">
@@ -1128,8 +1128,8 @@
       <div class="popup_city__container popup__container">
         <span class="popup_city__container__heading">Выберите город</span>
         <span class="popup_city__container__close icon--close" onclick="window.City.close();"></span>
-        <span class="popup_city__container__button button button--black">Москва</span>
-        <span class="popup_city__container__button button button--black">Санкт-Петербург</span>
+        <span class="popup_city__container__button button button--black" onclick="window.City.close();">Москва</span>
+        <span class="popup_city__container__button button button--black" onclick="window.City.close();">Санкт-Петербург</span>
       </div>
     </dialog>
     <dialog class="popup_cart popup" aria-label="Товар добавлен в корзину" id="Cart">
@@ -1155,6 +1155,59 @@
         </div>
         <a class="popup_cart__container__button--order button button--pink" href="../cart.html">Перейти в корзину</a>
         <span class="popup_cart__container__button--close  button button--white" onclick="window.Cart.close();">Остатья в каталоге</span>
+      </div>
+    </dialog>
+    <dialog class="popup_review popup" aria-label="Заказать в 1 клик" id="OneClick">
+      <div class="popup_1click__container popup__container">
+        <span class="popup_1click__container__heading">Заказать в 1 клик</span>
+        <span class="popup_1click__container__close icon--close" onclick="window.OneClick.close();"></span>
+        <div class="popup_1click__container__form">
+          <div class="popup_1click__container__message">Для уточнения других деталей заказа с вами свяжется менеджер</div>
+          <input class="popup_1click__container__form__input" placeholder="Имя" />
+          <input class="popup_1click__container__form__input" placeholder="Телефон" />
+          <div class="popup_1click__container__capcha smart-captcha" data-sitekey="ysc1_2kYyp6Ed1cWDxW0YtkLbN4SJteItmeDe4CvRtbC79209ed88">Капча</div>
+          <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
+          <span class="popup_1click__container__form__button button button--pink" onclick="OneClick_form('popup_1click'); return false;">Отправить</span>
+          <div class="popup_1click__container__terms">Нажимая на кнопку, вы соглашаетесь с <a class="popup_review__container__terms__link" href="#">Условиями обработки персональных данных</a>, а также c <a class="popup_review__container__terms__link" href="../oferta.html">Условиями публичной оферты</a>.</div>
+        </div>
+        <div class="popup_1click__result">
+          <div class="popup_1click__result__message">Для уточнения других деталей заказа с вами свяжется менеджер</div>
+          <img class="popup_1click__result__image" src="../images/clap.svg" />
+          <span class="popup_1click__result__button button button--pink" onclick="window.OneClick.close();">Понятно</span>
+        </div>
+      </div>
+    </dialog>
+    <dialog class="popup_review popup" aria-label="Оставить отзыв" id="Review">
+      <div class="popup_review__container popup__container">
+        <span class="popup_review__container__heading">Оставить отзыв</span>
+        <span class="popup_review__container__close icon--close" onclick="window.Review.close();"></span>
+        <div class="popup_review__container__form">
+          <div class="popup_review__container__form__rating">
+            <input class="popup_review__container__form__rating__input" name="review_rating" value="0" type="radio" disabled checked />
+            <label class="popup_review__container__form__rating__star__label" for="review_rating-1"></label>
+            <input class="popup_review__container__form__rating__input" name="review_rating" id="review_rating-1" value="1" type="radio" />
+            <label class="popup_review__container__form__rating__star__label" for="review_rating-2"></label>
+            <input class="popup_review__container__form__rating__input" name="review_rating" id="review_rating-2" value="2" type="radio" />
+            <label class="popup_review__container__form__rating__star__label" for="review_rating-3"></label>
+            <input class="popup_review__container__form__rating__input" name="review_rating" id="review_rating-3" value="3" type="radio" />
+            <label class="popup_review__container__form__rating__star__label" for="review_rating-4"></label>
+            <input class="popup_review__container__form__rating__input" name="review_rating" id="review_rating-4" value="4" type="radio" />
+            <label class="popup_review__container__form__rating__star__label" for="review_rating-5"></label>
+            <input class="popup_review__container__form__rating__input" name="review_rating" id="review_rating-5" value="5" type="radio" />
+          </div>
+          <input class="popup_review__container__form__input" placeholder="Имя" />
+          <input class="popup_review__container__form__input" type="email" placeholder="Email" />
+          <textarea class="popup_review__container__form__input popup_review__container__form__input--textarea" placeholder="Текст отзыва"></textarea>
+          <div class="popup_review__container__capcha smart-captcha" data-sitekey="ysc1_2kYyp6Ed1cWDxW0YtkLbN4SJteItmeDe4CvRtbC79209ed88">Капча</div>
+          <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
+          <span class="popup_review__container__form__button button button--pink" onclick="Review_form('popup_review'); return false;">Отправить отзыв</span>
+          <div class="popup_review__container__terms">Нажимая на кнопку, вы соглашаетесь с <a class="popup_review__container__terms__link" href="#">Условиями обработки персональных данных</a>, а также c <a class="popup_review__container__terms__link" href="../oferta.html">Условиями публичной оферты</a>.</div>
+        </div>
+        <div class="popup_review__result">
+          <div class="popup_review__result__message">Спасибо за ваше мнение!<br>После модерации отзыв будет опубликован на сайте.</div>
+          <img class="popup_review__result__image" src="../images/clap.svg" />
+          <span class="popup_review__result__button button button--pink" onclick="window.Review.close();">Понятно</span>
+        </div>
       </div>
     </dialog>
     <script src="./js/custom.js"></script>

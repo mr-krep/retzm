@@ -363,6 +363,12 @@ dialog
 .icon--close
   background-image: url('../images/icons/close.svg')
 
+.icon--minus
+  background-image: url(../images/icons/minus.svg)
+
+.icon--plus
+  background-image: url(../images/icons/plus.svg)
+
 .link--grey
   color: $grey1
   transition: 0.2s linear
@@ -1439,18 +1445,12 @@ dialog
   background-position: 50% 50%
   cursor: pointer
 
-.cart_contents__products__item__middle__count__minus
-  background-image: url('../images/icons/minus.svg')
-
 .cart_contents__products__item__middle__count__current
   justify-self: center
   align-self: center
   font-size: 1.4rem
   line-height: 130%
   font-weight: 700
-
-.cart_contents__products__item__middle__count__plus
-  background-image: url('../images/icons/plus.svg')
 
 .cart_contents__products__item__middle__price
   font-size: 1.2rem
@@ -3335,6 +3335,29 @@ dialog
 
   @media screen and (max-width: $tablet)
     padding: 2rem
+
+.product__buy__cart
+  display: grid
+  grid-template-columns: auto 9.5rem
+  gap: .4rem
+
+.product__buy__cart__add_to_cart
+  width: 100%
+
+.product__buy__cart__count
+  display: grid
+  grid-template-columns: 3.2rem auto 3.2rem
+  align-items: center
+  padding: .4rem .8rem
+  background-color: $white
+  border-radius: 0.4rem
+
+.product__buy__cart__count__current
+  justify-self: center
+  align-self: center
+  font-size: 1.4rem
+  line-height: 130%
+  font-weight: 700
 
 .product__buy__cart__out_of_stock
   cursor: default
