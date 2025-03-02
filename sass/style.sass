@@ -317,57 +317,74 @@ dialog
 .icon--search-white
   background-image: url(../images/icons/search-white.svg)
   background-size: cover
+  background-repeat: no-repeat
 
 .icon--heart-white
   background-image: url(../images/icons/heart-white.svg)
   background-size: cover
+  background-repeat: no-repeat
 
 .icon--cart-white
   background-image: url(../images/icons/cart-white.svg)
   background-size: cover
+  background-repeat: no-repeat
 
 .icon--nav-white
   background-image: url(../images/icons/nav-white.svg)
   background-size: cover
+  background-repeat: no-repeat
 
 .icon--add-to-cart-pink
   background-image: url("../images/icons/cart-pink.svg")
+  background-repeat: no-repeat
 
 .icon--address
   background-image: url('../images/contacts-geo.svg')
+  background-repeat: no-repeat
 
 .icon--metro
   background-image: url('../images/contacts-metro.svg')
+  background-repeat: no-repeat
 
 .icon--phone
   background-image: url('../images/contacts-phone.svg')
+  background-repeat: no-repeat
 
 .icon--email
   background-image: url('../images/contacts-email.svg')
+  background-repeat: no-repeat
 
 .icon--days
   background-image: url('../images/contacts-calendar.svg')
+  background-repeat: no-repeat
 
 .icon--hours
   background-image: url('../images/contacts-clock.svg')
+  background-repeat: no-repeat
 
 .icon--star-yellow
   background-image: url('../images/icons/star-yellow.svg')
+  background-repeat: no-repeat
 
 .icon--star--grey
   background-image: url('../images/icons/star-grey.svg')
+  background-repeat: no-repeat
 
 .icon--delete
   background-image: url('../images/icons/trash.svg')
+  background-repeat: no-repeat
 
 .icon--close
   background-image: url('../images/icons/close.svg')
+  background-repeat: no-repeat
 
 .icon--minus
   background-image: url(../images/icons/minus.svg)
+  background-repeat: no-repeat
 
 .icon--plus
   background-image: url(../images/icons/plus.svg)
+  background-repeat: no-repeat
 
 .link--grey
   color: $grey1
@@ -3054,12 +3071,12 @@ dialog
 .product
   display: grid
   gap: 1rem
-  grid-template-columns: 39% 32% 28%
+  grid-template-columns: 39% auto auto
   grid-template-rows: 3.2rem 2.6rem calc(2.8rem + 1rem + .6rem) auto auto
   grid-template-areas: "helpers condition condition" "gallery heading heading" "gallery guarantee guarantee" "gallery options buy" "tabs tabs tabs"
 
   @media screen and (max-width: $desktop)
-    grid-template-columns: 53% 47%
+    grid-template-columns: 53% auto
     grid-template-rows: 3.2rem auto calc(2.8rem + 1rem + .6rem) auto auto auto
     grid-template-areas: "helpers condition" "gallery heading" "gallery guarantee" "gallery options" "gallery buy" "tabs tabs"
 
@@ -4200,7 +4217,8 @@ dialog
 .popup_1click__container__heading, 
 .popup_notify__container__heading, 
 .popup_review__container__heading, 
-.popup_pickup__container__heading
+.popup_pickup__container__heading, 
+.popup_delivery__container__heading
   grid-area: heading
   font-size: 2.8rem
   font-weight: 700
@@ -4214,9 +4232,11 @@ dialog
 .popup_1click__container__close,
 .popup_notify__container__close,
 .popup_review__container__close,
-.popup_pickup__container__close
+.popup_pickup__container__close,
+.popup_delivery__container__close
   grid-area: close
   align-self: end
+  place-self: start
   margin-left: auto
   width: 2rem
   height: 2rem
@@ -4251,13 +4271,15 @@ dialog
 
 .popup_1click__container__form__input,
 .popup_notify__container__form__input,
-.popup_review__container__form__input
+.popup_review__container__form__input,
+.popup_delivery__container__form__input
   padding: 1.4rem
   font-size: 1.4rem
   background-color: #fff
 
 .popup_notify__container__form__input--textarea,
-.popup_review__container__form__input--textarea
+.popup_review__container__form__input--textarea,
+.popup_delivery__container__form__input--textarea
   height: 14rem
 
 .popup_1click__container__form__button,
@@ -4290,8 +4312,9 @@ dialog
 
 .popup_1click__result__message,
 .popup_notify__result__message,
-.popup_review__result__message
-  margin-top: 4rem
+.popup_review__result__message,
+.popup_delivery__container__message
+  grid-area: message
   padding: 1.4rem 2rem
   font-size: 1.4rem
   font-weight: 400
@@ -4412,4 +4435,45 @@ dialog
 
   @media screen and (max-width: $tablet)
     height: 47.7rem
+
+.popup_delivery
+  
+    @media screen and (min-width: $tablet+1)
+      margin: 5rem auto
+      max-width: 102.4rem - 2.8rem
+
+.popup_delivery__container
+  grid-template-areas: "heading close" "form map" "message map" "button map"
+  grid-template-columns: 1fr 1fr
+  gap: 2rem
+
+  @media screen and (max-width: $tablet)
+    grid-template-areas: "heading close" "form form" "message message" "map map" "button button"
+    grid-template-columns: 1fr auto
+
+.popup_delivery__container__form
+  grid-area: form
+  display: flex
+  flex-direction: column
+  gap: 1rem
+
+.popup_delivery__container__form__group
+  display: flex
+  gap: 1rem
+
+  input
+    width: 100%
+
+.popup_delivery__container__message
+  height: min-content
+
+.popup_delivery__container__button
+  grid-area: button
+  margin-top: auto
+  width: 100%
+
+.popup_delivery__container__map
+  grid-area: map
+  overflow: hidden
+  border-radius: $radius
 /*POPUP*/

@@ -44,7 +44,7 @@
           </ul>
           <ul class="header__top__container__getintouch">
             <li class="header__top__container__getintouch__item">
-              <a class="header__top__getintouch__item__link getintouch__city link--grey" href="#" alt="Выбрать город">Москва</a>
+              <span class="header__top__getintouch__item__link getintouch__city link--grey" onclick="window.City.showModal();" aria-controls="City" alt="Выбрать город">Москва</span>
             </li>
             <li class="header__top__container__getintouch__item">
               <a class="header__top__getintouch__item__link link--grey getintouch__phone change_phone" href="tel:+74996476144" alt="Телефон">+ 7 499 647-61-44</a>
@@ -159,12 +159,12 @@
             Способ получения <span class="order__left__city__select">в Санкт-Петербурге</span>
           </div>
           <div class="order__left__delivery">
-            <div class="order__left__delivery__option">
+            <div class="order__left__delivery__option" onclick="window.Pickup.showModal();" aria-controls="Pickup" alt="Подробнее о пункте выдачи">
               <span class="order__left__options__option__heading">Самовывоз &mdash; бесплатно</span>
               <span class="order__left__options__option__info">Метро Площадь Восстания, ул. 1-я Советская, 6к2</span>
               <span class="order__left__options__option__select">Подробнее о пункте выдачи</span>
             </div>
-            <div class="order__left__delivery__option">
+            <div class="order__left__delivery__option" onclick="window.Delivery.showModal();" aria-controls="Delivery" alt="Указать адрес доставки">
               <span class="order__left__options__option__heading">Доставка курьером &mdash; 200&nbsp;₽</span>
               <span class="order__left__options__option__info">До двери</span>
               <span class="order__left__options__option__select">Указать адрес доставки</span>
@@ -320,29 +320,49 @@
         <span class="popup_city__container__button button button--black">Санкт-Петербург</span>
       </div>
     </dialog>
-    <dialog class="popup_cart popup" aria-label="Товар добавлен в корзину" id="Cart">
-      <div class="popup_cart__container popup__container">
-        <span class="popup_cart__container__heading">Товар добавлен в корзину</span>
-        <span class="popup_cart__container__close icon--close" onclick="window.Cart.close();"></span>
-        <div class="popup_cart__container__product">
-          <div class="popup_cart__container__product__images">
-            <a class="popup_cart__container__product__images__link" href="#">
-              <img class="popup_cart__container__product__images__link__image" src="./images/goods/vinil.png" />
-            </a>
+    <dialog class="popup_delivery popup" aria-label="Указать адрес доставки" id="Delivery">
+      <div class="popup_delivery__container popup__container">
+        <span class="popup_delivery__container__heading">Укажите адрес доставки</span>
+        <span class="popup_delivery__container__close icon--close" onclick="window.Delivery.close();"></span>
+        <div class="popup_delivery__container__form">
+          <input class="popup_delivery__container__form__input" placeholder="Город" />
+          <input class="popup_delivery__container__form__input" placeholder="Улица" />
+          <div class="popup_delivery__container__form__group">
+            <input class="popup_delivery__container__form__input" placeholder="Подъезд" />
+            <input class="popup_delivery__container__form__input" placeholder="Этаж" />
+            <input class="popup_delivery__container__form__input" placeholder="Квартира" />
+            <input class="popup_delivery__container__form__input" placeholder="Домофон" />
           </div>
-          <div class="popup_cart__container__product__text">
-            <a class="popup_cart__container__product__text__title" href="#">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм </a>
-            <div class="popup_cart__container__product__text__info">
-              <div class="popup_cart__container__product__text__info__prices">
-                <span class="popup_cart__container__product__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
-                <span class="popup_cart__container__product__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
-              </div>
-            </div>
-          </div>
-          <a class="popup_cart__container__product__add_to_favourites--added" href="#heart"></a>
+          <textarea class="popup_delivery__container__form__input popup_delivery__container__form__input--textarea" placeholder="Комментарий"></textarea>
         </div>
-        <a class="popup_cart__container__button--order button button--pink" href="../cart.html">Перейти в корзину</a>
-        <span class="popup_cart__container__button--close  button button--white" onclick="window.Cart.close();">Остатья в каталоге</span>
+        <div class="popup_delivery__container__message">Для уточнения других деталей заказа с вами свяжется менеджер</div>
+        <span class="popup_delivery__container__button button button--pink" onclick="window.Delivery.close();">Готово</span>
+        <div class="popup_delivery__container__map" id="popup_delivery__map"></div>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A95f762cd1b2901d9765805705d3a5c157235081e11f563b4d8b358b06b0ce2bc&amp;width=100%25&amp;height=100%&amp;id=popup_delivery__map&amp;lang=ru_RU&amp;scroll=true"></script>
+      </div>
+    </dialog>
+    <dialog class="popup_pickup popup" aria-label="Подробнее о пункте выдачи" id="Pickup">
+      <div class="popup_pickup__container popup__container">
+        <span class="popup_pickup__container__heading">О пункте выдачи</span>
+        <span class="popup_pickup__container__close icon--close" onclick="window.Pickup.close();"></span>
+        <div class="popup_pickup__conditions">
+          <span class="popup_pickup__conditions__text">Ваш заказ готов к получению в течение 15 минут после подтверждения.</span>
+          <span class="popup_pickup__conditions__accent">Самовывоз бесплатный, оплата наличными.</span>
+        </div>
+        <div class="popup_pickup__info">
+          <span class="popup_pickup__info__item icon--address">ул. 1-ая Советская, д.&nbsp;6, корпус&nbsp;2, оф.&nbsp;208</span>
+          <span class="popup_pickup__info__item icon--metro">Станция метро &laquo;Площадь&nbsp;Восстания&raquo;</span>
+          <span class="popup_pickup__info__item icon--phone change_phone">
+            <a class="popup_pickup__info__item__link" href="tel:+78122431885">+7 812-243-18-85</a>
+          </span>
+          <span class="popup_pickup__info__item icon--email">
+            <a class="popup_pickup__info__item__link" href="mailto:spb@tehroom.ru">spb@tehroom.ru</a>
+          </span>
+          <span class="popup_pickup__info__item icon--days">Понедельник&mdash;воскресенье</span>
+          <span class="popup_pickup__info__item icon--hours">11:00&mdash;20:00</span>
+        </div>
+        <div class="popup_pickup__info__map" id="popup_pickup__map"></div>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A95f762cd1b2901d9765805705d3a5c157235081e11f563b4d8b358b06b0ce2bc&amp;width=100%25&amp;height=450&amp;id=popup_pickup__map&amp;lang=ru_RU&amp;scroll=true"></script>
       </div>
     </dialog>
   </body>
