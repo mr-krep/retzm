@@ -158,23 +158,35 @@
           <div class="order__left__subheading">
             Способ получения <span class="order__left__city__select">в Санкт-Петербурге</span>
           </div>
-          <div class="order__left__delivery">
-            <div class="order__left__delivery__option" onclick="window.Pickup.showModal();" aria-controls="Pickup" alt="Подробнее о пункте выдачи">
-              <span class="order__left__options__option__heading">Самовывоз &mdash; бесплатно</span>
-              <span class="order__left__options__option__info">Метро Площадь Восстания, ул. 1-я Советская, 6к2</span>
-              <span class="order__left__options__option__select">Подробнее о пункте выдачи</span>
-            </div>
-            <div class="order__left__delivery__option" onclick="window.Delivery.showModal();" aria-controls="Delivery" alt="Указать адрес доставки">
-              <span class="order__left__options__option__heading">Доставка курьером &mdash; 200&nbsp;₽</span>
-              <span class="order__left__options__option__info">До двери</span>
-              <span class="order__left__options__option__select">Указать адрес доставки</span>
-            </div>
-          </div>
+          <ul class="order__left__delivery">
+            <li class="order__left__delivery__option" onclick="window.Pickup.showModal();" aria-controls="Pickup" alt="Подробнее о пункте выдачи">
+              <label class="order__left__delivery__option__label" for="pickup">
+                <input class="order__left__delivery__option__label__input" id="pickup" type="radio" name="delivery_option" checked />
+                <span class="order__left__delivery__option__label__heading">Самовывоз &mdash; бесплатно</span>
+                <span class="order__left__delivery__option__label__info">Метро Площадь Восстания, ул. 1-я Советская, 6к2</span>
+                <span class="order__left__delivery__option__label__select">Подробнее о пункте выдачи</span>
+              </label>
+            </li>
+            <li class="order__left__delivery__option" onclick="window.Delivery.showModal();" aria-controls="Delivery" alt="Указать адрес доставки">
+              <label class="order__left__delivery__option__label" for="delivery">
+                <input class="order__left__delivery__option__label__input" id="delivery" type="radio" name="delivery_option" />
+                <span class="order__left__delivery__option__label__heading">Доставка курьером &mdash; 200&nbsp;₽</span>
+                <span class="order__left__delivery__option__label__info">До двери</span>
+                <span class="order__left__delivery__option__label__select">Указать адрес доставки</span>
+              </label>
+            </li>
+          </ul>
           <div class="order__left__subheading">Способ оплаты</div>
-          <div class="order__left__payment">
-            <span class="order__left__payment__option order__left__payment__option--active button">Наличными при получении</span>
-            <span class="order__left__payment__option button">Картой онлайн</span>
-          </div>
+          <ul class="order__left__payment">
+            <li class="order__left__payment__item order__left__payment__item__label--cash">
+              <input class="order__left__payment__input" id="cash" type="radio" name="payment_option" checked />
+              <label class="order__left__payment__item__label button" for="cash">Наличными при получении</label>
+            </li>
+            <li class="order__left__payment__item order__left__payment__item__label--online">
+              <input class="order__left__payment__input" id="online" type="radio" name="payment_option" />
+              <label class="order__left__payment__item__label button" for="online">Картой онлайн</label>
+            </li>
+          </ul>
           <div class="order__left__promo">
             <div class="order__left__promo__area">
               <span class="order__left__promo__area__heading">Промокод</span>
@@ -227,7 +239,7 @@
               </div>
               <div class="cart_contents__summary__container__bottom">
                 <span class="cart_contents__summary__container__bottom__heading">Итого: 1 290 000 ₽</span>
-                <span class="cart_contents__summary__container__bottom__button button button--pink">Оформить заказ</span>
+                <a class="cart_contents__summary__container__bottom__button button button--pink" href="../order-success.html">Оформить заказ</a>
                 <div class="cart_contents__summary__container__terms">Нажимая на кнопку, вы соглашаетесь с <a href="#">Условиями обработки персональных данных</a>, а также c <a href="#">Условиями публичной оферты</a>.</div>
               </div>
             </div>
