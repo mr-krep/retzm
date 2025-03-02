@@ -2144,6 +2144,7 @@ dialog
   font-size: 1.4rem
   line-height: 130%
   color: $black
+  border-radius: $radius
 
   @media screen and (max-width: $tablet)
     margin: 2rem 0
@@ -2165,6 +2166,7 @@ dialog
   grid-template-rows: 1fr 1fr
   grid-template-columns: 2fr 1fr 1fr
   row-gap: 1.2rem
+  align-items: center
 
   @media screen and (max-width: $tablet)
     display: block
@@ -3327,6 +3329,7 @@ dialog
   white-space: nowrap
 
 .product__buy__add_to_cart, .product__buy__cart__out_of_stock
+  grid-column: span 2
   width: 100%
   font-size: 1.6rem
   font-weight: 500
@@ -3443,6 +3446,7 @@ dialog
   font-weight: 500
   line-height: 130%
   color: $pink
+  cursor: pointer
 
 .product__tabs
   grid-area: tabs
@@ -4187,11 +4191,16 @@ dialog
     margin: 19rem auto
     width: 48rem
 
-.popup_1click__container, .popup_notify__container, .popup_review__container
+.popup_1click__container, 
+.popup_notify__container, 
+.popup_review__container
   grid-template-areas: "heading close" "form form" "result result"
   grid-template-columns: auto 2rem
 
-.popup_1click__container__heading, .popup_notify__container__heading, .popup_review__container__heading
+.popup_1click__container__heading, 
+.popup_notify__container__heading, 
+.popup_review__container__heading, 
+.popup_pickup__container__heading
   grid-area: heading
   font-size: 2.8rem
   font-weight: 700
@@ -4200,7 +4209,12 @@ dialog
   @media screen and (max-width: $tablet)
     font-size: 2rem
 
-.popup_cart__container__close, .popup_city__container__close, .popup_1click__container__close, .popup_notify__container__close, .popup_review__container__close
+.popup_cart__container__close, 
+.popup_city__container__close,
+.popup_1click__container__close,
+.popup_notify__container__close,
+.popup_review__container__close,
+.popup_pickup__container__close
   grid-area: close
   align-self: end
   margin-left: auto
@@ -4211,7 +4225,9 @@ dialog
   background-repeat: no-repeat
   cursor: pointer
 
-.popup_1click__container__form, .popup_notify__container__form, .popup_review__container__form
+.popup_1click__container__form,
+.popup_notify__container__form,
+.popup_review__container__form
   grid-area: form
   display: flex
   margin-top: 2rem
@@ -4221,7 +4237,9 @@ dialog
   @media screen and (max-width: $tablet)
     margin-top: 2rem
 
-.popup_1click__container__message, .popup_notify__container__message, .popup_review__container__message
+.popup_1click__container__message,
+.popup_notify__container__message,
+.popup_review__container__message
   grid-area: message
   padding: 1.4rem 2rem
   font-size: 1.4rem
@@ -4231,33 +4249,48 @@ dialog
   background-color: $grey1
   border-radius: $radius
 
-.popup_1click__container__form__input, .popup_notify__container__form__input, .popup_review__container__form__input
+.popup_1click__container__form__input,
+.popup_notify__container__form__input,
+.popup_review__container__form__input
   padding: 1.4rem
   font-size: 1.4rem
   background-color: #fff
 
-.popup_notify__container__form__input--textarea, .popup_review__container__form__input--textarea
+.popup_notify__container__form__input--textarea,
+.popup_review__container__form__input--textarea
   height: 14rem
 
-.popup_1click__container__form__button, .popup_notify__container__form__button, .popup_review__container__form__button
+.popup_1click__container__form__button,
+.popup_notify__container__form__button,
+.popup_review__container__form__button
   width: 100%
 
-.popup_1click__container__capcha, .popup_notify__container__capcha, .popup_review__container__capcha
+.popup_1click__container__capcha,
+.popup_notify__container__capcha,
+.popup_review__container__capcha
   margin-bottom: 1rem
 
-.popup_1click__container__terms, .popup_notify__container__terms, .popup_review__container__terms
+.popup_1click__container__terms,
+.popup_notify__container__terms,
+.popup_review__container__terms
   grid-area: terms
 
-.popup_review__container__terms__link, .popup_1click__container__terms__link, .popup_notify__container__terms__link
+.popup_review__container__terms__link,
+.popup_1click__container__terms__link,
+.popup_notify__container__terms__link
     color: $pink
 
-.popup_1click__result, .popup_notify__result, .popup_review__result
+.popup_1click__result,
+.popup_notify__result,
+.popup_review__result
   grid-area: result
   display: none
   flex-direction: column
   gap: 2rem
 
-.popup_1click__result__message, .popup_notify__result__message, .popup_review__result__message
+.popup_1click__result__message,
+.popup_notify__result__message,
+.popup_review__result__message
   margin-top: 4rem
   padding: 1.4rem 2rem
   font-size: 1.4rem
@@ -4267,11 +4300,15 @@ dialog
   background-color: $grey1
   border-radius: $radius
 
-.popup_1click__result__image, .popup_notify__result__image, .popup_review__result__image
+.popup_1click__result__image,
+.popup_notify__result__image,
+.popup_review__result__image
   margin: 0 auto
   width: 16.8rem
 
-.popup_1click__result__button, .popup_notify__result__button, .popup_review__result__button
+.popup_1click__result__button,
+.popup_notify__result__button,
+.popup_review__result__button
   margin: 0 auto
 
 .popup_review__container__form__rating
@@ -4302,4 +4339,77 @@ dialog
 .popup_review__container__form .popup_review__container__form__rating input:hover ~ .popup_review__container__form__rating__star__label
 	background-image: url('../images/icons/star-grey.svg')
 
+.popup_pickup
+  
+    @media screen and (min-width: $tablet+1)
+      margin: 5rem auto
+      width: 96rem
+
+.popup_pickup__container
+  grid-template-areas: "heading close" "conditions conditions" "info info" "map map"
+  grid-template-columns: auto 2rem
+  gap: 2rem
+
+.popup_pickup__conditions
+  grid-area: conditions
+  padding: 1.4rem 2rem
+  max-width: 47rem
+  background-color: $grey1
+  font-size: 1.4rem
+  line-height: 130%
+  color: $black
+  border-radius: $radius
+
+  @media screen and (max-width: $tablet)
+    margin: 2rem 0
+
+.popup_pickup__conditions__text
+  display: block
+  font-weight: 400
+
+.popup_pickup__conditions__accent
+  display: block
+  font-weight: 700
+
+.popup_pickup__info
+  grid-area: info
+  width: 100%
+  max-width: 100.5rem
+  display: grid
+  grid-auto-flow: column
+  grid-template-rows: 1fr 1fr
+  grid-template-columns: 3fr 2fr 2fr
+  row-gap: 1.2rem
+  align-items: center
+
+  @media screen and (max-width: $tablet)
+    display: block
+
+.popup_pickup__info__item
+  font-size: 1.6rem
+  line-height: 130%
+  padding-left: 2.6rem
+  background-position: left
+  background-repeat: no-repeat
+  background-size: 2rem 2rem
+  white-space: nowrap
+
+  @media screen and (max-width: $tablet)
+    display: block
+    margin-bottom: .5rem
+    font-size: 1.4rem
+    padding-left: 2.2rem
+    background-size: 1.6rem 1.6rem
+
+    &:nth-child(even)
+      margin-bottom: 2rem
+
+.popup_pickup__info__map
+  grid-area: map
+  width: 100%
+  border-radius: $radius
+  overflow: hidden
+
+  @media screen and (max-width: $tablet)
+    height: 47.7rem
 /*POPUP*/

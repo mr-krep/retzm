@@ -49,7 +49,7 @@
           </ul>
           <ul class="header__top__container__getintouch">
             <li class="header__top__container__getintouch__item">
-              <a class="header__top__getintouch__item__link getintouch__city link--grey" href="#" alt="Выбрать город">Москва</a>
+              <a class="header__top__getintouch__item__link getintouch__city link--grey" href="#" href="#" onclick="window.City.showModal();" aria-controls="City" alt="Выбрать город">Москва</a>
             </li>
             <li class="header__top__container__getintouch__item">
               <a class="header__top__getintouch__item__link link--grey getintouch__phone change_phone" href="tel:+74996476144" alt="Телефон">+ 7 499 647-61-44</a>
@@ -171,8 +171,8 @@
           <span class="product__helpers__stock product__helpers__stock--out_of_stock">Нет в наличии</span>
         </div>
         <div class="product__condition">
-          <span class="product__condition__option product__condition__option--active">Новый</span>
-          <span class="product__condition__option">Уценка</span>
+          <a class="product__condition__option product__condition__option--active" href="../product.html">Новый</a>
+          <a class="product__condition__option" href="../product-markdown.html">Уценка</a>
         </div>
         <div class="product__guarantee">
           <span class="product__guarantee__button">Гарантия 1 год</span>
@@ -200,24 +200,24 @@
           <div class="product__options__option">
             <span class="product__options__option__name">Цвет:</span>
             <div class="product__options__option__values">
-              <a class="product__options__option__values__color option__color--belyi" href="#"></a>
+              <a class="product__options__option__values__color option__color--belyi" href="../product-out-of-stock.html"></a>
               <span class="product__options__option__values__color option__color--bezhevyi product__options__option__values__color--active"></span>
-              <a class="product__options__option__values__color option__color--seryi" href="#"></a>
-              <a class="product__options__option__values__color option__color--zelenyi" href="#"></a>
+              <a class="product__options__option__values__color option__color--seryi" href="../product-out-of-stock.html"></a>
+              <a class="product__options__option__values__color option__color--zelenyi" href="../product-out-of-stock.html"></a>
             </div>
           </div>
           <div class="product__options__option">
             <span class="product__options__option__name">Память:</span>
             <div class="product__options__option__values">
-              <a class="product__options__option__values__value" href="#">256</a>
+              <a class="product__options__option__values__value" href="../product-out-of-stock.html">256</a>
               <span class="product__options__option__values__value product__options__option__values__value--active">512</span>
-              <a class="product__options__option__values__value" href="#">1024</a>
+              <a class="product__options__option__values__value" href="../product-out-of-stock.html">1024</a>
             </div>
           </div>
           <div class="product__options__option">
             <span class="product__options__option__name">Поддержка SIM карт:</span>
             <div class="product__options__option__values">
-              <a class="product__options__option__values__value" href="#">2 nano-SIM</a>
+              <a class="product__options__option__values__value" href="../product-out-of-stock.html">2 nano-SIM</a>
               <span class="product__options__option__values__value product__options__option__values__value--active">1 nano-SIM + 1 eSIM</span>
             </div>
           </div>
@@ -274,7 +274,7 @@
               <li class="product__buy__delivery__options__option">
                 <span class="product__buy__delivery__options__option__heading">Самовывоз - бесплатно</span>
                 <span class="product__buy__delivery__options__option__info">Метро Площадь Восстания, ул. 1-я Советская, 6к2</span>
-                <a class="product__buy__delivery__options__option__link" href="#">Подробнее о пункте выдачи</a>
+                <span class="product__buy__delivery__options__option__link" onclick="window.Pickup.showModal();" aria-controls="Pickup" alt="Подробнее о пункте выдачи">Подробнее о пункте выдачи</span>
               </li>
               <li class="product__buy__delivery__options__option">
                 <span class="product__buy__delivery__options__option__heading">Достава курьером (1-2 дня) - 200 ₽</span>
@@ -1122,8 +1122,8 @@
       <div class="popup_city__container popup__container">
         <span class="popup_city__container__heading">Выберите город</span>
         <span class="popup_city__container__close icon--close" onclick="window.City.close();"></span>
-        <span class="popup_city__container__button button button--black">Москва</span>
-        <span class="popup_city__container__button button button--black">Санкт-Петербург</span>
+        <span class="popup_city__container__button button button--black" onclick="window.City.close();">Москва</span>
+        <span class="popup_city__container__button button button--black" onclick="window.City.close();">Санкт-Петербург</span>
       </div>
     </dialog>
     <dialog class="popup_notify popup" aria-label="Заказать в 1 клик" id="Notify">
@@ -1179,6 +1179,30 @@
           <img class="popup_review__result__image" src="../images/clap.svg" />
           <span class="popup_review__result__button button button--pink" onclick="window.Review.close();">Понятно</span>
         </div>
+      </div>
+    </dialog>
+    <dialog class="popup_pickup popup" aria-label="Подробнее о пункте выдачи" id="Pickup">
+      <div class="popup_pickup__container popup__container">
+        <span class="popup_pickup__container__heading">О пункте выдачи</span>
+        <span class="popup_pickup__container__close icon--close" onclick="window.Pickup.close();"></span>
+        <div class="popup_pickup__conditions">
+          <span class="popup_pickup__conditions__text">Ваш заказ готов к получению в течение 15 минут после подтверждения.</span>
+          <span class="popup_pickup__conditions__accent">Самовывоз бесплатный, оплата наличными.</span>
+        </div>
+        <div class="popup_pickup__info">
+          <span class="popup_pickup__info__item icon--address">ул. 1-ая Советская, д.&nbsp;6, корпус&nbsp;2, оф.&nbsp;208</span>
+          <span class="popup_pickup__info__item icon--metro">Станция метро &laquo;Площадь&nbsp;Восстания&raquo;</span>
+          <span class="popup_pickup__info__item icon--phone change_phone">
+            <a class="popup_pickup__info__item__link" href="tel:+78122431885">+7 812-243-18-85</a>
+          </span>
+          <span class="popup_pickup__info__item icon--email">
+            <a class="popup_pickup__info__item__link" href="mailto:spb@tehroom.ru">spb@tehroom.ru</a>
+          </span>
+          <span class="popup_pickup__info__item icon--days">Понедельник&mdash;воскресенье</span>
+          <span class="popup_pickup__info__item icon--hours">11:00&mdash;20:00</span>
+        </div>
+        <div class="popup_pickup__info__map" id="popup_pickup__info__map"></div>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A95f762cd1b2901d9765805705d3a5c157235081e11f563b4d8b358b06b0ce2bc&amp;width=100%25&amp;height=450&amp;id=popup_pickup__info__map&amp;lang=ru_RU&amp;scroll=true"></script>
       </div>
     </dialog>
     <script src="./js/custom.js"></script>
