@@ -3,6 +3,10 @@ function OneClick_form(element) {
   document.querySelector('.'+element+'__container__form').style.display = 'none';
   document.querySelector('.'+element+'__result').style.display = 'flex';
 }
+function Review_form(element) {
+  document.querySelector('.'+element+'__container__form').style.display = 'none';
+  document.querySelector('.'+element+'__result').style.display = 'flex';
+}
 
 /* Закрытие модального окна при клике вне окна */
 // function openDialog({

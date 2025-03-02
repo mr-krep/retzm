@@ -3985,17 +3985,6 @@ dialog
   font-weight: 700
   line-height: 130%
 
-.popup_cart__container__close
-  grid-area: close
-  align-self: end
-  margin-left: auto
-  width: 2rem
-  height: 2rem
-  background-size: contain
-  background-position: right 50%
-  background-repeat: no-repeat
-  cursor: pointer
-
 .popup_cart__container__product
   grid-area: product
   position: relative
@@ -4121,12 +4110,7 @@ dialog
 
 .popup_cart__container__button--close
   grid-area: button_close
-  margin-top: -.5rem
   width: 100%
-  text-align: center
-  font-size: 1.6rem
-  font-weight: 500
-  line-height: 130%
 
 .popup_city
 
@@ -4135,20 +4119,20 @@ dialog
     width: 48.4rem
 
 .popup_city__container
-  grid-template-areas: "city_heading city_close" "none none"
+  grid-template-areas: "heading close" "none none"
   grid-template-columns: 1fr 1fr
   grid-template-rows: auto auto
   row-gap: 2rem
   column-gap: 1rem
 
 .popup_city__container__heading
-  grid-area: city_heading
+  grid-area: heading
   font-size: 2rem
   font-weight: 700
   line-height: 130%
 
 .popup_city__container__close
-  grid-area: city_close
+  grid-area: close
   align-self: end
   margin-left: auto
   width: 2rem
@@ -4168,98 +4152,23 @@ dialog
     margin: 15rem auto
     width: 57.8rem
 
-.popup_1click__container
-  grid-template-areas: "heading close" "form form" "result result"
-  grid-template-columns: auto 2rem
-
-  a
-    color: $pink
-
-.popup_1click__container__heading
-  grid-area: heading
-  font-size: 2.8rem
-  font-weight: 700
-  line-height: 130%
-
-.popup_1click__container__close
-  grid-area: close
-  align-self: end
-  margin-left: auto
-  width: 2rem
-  height: 2rem
-  background-size: contain
-  background-position: right 50%
-  background-repeat: no-repeat
-  cursor: pointer
-
-.popup_1click__container__form
-  grid-area: form
-  display: flex
-  margin-top: 4rem
-  flex-direction: column
-  gap: 1rem
-
-.popup_1click__container__message
-  grid-area: message
-  padding: 1.4rem 2rem
-  font-size: 1.4rem
-  font-weight: 400
-  line-height: 130%
-  color: $black
-  background-color: $grey1
-  border-radius: $radius
-
-.popup_1click__container__form__input
-  padding: 1.4rem
-  font-size: 1.4rem
-  background-color: #fff
-
-.popup_1click__container__form__button
-  width: 100%
-
-.popup_1click__container__capcha
-  margin-bottom: 1rem
-
-.popup_1click__container__terms
-  grid-area: terms
-
-.popup_1click__result
-  grid-area: result
-  display: none
-  flex-direction: column
-  gap: 2rem
-
-.popup_1click__result__message
-  margin-top: 4rem
-  padding: 1.4rem 2rem
-  font-size: 1.4rem
-  font-weight: 400
-  line-height: 130%
-  color: $black
-  background-color: $grey1
-  border-radius: $radius
-
-.popup_1click__result__image
-  margin: 0 auto
-  width: 16.8rem
-
-.popup_1click__result__button
-  margin: 0 auto
-
 .popup_notify
 
   @media screen and (min-width: $tablet+1)
     margin: 12rem auto
     width: 57.8rem
 
-.popup_notify__container
+.popup_review
+
+  @media screen and (min-width: $tablet+1)
+    margin: 19rem auto
+    width: 48rem
+
+.popup_1click__container, .popup_notify__container, .popup_review__container
   grid-template-areas: "heading close" "form form" "result result"
   grid-template-columns: auto 2rem
 
-  a
-    color: $pink
-
-.popup_notify__container__heading
+.popup_1click__container__heading, .popup_notify__container__heading, .popup_review__container__heading
   grid-area: heading
   font-size: 2.8rem
   font-weight: 700
@@ -4268,7 +4177,7 @@ dialog
   @media screen and (max-width: $tablet)
     font-size: 2rem
 
-.popup_notify__container__close
+.popup_cart__container__close, .popup_city__container__close, .popup_1click__container__close, .popup_notify__container__close, .popup_review__container__close
   grid-area: close
   align-self: end
   margin-left: auto
@@ -4279,17 +4188,17 @@ dialog
   background-repeat: no-repeat
   cursor: pointer
 
-.popup_notify__container__form
+.popup_1click__container__form, .popup_notify__container__form, .popup_review__container__form
   grid-area: form
   display: flex
-  margin-top: 4rem
+  margin-top: 2rem
   flex-direction: column
   gap: 1rem
 
   @media screen and (max-width: $tablet)
     margin-top: 2rem
 
-.popup_notify__container__message
+.popup_1click__container__message, .popup_notify__container__message, .popup_review__container__message
   grid-area: message
   padding: 1.4rem 2rem
   font-size: 1.4rem
@@ -4299,27 +4208,33 @@ dialog
   background-color: $grey1
   border-radius: $radius
 
-.popup_notify__container__form__input
+.popup_1click__container__form__input, .popup_notify__container__form__input, .popup_review__container__form__input
   padding: 1.4rem
   font-size: 1.4rem
   background-color: #fff
 
-.popup_notify__container__form__button
+.popup_notify__container__form__input--textarea, .popup_review__container__form__input--textarea
+  height: 14rem
+
+.popup_1click__container__form__button, .popup_notify__container__form__button, .popup_review__container__form__button
   width: 100%
 
-.popup_notify__container__capcha
+.popup_1click__container__capcha, .popup_notify__container__capcha, .popup_review__container__capcha
   margin-bottom: 1rem
 
-.popup_notify__container__terms
+.popup_1click__container__terms, .popup_notify__container__terms, .popup_review__container__terms
   grid-area: terms
 
-.popup_notify__result
+.popup_review__container__terms__link, .popup_1click__container__terms__link, .popup_notify__container__terms__link
+    color: $pink
+
+.popup_1click__result, .popup_notify__result, .popup_review__result
   grid-area: result
   display: none
   flex-direction: column
   gap: 2rem
 
-.popup_notify__result__message
+.popup_1click__result__message, .popup_notify__result__message, .popup_review__result__message
   margin-top: 4rem
   padding: 1.4rem 2rem
   font-size: 1.4rem
@@ -4329,11 +4244,39 @@ dialog
   background-color: $grey1
   border-radius: $radius
 
-.popup_notify__result__image
+.popup_1click__result__image, .popup_notify__result__image, .popup_review__result__image
   margin: 0 auto
   width: 16.8rem
 
-.popup_notify__result__button
+.popup_1click__result__button, .popup_notify__result__button, .popup_review__result__button
   margin: 0 auto
+
+.popup_review__container__form__rating
+  display: inline-flex
+  gap: .4rem
+  width: auto
+
+.popup_review__container__form__rating__input
+  display: none
+
+.popup_review__container__form__rating__star__label
+  display: block
+  margin: 0
+  width: 2rem
+  height: 2rem
+  background-image: url('../images/icons/star-yellow.svg')
+  background-position: 50% 50%
+  background-size: contain
+  background-repeat: no-repeat
+  cursor: pointer
+
+.popup_review__container__form .popup_review__container__form__rating__input:checked ~ .popup_review__container__form__rating__star__label
+	background-image: url('../images/icons/star-grey.svg')
+
+.popup_review__container__form .popup_review__container__form__rating:hover .popup_review__container__form__rating__star__label
+	background-image: url('../images/icons/star-yellow.svg')
+
+.popup_review__container__form .popup_review__container__form__rating input:hover ~ .popup_review__container__form__rating__star__label
+	background-image: url('../images/icons/star-grey.svg')
 
 /*POPUP*/
