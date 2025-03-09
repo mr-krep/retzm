@@ -31,7 +31,7 @@ var slider = tns({
   },
   fixedWidth: 200,
   items: 2,
-  loop: false,
+  loop: true,
   mouseDrag: true,
   nav: false,
   controls: true,

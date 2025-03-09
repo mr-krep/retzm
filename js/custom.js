@@ -108,3 +108,21 @@ class HvrSlider {
     });
   }
 }
+
+var slider = tns({
+  container: '.popup_search__suggestions__container__list',
+  responsive: {
+    "1350": {
+      fixedWidth: 210,
+      items: 6
+    }
+  },
+  fixedWidth: 200,
+  items: 2,
+  loop: true,
+  mouseDrag: true,
+  nav: false,
+  controls: true,
+  controlsContainer: '.popup_search__suggestions__container__arrows',
+  gutter: 10
+});

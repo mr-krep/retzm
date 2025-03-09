@@ -32,6 +32,11 @@ $orange: #FFAC4B
 html
   font-size: 62.5%
   scrollbar-gutter: stable
+  scrollbar-width: none
+  -ms-overflow-style: none
+
+  &::-webkit-scrollbar
+    display: none
 
 body
   display: flex
@@ -48,6 +53,11 @@ body
   color: $black
   background-color: $white
   scrollbar-gutter: stable
+  scrollbar-width: none
+  -ms-overflow-style: none
+
+  &::-webkit-scrollbar
+    display: none
 
   &:has(dialog[open])
     overflow: hidden
@@ -653,6 +663,7 @@ dialog
   background-position: left center
   background-repeat: no-repeat
   background-size: 2rem 2rem
+  cursor: pointer
 
 .header__mobile
   @media screen and (max-width: $tablet)
@@ -844,7 +855,7 @@ dialog
   right: auto
   
 .arrow--right
-  background-image: url("../images/icons/arrow-right.svg")
+  background-image: url("../images/icons/arrow-right-black.svg")
   right: var(--swiper-navigation-sides-offset, 1rem)
   left: auto
 
@@ -2678,6 +2689,7 @@ dialog
   background-size: contain
   background-position: right 50%
   background-repeat: no-repeat
+  cursor: pointer
 
 .catalogue__filters__container__feature__fieldset
   display: grid
@@ -3054,7 +3066,7 @@ dialog
   display: inline-block
   width: 3.4rem
   height: 3.4rem
-  background-image: url("../images/icons/arrow-right.svg")
+  background-image: url("../images/icons/arrow-right-black.svg")
   background-position: 50% 50%
   background-repeat: no-repeat
   
@@ -4495,4 +4507,356 @@ dialog
   grid-area: map
   overflow: hidden
   border-radius: $radius
+
+
+.popup_search
+  margin: 10.5rem auto 0
+  width: 100%
+  max-width: $desktop
+  background-color: $white
+  border-radius: $radius
+
+  @media screen and (max-width: $tablet)
+    margin: 0 auto
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+    border-bottom-left-radius: $radius
+    border-bottom-right-radius: $radius
+
+.popup_search__container
+  display: grid
+  grid-template-areas: "form" "queries" "suggestions" "link"
+  row-gap: 3rem
+  column-gap: 1rem
+  width: 100%
+  // overflow: hidden
+
+  @media screen and (max-width: $tablet)
+    grid-template-areas: "top" "form" "queries" "suggestions" "link"
+
+.popup_search__container__top
+  display: none
+
+  @media screen and (max-width: $tablet)
+    grid-area: top
+    display: flex
+    gap: 1rem
+    align-items: center
+    justify-content: space-between
+    margin: 2rem 2rem 0 2rem
+  
+.popup_search__container__top__heading
+  font-size: 2rem
+  font-weight: 700
+  line-height: 130%
+
+.popup_search__container__top__close
+  width: 2rem
+  height: 100%
+  background-image: url('../images/icons/close.svg')
+  background-size: contain
+  background-position: right 50%
+  background-repeat: no-repeat
+  cursor: pointer
+
+.popup_search__container__form
+  grid-area: form
+  display: flex
+  gap: 1rem
+  align-items: center
+  margin: 2rem 2rem 0 2rem
+
+  @media screen and (max-width: $tablet)
+    margin-top: 0
+
+.popup_search__container__form__input
+  flex-grow: 2
+  padding: 1.4rem
+  background-color: #fff
+  border-radius: $radius
+
+.popup_search__container__form__button
+  
+  @media screen and (max-width: $tablet)
+    padding: 1.2rem 2.2rem
+
+.popup_search__container__queries
+  grid-area: queries
+  display: flex
+  gap: 1rem
+  flex-wrap: wrap
+  margin: 0 2rem
+
+  @media screen and (max-width: $tablet)
+    margin-right: 0
+    flex-wrap: nowrap
+    overflow-x: auto
+    -ms-overflow-style: none
+    scrollbar-width: none
+
+    &::-webkit-scrollbar
+        width: 0
+        height: 0
+
+.popup_search__container__queries__item
+  white-space: nowrap
+  padding: .4rem 1.6rem .6rem
+  font-size: 1.4rem
+  font-weight: 400
+  line-height: 130%
+  background-color: #fff
+  border-radius: $radius
+
+.popup_search__container_suggestions
+  grid-area: suggestions
+  margin: 0
+
+.popup_search__suggestions__container__heading
+  margin: 0 2rem 2rem
+
+
+.popup_search__container__link_results
+  grid-area: link
+  display: inline-block
+  margin: 0 2rem 2rem
+  padding-right: calc( 1.6rem + .5rem )
+  padding-bottom: .3rem
+  width: fit-content
+  font-size: 1.4rem
+  font-weight: 500
+  line-height: 130%
+  color: $pink
+  background-image: url(../images/icons/arrow-right-pink.svg)
+  background-repeat: no-repeat
+  background-position: top 50% right 0
+  cursor: pointer
+
+  &:hover
+    color: $black
+    background-image: url(../images/icons/arrow-right-black.svg)
+
+.popup_search__suggestions
+  margin-bottom: 6rem
+  
+.popup_search__suggestions__container
+  position: relative
+  margin: 6rem auto
+  width: 100%
+  // max-width: 138rem
+  // overflow-x: auto
+  overflow-x: hidden
+  -ms-overflow-style: none
+  scrollbar-width: none
+
+  &::-webkit-scrollbar
+      width: 0
+      height: 0
+
+  &:hover .arrows--left, 
+  &:hover .arrows--right 
+    display: block
+
+  @media screen and (max-width: $tablet)
+    margin: 4rem auto
+
+.popup_search__suggestions__container .tns-item
+  display: flex !important
+
+.popup_search__suggestions__container__list
+  position: relative
+  display: flex
+  flex-wrap: nowrap
+  justify-content: flex-start
+  align-items: stretch
+  margin-left: 2rem
+  overflow: hidden
+  z-index: 1
+
+  &::-webkit-scrollbar
+      width: 0
+      height: 0
+  
+  @media screen and (max-width: $tablet)
+    align-items: stretch
+
+.popup_search__suggestions__container__list__item
+  position: relative
+  padding: 0
+  margin: 0
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  gap: 2rem
+  min-width: 21rem
+  background-color: #fff
+  background-clip: content-box
+  border-radius: $radius
+
+  @media screen and (max-width: $tablet)
+    min-width: 20rem
+    gap: 1rem
+
+.popup_search__suggestions__container__list__item__images
+  margin: 2.2rem 2.2rem 0
+  display: flex
+  flex-wrap: nowrap
+  justify-content: flex-start
+  max-width: 21rem
+  overflow-x: auto
+  -ms-overflow-style: none
+  scrollbar-width: none
+
+  &::-webkit-scrollbar
+      width: 0
+      height: 0
+  
+  @media screen and (max-width: $tablet)
+    margin: 1rem 1rem 0
+    width: 18rem
+    height: 18rem
+
+.popup_search__container_suggestions__list__item__images__link
+  display: block
+  width: 100%
+
+  @media screen and (max-width: $tablet)
+    width: 18rem
+    height: 18rem
+
+  @media screen and (max-width: $tablet)
+    width: 18rem
+    height: 18rem
+
+.popup_search__container_suggestions__list__item__images__link__image
+  max-width: unset
+  width: 100%
+
+.popup_search__suggestions__container__list__item__text
+  margin: 0 2rem 2rem
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  margin-top: 2rem
+  flex: 1 0 10rem
+  gap: 1rem
+  
+.popup_search__suggestions__container__list__item__text__title
+  font-size: 1.4rem
+  font-weight: 500
+  line-height: 1.8rem
+  text-align: center
+  width: 100%
+  transition: 0.2s linear
+
+  &:hover
+    color: $pink
+
+.popup_search__suggestions__container__list__item__text__info
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  flex-wrap: wrap
+  gap: 1rem
+
+.popup_search__suggestions__container__list__item__text__info__prices
+  display: flex
+  gap: 0.4rem
+  align-items: center
+  width: 100%
+
+  @media screen and (max-width: $tablet)
+    align-items: flex-start
+    flex-direction: column
+
+.popup_search__suggestions__container__list__item__text__info__prices__price
+  font-size: 1.6rem
+  line-height: 130%
+  font-weight: 700
+  color: $black
+
+.popup_search__suggestions__container__list__item__text__info__prices__oldprice
+  font-size: 1.2rem
+  line-height: 130%
+  font-weight: 400
+  color: $grey-dark2
+  text-decoration: line-through
+
+.popup_search__suggestions__container__list__item__text__info__label
+  padding: 0.3rem 0.8rem
+  background-color: $grey1
+  border-radius: $radius
+  color: $grey-dark2
+  font-size: 1.2rem
+  line-height: 130%
+  font-weight: 400
+
+.popup_search__suggestions__container__list__item__add_to_cart
+  display: flex
+  justify-content: center
+  align-items: center
+  gap: 0.5rem
+  width: 100%
+  height: 5rem
+  text-align: center
+  align-content: center
+  border-radius: $radius
+  transition: 0.2s linear
+
+  &:hover
+    background-color: $pink
+
+  &:hover .popup_search__suggestions__container__list__item__add_to_cart__text
+    color: $white
+
+  &:hover .icon--add-to-cart-pink
+    background-image: url("../images/icons/cart-white.svg")
+
+.popup_search__suggestions__container__list__item__add_to_cart__text
+  color: $pink
+  font-size: 1.6rem
+  font-weight: 500
+  line-height: 1.6rem
+  transition: 0.2s linear
+
+.popup_search__suggestions__container__list__item__add_to_cart__icon
+  display: inline-block
+  width: 1.6rem
+  height: 1.6rem
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: 1.6rem 1.6rem
+
+.popup_search__suggestions__container__list__item__add_to_favourites
+  position: absolute
+  display: block
+  top: 1.6rem
+  right: 1.6rem
+  width: 1.6rem
+  height: 1.6rem
+  z-index: 10
+  background-image: url("../images/icons/heart-grey.svg")
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  transition: 0.2s linear
+
+  &:hover
+    background-image: url("../images/icons/heart-pink.svg")
+
+.popup_search__suggestions__container__list__item__add_to_favourites--added
+  position: absolute
+  display: block
+  top: 1.6rem
+  right: 1.6rem
+  width: 1.6rem
+  height: 1.6rem
+  z-index: 10
+  background-image: url("../images/icons/heart-pink-filled.svg")
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  transition: 0.2s linear
+
+  &:hover
+    background-image: url("../images/icons/heart-grey.svg")
 /*POPUP*/
