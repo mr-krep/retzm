@@ -8,35 +8,23 @@ function Review_form(element) {
   document.querySelector('.'+element+'__result').style.display = 'flex';
 }
 
-/* Закрытие модального окна при клике вне окна */
-// function openDialog({
-//   target: button
-// }) {
-//   const dialogElement = document.querySelector(".popup");
-//   const dialogElementContainer = document.querySelector(".popup__container");
+/* Проверяем клики, запускаем закрытие модального окна и завершение прослушки */
+function ListenPopupClicks(element)
+{
+  if (!element.closest('.popup__container') && !element.closest('.popup__opener')){closeDialog ()}
+}
+/* Открываем модальноео окно и включаем прослушку кликов */
+function openDialog(item){
+  window.addEventListener('click', function(e){ListenPopupClicks(e.target)})
+  document.getElementById(item).showModal()
+}
 
-//   setTimeout(() => {
-//     document.addEventListener("click", closeDialogOnOutsideClick)
-//     dialogElement.addEventListener("close", () =>
-//       document.removeEventListener("click", closeDialogOnOutsideClick)
-//     )
-//   }, 100)
-
-//   function closeDialogOnOutsideClick({
-//     target
-//   }) {
-//     const isClickOnDialog = target === dialogElementContainer
-//     const isClickOnDialogChildrenNodes = dialogElementContainer.contains(target)
-
-//     const isClickOutsideOfDialog = !(
-//       isClickOnDialog || isClickOnDialogChildrenNodes
-//     );
-
-//     if (isClickOutsideOfDialog) {
-//       dialogElement.close()
-//     }
-//   }
-// }
+/* Закрываем модальное окно и отключаем прослушку кликов */
+function closeDialog (){
+  const elements = document.querySelectorAll("dialog")
+  elements.forEach((item, index, arr) => {document.querySelectorAll("dialog")[index].close()})
+  window.removeEventListener('click', ListenPopupClicks)
+}
 
 /* Tooltip c корзиной */
 document.querySelector('.link_icon--cart').addEventListener('click', () => {

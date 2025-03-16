@@ -49,7 +49,7 @@
           </ul>
           <ul class="header__top__container__getintouch">
             <li class="header__top__container__getintouch__item">
-              <span class="header__top__getintouch__item__link getintouch__city link--grey" onclick="window.City.showModal(); openDialog(event);" aria-controls="City" alt="Выбрать город">Москва</span>
+              <span class="header__top__getintouch__item__link getintouch__city link--grey popup__opener" onclick="openDialog('City');" aria-controls="City" alt="Выбрать город">Москва</span>
             </li>
             <li class="header__top__container__getintouch__item">
               <a class="header__top__getintouch__item__link link--grey getintouch__phone change_phone" href="tel:+74996476144" alt="Телефон">+ 7 499 647-61-44</a>
@@ -63,7 +63,7 @@
       <div class="header__bottom desktop--block">
         <div class="header__bottom__container section wrapper--global">
           <div class="header__bottom__container__column column__left">
-            <span class="header__bottom__container__column__button button button--pink megamenu_button" onclick="window.Menu.showModal(); openDialog(event);" aria-controls="Menu" alt="Каталог">Каталог</span>
+            <span class="header__bottom__container__column__button button button--pink megamenu_button popup__opener" onclick="openDialog('Menu');" aria-controls="Menu" alt="Каталог">Каталог</span>
           </div>
           <div class="header__bottom__container__column column__center">
             <a class="header__bottom__container__column__logo" href="/" alt="ТехноЗум">
@@ -73,7 +73,7 @@
           <div class="header__bottom__container__column column__right">
             <ul class="header__bottom__container__column__services">
               <li class="header__bottom__container__column__services__item">
-                <span class="header__bottom__container__column__services__item__link link--grey link_icon--search" onclick="window.Search.showModal();" aria-controls="Search" alt="Поиск">Поиск</s>
+                <span class="header__bottom__container__column__services__item__link link--grey link_icon--search popup__opener" onclick="openDialog('Search');" aria-controls="Search" alt="Поиск">Поиск</s>
               </li>
               <li class="header__bottom__container__column__services__item">
                 <a class="header__bottom__container__column__services__item__link link--grey link_icon--favourites" href="#">Избранное</a>
@@ -165,7 +165,7 @@
       </div>
       <div class="header__mobile mobile--grid">
         <div class="header__mobile__item">
-          <span class="header__mobile__item__icon icon--search-white" onclick="window.Search.showModal();" aria-controls="Search" alt="Поиск"></span>
+          <span class="header__mobile__item__icon icon--search-white popup__opener" onclick="openDialog('Search');" aria-controls="Search" alt="Поиск"></span>
         </div>
         <div class="header__mobile__item">
           <span class="header__mobile__item__icon icon--heart-white"></span>
@@ -179,7 +179,7 @@
           <a class="header__mobile__item__icon icon--cart-white" href="../cart.html"></a>
         </div>
         <div class="header__mobile__item">
-          <span class="header__mobile__item__icon icon--nav-white"></span>
+          <span class="header__mobile__item__icon icon--nav-white popup__opener" onclick="openDialog('Menu');" aria-controls="Menu" alt="Каталог"></span>
         </div>
       </div>
     </header>
@@ -688,15 +688,15 @@
     <dialog class="popup_city popup" aria-label="Выбор города" id="City">
       <div class="popup_city__container popup__container">
         <span class="popup_city__container__heading">Выберите город</span>
-        <span class="popup_city__container__close icon--close" onclick="window.City.close();"></span>
+        <span class="popup_city__container__close icon--close" onclick="closeDialog()"></span>
         <span class="popup_city__container__button button button--black">Москва</span>
         <span class="popup_city__container__button button button--black">Санкт-Петербург</span>
       </div>
     </dialog>
-    <dialog class="popup_search popup" aria-label="Товар добавлен в корзину" id="Cart">
+    <dialog class="popup_cart popup" aria-label="Товар добавлен в корзину" id="Cart">
       <div class="popup_cart__container popup__container">
         <span class="popup_cart__container__heading">Товар добавлен в корзину</span>
-        <span class="popup_cart__container__close icon--close" onclick="window.Cart.close();"></span>
+        <span class="popup_cart__container__close icon--close" onclick="closeDialog()"></span>
         <div class="popup_cart__container__product">
           <div class="popup_cart__container__product__images">
             <a class="popup_cart__container__product__images__link" href="#">
@@ -715,14 +715,14 @@
           <a class="popup_cart__container__product__add_to_favourites--added" href="#heart"></a>
         </div>
         <a class="popup_cart__container__button--order button button--pink" href="../cart.html">Перейти в корзину</a>
-        <span class="popup_cart__container__button--close  button button--white" onclick="window.Cart.close();">Остатья в каталоге</span>
+        <span class="popup_cart__container__button--close  button button--white" onclick="closeDialog()">Остатья в каталоге</span>
       </div>
     </dialog>
     <dialog class="popup_search popup" aria-label="Поиск товара" id="Search">
-      <div class="popup_search__container">
+      <div class="popup_search__container popup__container">
         <div class="popup_search__container__top">
           <div class="popup_search__container__top__heading">Поиск</div>
-          <span class="popup_search__container__top__close icon--close" onclick="window.Search.close();"></span>
+          <span class="popup_search__container__top__close icon--close" onclick="closeDialog()"></span>
         </div>
         <form class="popup_search__container__form">
           <input class="popup_search__container__form__input" placeholder="Название, артикул или код товара" />
@@ -880,8 +880,8 @@
       </div>
     </dialog>
     <dialog class="popup_menu popup" aria-label="Меню каталога" id="Menu">
-      <div class="popup_menu__container">
-        <input class="popup_menu__container__radio" id="content__1" type="radio" name="popup_menu" checked="checked" />
+      <div class="popup_menu__container popup__container">
+        <input class="popup_menu__container__radio" id="content__1" type="radio" name="popup_menu" />
         <input class="popup_menu__container__radio" id="content__2" type="radio" name="popup_menu" />
         <input class="popup_menu__container__radio" id="content__3" type="radio" name="popup_menu" />
         <input class="popup_menu__container__radio" id="content__4" type="radio" name="popup_menu" />
@@ -894,6 +894,116 @@
         <input class="popup_menu__container__radio" id="content__11" type="radio" name="popup_menu" />
 
         <ul class="popup_menu__container__navigation">
+          <li class="popup_menu__container__navigation__content">
+            <ul class="popup_menu__container__content__list content__1">
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/girland.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Гирлянды</span>
+                </a>
+              </li>
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/coffe.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Кофемашины</span>
+                </a>
+              </li>
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/mixer.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Миксеры</span>
+                </a>
+              </li>
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/vc.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Бытовая техника</span>
+                </a>
+              </li>
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/lamp.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Светильники</span>
+                </a>
+              </li>
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/scales.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Умные весы</span>
+                </a>
+              </li>
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/kettle.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Бытовая техника</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="popup_menu__container__content__list content__2">
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/girland.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Гирлянды2</span>
+                </a>
+              </li>
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/coffe.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Кофемашины2</span>
+                </a>
+              </li>
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/mixer.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Миксеры2</span>
+                </a>
+              </li>
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/vc.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Бытовая техника2</span>
+                </a>
+              </li>
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/lamp.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Светильники2</span>
+                </a>
+              </li>
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/scales.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Умные весы2</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="popup_menu__container__content__list content__3">
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/girland.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Гирлянды3</span>
+                </a>
+              </li>
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/coffe.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Кофемашины3</span>
+                </a>
+              </li>
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/mixer.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Миксеры3</span>
+                </a>
+              </li>
+              <li class="popup_menu__container__content__list__item">
+                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
+                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/vc.png" />
+                  <span class="popup_menu__container__content__list__item__link__name">Бытовая техника3</span>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li class="popup_menu__container__navigation__item content__1">
             <label class="popup_menu__container__navigation__item__label button" for="content__1">Бытовая техника</label>
           </li>
@@ -903,121 +1013,31 @@
           <li class="popup_menu__container__navigation__item content__3">
             <label class="popup_menu__container__navigation__item__label button" for="content__3">Компьютеры, ноутбуки, аксессуары</label>
           </li>
-          <li class="popup_menu__container__navigation__item">
+          <li class="popup_menu__container__navigation__item content__4">
             <label class="popup_menu__container__navigation__item__label button" for="content__4">Игры и аксессуары</label>
           </li>
-          <li class="popup_menu__container__navigation__item">
+          <li class="popup_menu__container__navigation__item content__5">
             <label class="popup_menu__container__navigation__item__label button" for="content__5">Игрушки и конструкторы</label>
           </li>
-          <li class="popup_menu__container__navigation__item">
+          <li class="popup_menu__container__navigation__item content__6">
             <label class="popup_menu__container__navigation__item__label button" for="content__6">Красота и здоровье</label>
           </li>
-          <li class="popup_menu__container__navigation__item">
+          <li class="popup_menu__container__navigation__item content__7">
             <label class="popup_menu__container__navigation__item__label button" for="content__7">Телевизоры и аксессуары</label>
           </li>
-          <li class="popup_menu__container__navigation__item">
+          <li class="popup_menu__container__navigation__item content__8">
             <label class="popup_menu__container__navigation__item__label button" for="content__8">Аудиотехника</label>
           </li>
-          <li class="popup_menu__container__navigation__item">
+          <li class="popup_menu__container__navigation__item content__9">
             <label class="popup_menu__container__navigation__item__label button" for="content__9">Фото и видео</label>
           </li>
-          <li class="popup_menu__container__navigation__item">
+          <li class="popup_menu__container__navigation__item content__10">
             <label class="popup_menu__container__navigation__item__label button" for="content__10">Аксессуары для смартфонов и гаджетов</label>
           </li>
-          <li class="popup_menu__container__navigation__item">
+          <li class="popup_menu__container__navigation__item content__11">
             <label class="popup_menu__container__navigation__item__label button" for="content__11">Туризм GPS навигаторы и эхолоты</label>
           </li>
         </ul>
-        <div class="popup_menu__container__content">
-          <ul class="popup_menu__container__content__list content__1">
-            <li class="popup_menu__container__content__list__item">
-              <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/girland.png" />
-                <span class="popup_menu__container__content__list__item__link__name">Гирлянды</span>
-              </a>
-            </li>
-            <li class="popup_menu__container__content__list__item">
-              <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/coffe.png" />
-                <span class="popup_menu__container__content__list__item__link__name">Кофемашины</span>
-              </a>
-            </li>
-            <li class="popup_menu__container__content__list__item">
-              <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/mixer.png" />
-                <span class="popup_menu__container__content__list__item__link__name">Миксеры</span>
-              </a>
-            </li>
-            <li class="popup_menu__container__content__list__item">
-              <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/vc.png" />
-                <span class="popup_menu__container__content__list__item__link__name">Бытовая техника</span>
-              </a>
-            </li>
-            <li class="popup_menu__container__content__list__item">
-              <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/lamp.png" />
-                <span class="popup_menu__container__content__list__item__link__name">Светильники</span>
-              </a>
-            </li>
-            <li class="popup_menu__container__content__list__item">
-              <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/scales.png" />
-                <span class="popup_menu__container__content__list__item__link__name">Умные весы</span>
-              </a>
-            </li>
-            <li class="popup_menu__container__content__list__item">
-              <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/kettle.png" />
-                <span class="popup_menu__container__content__list__item__link__name">Бытовая техника</span>
-              </a>
-            </li>
-          </ul>
-          <ul class="popup_menu__container__content__list content__2">
-            <li class="popup_menu__container__content__list__item">
-              <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/girland.png" />
-                <span class="popup_menu__container__content__list__item__link__name">Гирлянды2</span>
-              </a>
-            </li>
-            <li class="popup_menu__container__content__list__item">
-              <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/coffe.png" />
-                <span class="popup_menu__container__content__list__item__link__name">Кофемашины2</span>
-              </a>
-            </li>
-            <li class="popup_menu__container__content__list__item">
-              <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/mixer.png" />
-                <span class="popup_menu__container__content__list__item__link__name">Миксеры2</span>
-              </a>
-            </li>
-            <li class="popup_menu__container__content__list__item">
-              <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/vc.png" />
-                <span class="popup_menu__container__content__list__item__link__name">Бытовая техника2</span>
-              </a>
-            </li>
-            <li class="popup_menu__container__content__list__item">
-              <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/lamp.png" />
-                <span class="popup_menu__container__content__list__item__link__name">Светильники2</span>
-              </a>
-            </li>
-            <li class="popup_menu__container__content__list__item">
-              <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/scales.png" />
-                <span class="popup_menu__container__content__list__item__link__name">Умные весы2</span>
-              </a>
-            </li>
-            <li class="popup_menu__container__content__list__item">
-              <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/kettle.png" />
-                <span class="popup_menu__container__content__list__item__link__name">Бытовая техника2</span>
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
     </dialog>
     <script src="./js/custom.js"></script>

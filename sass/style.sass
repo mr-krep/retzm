@@ -4039,8 +4039,6 @@ dialog
     z-index: 1000
 
 .popup__container
-  display: grid
-  padding: 2rem
   
 .popup_cart
   gap: 1rem
@@ -4050,9 +4048,11 @@ dialog
     width: 31.4rem
 
 .popup_cart__container
+  display: grid
   grid-template-areas: "heading close" "product product" "button_cart button_cart" "button_close button_close"
   grid-template-columns: auto 2rem
   gap: 1rem
+  padding: 2rem
 
 .popup_cart__container__heading
   grid-area: heading
@@ -4194,11 +4194,13 @@ dialog
     width: 48.4rem
 
 .popup_city__container
+  display: grid
   grid-template-areas: "heading close" "none none"
   grid-template-columns: 1fr 1fr
   grid-template-rows: auto auto
   row-gap: 2rem
   column-gap: 1rem
+  padding: 2rem
 
 .popup_city__container__heading
   grid-area: heading
@@ -4242,8 +4244,10 @@ dialog
 .popup_1click__container, 
 .popup_notify__container, 
 .popup_review__container
+  display: grid
   grid-template-areas: "heading close" "form form" "result result"
   grid-template-columns: auto 2rem
+  padding: 2rem
 
 .popup_1click__container__heading, 
 .popup_notify__container__heading, 
@@ -4400,9 +4404,11 @@ dialog
       width: 96rem
 
 .popup_pickup__container
+  display: grid
   grid-template-areas: "heading close" "conditions conditions" "info info" "map map"
   grid-template-columns: auto 2rem
   gap: 2rem
+  padding: 2rem
 
 .popup_pickup__conditions
   grid-area: conditions
@@ -4474,9 +4480,11 @@ dialog
       max-width: 102.4rem - 2.8rem
 
 .popup_delivery__container
+  display: grid
   grid-template-areas: "heading close" "form map" "message map" "button map"
   grid-template-columns: 1fr 1fr
   gap: 2rem
+  padding: 2rem
 
   @media screen and (max-width: $tablet)
     grid-template-areas: "heading close" "form form" "message message" "map map" "button button"
@@ -4529,6 +4537,7 @@ dialog
   row-gap: 3rem
   column-gap: 1rem
   width: 100%
+  padding: 2rem
   // overflow: hidden
 
   @media screen and (max-width: $tablet)
@@ -4870,36 +4879,60 @@ dialog
   border-radius: $radius
 
   @media screen and (max-width: $tablet)
-    margin: 0 auto
+    margin: 10.2rem auto 0
     border-top-left-radius: 0
     border-top-right-radius: 0
     border-bottom-left-radius: $radius
     border-bottom-right-radius: $radius
 
 .popup_menu__container
-  display: grid
-  grid-template-areas: "buttons tiles"
-  grid-template-columns: 28.4rem auto
-  gap: 2rem
   width: 100%
   padding: 2rem
 
   @media screen and (max-width: $tablet)
+    display: grid
     grid-template-areas: "buttons" "tiles"
     grid-template-columns: 100%
+    gap: 2rem
 
 .popup_menu__container > .popup_menu__container__radio
   display: none
 
 .popup_menu__container__navigation
   grid-area: buttons
-  display: flex
-  flex-direction: column
+  display: grid
+  grid-template-areas: "none" "tiles"
   gap: 1rem
   width: 100%
 
+  @media screen and (min-width: $tablet+1)
+    grid-template-columns: 28.4rem auto
+    grid-template-areas: "none tiles"
+    gap: 0
+
+#content__1:checked ~ .popup_menu__container__navigation
+  grid-template-areas: "none" "tiles"
+
+  @media screen and (min-width: $tablet+1)
+    grid-template-areas: "none tiles"
+
+#content__2:checked ~ .popup_menu__container__navigation
+  grid-template-areas: "none" "none" "tiles"
+
+  @media screen and (min-width: $tablet+1)
+    grid-template-areas: "none tiles"
+
+#content__3:checked ~ .popup_menu__container__navigation
+  grid-template-areas: "none" "none" "none" "tiles"
+
+  @media screen and (min-width: $tablet+1)
+    grid-template-areas: "none tiles"
+
 .popup_menu__container__navigation__item
   width: 100%
+
+  @media screen and (min-width: $tablet+1)
+    margin-bottom: 1rem
 
 .popup_menu__container__navigation__item__label
   width: 100%
@@ -4912,19 +4945,62 @@ dialog
     background-color: $black
 
 #content__1:checked ~ .popup_menu__container__navigation .content__1 .popup_menu__container__navigation__item__label,
-#content__2:checked ~ .popup_menu__container__navigation .content__2 .popup_menu__container__navigation__item__label
+#content__2:checked ~ .popup_menu__container__navigation .content__2 .popup_menu__container__navigation__item__label,
+#content__3:checked ~ .popup_menu__container__navigation .content__3 .popup_menu__container__navigation__item__label,
+#content__4:checked ~ .popup_menu__container__navigation .content__4 .popup_menu__container__navigation__item__label,
+#content__5:checked ~ .popup_menu__container__navigation .content__5 .popup_menu__container__navigation__item__label,
+#content__6:checked ~ .popup_menu__container__navigation .content__6 .popup_menu__container__navigation__item__label,
+#content__7:checked ~ .popup_menu__container__navigation .content__7 .popup_menu__container__navigation__item__label,
+#content__8:checked ~ .popup_menu__container__navigation .content__8 .popup_menu__container__navigation__item__label,
+#content__9:checked ~ .popup_menu__container__navigation .content__9 .popup_menu__container__navigation__item__label,
+#content__10:checked ~ .popup_menu__container__navigation .content__10 .popup_menu__container__navigation__item__label,
+#content__11:checked ~ .popup_menu__container__navigation .content__11 .popup_menu__container__navigation__item__label,
+#content__12:checked ~ .popup_menu__container__navigation .content__12 .popup_menu__container__navigation__item__label,
+#content__13:checked ~ .popup_menu__container__navigation .content__13 .popup_menu__container__navigation__item__label,
+#content__14:checked ~ .popup_menu__container__navigation .content__14 .popup_menu__container__navigation__item__label,
+#content__15:checked ~ .popup_menu__container__navigation .content__15 .popup_menu__container__navigation__item__label,
+#content__16:checked ~ .popup_menu__container__navigation .content__16 .popup_menu__container__navigation__item__label,
+#content__17:checked ~ .popup_menu__container__navigation .content__17 .popup_menu__container__navigation__item__label,
+#content__18:checked ~ .popup_menu__container__navigation .content__18 .popup_menu__container__navigation__item__label,
+#content__19:checked ~ .popup_menu__container__navigation .content__19 .popup_menu__container__navigation__item__label,
+#content__20:checked ~ .popup_menu__container__navigation .content__20 .popup_menu__container__navigation__item__label
   color: #fff
   background-color: $black
   cursor: default
 
-.popup_menu__container__content
+.popup_menu__container__content, .popup_menu__container__navigation__content
   grid-area: tiles
+
+  @media screen and (min-width: $tablet+1)
+    grid-row: span 20
+    margin-left: 1rem
 
 .popup_menu__container__content__list
   display: none
 
-#content__1:checked ~ .popup_menu__container__content .content__1,
-#content__2:checked ~ .popup_menu__container__content .content__2
+// .test#{$mobile}
+//     background: red !important
+
+#content__1:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__1,
+#content__2:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__2,
+#content__3:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__3,
+#content__4:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__4,
+#content__5:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__5,
+#content__6:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__6,
+#content__7:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__7,
+#content__8:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__8,
+#content__9:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__9,
+#content__10:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__10,
+#content__11:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__11,
+#content__12:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__12,
+#content__13:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__13,
+#content__14:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__14,
+#content__15:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__15,
+#content__16:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__16,
+#content__17:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__17,
+#content__18:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__18,
+#content__19:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__19,
+#content__20:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__20
   margin: 0 auto
   display: flex
   flex-wrap: wrap
