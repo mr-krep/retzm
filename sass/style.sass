@@ -3066,6 +3066,7 @@ dialog
   margin-top: 1.2rem
 
 .navigation__more
+  padding: 1.2rem 1.8rem
   display: block
   width: 100%
   text-align: center
@@ -5313,5 +5314,69 @@ dialog
 
 // .blog__feed__navigation
 
-  
+.blog_author__back
+  display: inline-block
+  margin-top: 6rem
+  margin-bottom: 2rem
+  padding-left: .2rem + 1.6rem + .8rem
+  background-image: url(../images/icons/arrow-left-black.svg)
+  background-repeat: no-repeat
+  background-size: 1.6rem 1.6rem
+  background-position: top 50% left .2rem
+
+  &:hover
+    color: $pink
+
+.blog_author__container
+  margin-bottom: 4rem
+  padding: 2.4rem 2rem
+  display: grid
+  grid-template-columns: 15rem auto 50%
+  grid-template-areas: "photo title intro" "photo name intro"
+  column-gap: 2rem
+  row-gap: .6rem
+  background-color: $black
+  border-radius: $radius
+
+  @media screen and (max-width: $tablet)
+    grid-template-columns: 12rem auto
+    grid-template-areas: "photo title" "photo name" "intro intro"
+
+
+.blog_author__container__photo
+  grid-area: photo
+  align-self: center
+  grid-row: span 2
+  width: 100%
+  border-radius: 50%
+
+.blog_author__container__title, .blog_author__container__intro
+  display: block
+  font-size: 1.4rem
+  font-weight: 400
+  line-height: 130%
+  color: #fff
+
+  @media screen and (max-width: $tablet)
+    margin-top: 1.4rem
+
+.blog_author__container__title
+  grid-area: title
+  align-self: end
+
+.blog_author__container__name
+  grid-area: name
+  align-self: start
+  display: block
+  font-size: 2rem
+  font-weight: 700
+  line-height: 130%
+  color: #fff
+
+.blog_author__container__intro
+  grid-area: intro
+  align-self: center
+  grid-row: span 2
+  display: block
+
 /* Блог */
