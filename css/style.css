@@ -816,7 +816,6 @@ dialog {
   margin: 0 0.2rem;
   width: 0.6rem;
   height: 0.6rem;
-  border-radius: 0.4rem;
   background-color: #DBDBDB;
   cursor: pointer;
 }
@@ -7751,6 +7750,267 @@ dialog {
   align-self: center;
   grid-row: span 2;
   display: block;
+}
+
+/* line 5382, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__back {
+  display: inline-block;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  padding-left: 4.2rem;
+  background-image: url(../images/icons/arrow-left-white.svg);
+  background-repeat: no-repeat;
+  background-size: 1.6rem 1.6rem;
+  background-position: top 50% left 1.8rem;
+}
+
+/* line 5392, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article {
+  width: 100%;
+  max-width: 80.6rem;
+  margin-bottom: 2rem;
+}
+
+/* line 5397, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__container {
+  display: grid;
+  grid-template-columns: auto 1.6rem;
+  gap: 1.2rem;
+  position: relative;
+  padding: 2.4rem;
+  width: 100%;
+  height: 26.8rem;
+  color: #fff;
+  background-image: linear-gradient(transparent, #0A0A0A);
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  /* line 5397, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  .blog_article__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* line 5413, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__container__date {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+/* line 5418, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__container__icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  background-size: 100% 100%;
+}
+
+/* line 5423, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__container__title {
+  grid-row: span 2;
+  align-content: end;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 130%;
+  color: #FAFAFA;
+}
+
+/* line 5431, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__container__image {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* line 5440, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__author {
+  width: 100%;
+  max-width: 80.6rem;
+  margin-bottom: 6rem;
+}
+
+/* line 5445, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__author__container {
+  margin-bottom: 8rem;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 15rem auto auto;
+  grid-template-areas: "photo title intro" "photo name intro" "photo button intro";
+  column-gap: 2rem;
+  row-gap: .6rem;
+  background-color: #0A0A0A;
+  border-radius: 0.4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  /* line 5445, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  .blog_article__author__container {
+    grid-template-columns: 12rem auto;
+    grid-template-areas: "photo title" "photo name" "intro intro";
+  }
+}
+
+/* line 5461, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__author__container__photo {
+  grid-area: photo;
+  align-self: center;
+  grid-row: span 3;
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* line 5468, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__author__container__title, .blog_article__author__container__intro {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 130%;
+  color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  /* line 5468, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  .blog_article__author__container__title, .blog_article__author__container__intro {
+    margin-top: 1.4rem;
+  }
+}
+
+/* line 5478, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__author__container__title {
+  grid-area: title;
+  align-self: end;
+}
+
+/* line 5482, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__author__container__name {
+  grid-area: name;
+  align-self: start;
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 130%;
+  color: #fff;
+}
+
+/* line 5491, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__author__container__button {
+  grid-area: button;
+  place-self: baseline;
+  white-space: nowrap;
+}
+
+/* line 5496, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__author__container__intro {
+  grid-area: intro;
+  align-self: center;
+  grid-row: span 3;
+  display: block;
+}
+
+/* line 5502, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__content {
+  width: 100%;
+  max-width: 80.6rem;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+/* line 5508, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__content__intro {
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: auto 25%;
+  background-color: #F5F5F5;
+  border-radius: 0.4rem;
+}
+
+/* line 5515, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__content__intro__text {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* line 5521, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__content__intro__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+/* line 5527, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__content__hero {
+  margin-bottom: 1.6rem;
+  border-radius: 0.4rem;
+}
+
+/* line 5533, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__content__main ul, .blog_article__content__main ol, .blog_article__content__main p, .blog_article__content__main h2, .blog_article__content__main h3, .blog_article__content__main h4, .blog_article__content__main h5, .blog_article__content__main h6, .blog_article__content__main blockquote, .blog_article__content__main img {
+  display: inline-block;
+  margin-bottom: 1.6rem;
+}
+
+/* line 5537, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__content__main ul, .blog_article__content__main ol {
+  margin-left: 1.8rem;
+}
+
+/* line 5540, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__content__main ul li, .blog_article__content__main ol li {
+  padding-bottom: 2rem;
+  padding-left: 2.8rem;
+}
+
+/* line 5544, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__banner {
+  position: relative;
+  width: 100%;
+  max-width: 80.6rem;
+  margin-bottom: 2rem;
+}
+
+/* line 5550, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__banner__container {
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+/* line 5554, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__banner__container .tns-item, .blog_article__banner__container .tns-slide-active {
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+/* line 5560, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__banner__arrows .arrow--left {
+  left: var(--swiper-navigation-sides-offset, 2.5rem);
+}
+
+/* line 5563, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__banner__arrows .arrow--right {
+  right: var(--swiper-navigation-sides-offset, 2.5rem);
+}
+
+/* line 5566, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__banner__dots.dots {
+  bottom: 7rem !important;
+}
+
+/* line 5569, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.blog_article__banner__description {
+  margin: 1.2rem 5.2rem;
+  padding: 1.8rem 4rem;
+  max-width: 80.6rem;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
 /* Блог */
