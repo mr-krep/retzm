@@ -5381,13 +5381,17 @@ dialog
 
 .blog_article__back
   display: inline-block
-  margin-top: 6rem
+  margin-top: 4rem
   margin-bottom: 2rem
   padding-left: 1.8rem + 1.6rem + .8rem
   background-image: url(../images/icons/arrow-left-white.svg)
   background-repeat: no-repeat
   background-size: 1.6rem 1.6rem
   background-position: top 50% left 1.8rem
+
+  @media screen and (max-width: $tablet)
+    padding-top: 1rem
+    padding-bottom: 1rem
 
 .blog_article
   width: 100%
@@ -5443,7 +5447,7 @@ dialog
   margin-bottom: 6rem
 
 .blog_article__author__container
-  margin-bottom: 8rem
+  margin-bottom: 4rem
   padding: 2rem
   display: grid
   grid-template-columns: 15rem auto auto
@@ -5455,7 +5459,7 @@ dialog
 
   @media screen and (max-width: $tablet)
     grid-template-columns: 12rem auto
-    grid-template-areas: "photo title" "photo name" "intro intro"
+    grid-template-areas: "photo title" "photo name" "photo button"
 
 
 .blog_article__author__container__photo
@@ -5472,8 +5476,8 @@ dialog
   line-height: 130%
   color: #fff
 
-  @media screen and (max-width: $tablet)
-    margin-top: 1.4rem
+  // @media screen and (max-width: $tablet)
+  //   margin-top: 1.4rem
 
 .blog_article__author__container__title
   grid-area: title
@@ -5493,6 +5497,10 @@ dialog
   place-self: baseline
   white-space: nowrap
 
+  @media screen and (max-width: $tablet)
+    margin-top: 1rem
+    padding: 1rem 1.8rem
+
 .blog_article__author__container__intro
   grid-area: intro
   align-self: center
@@ -5511,6 +5519,10 @@ dialog
   grid-template-columns: auto 25%
   background-color: $grey1
   border-radius: $radius
+  overflow: hidden
+
+  @media screen and (max-width: $tablet)
+    grid-template-columns: 1fr
 
 .blog_article__content__intro__text
   padding: 2.4rem
@@ -5527,6 +5539,11 @@ dialog
 .blog_article__content__hero
   margin-bottom: 1.6rem
   border-radius: $radius
+
+  @media screen and (max-width: $tablet)
+    height: 23rem
+    width: 100%
+    object-fit: cover
 
 .blog_article__content__main
   
@@ -5564,7 +5581,8 @@ dialog
     right: var(--swiper-navigation-sides-offset, 2.5rem)
 
 .blog_article__banner__dots.dots
-  bottom: 7rem !important
+  position: relative
+  bottom: 0 !important
 
 .blog_article__banner__description
   margin: 1.2rem 5.2rem
@@ -5572,6 +5590,12 @@ dialog
   max-width: 80.6rem
   font-size: 1.4rem
   font-weight: 400
+
+  @media screen and (max-width: $tablet)
+    margin: 1.8rem 4rem 0
+    padding: 0
+    max-width: 100%
+    text-align: center
 
 
 /* Блог */
