@@ -1,7 +1,7 @@
 $font: 'NT Somic', Arial, Helvetica, sans-serif
 $std-size: 1.6rem
-$radius: 0.4rem
-$shadow: 0.2rem 0.2rem 1.4rem 0 rgba(10, 10, 10, 0.1)
+$radius: .4rem
+$shadow: .2rem .2rem 1.4rem 0 rgba(10, 10, 10, .1)
 
 $desktop: 1350px
 $tablet: 1024px
@@ -261,7 +261,7 @@ dialog
 .button--pink
   color: $white
   background-color: $pink
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-color: $black
@@ -269,7 +269,7 @@ dialog
 .button--black
   color: $white
   background-color: $black
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-color: $pink
@@ -277,7 +277,7 @@ dialog
 .button--white
   color: $black
   background-color: #fff
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-color: $black
@@ -286,7 +286,7 @@ dialog
 .button--yellow
   color: $black
   background-color: $yellow
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-color: $black
@@ -295,7 +295,7 @@ dialog
 .button--grey
   color: #fff
   background-color: $grey3
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-color: $black
@@ -444,7 +444,7 @@ dialog
 
 .link--grey
   color: $grey1
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     color: $pink
@@ -469,28 +469,28 @@ dialog
 
 .link_icon--account
   background-image: url("../images/icons/tzm-icon.svg")
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-image: url("../images/icons/tzm-icon-pink.svg")
 
 .link_icon--search
   background-image: url("../images/icons/search.svg")
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-image: url("../images/icons/search-pink.svg")
 
 .link_icon--favourites
   background-image: url("../images/icons/heart.svg")
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-image: url("../images/icons/heart-pink.svg")
 
 .link_icon--cart
   background-image: url("../images/icons/cart.svg")
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-image: url("../images/icons/cart-pink.svg")
@@ -513,7 +513,7 @@ dialog
   flex: 1 0
   border-bottom: 1px dotted #000
   height: 1rem
-  margin: 0.4em
+  margin: .4em
 
 .flex_columns__item__value
   @media screen and (max-width: $tablet)
@@ -551,9 +551,9 @@ dialog
   height: 4rem
   background-image: url('../images/icons/arrow-slider-left-black.svg')
   cursor: pointer
-  opacity: 0.5
+  opacity: .5
   z-index: 10
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     opacity: 1
@@ -564,9 +564,9 @@ dialog
   height: 4rem
   background-image: url('../images/icons/arrow-slider-right-black.svg')
   cursor: pointer
-  opacity: 0.5
+  opacity: .5
   z-index: 10
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     opacity: 1
@@ -584,9 +584,9 @@ dialog
 
 .dots__item
   display: inline-block
-  margin: 0 0.2rem
-  width: 0.6rem
-  height: 0.6rem
+  margin: 0 .2rem
+  width: .6rem
+  height: .6rem
   // border-radius: $radius
   background-color: $grey3
   cursor: pointer
@@ -609,7 +609,7 @@ dialog
 
 .breadcrumbs__menu
   display: flex
-  gap: 0.5rem
+  gap: .5rem
 
 .breadcrumbs__menu__item
   color: $grey-dark1
@@ -639,7 +639,7 @@ dialog
 .header__top__container__getintouch
   display: flex
   gap: 4rem
-  padding: 0.8rem 0
+  padding: .8rem 0
 
 .header__top__container__menu__item,
 .header__top__container__getintouch__item
@@ -656,7 +656,7 @@ dialog
 .getintouch__city
   text-decoration: none
   border-bottom: 1px dashed
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:link, &:hover
     text-decoration: none
@@ -677,15 +677,15 @@ dialog
 .header__bottom__container
   display: grid
   grid-template-columns: 1fr 1fr 1fr
-  padding-top: 0.8rem
-  padding-bottom: 0.8rem
+  padding-top: .8rem
+  padding-bottom: .8rem
 
 .header__bottom__container__column
   display: flex
   align-items: center
 
 .header__bottom__container__column__button
-  padding: 1rem 1.8rem 1rem 1.8 + 1.6 + 0.5rem
+  padding: 1rem 1.8rem 1rem 1.8 + 1.6 + .5rem
   background-image: url("../images/icons/nav-white.svg")
   background-position: 1rem center
   background-repeat: no-repeat
@@ -717,7 +717,7 @@ dialog
     grid-template-columns: 4.4rem 4.4rem auto 4.4rem 4.4rem
     justify-items: center
     align-items: center
-    gap: 0.4rem
+    gap: .4rem
     background-color: $black
 
     .header__mobile__item
@@ -963,7 +963,7 @@ dialog
     color: $white
 
   @media screen and (max-width: $tablet)
-    padding: 1.6rem 0.8rem
+    padding: 1.6rem .8rem
 
   
 .categories__tiles__item__link
@@ -1173,7 +1173,7 @@ dialog
   font-weight: 500
   line-height: 1.8rem
   width: 100%
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     color: $pink
@@ -1185,7 +1185,7 @@ dialog
 
 .suggestions__container__list__item__text__info__prices
   display: flex
-  gap: 0.4rem
+  gap: .4rem
   align-items: center
 
   @media screen and (max-width: $tablet)
@@ -1206,7 +1206,7 @@ dialog
   text-decoration: line-through
 
 .suggestions__container__list__item__text__info__label
-  padding: 0.3rem 0.8rem
+  padding: .3rem .8rem
   background-color: $grey1
   border-radius: $radius
   color: $grey-dark2
@@ -1218,13 +1218,13 @@ dialog
   display: flex
   justify-content: center
   align-items: center
-  gap: 0.5rem
+  gap: .5rem
   width: 100%
   height: 5rem
   text-align: center
   align-content: center
   border-radius: $radius
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-color: $pink
@@ -1240,7 +1240,7 @@ dialog
   font-size: 1.6rem
   font-weight: 500
   line-height: 1.6rem
-  transition: 0.2s linear
+  transition: .2s linear
 
 .suggestions__container__list__item__add_to_cart__icon
   display: inline-block
@@ -1262,7 +1262,7 @@ dialog
   background-position: center center
   background-repeat: no-repeat
   background-size: cover
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-image: url("../images/icons/heart-pink.svg")
@@ -1279,7 +1279,7 @@ dialog
   background-position: center center
   background-repeat: no-repeat
   background-size: cover
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-image: url("../images/icons/heart-grey.svg")
@@ -1411,7 +1411,7 @@ dialog
   flex-direction: column
   flex-wrap: wrap
   gap: 2rem
-  opacity: 0.7
+  opacity: .7
   text-transform: uppercase
 
   @media screen and (max-width: $tablet)
@@ -1435,7 +1435,7 @@ dialog
   display: flex
   justify-content: space-between
   color: $white
-  opacity: 0.5
+  opacity: .5
   text-transform: uppercase
   font-size: 1rem
 
@@ -1984,7 +1984,7 @@ dialog
   margin-top: 2rem
   margin-bottom: 1rem
   max-width: 96rem
-  border-radius: 0.4rem
+  border-radius: .4rem
 
 .success_order_contents__products
   display: flex
@@ -2093,7 +2093,7 @@ dialog
   flex: 1 0
   border-bottom: 1px dotted $grey-dark2
   height: 1rem
-  margin: 0.4em
+  margin: .4em
 
 .success_order_info__summary__delivery__info__item__value, .success_order_info__summary__payment__info__item__value, .success_order_info__summary__buyer__info__item__value
   color: $black
@@ -2172,7 +2172,7 @@ dialog
     padding: 0 0 2rem 3rem
     
     li
-      padding-bottom: 0.5rem    
+      padding-bottom: .5rem    
 
   ul
     li
@@ -2580,7 +2580,7 @@ dialog
   gap: 1rem
 
 .popular__link
-  padding: 0.4rem 1.6rem 0.6rem
+  padding: .4rem 1.6rem .6rem
   color: $black
   background-color: #fff
   border-radius: $radius
@@ -2937,7 +2937,7 @@ dialog
   font-weight: 500
   line-height: 1.8rem
   width: 100%
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     color: $pink
@@ -2949,7 +2949,7 @@ dialog
 
 .catalogue__products__list__item__text__info__prices
   display: flex
-  gap: 0.4rem
+  gap: .4rem
   align-items: center
 
   @media screen and (max-width: $tablet)
@@ -2970,7 +2970,7 @@ dialog
   text-decoration: line-through
 
 .catalogue__products__list__item__text__info__label
-  padding: 0.3rem 0.8rem
+  padding: .3rem .8rem
   background-color: $grey1
   border-radius: $radius
   color: $grey-dark2
@@ -2982,13 +2982,13 @@ dialog
   display: flex
   justify-content: center
   align-items: center
-  gap: 0.5rem
+  gap: .5rem
   width: 100%
   height: 5rem
   text-align: center
   align-content: center
   border-radius: $radius
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-color: $pink
@@ -3004,7 +3004,7 @@ dialog
   font-size: 1.6rem
   font-weight: 500
   line-height: 1.6rem
-  transition: 0.2s linear
+  transition: .2s linear
 
 .catalogue__products__list__item__add_to_cart__icon
   display: inline-block
@@ -3019,7 +3019,7 @@ dialog
   justify-content: center
   align-items: center
   align-content: center
-  gap: 0.5rem
+  gap: .5rem
   width: 100%
   height: 5rem
   background-color: $grey3
@@ -3029,7 +3029,7 @@ dialog
   font-weight: 500
   line-height: 1.6rem
   border-radius: $radius
-  transition: 0.2s linear
+  transition: .2s linear
 
 .catalogue__products__list__item__add_to_favourites
   position: absolute
@@ -3043,7 +3043,7 @@ dialog
   background-position: center center
   background-repeat: no-repeat
   background-size: cover
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-image: url("../images/icons/heart-pink.svg")
@@ -3060,7 +3060,7 @@ dialog
   background-position: center center
   background-repeat: no-repeat
   background-size: cover
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-image: url("../images/icons/heart-grey.svg")
@@ -3379,7 +3379,7 @@ dialog
   flex: 1 0
   border-bottom: 1px dotted $grey-dark2
   height: 1rem
-  margin: 0.4em
+  margin: .4em
 
 .product__options__summary__list__item__value
   color: $black
@@ -3401,7 +3401,7 @@ dialog
     margin-top: 3rem
 
 .product__buy__prices
-  gap: 0.4rem
+  gap: .4rem
   align-items: center
 
   @media screen and (max-width: $tablet)
@@ -3448,7 +3448,7 @@ dialog
   align-items: center
   padding: .4rem .8rem
   background-color: $white
-  border-radius: 0.4rem
+  border-radius: .4rem
 
 .product__buy__cart__count__current
   justify-self: center
@@ -3914,7 +3914,7 @@ dialog
 
 .product__tabs__content__block__characteristics_group__list__item__name
 .product__tabs__content__block__characteristics_group__list__item__dots
-  margin: 0.4em
+  margin: .4em
   min-width: 1rem
   height: 1rem
   flex: 1 0
@@ -4074,7 +4074,7 @@ dialog
   box-shadow: $shadow
 
   &::backdrop
-    background: rgba(0, 0, 0, 0.5)
+    background: rgba(0, 0, 0, .5)
 
   &:focus-visible, &:focus
     outline: none
@@ -4163,7 +4163,7 @@ dialog
   font-weight: 500
   line-height: 1.8rem
   width: 100%
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     color: $pink
@@ -4175,7 +4175,7 @@ dialog
 
 .popup_cart__container__product__text__info__prices
   display: flex
-  gap: 0.4rem
+  gap: .4rem
   align-items: center
 
 .popup_cart__container__product__text__info__prices__price
@@ -4203,7 +4203,7 @@ dialog
   background-position: center center
   background-repeat: no-repeat
   background-size: cover
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-image: url("../images/icons/heart-pink.svg")
@@ -4220,7 +4220,7 @@ dialog
   background-position: center center
   background-repeat: no-repeat
   background-size: cover
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-image: url("../images/icons/heart-grey.svg")
@@ -4806,7 +4806,7 @@ dialog
   line-height: 1.8rem
   text-align: center
   width: 100%
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     color: $pink
@@ -4820,7 +4820,7 @@ dialog
 
 .popup_search__suggestions__container__list__item__text__info__prices
   display: flex
-  gap: 0.4rem
+  gap: .4rem
   align-items: center
   width: 100%
 
@@ -4842,7 +4842,7 @@ dialog
   text-decoration: line-through
 
 .popup_search__suggestions__container__list__item__text__info__label
-  padding: 0.3rem 0.8rem
+  padding: .3rem .8rem
   background-color: $grey1
   border-radius: $radius
   color: $grey-dark2
@@ -4854,13 +4854,13 @@ dialog
   display: flex
   justify-content: center
   align-items: center
-  gap: 0.5rem
+  gap: .5rem
   width: 100%
   height: 5rem
   text-align: center
   align-content: center
   border-radius: $radius
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-color: $pink
@@ -4876,7 +4876,7 @@ dialog
   font-size: 1.6rem
   font-weight: 500
   line-height: 1.6rem
-  transition: 0.2s linear
+  transition: .2s linear
 
 .popup_search__suggestions__container__list__item__add_to_cart__icon
   display: inline-block
@@ -4898,7 +4898,7 @@ dialog
   background-position: center center
   background-repeat: no-repeat
   background-size: cover
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-image: url("../images/icons/heart-pink.svg")
@@ -4915,7 +4915,7 @@ dialog
   background-position: center center
   background-repeat: no-repeat
   background-size: cover
-  transition: 0.2s linear
+  transition: .2s linear
 
   &:hover
     background-image: url("../images/icons/heart-grey.svg")
@@ -5175,7 +5175,7 @@ dialog
     color: $white
 
   @media screen and (max-width: $tablet)
-    padding: 1.6rem 0.8rem
+    padding: 1.6rem .8rem
     width: auto
 
 .popup_menu__container__content__list__item__link
@@ -5748,12 +5748,6 @@ dialog
   color: $grey-dark2
   text-decoration: line-through
   white-space: nowrap
-
-
-
-
-
-
 
 .blog_product__container__intro__buy__buttons
   display: grid
