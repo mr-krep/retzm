@@ -2829,6 +2829,21 @@ dialog
       width: 0
       height: 0
 
+.favourites
+  margin-bottom: 6rem
+
+.favourites .catalogue__products__list
+  grid-template-columns: repeat(5, 1fr)
+  
+  @media screen and (max-width: $desktop)
+    grid-template-columns: repeat(4, 1fr)
+
+  @media screen and (max-width: $tablet)
+    grid-template-columns: 1fr 1fr
+    align-items: stretch
+    gap: 1rem
+    max-width: 100%
+
 .catalogue__products__list__item
   position: relative
   padding: 0
