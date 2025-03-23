@@ -8677,5 +8677,83 @@ dialog {
 }
 
 /* Блог */
+/* Личный кабинет */
+/* line 6036, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.account__heading {
+  display: inline-block;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* line 6041, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.account__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-bottom: 4rem;
+}
+
+/* line 6047, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.account__navigation__item {
+  padding: .6rem 1.8rem .8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+/* line 6053, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.account__navigation__item--active {
+  color: #fff;
+  background-color: #0A0A0A;
+  cursor: default;
+}
+
+/* line 6058, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.account__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* line 6063, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.account__form__input {
+  padding: 1.4rem;
+  max-width: 46rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 130%;
+  background-color: #fff;
+  border-radius: 0.4rem;
+}
+
+/* line 6072, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.account__form__button {
+  margin-top: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  /* line 6072, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+  .account__form__button {
+    width: 100%;
+  }
+}
+
+/* line 6079, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.account__disclamer {
+  margin-bottom: 6rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 130%;
+  color: #8A8A8A;
+  max-width: 60rem;
+}
+
+/* line 6087, ../../../../../Users/eugene/git_projects/retzm/sass/style.sass */
+.account__disclamer a {
+  color: #FF197A;
+}
+
+/* Личный кабинет */
 
 /*# sourceMappingURL=style.css.map */
