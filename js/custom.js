@@ -7,6 +7,10 @@ function Review_form(element) {
   document.querySelector('.'+element+'__container__form').style.display = 'none';
   document.querySelector('.'+element+'__result').style.display = 'flex';
 }
+function Check_authorization_code(element) {
+  document.querySelector('.'+element+'__container').style.display = 'none';
+  document.querySelector('.'+element+'__container__check_code').style.display = 'grid';
+}
 
 /* Проверяем клики, запускаем закрытие модального окна и завершение прослушки */
 function ListenPopupClicks(element)

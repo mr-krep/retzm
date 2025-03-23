@@ -4248,6 +4248,66 @@ dialog
   grid-area: button_close
   width: 100%
 
+.popup_authorization
+
+  @media screen and (min-width: $tablet+1)
+    margin: 11rem auto
+    width: 48.4rem
+
+.popup_authorization__container, .popup_authorization__container__check_code
+  grid-template-areas: "heading close" "none none" "none none" "none none"
+  grid-template-columns: 1fr 2rem
+  grid-template-rows: auto auto
+  row-gap: 2rem
+  column-gap: 1rem
+  padding: 2rem
+
+.popup_authorization__container
+  display: grid
+
+.popup_authorization__container__check_code
+  display: none
+
+.popup_authorization__container__heading
+  grid-area: heading
+  font-size: 2rem
+  font-weight: 700
+  line-height: 130%
+
+.popup_authorization__container__close
+  grid-area: close
+  align-self: end
+  margin-left: auto
+  width: 2rem
+  height: 2rem
+  background-size: contain
+  background-position: right 50%
+  background-repeat: no-repeat
+  cursor: pointer
+
+.popup_authorization__container__button
+  grid-column: span 2
+  width: 100%
+  text-align: center
+
+.popup_authorization__container__input, 
+  grid-column: span 2
+  padding: 1.4rem
+  width: 100%
+  background-color: #fff
+  border-radius: $radius
+  
+.popup_authorization__container__capcha
+  grid-column: span 2
+  width: 100%
+
+.popup_authorization__container__wait
+  margin-top: -1rem
+  font-size: 1.2rem
+  font-weight: 400
+  line-height: 130%
+  color: $grey-dark1
+
 .popup_city
 
   @media screen and (min-width: $tablet+1)
@@ -4385,7 +4445,8 @@ dialog
 
 .popup_1click__container__capcha,
 .popup_notify__container__capcha,
-.popup_review__container__capcha
+.popup_review__container__capcha,
+.popup_authorization__container__capcha
   margin-bottom: 1rem
 
 .popup_1click__container__terms,

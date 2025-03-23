@@ -55,7 +55,7 @@
               <a class="header__top__getintouch__item__link link--grey getintouch__phone change_phone" href="tel:+74996476144" alt="Телефон">+ 7 499 647-61-44</a>
             </li>
             <li class="header__top__container__getintouch__item">
-              <a class="header__top__getintouch__item__link link--grey link_icon--account getintouch__account" href="#" alt="Личный кабинет">Личный кабинет</a>
+              <span class="header__top__getintouch__item__link link--grey link_icon--account getintouch__account popup__opener" onclick="openDialog('Authorization');" aria-controls="Authorization" alt="Авторизация">Личный кабинет</span>
             </li>
           </ul>
         </div>
@@ -399,6 +399,26 @@
         </div>
       </div>
     </footer>
+    <dialog class="popup_authorization popup_authorization__getcode popup" aria-label="Автризация" id="Authorization">
+      <div class="popup_authorization__container popup__container">
+        <span class="popup_authorization__container__heading">Вход или регистрация</span>
+        <span class="popup_authorization__container__close icon--close" onclick="closeDialog()"></span>
+        <input class="popup_authorization__container__input" name="phone" type="text" value="" placeholder="Телефон" />
+        <div class="popup_authorization__container__capcha smart-captcha" data-sitekey="ysc1_2kYyp6Ed1cWDxW0YtkLbN4SJteItmeDe4CvRtbC79209ed88">Капча</div>
+        <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
+        <span class="popup_authorization__container__button button button--pink" onclick="Check_authorization_code('popup_authorization'); return false;">Получить код</span>
+      </div>
+      <div class="popup_authorization__container__check_code popup__container">
+        <span class="popup_authorization__container__heading">Вход или регистрация</span>
+        <span class="popup_authorization__container__close icon--close" onclick="closeDialog()"></span>
+        <input class="popup_authorization__container__input" name="phone" type="text" value="" placeholder="Код из SMS" />
+        <span class="popup_authorization__container__wait">
+          Отправить код повторно 
+          <span class="popup_authorization__container__wait__countdown">40с</span>
+        </span>
+        <span class="popup_authorization__container__button button button--pink" onclick="closeDialog(); window.location.replace('../account.html')">Войти</span>
+      </div>
+    </dialog>
     <dialog class="popup_city popup" aria-label="Выбор города" id="City">
       <div class="popup_city__container popup__container">
         <span class="popup_city__container__heading">Выберите город</span>
