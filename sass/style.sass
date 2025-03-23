@@ -1095,7 +1095,7 @@ dialog
   overflow: hidden
   z-index: 1
   justify-content: flex-start
-  align-items: center
+  align-items: stretch
 
   &::-webkit-scrollbar
       width: 0
@@ -3481,6 +3481,7 @@ dialog
     padding: 2rem
 
 .product__buy__row2_buttons__favourites
+  display: inline-block
   width: 100%
   height: 100%
   background-image: url('../images/icons/heart-grey.svg')
@@ -3995,7 +3996,7 @@ dialog
   grid-template-areas: "review_image review_summary review_meta" "review_text review_text review_text"
   gap: 1rem
   padding: 2rem
-  max-width: 76.6rem
+  max-width: 80.6rem
   font-size: 1.4rem
   font-weight: 400
   line-height: 130%
@@ -4041,6 +4042,9 @@ dialog
 
 .product__tabs__content__block__reviews__list__item__text
   grid-area: review_text
+
+  @media screen and (max-width: $tablet)
+    font-size: 1.6rem
 
 .product__tabs__content__block__reviews__list__item__meta
   grid-area: review_meta
@@ -5606,17 +5610,17 @@ dialog
 .main_blog_product
   margin: 0 auto 2rem
   width: 100%
-  max-width: 80.6rem
+  max-width: 83.6rem
 
 .blog_product__back
   display: inline-block
   margin-top: 4rem
   margin-bottom: 2rem
-  padding-left: 1.8rem + 1.6rem + .8rem
+  padding-left: 1.6rem + .8rem
   background-image: url("../images/icons/arrow-left-black.svg")
   background-repeat: no-repeat
   background-size: 1.6rem 1.6rem
-  background-position: top 50% left 1.8rem
+  background-position: top 50% left 0
 
   @media screen and (max-width: $tablet)
     padding-top: 1rem
@@ -5632,6 +5636,9 @@ dialog
   padding: 2rem
   background-color: #fff
   border-radius: $radius
+
+  @media screen and (max-width: $tablet)
+    grid-template-columns: 1fr
 
 .blog_product__container__gallery
   display: grid
@@ -5703,17 +5710,23 @@ dialog
   font-weight: 700
   line-height: 130%
 
+  @media screen and (max-width: $tablet)
+    margin-top: 1rem
+
 .blog_product__container__intro__text
   font-size: 1.4rem
   font-weight: 400
   line-height: 130%
+
+  @media screen and (max-width: $tablet)
+    margin-bottom: 1rem
 
 .blog_product__container__intro__buy
   place-self: end
   width: 100%
 
 .blog_product__container__intro__buy__prices
-  gap: 0.4rem
+  gap: .4rem
   align-items: center
   margin-bottom: 1rem
 
@@ -5721,12 +5734,67 @@ dialog
     align-items: flex-start
     flex-direction: column
 
+.blog_product__container__intro__buy__prices__current
+  font-size: 2rem
+  line-height: 130%
+  font-weight: 700
+  color: $black
+  white-space: nowrap
+
+.blog_product__container__intro__buy__prices__old
+  font-size: 1.2rem
+  line-height: 130%
+  font-weight: 500
+  color: $grey-dark2
+  text-decoration: line-through
+  white-space: nowrap
+
+
+
+
+
+
+
+.blog_product__container__intro__buy__buttons
+  display: grid
+  grid-template-columns: auto 4.8rem
+  gap: .4rem
+
+.blog_product__container__intro__buy__buttons__add_to_cart
+  padding-top: 1.2rem
+  padding-bottom: 1.2rem
+  width: 100%
+  font-size: 1.6rem
+  font-weight: 500
+  line-height: 130%
+  text-align: center
+
+  @media screen and (max-width: $tablet)
+    padding: 2rem
+
+.blog_product__container__intro__buy__buttons__favourites
+  display: inline-block
+  width: 100%
+  height: 100%
+  background-image: url('../images/icons/heart-grey.svg')
+  background-size: 2rem
+  background-position: 50% 50%
+  background-repeat: no-repeat
+
+  @media screen and (max-width: $tablet)
+    padding: 2rem
+
+  &:hover
+    background-image: url('../images/icons/heart-pink.svg')
+    cursor: pointer
+
 .blog_product__reviews
   margin-bottom: 2rem
 
 .blog_product__reviews__heading
   display: inline-block
   margin-bottom: 1.6rem
+  font-size: 2rem
 
 .blog_product__shop_rating
   display: grid
@@ -5735,10 +5803,18 @@ dialog
   gap: 1.2rem
   margin-bottom: 2rem
 
+  @media screen and (max-width: $tablet)
+    grid-template-columns: 1fr
+    gap: .8rem
+
 .blog_product__shop_rating__heading
   grid-column: span 3
   display: inline-block
   margin-bottom: 1.6rem
+  font-size: 2rem
+
+  @media screen and (max-width: $tablet)
+    grid-column: span 1
 
 .blog_product__shop_rating__infographics
   display: flex
@@ -5782,6 +5858,9 @@ dialog
   display: grid
   grid-template-columns: 1fr 1fr
   gap: 1.2rem
+
+  @media screen and (max-width: $tablet)
+    grid-template-columns: 1fr
 
 .blog_product__comparison__block
   padding: 2rem
@@ -5866,5 +5945,8 @@ dialog
   align-self: center
   grid-row: span 3
   display: block
+
+.blog_product__suggestions__container__list__item__text
+  margin-bottom: 2.2rem
 
 /* Блог */
