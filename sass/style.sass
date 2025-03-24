@@ -7,8 +7,12 @@ $desktop: 1350px
 $tablet: 1024px
 $mobile: 840px
 
+$beige: #F88D8D
+$beige-bg: #FFF3F3
 $black: #0A0A0A
 $black-light: #202020
+$coral: #FF9A9A
+$green: #3DCF92
 $grey: #B6B6B6
 $grey1: #F5F5F5
 $grey2: #F0F0F0
@@ -16,27 +20,18 @@ $grey3: #DBDBDB
 $grey-dark1: #B6B6B6
 $grey-dark2: #8A8A8A
 $grey-soft: #ECECEC
+$orange: #FFAC4B
 $pink: #FF197A
-$white: #FAFAFA
-$yellow: #FFCF4B
+$scarlet: #FF573D
 $violet: #8123FF
 $violet-bg: #D5BBF9
-$beige: #F88D8D
-$beige-bg: #FFF3F3
-$coral-bg: #FF9A9A
-$scarlet-bg: #FF573D
-$green-bg: #3DCF92
-$orange: #FFAC4B
+$white: #FAFAFA
+$yellow: #FFCF4B
   
 /* Common start */
 html
   font-size: 62.5%
   scrollbar-gutter: stable
-  // scrollbar-width: none
-  // -ms-overflow-style: none
-
-  // &::-webkit-scrollbar
-  //   display: none
 
 body
   display: flex
@@ -323,6 +318,41 @@ dialog
   @media screen and (max-width: $tablet)
     max-width: 100%
 
+.bg--green
+  background-color: $green
+  color: #fff
+
+.bg--orange
+  background-color: $orange
+  color: #fff
+
+.bg--beige
+  background-color: $beige
+  color: #fff
+
+.bg--black
+  background-color: $black
+  color: #fff
+
+.bg--coral
+  background-color: $coral
+  color: #fff
+
+.bg--grey
+  background-color: $grey-dark2
+  color: #fff
+
+.bg--pink
+  background-color: $pink
+  color: #fff
+
+.bg--scarlet
+  background-color: $scarlet
+  color: #fff
+
+.bg--violet
+  background-color: $violet
+  color: #fff
   
 .icon--search-white
   background-image: url(../images/icons/search-white.svg)
@@ -4103,7 +4133,7 @@ dialog
     outline: none
 
   @media screen and (max-width: $tablet)
-    position: absolute
+    // position: absolute
     top: 0
     width: 100%
     max-width: 60rem
@@ -4371,7 +4401,7 @@ dialog
     margin: 12rem auto
     width: 57.8rem
 
-.popup_review
+.popup_review, .popup_problem
 
   @media screen and (min-width: $tablet+1)
     margin: 19rem auto
@@ -4379,7 +4409,8 @@ dialog
 
 .popup_1click__container, 
 .popup_notify__container, 
-.popup_review__container
+.popup_review__container,
+.popup_problem__container
   display: grid
   grid-template-areas: "heading close" "form form" "result result"
   grid-template-columns: auto 2rem
@@ -4389,7 +4420,8 @@ dialog
 .popup_notify__container__heading, 
 .popup_review__container__heading, 
 .popup_pickup__container__heading, 
-.popup_delivery__container__heading
+.popup_delivery__container__heading,
+.popup_problem__container__heading
   grid-area: heading
   font-size: 2.8rem
   font-weight: 700
@@ -4403,6 +4435,7 @@ dialog
 .popup_1click__container__close,
 .popup_notify__container__close,
 .popup_review__container__close,
+.popup_problem__container__close,
 .popup_pickup__container__close,
 .popup_delivery__container__close
   grid-area: close
@@ -4418,7 +4451,8 @@ dialog
 
 .popup_1click__container__form,
 .popup_notify__container__form,
-.popup_review__container__form
+.popup_review__container__form,
+.popup_problem__container__form
   grid-area: form
   display: flex
   margin-top: 2rem
@@ -4430,7 +4464,8 @@ dialog
 
 .popup_1click__container__message,
 .popup_notify__container__message,
-.popup_review__container__message
+.popup_review__container__message,
+.popup_problem__container__message
   grid-area: message
   padding: 1.4rem 2rem
   font-size: 1.4rem
@@ -4443,40 +4478,73 @@ dialog
 .popup_1click__container__form__input,
 .popup_notify__container__form__input,
 .popup_review__container__form__input,
-.popup_delivery__container__form__input
+.popup_delivery__container__form__input,
+.popup_problem__container__form__input,
+.popup_problem__container__form__label
   padding: 1.4rem
   font-size: 1.4rem
   background-color: #fff
 
+.popup_problem__container__form__label
+  text-align: center
+  color: $pink
+
+.popup_review__container__form__label
+  margin-top: -.8rem
+  padding: 0
+  font-size: 1.2rem
+  font-weight: 400
+  line-height: 130%
+  color: $grey-dark1
+
 .popup_notify__container__form__input--textarea,
 .popup_review__container__form__input--textarea,
-.popup_delivery__container__form__input--textarea
+.popup_delivery__container__form__input--textarea,
+.popup_problem__container__form__input--textarea
   height: 14rem
 
 .popup_1click__container__form__button,
 .popup_notify__container__form__button,
-.popup_review__container__form__button
+.popup_review__container__form__button,
+.popup_problem__container__form__button
   width: 100%
 
 .popup_1click__container__capcha,
 .popup_notify__container__capcha,
 .popup_review__container__capcha,
+.popup_problem__container__capcha,
 .popup_authorization__container__capcha
   margin-bottom: 1rem
 
 .popup_1click__container__terms,
 .popup_notify__container__terms,
-.popup_review__container__terms
+.popup_review__container__terms,
+.popup_problem__container__terms
   grid-area: terms
+  color: $grey-dark2
 
 .popup_review__container__terms__link,
 .popup_1click__container__terms__link,
-.popup_notify__container__terms__link
+.popup_notify__container__terms__link,
+.popup_problem__container__terms__link
     color: $pink
+
+.popup_problem__container__form__files
+  display: flex
+  flex-wrap: wrap
+  gap: 1.5rem
+  margin-bottom: 1rem
+
+.popup_problem__container__form__files__image
+  width: 7.6rem
+  height: 7.6rem
+  border-radius: $radius
+  overflow: hidden
 
 .popup_1click__result,
 .popup_notify__result,
-.popup_review__result
+.popup_review__result,
+.popup_problem__result
   grid-area: result
   display: none
   flex-direction: column
@@ -4485,8 +4553,10 @@ dialog
 .popup_1click__result__message,
 .popup_notify__result__message,
 .popup_review__result__message,
-.popup_delivery__container__message
+.popup_delivery__container__message,
+.popup_problem__result__message
   grid-area: message
+  margin-top: 2rem
   padding: 1.4rem 2rem
   font-size: 1.4rem
   font-weight: 400
@@ -4497,13 +4567,15 @@ dialog
 
 .popup_1click__result__image,
 .popup_notify__result__image,
-.popup_review__result__image
+.popup_review__result__image,
+.popup_problem__result__image
   margin: 0 auto
   width: 16.8rem
 
 .popup_1click__result__button,
 .popup_notify__result__button,
-.popup_review__result__button
+.popup_review__result__button,
+.popup_problem__result__button
   margin: 0 auto
 
 .popup_review__container__form__rating
@@ -4653,6 +4725,8 @@ dialog
   overflow: hidden
   border-radius: $radius
 
+  @media screen and (max-width: $tablet)
+    height: 47rem
 
 .popup_search
   margin: 10.5rem auto 0
@@ -6086,5 +6160,414 @@ dialog
 
   a
     color: $pink
+
+.account_addresses
+  margin-top: 4rem
+  margin-bottom: 6rem
+
+.account_addresses__list
+  margin-bottom: 2.4rem
+  display: flex
+  flex-wrap: wrap
+  gap: 1rem
+  width: 100%
+
+.account_addresses__list__item
+  display: grid
+  grid-template-rows: auto 1fr auto
+  gap: 1rem
+  padding: 1.6rem
+  width: 34rem
+  background-color: #fff
+  border: .1rem solid #fff
+  border-radius: $radius
+
+  &:hover
+    border: .1rem solid $pink
+    cursor: pointer
+
+  @media screen and (max-width: $tablet)
+    width: 100%
+
+  &:last-child
+    display: block
+    padding: 0
+    width: 4.4rem
+    height: auto
+    background-color: unset
+    border: none
+
+    &:hover
+      border: none
+
+    @media screen and (max-width: $tablet)
+      width: 100%
+      height: 4.4rem
+      border: none
+
+.account_addresses__list__item--active
+  border: .1rem solid $pink
+
+.account_addresses__list__item__heading
+  font-size: 1.6rem
+  font-weight: 700
+  line-height: 130%
+
+.account_addresses__list__item__address
+  font-size: 1.4rem
+  font-weight: 500
+  line-height: 130%
+
+.account_addresses__list__item__actions
+  display: flex
+  justify-content: space-between
+  width: 100%
+
+.account_addresses__list__item__actions__change
+  font-size: 1.3rem
+  font-weight: 500
+  line-height: 130%
+  color: $pink
+  cursor: pointer
+
+.account_addresses__list__item__actions__delete
+  font-size: 1.3rem
+  font-weight: 500
+  line-height: 130%
+  color: $grey-dark1
+  cursor: pointer
+
+.account_addresses__list__item__add
+  display: block
+  width: 100%
+  height: 100%
+  background-image: url('../images/icons/plus.svg')
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  background-size: 2rem 2rem
+
+  &:hover
+    background-image: url('../images/icons/plus-pink.svg')
+    cursor: pointer
+
+.account_addresses__button
+  padding: 1.2rem 2.2rem
+  font-size: 1.6rem
+
+  @media screen and (max-width: $tablet)
+    padding: 2rem
+    width: 100%
+
+.popup_delete_address
+  width: 100%
+
+  @media screen and (min-width: $tablet+1)
+    margin: 11rem auto
+    width: 40rem
+
+.popup_delete_address__container
+  display: grid
+  grid-template-columns: 1fr 2rem
+  gap: 2rem
+  padding: 2rem
+
+.popup_delete_address__container__heading
+  font-size: 2rem
+  font-weight: 700
+  line-height: 130%
+
+.popup_delete_address__container__close
+  align-self: end
+  margin-left: auto
+  width: 2rem
+  height: 2rem
+  background-size: contain
+  background-position: right 50%
+  background-repeat: no-repeat
+  cursor: pointer
+
+.popup_delete_address__container__item
+  grid-column: span 2
+  display: flex
+  flex-direction: column
+  gap: 1rem
+
+.popup_delete_address__container__buttons
+  grid-column: span 2
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 1rem
+  justify-items: stretch
+
+.popup_delete_address__container__buttons__cancel, 
+.popup_delete_address__container__buttons__confirm
+  width: 100%
+
+.account_orders
+  width: 100%
+
+.account_orders__list
+  display: flex
+  flex-direction: column
+  gap: 2rem
+  margin-bottom: 6rem
+
+  @media screen and (max-width: $tablet)
+    margin-bottom: 4rem
+
+.account_orders__list__item__spoiler__summary
+  display: flex
+  gap: 2rem
+  align-items: center
+  flex-wrap: wrap
+  padding: 2rem
+  
+  &:after
+    content: url('../images/icons/down-black.svg')
+
+    @media screen and (max-width: $tablet)
+      content: none
+
+.account_orders__list__item__spoiler
+  border-bottom-right-radius: 0
+  border-bottom-left-radius: 0
+  display: flex
+  flex-direction: column
+  gap: 2rem
+  padding: 0
+  color: $black
+  background-color: #fff
+  border-radius: $radius
+  
+  @media screen and (max-width: $tablet)
+    gap: 2.4rem
+
+  &[open]
+    border-bottom-right-radius: $radius
+    border-bottom-left-radius: $radius
+
+  &[open] ~ .account_orders__list__item__products_short
+    display: none
+
+  &[open] > .account_orders__list__item__spoiler__summary:after
+    content: url('../images/icons/up-black.svg')
+
+    @media screen and (max-width: $tablet)
+      content: none
+
+.account_orders__list__item__spoiler__summary__number
+  font-size: 1.6rem
+  font-weight: 500
+  line-height: 130%
+  color: $pink
+
+.account_orders__list__item__spoiler__summary__date
+  font-size: 1.3rem
+  font-weight: 500
+  line-height: 130%
+  color: $black
+
+.account_orders__list__item__spoiler__summary__status
+  margin-right: auto
+  padding: .2rem .8rem .4rem
+  font-size: 1.2rem
+  font-weight: 400
+  line-height: 130%
+  border-radius: $radius
+
+.account_orders__list__item__spoiler__details
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 6rem
+  margin: 2rem
+  padding: 2rem
+  border: .1rem dashed $grey-dark1
+  border-radius: $radius
+
+  @media screen and (max-width: $tablet)
+    grid-template-columns: 1fr
+    margin: 0 1.5rem
+
+.account_orders__list__item__spoiler__details__block
+
+.account_orders__list__item__spoiler__details__block__heading
+  display: block
+  font-size: 1.4rem
+  font-weight: 700
+  line-height: 130%
+  color: $black
+
+.account_orders__list__item__spoiler__details__block__list
+  display: flex
+  flex-direction: column
+  gap: 1.2rem
+  margin-top: 1.4rem
+  width: 100%
+
+.account_orders__list__item__spoiler__details__block__list__item
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  font-size: 1.4rem
+  line-height: 130%
+  color: $grey-dark2
+
+.account_orders__list__item__spoiler__details__block__list__item__name
+
+.account_orders__list__item__spoiler__details__block__list__item__dots
+  min-width: 1rem
+  flex: 1 0
+  border-bottom: 1px dashed $grey-dark2
+  height: 1rem
+  margin: .4em
+
+.account_orders__list__item__spoiler__details__block__list__item__value
+  color: $black
+
+.account_orders__list__item__spoiler__details__products
+  display: flex
+  flex-direction: column
+  margin: 2.4rem 1.5rem
+
+  @media screen and (max-width: $tablet)
+    gap: 3.2rem
+
+.account_orders__list__item__spoiler__details__products__sku
+  display: grid
+  grid-template-columns: 10rem 1fr auto
+  gap: 1rem
+  padding: 2.6rem 1.6rem
+  border-bottom: 1px solid $grey1
+
+  &:last-child
+    border: none
+
+  @media screen and (max-width: $tablet)
+    grid-template-columns: 10rem 1fr
+    padding: 0 0 1.8rem 0
+    border-bottom: .1rem solid $grey1
+
+    &:last-child
+      padding: 0
+      border: none
+
+.account_orders__list__item__spoiler__details__products__sku__link
+
+.account_orders__list__item__spoiler__details__products__sku__link__image
+  width: 10rem
+  height: 10rem
+
+.account_orders__list__item__spoiler__details__products__sku__information
+  display: flex
+  flex-direction: column
+  gap: .8rem
+
+.account_orders__list__item__spoiler__details__products__sku__information__name
+  font-size: 1.4rem
+  font-weight: 400
+  line-height: 130%
+  margin-bottom: auto
+
+.account_orders__list__item__spoiler__details__products__sku__information__guarantee
+  font-size: 1.2rem
+  font-weight: 400
+  line-height: 130%
+  color: $violet
+
+.account_orders__list__item__spoiler__details__products__sku__information__code
+  font-size: 1.4rem
+  font-weight: 400
+  line-height: 130%
+  color: $grey-dark1
+
+.account_orders__list__item__spoiler__details__products__sku__price
+  display: flex
+  flex-direction: column
+  gap: .4rem
+  align-items: end
+
+  @media screen and (max-width: $tablet)
+    grid-column: span 2
+    display: grid
+    grid-template-columns: auto 1fr
+    align-items: center
+
+.account_orders__list__item__spoiler__details__products__sku__price__summ
+  font-size: 1.6rem
+  font-weight: 700
+  line-height: 130%
+
+.account_orders__list__item__spoiler__details__products__sku__price__single
+  font-size: 1.2rem
+  font-weight: 400
+  line-height: 130%
+  color: $grey-dark2
+
+.account_orders__list__item__spoiler__details__products__sku__price__actions
+  display: flex
+  justify-content: space-between
+  gap: 4rem
+  margin-top: auto
+  width: 100%
+  font-size: 1.4rem
+  font-weight: 500
+  line-height: 130%
+  color: $pink
+
+  @media screen and (max-width: $tablet)
+    grid-column: span 2
+    margin-top: .8rem
+
+.account_orders__list__item__spoiler__details__products__sku__price__actions__problem
+
+  &:hover
+    cursor: pointer
+
+.account_orders__list__item__spoiler__details__products__sku__price__actions__review
+
+  &:hover
+    cursor: pointer
+
+.account_orders__list__item__products_short
+  display: flex
+  gap: 1.6rem
+  align-items: center
+  flex-wrap: wrap
+  padding: 1.6rem
+  background-color: #fff
+  border-radius: $radius
+
+  @media screen and (max-width: $tablet)
+    justify-content: space-between
+
+.account_orders__list__item__products_short__sku__link
+  display: block
+  width: 10rem
+  height: 10rem
+
+.account_orders__list__item__products_short__prices
+  display: flex
+  flex-direction: column
+  gap: .4rem
+  align-items: end
+  margin-left: auto
+
+  @media screen and (max-width: $tablet)
+    align-items: center
+    flex-direction: row
+    margin: 0
+
+.account_orders__list__item__products_short__prices__current
+  font-size: 1.6rem
+  line-height: 130%
+  font-weight: 700
+  color: $black
+
+.account_orders__list__item__products_short__prices__old
+  font-size: 1.2rem
+  line-height: 130%
+  font-weight: 400
+  color: $grey-dark2
+  text-decoration: line-through
 
 /* Личный кабинет */

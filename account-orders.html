@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Заказ оформлен — ТехноЗум.рф</title>
+    <title>Личный кабинет, история заказов — ТехноЗум.рф</title>
     <meta name="description" value="DESCRIPTION" />
     
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
@@ -190,136 +190,316 @@
             <a class="breadcrumbs__menu__item__link" href="/">Технозум</a>
           </li>
           <li class="breadcrumbs__menu__item breadcrumbs__menu__item--active">
-            Заказ оформлен
+            Личный кабинет
           </li>
         </ul>
       </section>
-      <section class="success_heading section wrapper--global">
-        <h1>Ваш заказ <span class="success_heading__number">№ S-0508I13UT6776</span> принят</h1>
-        <div class="success_heading__message">Менеджер свяжется с вами для уточнения деталей заказа</div>
-        <img class="success_heading__image" src="../images/clap.svg" />
+      <section class="account section wrapper--global">
+        <h1 class="account__heading">Личный кабинет</h1>
+        <ul class="account__navigation">
+          <li class="account__navigation__item button button--white"><a href="../account-orders.html">Данные профиля</a></li>
+          <li class="account__navigation__item button button--white"><a href="../account-address.html">Адреса доставки</a></li>
+          <li class="account__navigation__item button account__navigation__item--active">Мои заказы</li>
+          <li class="account__navigation__item button button--white"><a href="../account-favourites.html">Избранное</a></li>
+        </ul>
       </section>
-      <section class="success_unpaid section wrapper--global">
-        <div class="success_unpaid__message">По каким-то причинам заказ не был оплачен. Оплатите заказ, чтобы мы взяли его в работу.</div>
-        <a class="success_unpaid__button button button--pink" href="../order-paid.html">Оплатить</a>
-      </section>
-      <section class="success_order_info section wrapper--global">
-        <div class="success_order_info__main">
-          <span class="success_order_info__main__number">№ S-0508I13UT6776</span>
-          <span class="success_order_info__main__date">от 27.06.2022</span>
-          <span class="success_order_info__main__status">В обработке</span>
-        </div>
-        <div class="success_order_info__summary">
-          <div class="success_order_info__summary__delivery">
-            <span class="success_order_info__summary__delivery__heading success_order_info__summary__heading">Доставка:</span>
-            <ul class="success_order_info__summary__delivery__info">
-              <li class="success_order_info__summary__delivery__info__item">
-                <span class="success_order_info__summary__delivery__info__item__name">Город</span>
-                <span class="success_order_info__summary__delivery__info__item__dots"></span>
-                <span class="success_order_info__summary__delivery__info__item__value">Санкт-Петербург</span>
-              </li>
-              <li class="success_order_info__summary__delivery__info__item">
-                <span class="success_order_info__summary__delivery__info__item__name">Адрес</span>
-                <span class="success_order_info__summary__delivery__info__item__dots"></span>
-                <span class="success_order_info__summary__delivery__info__item__value">ул. 1-ая Советская, д.6,
-                  корпус 2, оф. 208</span>
-              </li>
-              <li class="success_order_info__summary__delivery__info__item">
-                <span class="success_order_info__summary__delivery__info__item__name">Комментарий</span>
-                <span class="success_order_info__summary__delivery__info__item__dots"></span>
-                <span class="success_order_info__summary__delivery__info__item__value">Комментарий комментарий комментарий комментарий комментарий комментарий комментарий комментарий комментарий комментарий комментарий</span>
-              </li>
-            </ul>
-          </div>
-          <div class="success_order_info__summary__payment">
-            <span class="success_order_info__summary__payment__heading success_order_info__summary__heading">Оплата:</span>
-            <ul class="success_order_info__summary__payment__info">
-              <li class="success_order_info__summary__payment__info__item">
-                <span class="success_order_info__summary__payment__info__item__name">Способ</span>
-                <span class="success_order_info__summary__payment__info__item__dots"></span>
-                <span class="success_order_info__summary__payment__info__item__value">Картой онлайн</span>
-              </li>
-              <li class="success_order_info__summary__payment__info__item">
-                <span class="success_order_info__summary__payment__info__item__name">Статус</span>
-                <span class="success_order_info__summary__payment__info__item__dots"></span>
-                <span class="success_order_info__summary__payment__info__item__value">Оплачен</span>
-              </li>
-              <li class="success_order_info__summary__payment__info__item">
-                <span class="success_order_info__summary__payment__info__item__name">Стоимость заказа</span>
-                <span class="success_order_info__summary__payment__info__item__dots"></span>
-                <span class="success_order_info__summary__payment__info__item__value">645 000 ₽</span>
-              </li>
-              <li class="success_order_info__summary__payment__info__item">
-                <span class="success_order_info__summary__payment__info__item__name">Стоимость доставки</span>
-                <span class="success_order_info__summary__payment__info__item__dots"></span>
-                <span class="success_order_info__summary__payment__info__item__value">Бесплатно</span>
-              </li>
-              <li class="success_order_info__summary__payment__info__item">
-                <span class="success_order_info__summary__payment__info__item__name">Итого</span>
-                <span class="success_order_info__summary__payment__info__item__dots"></span>
-                <span class="success_order_info__summary__payment__info__item__value">645 000 ₽</span>
-              </li>
-            </ul>
-          </div>
-          <div class="success_order_info__summary__buyer">
-            <span class="success_order_info__summary__buyer__heading success_order_info__summary__heading">Получатель:</span>
-            <ul class="success_order_info__summary__buyer__info">
-              <li class="success_order_info__summary__buyer__info__item">
-                <span class="success_order_info__summary__buyer__info__item__name">Имя</span>
-                <span class="success_order_info__summary__buyer__info__item__dots"></span>
-                <span class="success_order_info__summary__buyer__info__item__value">Юрий</span>
-              </li>
-              <li class="success_order_info__summary__buyer__info__item">
-                <span class="success_order_info__summary__buyer__info__item__name">Телефон</span>
-                <span class="success_order_info__summary__buyer__info__item__dots"></span>
-                <span class="success_order_info__summary__buyer__info__item__value">+ 7 (999) 990-99-99</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section class="success_order_contents section wrapper--global">
-        <ul class="success_order_contents__products">
-          <li class="success_order_contents__products__item">
-            <img class="success_order_contents__products__item__image" src="../images/demo/cart/cart-product.png" />
-            <span class="success_order_contents__products__item__name">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</span>
-            <div class="success_order_contents__products__item__cost">
-              <span class="success_order_contents__products__item__cost__current">645 000 ₽</span>
-              <span class="success_order_contents__products__item__price">645 000 x 3</span>
+      <section class="account_orders section wrapper--global">
+        <ul class="account_orders__list">
+          <li class="account_orders__list__item">
+            <details class="account_orders__list__item__spoiler" open>
+              <summary class="account_orders__list__item__spoiler__summary">
+                <span class="account_orders__list__item__spoiler__summary__number">№ 12345678</span>
+                <span class="account_orders__list__item__spoiler__summary__date">от 27.06.2022</span>
+                <span class="account_orders__list__item__spoiler__summary__status bg--scarlet">Ждет оплаты</span>
+              </summary>
+              <ul class="account_orders__list__item__spoiler__details">
+                <li class="account_orders__list__item__spoiler__details__block">
+                  <span class="account_orders__list__item__spoiler__details__block__heading">Доставка:</span>
+                  <ul class="account_orders__list__item__spoiler__details__block__list">
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Город</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">Санкт-Петербург</span>
+                    </li>
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Адрес</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">ул. 1-ая Советская, д.6, корпус 2, оф. 208</span>
+                    </li>
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Комментарий</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">Комментарий комментарий комментарий комментарий комментарий комментарий комментарий комментарий комментарий комментарий комментарий </span>
+                    </li>
+                  </ul>
+                </li>
+                <li class="account_orders__list__item__spoiler__details__block">
+                  <span class="account_orders__list__item__spoiler__details__block__heading">Оплата:</span>
+                  <ul class="account_orders__list__item__spoiler__details__block__list">
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Способ</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">Онлайн-оплата</span>
+                    </li>
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Статус</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">Оплачен</span>
+                    </li>
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Стоимость заказа</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">645 000 ₽</span>
+                    </li>
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Стоимость достаки</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">Бесплатно</span>
+                    </li>
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Итого</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">645 000 ₽</span>
+                    </li>
+                  </ul>
+                </li>
+                <li class="account_orders__list__item__spoiler__details__block">
+                  <span class="account_orders__list__item__spoiler__details__block__heading">Получатель:</span>
+                  <ul class="account_orders__list__item__spoiler__details__block__list">
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Имя</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">Юрий</span>
+                    </li>
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Телефон</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">+ 7 (999) 990-99-99</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="account_orders__list__item__spoiler__details__products">
+                <li class="account_orders__list__item__spoiler__details__products__sku">
+                  <a class="account_orders__list__item__spoiler__details__products__sku__link" href="../product.html">
+                    <img class="account_orders__list__item__spoiler__details__products__sku__link__image" src="../images/demo/cart/cart-product.png" />
+                  </a>
+                  <div class="account_orders__list__item__spoiler__details__products__sku__information">
+                    <a class="account_orders__list__item__spoiler__details__products__sku__information__name" href="../product.html">Умные часы Apple Watch Ultra GPS</a>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__information__guarantee">Гарантия до: 18.10.2024</span>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__information__code">Код товара: 1234567</span>
+                  </div>
+                  <div class="account_orders__list__item__spoiler__details__products__sku__price">
+                    <span class="account_orders__list__item__spoiler__details__products__sku__price__summ">645 000 ₽</span>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__price__single">215 000 x 3</span>
+                    <div class="account_orders__list__item__spoiler__details__products__sku__price__actions">
+                      <span class="account_orders__list__item__spoiler__details__products__sku__price__actions__problem popup__opener" onclick="openDialog('Problem')">Проблема с заказом?</span>
+                      <span class="account_orders__list__item__spoiler__details__products__sku__price__actions__review popup__opener" onclick="openDialog('Review')">Оставить отзыв</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="account_orders__list__item__spoiler__details__products__sku">
+                  <a class="account_orders__list__item__spoiler__details__products__sku__link" href="../product.html">
+                    <img class="account_orders__list__item__spoiler__details__products__sku__link__image" src="../images/demo/cart/cart-product.png" />
+                  </a>
+                  <div class="account_orders__list__item__spoiler__details__products__sku__information">
+                    <a class="account_orders__list__item__spoiler__details__products__sku__information__name" href="../product.html">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</a>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__information__guarantee">Гарантия до: 18.10.2024</span>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__information__code">Код товара: 1234567</span>
+                  </div>
+                  <div class="account_orders__list__item__spoiler__details__products__sku__price">
+                    <span class="account_orders__list__item__spoiler__details__products__sku__price__summ">645 000 ₽</span>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__price__single">215 000 x 3</span>
+                    <div class="account_orders__list__item__spoiler__details__products__sku__price__actions">
+                      <span class="account_orders__list__item__spoiler__details__products__sku__price__actions__problem popup__opener" onclick="openDialog('Problem')">Проблема с заказом?</span>
+                      <span class="account_orders__list__item__spoiler__details__products__sku__price__actions__review popup__opener" onclick="openDialog('Review')">Оставить отзыв</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="account_orders__list__item__spoiler__details__products__sku">
+                  <a class="account_orders__list__item__spoiler__details__products__sku__link" href="../product.html">
+                    <img class="account_orders__list__item__spoiler__details__products__sku__link__image" src="../images/demo/cart/cart-product.png" />
+                  </a>
+                  <div class="account_orders__list__item__spoiler__details__products__sku__information">
+                    <a class="account_orders__list__item__spoiler__details__products__sku__information__name" href="../product.html">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</a>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__information__guarantee">Гарантия до: 18.10.2024</span>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__information__code">Код товара: 1234567</span>
+                  </div>
+                  <div class="account_orders__list__item__spoiler__details__products__sku__price">
+                    <span class="account_orders__list__item__spoiler__details__products__sku__price__summ">645 000 ₽</span>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__price__single">215 000 x 3</span>
+                    <div class="account_orders__list__item__spoiler__details__products__sku__price__actions">
+                      <span class="account_orders__list__item__spoiler__details__products__sku__price__actions__problem popup__opener" onclick="openDialog('Problem')">Проблема с заказом?</span>
+                      <span class="account_orders__list__item__spoiler__details__products__sku__price__actions__review popup__opener" onclick="openDialog('Review')">Оставить отзыв</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </details>
+            <div class="account_orders__list__item__products_short">
+              <a class="account_orders__list__item__products_short__sku__link" href="../product.html">
+                <img class="account_orders__list__item__products_short__sku__link__image" src="../images/demo/cart/cart-product.png" />
+              </a>
+              <a class="account_orders__list__item__products_short__sku__link" href="../product.html">
+                <img class="account_orders__list__item__products_short__sku__link__image" src="../images/demo/cart/cart-product.png" />
+              </a>
+              <a class="account_orders__list__item__products_short__sku__link" href="../product.html">
+                <img class="account_orders__list__item__products_short__sku__link__image" src="../images/demo/cart/cart-product.png" />
+              </a>
+              <div class="account_orders__list__item__products_short__prices">
+                <span class="account_orders__list__item__products_short__prices__current">645&nbsp;000&nbsp;₽</span>
+                <span class="account_orders__list__item__products_short__prices__old">667&nbsp;000&nbsp;₽</span>
+              </div>
             </div>
           </li>
-          <li class="success_order_contents__products__item">
-            <img class="success_order_contents__products__item__image" src="../images/demo/cart/cart-product.png" />
-            <span class="success_order_contents__products__item__name">Умные часы Apple Watch Ultra GPS + Cellular</span>
-            <div class="success_order_contents__products__item__cost">
-              <span class="success_order_contents__products__item__cost__current">645 000 ₽</span>
-              <span class="success_order_contents__products__item__price">645 000 x 3</span>
-            </div>
-          </li>
-          <li class="success_order_contents__products__item">
-            <img class="success_order_contents__products__item__image" src="../images/demo/cart/cart-product.png" />
-            <span class="success_order_contents__products__item__name">Умные часы Apple Watch Ultra GPS + Cellular</span>
-            <div class="success_order_contents__products__item__cost">
-              <span class="success_order_contents__products__item__cost__current">645 000 ₽</span>
-              <span class="success_order_contents__products__item__price">645 000 x 3</span>
+          <li class="account_orders__list__item">
+            <details class="account_orders__list__item__spoiler">
+              <summary class="account_orders__list__item__spoiler__summary">
+                <span class="account_orders__list__item__spoiler__summary__number">№ 12345678</span>
+                <span class="account_orders__list__item__spoiler__summary__date">от 27.06.2022</span>
+                <span class="account_orders__list__item__spoiler__summary__status bg--green">Готов к выдаче</span>
+              </summary>
+              <ul class="account_orders__list__item__spoiler__details">
+                <li class="account_orders__list__item__spoiler__details__block">
+                  <span class="account_orders__list__item__spoiler__details__block__heading">Доставка:</span>
+                  <ul class="account_orders__list__item__spoiler__details__block__list">
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Город</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">Санкт-Петербург</span>
+                    </li>
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Адрес</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">ул. 1-ая Советская, д.6, корпус 2, оф. 208</span>
+                    </li>
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Комментарий</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">Комментарий комментарий комментарий комментарий комментарий комментарий комментарий комментарий комментарий комментарий комментарий </span>
+                    </li>
+                  </ul>
+                </li>
+                <li class="account_orders__list__item__spoiler__details__block">
+                  <span class="account_orders__list__item__spoiler__details__block__heading">Оплата:</span>
+                  <ul class="account_orders__list__item__spoiler__details__block__list">
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Способ</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">Онлайн-оплата</span>
+                    </li>
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Статус</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">Оплачен</span>
+                    </li>
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Стоимость заказа</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">645 000 ₽</span>
+                    </li>
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Стоимость достаки</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">Бесплатно</span>
+                    </li>
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Итого</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">645 000 ₽</span>
+                    </li>
+                  </ul>
+                </li>
+                <li class="account_orders__list__item__spoiler__details__block">
+                  <span class="account_orders__list__item__spoiler__details__block__heading">Получатель:</span>
+                  <ul class="account_orders__list__item__spoiler__details__block__list">
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Имя</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">Юрий</span>
+                    </li>
+                    <li class="account_orders__list__item__spoiler__details__block__list__item">
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__name">Телефон</span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__dots"></span>
+                      <span class="account_orders__list__item__spoiler__details__block__list__item__value">+ 7 (999) 990-99-99</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="account_orders__list__item__spoiler__details__products">
+                <li class="account_orders__list__item__spoiler__details__products__sku">
+                  <a class="account_orders__list__item__spoiler__details__products__sku__link" href="../product.html">
+                    <img class="account_orders__list__item__spoiler__details__products__sku__link__image" src="../images/demo/cart/cart-product.png" />
+                  </a>
+                  <div class="account_orders__list__item__spoiler__details__products__sku__information">
+                    <a class="account_orders__list__item__spoiler__details__products__sku__information__name" href="../product.html">Умные часы Apple Watch Ultra GPS</a>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__information__guarantee">Гарантия до: 18.10.2024</span>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__information__code">Код товара: 1234567</span>
+                  </div>
+                  <div class="account_orders__list__item__spoiler__details__products__sku__price">
+                    <span class="account_orders__list__item__spoiler__details__products__sku__price__summ">645 000 ₽</span>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__price__single">215 000 x 3</span>
+                    <div class="account_orders__list__item__spoiler__details__products__sku__price__actions">
+                      <span class="account_orders__list__item__spoiler__details__products__sku__price__actions__problem popup__opener" onclick="openDialog('Problem')">Проблема с заказом?</span>
+                      <span class="account_orders__list__item__spoiler__details__products__sku__price__actions__review popup__opener" onclick="openDialog('Review')">Оставить отзыв</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="account_orders__list__item__spoiler__details__products__sku">
+                  <a class="account_orders__list__item__spoiler__details__products__sku__link" href="../product.html">
+                    <img class="account_orders__list__item__spoiler__details__products__sku__link__image" src="../images/demo/cart/cart-product.png" />
+                  </a>
+                  <div class="account_orders__list__item__spoiler__details__products__sku__information">
+                    <a class="account_orders__list__item__spoiler__details__products__sku__information__name" href="../product.html">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</a>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__information__guarantee">Гарантия до: 18.10.2024</span>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__information__code">Код товара: 1234567</span>
+                  </div>
+                  <div class="account_orders__list__item__spoiler__details__products__sku__price">
+                    <span class="account_orders__list__item__spoiler__details__products__sku__price__summ">645 000 ₽</span>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__price__single">215 000 x 3</span>
+                    <div class="account_orders__list__item__spoiler__details__products__sku__price__actions">
+                      <span class="account_orders__list__item__spoiler__details__products__sku__price__actions__problem popup__opener" onclick="openDialog('Problem')">Проблема с заказом?</span>
+                      <span class="account_orders__list__item__spoiler__details__products__sku__price__actions__review popup__opener" onclick="openDialog('Review')">Оставить отзыв</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="account_orders__list__item__spoiler__details__products__sku">
+                  <a class="account_orders__list__item__spoiler__details__products__sku__link" href="../product.html">
+                    <img class="account_orders__list__item__spoiler__details__products__sku__link__image" src="../images/demo/cart/cart-product.png" />
+                  </a>
+                  <div class="account_orders__list__item__spoiler__details__products__sku__information">
+                    <a class="account_orders__list__item__spoiler__details__products__sku__information__name" href="../product.html">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</a>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__information__guarantee">Гарантия до: 18.10.2024</span>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__information__code">Код товара: 1234567</span>
+                  </div>
+                  <div class="account_orders__list__item__spoiler__details__products__sku__price">
+                    <span class="account_orders__list__item__spoiler__details__products__sku__price__summ">645 000 ₽</span>
+                    <span class="account_orders__list__item__spoiler__details__products__sku__price__single">215 000 x 3</span>
+                    <div class="account_orders__list__item__spoiler__details__products__sku__price__actions">
+                      <span class="account_orders__list__item__spoiler__details__products__sku__price__actions__problem popup__opener" onclick="openDialog('Problem')">Проблема с заказом?</span>
+                      <span class="account_orders__list__item__spoiler__details__products__sku__price__actions__review popup__opener" onclick="openDialog('Review')">Оставить отзыв</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </details>
+            <div class="account_orders__list__item__products_short">
+              <a class="account_orders__list__item__products_short__sku__link" href="../product.html">
+                <img class="account_orders__list__item__products_short__sku__link__image" src="../images/demo/cart/cart-product.png" />
+              </a>
+              <a class="account_orders__list__item__products_short__sku__link" href="../product.html">
+                <img class="account_orders__list__item__products_short__sku__link__image" src="../images/demo/cart/cart-product.png" />
+              </a>
+              <a class="account_orders__list__item__products_short__sku__link" href="../product.html">
+                <img class="account_orders__list__item__products_short__sku__link__image" src="../images/demo/cart/cart-product.png" />
+              </a>
+              <div class="account_orders__list__item__products_short__prices">
+                <span class="account_orders__list__item__products_short__prices__current">645&nbsp;000&nbsp;₽</span>
+                <span class="account_orders__list__item__products_short__prices__old">667&nbsp;000&nbsp;₽</span>
+              </div>
             </div>
           </li>
         </ul>
-        <div class="success_order_contents__summary">
-          <span class="success_order_contents__summary__heading">Товары (2) на сумму 1 290 000 ₽</span>
-          <div class="success_order_contents__summary__detalization">
-            <span class="success_order_contents__summary__detalization__name">Скидка:</span>
-            <span class="success_order_contents__summary__detalization__summ">400 000 ₽</span>
-          </div>
-          <div class="success_order_contents__summary__detalization">
-            <span class="success_order_contents__summary__detalization__name">Скидка по промокоду:</span>
-            <span class="success_order_contents__summary__detalization__summ">400 000 ₽</span>
-          </div>
-          <span class="success_order_contents__summary__heading">Итого: 1 290 000 ₽</span>
-        </div>
-      </section>
-      <section class="buy_more section wrapper--global">
-        <a class="buy_more__button button button--black" href="../catalogue.html">Купить что-нибудь еще</a>
       </section>
     </main>
     <footer class="footer">
@@ -772,6 +952,69 @@
             <label class="popup_menu__container__navigation__item__label button" for="content__11">Туризм GPS навигаторы и эхолоты</label>
           </li>
         </ul>
+      </div>
+    </dialog>
+    <dialog class="popup_review popup" aria-label="Оставить отзыв" id="Review">
+      <div class="popup_review__container popup__container">
+        <span class="popup_review__container__heading">Оставить отзыв</span>
+        <span class="popup_review__container__close icon--close" onclick="closeDialog()"></span>
+        <div class="popup_review__container__form">
+          <div class="popup_review__container__form__rating">
+            <input class="popup_review__container__form__rating__input" name="review_rating" value="0" type="radio" disabled checked />
+            <label class="popup_review__container__form__rating__star__label" for="review_rating-1"></label>
+            <input class="popup_review__container__form__rating__input" name="review_rating" id="review_rating-1" value="1" type="radio" />
+            <label class="popup_review__container__form__rating__star__label" for="review_rating-2"></label>
+            <input class="popup_review__container__form__rating__input" name="review_rating" id="review_rating-2" value="2" type="radio" />
+            <label class="popup_review__container__form__rating__star__label" for="review_rating-3"></label>
+            <input class="popup_review__container__form__rating__input" name="review_rating" id="review_rating-3" value="3" type="radio" />
+            <label class="popup_review__container__form__rating__star__label" for="review_rating-4"></label>
+            <input class="popup_review__container__form__rating__input" name="review_rating" id="review_rating-4" value="4" type="radio" />
+            <label class="popup_review__container__form__rating__star__label" for="review_rating-5"></label>
+            <input class="popup_review__container__form__rating__input" name="review_rating" id="review_rating-5" value="5" type="radio" />
+          </div>
+          <input class="popup_review__container__form__input" placeholder="Имя" />
+          <input class="popup_review__container__form__input" type="email" placeholder="Email" />
+          <label class="popup_review__container__form__label" for="email">Ваш e-mail не будет опубликован</label>
+          <textarea class="popup_review__container__form__input popup_review__container__form__input--textarea" placeholder="Текст отзыва"></textarea>
+          <div class="popup_review__container__capcha smart-captcha" data-sitekey="ysc1_2kYyp6Ed1cWDxW0YtkLbN4SJteItmeDe4CvRtbC79209ed88">Капча</div>
+          <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
+          <span class="popup_review__container__form__button button button--pink" onclick="Review_form('popup_review'); return false;">Отправить отзыв</span>
+          <div class="popup_review__container__terms">Нажимая на кнопку, вы соглашаетесь с <a class="popup_review__container__terms__link" href="../oferta.html">Условиями обработки персональных данных</a>, а также c <a class="popup_review__container__terms__link" href="../oferta.html">Условиями публичной оферты</a>.</div>
+        </div>
+        <div class="popup_review__result">
+          <div class="popup_review__result__message">Спасибо за ваше мнение!<br>После модерации отзыв будет опубликован на сайте.</div>
+          <img class="popup_review__result__image" src="../images/clap.svg" />
+          <span class="popup_review__result__button button button--pink" onclick="closeDialog()">Понятно</span>
+        </div>
+      </div>
+    </dialog>
+    <dialog class="popup_problem popup" aria-label="Оставить отзыв" id="Problem">
+      <div class="popup_problem__container popup__container">
+        <span class="popup_problem__container__heading">Прблема с заказом?</span>
+        <span class="popup_problem__container__close icon--close" onclick="closeDialog()"></span>
+        <div class="popup_problem__container__form">
+          <div class="popup_problem__container__message">
+            <p>Если у вас есть вопросы или возникла проблема с заказом заполните форму ниже</p>
+            <p><b>Самовывоз бесплатный, оплата наличными.</b></p>
+          </div>
+          <textarea class="popup_problem__container__form__input popup_problem__container__form__input--textarea" placeholder="Текст обращения"></textarea>
+          <input class="popup_problem__container__form__input" type="file" id="popup_problem_file_upload" style="display:none" />
+          <label for="popup_problem_file_upload" class="popup_problem__container__form__label">Добавить фото</label>
+          <div class="popup_problem__container__form__files">
+            <img class="popup_problem__container__form__files__image" src="../images/demo/cart/cart-product.png" />
+            <img class="popup_problem__container__form__files__image" src="../images/demo/cart/cart-product.png" />
+            <img class="popup_problem__container__form__files__image" src="../images/demo/cart/cart-product.png" />
+            <img class="popup_problem__container__form__files__image" src="../images/demo/cart/cart-product.png" />
+            <img class="popup_problem__container__form__files__image" src="../images/demo/cart/cart-product.png" />
+          </div>
+          <span class="popup_problem__container__form__button button button--pink" onclick="Problem_form('popup_problem'); return false;">Отправить</span>
+          <div class="popup_problem__container__terms">Нажимая на кнопку, вы соглашаетесь с <a class="popup_problem__container__terms__link" href="../oferta.html">Условиями обработки персональных данных</a>, а также c <a class="popup_problem__container__terms__link" href="../oferta.html">Условиями публичной оферты</a>.</div>
+        </div>
+        <div class="popup_problem__result">
+          <div class="popup_problem__result__message">Спасибо за ваше обращение!<br>Мы рассмотрим его в ближайшее время и свяжемся с вами при необходимости.</div>
+          <img class="popup_problem__result__image" src="../images/clap.svg" />
+          <span class="popup_problem__result__button button button--pink" onclick="closeDialog()">Понятно</span>
+        </div>
       </div>
     </dialog>
     <script src="./js/custom.js"></script>
