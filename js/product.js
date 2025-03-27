@@ -1,4 +1,27 @@
-var slider = tns({
+document.querySelector('.product__gallery').addEventListener('click', function(e){
+  if ( e.target.classList.contains('product__gallery__preview__list__item__image') ){
+    var image_id = e.target.getAttribute('data-preview')
+    var preview = document.getElementsByClassName('product__gallery__preview__list__item__image')
+
+    document.querySelector('.product__gallery__big__item--active').classList.remove('product__gallery__big__item--active')
+    document.querySelector('[data-image="'+image_id+'"]').classList.add('product__gallery__big__item--active')
+    
+    document.querySelector('.product__gallery__preview__list__item__image--active').classList.remove('product__gallery__preview__list__item__image--active')
+    e.target.classList.add('product__gallery__preview__list__item__image--active')
+  }
+})
+
+
+var slider_preview = tns({
+  container: '.product__gallery__preview__list',
+  items: 5,
+  loop: true,
+  controls: true,
+  controlsContainer: '.product__gallery__preview__arrows',
+  axis: "vertical"
+});
+
+var slider_alike = tns({
   container: '.carousel_alike',
   responsive: {
     "840": {
@@ -16,7 +39,7 @@ var slider = tns({
   gutter: 10
 });
 
-var slider = tns({
+var slider_addon = tns({
   container: '.carousel_addon',
   responsive: {
     "840": {

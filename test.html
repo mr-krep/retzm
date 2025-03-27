@@ -2,210 +2,155 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Убираем сдвиги контента — scrollbar-gutter — Дока</title>
+    <title>TEST</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+    <link href="./fonts/fonts.css" rel="stylesheet" />
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
     <style>
-      *,
-      *::before,
-      *::after {
+      .product__gallery__preview
+      {
+        width: 100px
+      }
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
-      body {
-        min-height: 100vh;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        background-color: #18191c;
-        color: #ffffff;
-        font-family: "Roboto", sans-serif;
-      }
-
-      html,
-      body {
-        scrollbar-gutter: stable;
-      }
-
-      @media (max-width: 768px) {
-        body {
-          padding: 0;
-        }
-      }
-
-      p {
-        margin-bottom: 40px;
-        font-size: 30px;
-      }
-
-      .button {
-        display: block;
-        min-width: 210px;
-        border: 2px solid transparent;
-        border-radius: 6px;
-        padding: 9px 15px;
-        color: #000000;
-        font-size: 18px;
-        font-weight: 300;
-        font-family: inherit;
-        transition: background-color 0.2s linear;
-      }
-
-      .open-button {
-        margin: 0 auto 20px;
-      }
-
-      .button:hover {
-        background-color: #ffffff;
-        cursor: pointer;
-        transition: background-color 0.2s linear;
-      }
-
-      .button:focus-visible {
-        border: 2px solid #ffffff;
-        outline: none;
-      }
-
-      .button:focus {
-        border: 2px solid #ffffff;
-        outline: none;
-      }
-
-      .close-button,
-      .close-button:hover,
-      .close-button:focus {
-        margin: 10px auto 0;
-        background: #000000;
-        border: 2px solid #000000;
-        color: #ffffff;
-      }
-
-      .button-blue {
-        background-color: #2e9aff;
-      }
-
-      .dialog {
-        position: fixed;
-        padding: 0;
-        margin: 0;
-      }
-
-      .dialog::backdrop {
-        background-color: rgb(0 0 0 / 0.5);
-      }
-
       .container {
-        max-width: 100%;
+        position: relative;
+        height: 200px;
+        overflow: hidden;
       }
 
-      .dialog {
-  border: none;
-  padding: 0;
-}
+      .sliders {
+        width: 100%;
+        height: 100%;
+        transition: 500ms;
+      }
 
-.dialog__wrapper {
-  padding: 1em;
-}
+      .slide-block {
+        display: flex;
+        height: 100%;
+      }
+
+      .slide-left-side {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 32px;
+      }
+
+      .slide-right-side {
+        width: 60%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .slide-buttons {
+        position: absolute;
+        display: flex;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+      }
+
+      .slide-buttons button {
+        background-color: #fff;
+        border: none;
+        color: #AAA;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 15px;
+      }
+
+      #down {
+        transform: translateY(50%);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      #up {
+        transform: translateY(-50%);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
     </style>
 </head>
   <body>
-    <div class="container">
-      <button class="button button-blue open-button catalogue__filters_mobile__link">
-        Открыть модальное окно
-      </button>
-      <dialog class="dialog catalogue__filters">
-        Тут какая-то дополнительная информация про ленивцев
-        <button class="button close-button catalogue__filters__container__heading__close">Закрыть диалог</button>
-      </dialog>
-      <p>
-        Ленивцы все делают медленно - даже моргают. Как получилось, что эти
-        животные ведут такую, мягко говоря, размеренную жизнь? Им что, никогда
-        не хочется побегать?
-      </p>
-      <p>
-        Ленивцам, как следует из их имени, некуда спешить. Большую часть времени
-        они проводят на деревьях в лесах Центральной и Южной Америки, почти не
-        двигаясь, и спускаются на землю (примерно раз в неделю) только для того,
-        чтобы испражниться.
-      </p>
-      <p>
-        Жизнь, которую они ведут, проходит как в замедленной съёмке. Каким
-        образом эволюция привела их к этому?
-      </p>
-      <p>
-        Современные ленивцы (трёхпалые и двупалые) гораздо меньше тех, что жили
-        на Земле в доисторический период. Те были поистине гигантскими - весом в
-        несколько тонн. Они населяли нашу планету в последнюю ледниковую эпоху и
-        исчезли примерно 11 тыс. лет назад.
-      </p>
-      <p>
-        Ходили они по земле, а чтобы достать листья, которыми они питались,
-        становились на задние лапы.
-      </p>
-      <p>
-        "Изменения, которые произошли с ленивцами, — это результат того, что они
-        начали жить на деревьях и в питании перешли почти исключительно на
-        листья", — говорит Камила Маццони.
-      </p>
-      <p>
-        "Лиственная диета весьма скудна на питательные вещества, калорий в
-        листве очень мало. Из-за этого у ленивцев очень медленно идущий обмен
-        веществ".
-      </p>
-      <p>
-        Частично это объясняется тем, где они живут. Все шесть видов ленивцев
-        обитают в тропических лесах. Там жарко и влажно, так что нужда в
-        движении, согревающем мышцы и сердечно-сосудистую систему, отпадает. Вот
-        ленивцы и не напрягаются.
-      </p>
-      <p>
-        В том, чтобы быть млекопитающим, есть свои преимущества. Способность
-        регулировать внутреннюю температуру тела позволяет жить в куда более
-        холодном климате, чем могут рептилии или другие холоднокровные животные.
-      </p>
-      <p>
-        Но теплокровная природа имеет и некоторые неудобства. Чтобы поддерживать
-        в рабочем состоянии эту жадную на энергию систему, млекопитающим
-        приходится много есть и поддерживать мышцы в разогретом состоянии, чтобы
-        без проблем передвигаться.
-      </p>
-      <p>
-        Эта эндотермическая адаптация позволяет млекопитающим существовать почти
-        в любых условиях обитания на Земле, в том числе на обоих полюсах.
-      </p>
-      <p>
-        Но кое-где некоторые млекопитающие отказались от преимуществ, подаренных
-        им природой. Они выбрали энергосберегающий стиль жизни, больше
-        напоминающий образ жизни холоднокровных животных.
-      </p>
-      <p>
-        "Система терморегуляции, которой обладает большинство млекопитающих,
-        требует много энергии, - говорит Маццони. - Поскольку у ленивцев такой
-        системы нет, им энергии нужно куда меньше. Однако это означает, что они
-        могут жить только в тропиках, причём не высоко в горах, где температура
-        может падать. Впрочем, двупалые ленивцы иногда забираются повыше в горы
-        в Коста-Рике".
-      </p>
+    <div class="product__gallery__preview">
+      <span class="product__gallery__preview__up" id="up1"></span>
+      <ul class="product__gallery__preview__list sliders">
+        <li class="product__gallery__preview__list__item slide-block">
+          <img class="product__gallery__preview__list__item__image product__gallery__preview__list__item__image--active" data-preview="1" src="../images/demo/product/product-priview.jpg" />
+        </li>
+        <li class="product__gallery__preview__list__item slide-block">
+          <img class="product__gallery__preview__list__item__image" data-preview="2" src="../images/demo/product/ipad.jpg" />
+        </li>
+        <li class="product__gallery__preview__list__item slide-block">
+          <img class="product__gallery__preview__list__item__image" data-preview="3" src="../images/demo/product/watch.jpg" />
+        </li>
+        <li class="product__gallery__preview__list__item slide-block">
+          <img class="product__gallery__preview__list__item__image" data-preview="4" src="../images/demo/product/belkin.jpg" />
+        </li>
+        <li class="product__gallery__preview__list__item slide-block">
+          <img class="product__gallery__preview__list__item__image" data-preview="5" src="../images/demo/product/airpods.jpg" />
+        </li>
+        <li class="product__gallery__preview__list__item slide-block">
+          <img class="product__gallery__preview__list__item__image" data-preview="6" src="../images/demo/product/airtag.jpg" />
+        </li>
+      </ul>
+      <span class="product__gallery__preview__down" id="down1"></span>
     </div>
     <script>
-      const dialog = document.querySelector('.catalogue__filters')
-      const openButton = document.querySelector('.catalogue__filters_mobile__link')
-      const closeButton = document.querySelector('.catalogue__filters__container__heading__close')
+      const slider = document.querySelector('.sliders');
+      const sliders = document.querySelectorAll('.slide-block');
+      const up = document.getElementById('up1');
+      const down = document.getElementById('down1');
 
-      openButton.addEventListener('click', () => {
-        dialog.showModal()
-        document.body.style.overflowY = 'hidden'
-      })
+      let slidersCount = sliders.length - 1;
+      let currentPosition = 0;
 
-      closeButton.addEventListener('click', () => {
-        dialog.close()
-        document.body.style.overflowY = 'auto'
-      })
+      up.addEventListener('click', () => {
+        move(1);
+      });
+
+      down.addEventListener('click', () => {
+        move(-1);
+      });
+
+      for (let slide of sliders) {
+        slide.style.background = getRandomGradient();
+      }
+
+      function move(step) {
+        currentPosition += step;
+
+        if (currentPosition > 0) {
+          currentPosition = -slidersCount;
+        }
+
+        if (currentPosition < -slidersCount) {
+          currentPosition = 0;
+        }
+
+        slider.style.transform = `translateY(calc(${currentPosition} * 100%))`;
+      }
+
+      function getRandomGradient() {
+        let deg = Math.floor(Math.random() * 360);
+        let a = Math.floor(Math.random() * 255);
+        let b = Math.floor(Math.random() * 255);
+        let c = Math.floor(Math.random() * 255);
+        let d = Math.floor(Math.random() * 255);
+        let e = Math.floor(Math.random() * 255);
+        let f = Math.floor(Math.random() * 255);
+        return `linear-gradient(${deg}deg, rgba(${a},${b},${c},1) 0%, rgba(${e},${f},${d},1) 100%)`
+      }
     </script>
   </body>
 </html>
