@@ -1,4 +1,4 @@
-/* TMP */
+/* TMP для более удобного тестирования */
 function OneClick_form(element) {
   document.querySelector('.'+element+'__container__form').style.display = 'none';
   document.querySelector('.'+element+'__result').style.display = 'flex';
@@ -15,6 +15,7 @@ function Problem_form(element) {
   document.querySelector('.'+element+'__container__form').style.display = 'none';
   document.querySelector('.'+element+'__result').style.display = 'flex';
 }
+/* end TMP для более удобного тестирования */
 
 /* Проверяем клики, запускаем закрытие модального окна и завершение прослушки */
 function ListenPopupClicks(element)
@@ -23,13 +24,17 @@ function ListenPopupClicks(element)
 }
 /* Открываем модальноео окно и включаем прослушку кликов */
 function openDialog(item){
+  window.scrollPosition = window.scrollY
+  window.scrollTo(0, 0)
   window.addEventListener('click', function(e){ListenPopupClicks(e.target)})
   document.getElementById(item).showModal()
+  return scrollPosition
 }
 
 /* Закрываем модальное окно и отключаем прослушку кликов */
 function closeDialog (){
   const elements = document.querySelectorAll("dialog")
+  window.scrollTo(0, scrollPosition)
   elements.forEach((item, index, arr) => {document.querySelectorAll("dialog")[index].close()})
   window.removeEventListener('click', ListenPopupClicks)
 }

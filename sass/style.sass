@@ -245,6 +245,9 @@ dialog
   text-align: center
   cursor: pointer
 
+  &:disabled
+    cursor: default
+
   @media screen and (max-width: $tablet)
     padding: 2rem 2.2rem
 
@@ -255,6 +258,10 @@ dialog
 
   &:hover
     background-color: $black
+
+  &:disabled
+    background-color: $black
+    color: #fff
 
 .button--black
   color: $white
@@ -977,17 +984,20 @@ dialog
 
 .categories__tiles__item
   padding: 1.6rem
-  background-color: $grey1
+  background-image: url('../images/bg/grey1.svg')
+  background-size: cover
   border-radius: $radius
+  -webkit-transition: background-image 500ms ease
+  -moz-transition: background-image 500ms ease
+  -o-transition: background-image 500ms ease
+  transition: background-image 500ms ease
 
   &:hover
     background-image: url('../images/main-tiles/tile-bg-hover.svg')
-    background-size: cover
     color: $white
 
   @media screen and (max-width: $tablet)
     padding: 1.6rem .8rem
-
   
 .categories__tiles__item__link
   display: grid
@@ -1742,8 +1752,7 @@ dialog
   cursor: pointer
 
 .order__left__delivery__option__label:has(.order__left__delivery__option__label__input:checked)
-  background-color: $black
-  color: #fff
+  border: .1rem solid $pink
 
 .order__left__delivery__option__label__heading
   font-size: 1.6rem
@@ -2426,6 +2435,12 @@ dialog
 
 .pickup_teaser__banner__heading
   max-width: 59rem
+
+.pickup_teaser__banner__button, .delivery_teaser__banner__button
+  
+  &:hover
+    background-color: $white
+    color: $black  
 
 .delivery_teaser__courier, .pickup_teaser__packing
   max-width: 39.8rem
@@ -3192,6 +3207,7 @@ dialog
   display: flex
   flex-direction: column
   gap: 1.2rem
+  color: $grey-dark2
 
 .catalogue__products__description__media__image
   object-fit: contain
@@ -3204,18 +3220,18 @@ dialog
 .product
   display: grid
   gap: 1rem
-  grid-template-columns: 39% auto auto
-  grid-template-rows: 3.2rem 2.6rem calc(2.8rem + 1rem + .6rem) auto auto
+  grid-template-columns: 39% auto 36.8rem
+  grid-template-rows: 3.2rem 2.6rem auto auto auto
   grid-template-areas: "helpers condition condition" "gallery heading heading" "gallery guarantee guarantee" "gallery options buy" "tabs tabs tabs"
 
   @media screen and (max-width: $desktop)
     grid-template-columns: 53% auto
-    grid-template-rows: 3.2rem auto calc(2.8rem + 1rem + .6rem) auto auto auto
+    grid-template-rows: 3.2rem auto auto auto auto auto
     grid-template-areas: "helpers condition" "gallery heading" "gallery guarantee" "gallery options" "gallery buy" "tabs tabs"
 
   @media screen and (max-width: $tablet)
     grid-template-columns: 100%
-    grid-template-rows: 3.2rem auto calc(2.8rem + 1rem + .6rem) auto auto auto
+    grid-template-rows: 3.2rem auto auto auto auto auto
     grid-template-areas: "condition" "heading" "guarantee" "helpers" "gallery" "options" "buy" "tabs"
 
 .product__helpers
@@ -3254,9 +3270,17 @@ dialog
   background-color: #fff
   cursor: pointer
 
+  &:hover
+    background-color: #fff
+    color: $pink
+
 .product__condition__option--active
   color: #fff
   background-color: $black
+
+  &:hover
+    background-color: $pink
+    color: #fff
 
 .product__heading
   grid-area: heading
@@ -3389,10 +3413,14 @@ dialog
   grid-area: guarantee
   margin-top: .6rem
   margin-bottom: 1rem
+  display: flex
+  flex-direction: column
+  gap: 1.6rem
 
 .product__guarantee__button
   display: inline-block
   padding: .4rem 1.2rem .6rem calc(1.2rem + .4rem + 1.6rem)
+  width: fit-content
   font-size: 1.4rem
   font-weight: 500
   line-height: 130%
@@ -3404,6 +3432,14 @@ dialog
   background-image: url('../images/icons/guarantee.svg')
   background-repeat: no-repeat
   background-position: left 1.2rem top 50%
+
+.product__markdown
+  padding: 1.4rem 2rem
+  font-size: 1.4rem
+  font-weight: 400
+  line-height: 130%
+  background-color: $grey1
+  border-radius: $radius
 
 .product__options
   grid-area: options
@@ -3436,9 +3472,13 @@ dialog
   gap: .8rem
 
 .product__options__option__values__color
-  border-radius: 50%
   width: 2rem
   height: 2rem
+  border: 1px solid #fff
+  border-radius: 50%
+
+  &:hover
+    border: 1px dotted rgba(255, 25, 122, 0.2)
 
 .option__color--belyi
   background-color: #fff
@@ -3460,10 +3500,17 @@ dialog
   line-height: 130%
   color: $black
   background-color: #fff
+  border: 1px solid #fff
   border-radius: $radius
+
+  &:hover
+    border: 1px dotted rgba(255, 25, 122, 0.2)
 
 .product__options__option__values__value--active, .product__options__option__values__color--active
   border: 1px dotted $pink
+
+  &:hover
+    border: 1px dotted $pink
 
 .product__options__summary
   grid-area: summary
@@ -3543,6 +3590,8 @@ dialog
 
 .product__buy__add_to_cart, .product__buy__cart__out_of_stock
   grid-column: span 2
+
+.product__buy__add_to_cart, .product__buy__cart__out_of_stock, .product__buy__cart__add_to_cart
   width: 100%
   font-size: 1.6rem
   font-weight: 500
@@ -3553,12 +3602,9 @@ dialog
     padding: 2rem
 
 .product__buy__cart
-  display: grid
-  grid-template-columns: auto 9.5rem
+  display: flex
+  // grid-template-columns: auto 9.5rem
   gap: .4rem
-
-.product__buy__cart__add_to_cart
-  width: 100%
 
 .product__buy__cart__count
   display: grid
@@ -3612,6 +3658,13 @@ dialog
 
   &:hover
     background-image: url('../images/icons/heart-pink.svg')
+    cursor: pointer
+
+.product__buy__row2_buttons__favourites--active
+  background-image: url('../images/icons/heart-pink-filled.svg')
+
+  &:hover
+    background-image: url('../images/icons/heart-grey.svg')
     cursor: pointer
 
 .product__buy__delivery
@@ -4049,6 +4102,9 @@ dialog
       margin-left: 2rem
       list-style-type: disc
 
+a.product__tabs__content__block__characteristics_group__list__item__value
+  color: $pink
+
 .product__tabs__content__block--reviews
   grid-area: tab_content
 
@@ -4062,7 +4118,7 @@ dialog
   display: block
   margin: 0
   font-size: 2rem
-  font-weight: 400
+  font-weight: 700
   line-height: 130%
 
 .product__tabs__content__block__reviews__message
@@ -4187,11 +4243,14 @@ dialog
 
 /*POPUP*/
 .popup
+  position: absolute
   background-color: $white
   border-radius: $radius
   box-shadow: $shadow
 
   &::backdrop
+    position: absolute
+    margin-top: 10rem
     background: rgba(0, 0, 0, .5)
 
   &:focus-visible, &:focus
@@ -4360,7 +4419,7 @@ dialog
 .popup_authorization
 
   @media screen and (min-width: $tablet+1)
-    margin: 11rem auto
+    margin: auto auto
     width: 48.4rem
 
 .popup_authorization__container, .popup_authorization__container__check_code
@@ -4456,19 +4515,19 @@ dialog
 .popup_1click
 
   @media screen and (min-width: $tablet+1)
-    margin: 15rem auto
+    margin: auto auto
     width: 57.8rem
 
 .popup_notify
 
   @media screen and (min-width: $tablet+1)
-    margin: 12rem auto
+    margin: auto auto
     width: 57.8rem
 
 .popup_review, .popup_problem
 
   @media screen and (min-width: $tablet+1)
-    margin: 19rem auto
+    margin: auto auto
     width: 48rem
 
 .popup_1click__container, 
@@ -4682,7 +4741,7 @@ dialog
 .popup_pickup
   
     @media screen and (min-width: $tablet+1)
-      margin: 5rem auto
+      margin: auto auto
       width: 96rem
 
 .popup_pickup__container
@@ -4758,7 +4817,7 @@ dialog
 .popup_delivery
   
     @media screen and (min-width: $tablet+1)
-      margin: 5rem auto
+      margin: auto auto
       max-width: 102.4rem - 2.8rem
 
 .popup_delivery__container
@@ -4982,11 +5041,25 @@ dialog
   background-clip: content-box
   border-radius: $radius
 
+  &:hover .popup_search__suggestions__container__list__item__link__text__title
+    color: $pink
+
   @media screen and (max-width: $tablet)
     min-width: 20rem
     gap: 1rem
 
-.popup_search__suggestions__container__list__item__images
+.popup_search__suggestions__container__list__item__link
+  position: relative
+  padding: 0
+  margin: 0
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  gap: 2rem
+  width: 100%
+  height: 100%
+
+.popup_search__suggestions__container__list__item__images, .popup_search__suggestions__container__list__item__link__images
   margin: 2.2rem 2.2rem 0
   display: flex
   flex-wrap: nowrap
@@ -5017,11 +5090,11 @@ dialog
     width: 18rem
     height: 18rem
 
-.popup_search__container_suggestions__list__item__images__link__image
+.popup_search__container_suggestions__list__item__images__link__image, .popup_search__suggestions__container__list__item__link__images__image
   max-width: unset
   width: 100%
 
-.popup_search__suggestions__container__list__item__text
+.popup_search__suggestions__container__list__item__text, .popup_search__suggestions__container__list__item__link__text
   margin: 0 2rem 2rem
   display: flex
   flex-direction: column
@@ -5030,7 +5103,7 @@ dialog
   flex: 1 0 10rem
   gap: 1rem
   
-.popup_search__suggestions__container__list__item__text__title
+.popup_search__suggestions__container__list__item__text__title, .popup_search__suggestions__container__list__item__link__text__title
   font-size: 1.4rem
   font-weight: 500
   line-height: 1.8rem
@@ -5041,14 +5114,14 @@ dialog
   &:hover
     color: $pink
 
-.popup_search__suggestions__container__list__item__text__info
+.popup_search__suggestions__container__list__item__text__info, .popup_search__suggestions__container__list__item__link__text__info
   display: flex
   justify-content: space-between
   align-items: flex-start
   flex-wrap: wrap
   gap: 1rem
 
-.popup_search__suggestions__container__list__item__text__info__prices
+.popup_search__suggestions__container__list__item__text__info__prices, .popup_search__suggestions__container__list__item__link__text__info__prices
   display: flex
   gap: .4rem
   align-items: center
@@ -5058,20 +5131,20 @@ dialog
     align-items: flex-start
     flex-direction: column
 
-.popup_search__suggestions__container__list__item__text__info__prices__price
+.popup_search__suggestions__container__list__item__text__info__prices__price, .popup_search__suggestions__container__list__item__link__text__info__prices__price
   font-size: 1.6rem
   line-height: 130%
   font-weight: 700
   color: $black
 
-.popup_search__suggestions__container__list__item__text__info__prices__oldprice
+.popup_search__suggestions__container__list__item__text__info__prices__oldprice, .popup_search__suggestions__container__list__item__link__text__info__prices__oldprice
   font-size: 1.2rem
   line-height: 130%
   font-weight: 400
   color: $grey-dark2
   text-decoration: line-through
 
-.popup_search__suggestions__container__list__item__text__info__label
+.popup_search__suggestions__container__list__item__text__info__label, .popup_search__suggestions__container__list__item__link__text__info__label
   padding: .3rem .8rem
   background-color: $grey1
   border-radius: $radius
@@ -5080,7 +5153,7 @@ dialog
   line-height: 130%
   font-weight: 400
 
-.popup_search__suggestions__container__list__item__add_to_cart
+.popup_search__suggestions__container__list__item__add_to_cart, .popup_search__suggestions__container__list__item__link__add_to_cart
   display: flex
   justify-content: center
   align-items: center
@@ -5095,20 +5168,20 @@ dialog
   &:hover
     background-color: $pink
 
-  &:hover .popup_search__suggestions__container__list__item__add_to_cart__text
+  &:hover .popup_search__suggestions__container__list__item__add_to_cart__text, .popup_search__suggestions__container__list__item__link__add_to_cart__text
     color: $white
 
   &:hover .icon--add-to-cart-pink
     background-image: url("../images/icons/cart-white.svg")
 
-.popup_search__suggestions__container__list__item__add_to_cart__text
+.popup_search__suggestions__container__list__item__add_to_cart__text, .popup_search__suggestions__container__list__item__link__add_to_cart__text
   color: $pink
   font-size: 1.6rem
   font-weight: 500
   line-height: 1.6rem
   transition: .2s linear
 
-.popup_search__suggestions__container__list__item__add_to_cart__icon
+.popup_search__suggestions__container__list__item__add_to_cart__icon, .popup_search__suggestions__container__list__item__link__add_to_cart__icon
   display: inline-block
   width: 1.6rem
   height: 1.6rem
@@ -5155,7 +5228,7 @@ dialog
 
 /* MENU */
 .popup_menu
-  margin: 10.5rem auto 0
+  margin: 10rem auto 0
   width: 100%
   max-width: $desktop
   background-color: $white
