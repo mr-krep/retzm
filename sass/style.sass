@@ -529,7 +529,7 @@ dialog
 
 .flex_columns__item
   display: flex
-  justify-content: space-between;
+  justify-content: space-between
   font-size: 1.4rem
   line-height: 130%
 
@@ -2791,8 +2791,19 @@ dialog
   max-height: 15rem
   scrollbar-color: $grey #fff
 
+  &::-webkit-scrollbar
+    width: .8rem
+    background-color: #fff
+    border-radius: .4rem
+
+  &::-webkit-scrollbar-thumb
+    width: .8rem
+    background-color: $grey
+    border-radius: .4rem
+
 .catalogue__filters__container__feature__heading, .catalogue__filters__container__feature--label
   font-size: 1.6rem
+  color: $grey-dark2
 
   @media screen and (min-width: $tablet+1) and (max-width: $desktop)
     font-size: 1.4rem
@@ -4660,7 +4671,7 @@ dialog
   cursor: pointer
 
 .popup_review__container__form .popup_review__container__form__rating__input:checked ~ .popup_review__container__form__rating__star__label
-	background-image: url('../images/icons/star-grey.svg')
+  background-image: url('../images/icons/star-grey.svg')
 
 .popup_review__container__form .popup_review__container__form__rating:hover .popup_review__container__form__rating__star__label
 	background-image: url('../images/icons/star-yellow.svg')
