@@ -737,12 +737,21 @@ dialog
   padding-left: 2.8rem
   font-size: 1.6rem
   line-height: 2rem
-  background-position: left center
+  background-position: left top
   background-repeat: no-repeat
   background-size: 2rem 2rem
   cursor: pointer
 
+.header__bottom__container__column__services__item__link.link_icon--cart
+  position: relative
+  padding-bottom: 3rem
+  z-index: 5
+
+  &:hover ~ .header__bottom__container__column__services__item__cart_tooltip
+    display: flex
+
 .header__mobile
+
   @media screen and (max-width: $tablet)
     padding: 1.2rem 1.5rem
     grid-template-columns: 4.4rem 4.4rem auto 4.4rem 4.4rem
@@ -775,7 +784,7 @@ dialog
   position: absolute
   top: 4.5rem
   right: 0
-  z-index: 1000
+  z-index: 100
   margin: 0
   padding: 2rem
   width: 48.4rem
@@ -785,6 +794,10 @@ dialog
   background-color: $white
   box-shadow: $shadow
   border-radius: $radius
+
+  &:hover
+    display: flex
+    box-shadow: $shadow    
 
   @media screen and (max-width: $tablet)
     position: absolute
@@ -2616,8 +2629,12 @@ dialog
 
 .popular
   display: flex
-  flex-wrap: wrap
+  flex-wrap: nowrap
   gap: 1rem
+  overflow-x: scroll
+  scrollbar-width: none
+  -ms-overflow-style: none
+
 
 .popular__link
   padding: .4rem 1.6rem .6rem
@@ -4884,6 +4901,7 @@ a.product__tabs__content__block__characteristics_group__list__item__value
 
   @media screen and (max-width: $tablet)
     grid-template-areas: "top" "form" "queries" "suggestions" "link"
+    row-gap: 1rem
 
 .popup_search__container__top
   display: none
@@ -4894,7 +4912,7 @@ a.product__tabs__content__block__characteristics_group__list__item__value
     gap: 1rem
     align-items: center
     justify-content: space-between
-    margin: 2rem 2rem 0 2rem
+    margin: 0 0 .9rem
   
 .popup_search__container__top__heading
   font-size: 2rem
@@ -4918,7 +4936,7 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   margin: 2rem 2rem 0 2rem
 
   @media screen and (max-width: $tablet)
-    margin-top: 0
+    margin: 0
 
 .popup_search__container__form__input
   flex-grow: 2
@@ -4939,7 +4957,8 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   margin: 0 2rem
 
   @media screen and (max-width: $tablet)
-    margin-right: 0
+    margin: 0
+    padding: 2rem 0
     flex-wrap: nowrap
     overflow-x: auto
     -ms-overflow-style: none
@@ -4963,7 +4982,7 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   margin: 0
 
 .popup_search__suggestions__container__heading
-  margin: 0 2rem 2rem
+  margin: 0 0 2rem
 
 
 .popup_search__container__link_results
@@ -4981,6 +5000,9 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   background-repeat: no-repeat
   background-position: top 50% right 0
   cursor: pointer
+
+  @media screen and (max-width: $tablet)
+    margin: 0
 
   &:hover
     color: $black
@@ -5027,6 +5049,7 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   
   @media screen and (max-width: $tablet)
     align-items: stretch
+    margin-left: 0
 
 .popup_search__suggestions__container__list__item
   position: relative
@@ -5125,11 +5148,12 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   display: flex
   gap: .4rem
   align-items: center
+  justify-content: space-between
   width: 100%
 
   @media screen and (max-width: $tablet)
-    align-items: flex-start
-    flex-direction: column
+    // align-items: flex-start
+    // flex-direction: column
 
 .popup_search__suggestions__container__list__item__text__info__prices__price, .popup_search__suggestions__container__list__item__link__text__info__prices__price
   font-size: 1.6rem
