@@ -65,3 +65,8 @@ $link.addEventListener('click', e => {
     behavior: 'smooth'
   });
 });
+
+/* Tooltip c гарантией */
+document.querySelector('.product__guarantee__button').addEventListener('click', () => {
+  document.querySelector('.product__guarantee__tooltip').style.display = (document.querySelector('.product__guarantee__tooltip').style.display == 'block') ? '' : 'block'
+})
