@@ -22,8 +22,8 @@ $grey-soft: #ECECEC
 $orange: #FFAC4B
 $pink: #FF197A
 $scarlet: #FF573D
-$violet: #8123FF
-$violet-bg: #D5BBF9
+$purple: #8123FF
+$purple-bg: #D5BBF9
 $white: #FAFAFA
 $yellow: #FFCF4B
   
@@ -351,24 +351,44 @@ dialog
   background-color: $scarlet
   color: #fff
 
-.bg--violet
-  background-color: $violet
+.bg--purple
+  background-color: $purple
   color: #fff
   
 .icon--search-white
   background-image: url(../images/icons/search-white.svg)
   background-size: cover
   background-repeat: no-repeat
+  
+.icon--search-grey
+  background-image: url(../images/icons/search-grey.svg)
+  background-repeat: no-repeat
+  background-position: 50% 50%
+
+.icon--heart
+  background-image: url(../images/icons/heart.svg)
+  background-repeat: no-repeat
+  background-position: 50% 50%
 
 .icon--heart-white
   background-image: url(../images/icons/heart-white.svg)
   background-size: cover
   background-repeat: no-repeat
 
+.icon--cart
+  background-image: url(../images/icons/cart.svg)
+  background-repeat: no-repeat
+  background-position: 50% 50%
+
 .icon--cart-white
   background-image: url(../images/icons/cart-white.svg)
   background-size: cover
   background-repeat: no-repeat
+
+.icon--nav
+  background-image: url(../images/icons/nav.svg)
+  background-repeat: no-repeat
+  background-position: 50% 50%
 
 .icon--nav-white
   background-image: url(../images/icons/nav-white.svg)
@@ -389,6 +409,10 @@ dialog
 
 .icon--phone
   background-image: url('../images/contacts-phone.svg')
+  background-repeat: no-repeat
+
+.icon--phone-white
+  background-image: url('../images/icons/phone-white.svg')
   background-repeat: no-repeat
 
 .icon--email
@@ -419,12 +443,22 @@ dialog
   background-image: url('../images/icons/close.svg')
   background-repeat: no-repeat
 
+.icon--close-grey
+  background-image: url('../images/icons/close-grey.svg')
+  background-repeat: no-repeat
+  background-position: 50% 50%
+
+.icon--left-grey
+  background-image: url('../images/icons/arrow-left-grey.svg')
+  background-repeat: no-repeat
+  background-position: 50% 50%
+
 .icon--minus
   background-image: url(../images/icons/minus.svg)
   background-repeat: no-repeat
 
-.icon--minus-violet
-  background-image: url("../images/icons/minus-violet.svg")
+.icon--minus-purple
+  background-image: url("../images/icons/minus-purple.svg")
 
 .icon--plus
   background-image: url(../images/icons/plus.svg)
@@ -452,6 +486,11 @@ dialog
 .icon--search-black
   background-image: url('../images/icons/search-black.svg')
   background-repeat: no-repeat
+  
+.icon--search-grey
+  background-image: url('../images/icons/search-grey.svg')
+  background-repeat: no-repeat
+  background-position: 50% 50%
 
 .icon--tiles-white
   background-image: url('../images/icons/tiles-white.svg')
@@ -472,6 +511,72 @@ dialog
 .icon--search-white
   background-image: url('../images/icons/search-white.svg')
   background-repeat: no-repeat
+
+.icon--headphones
+  background-image: url('../images/icons/categories/headphones.svg')
+  background-repeat: no-repeat
+
+  &:hover
+    background-image: url('../images/icons/categories/headphones-active.svg')
+
+.icon--accessories
+  background-image: url('../images/icons/categories/accessories.svg')
+  background-repeat: no-repeat
+
+  &:hover
+    background-image: url('../images/icons/categories/accessories-active.svg')
+
+.icon--acoustic
+  background-image: url('../images/icons/categories/acoustic.svg')
+  background-repeat: no-repeat
+
+  &:hover
+    background-image: url('../images/icons/categories/acoustic-active.svg')
+
+.icon--keyboard
+  background-image: url('../images/icons/categories/keyboard.svg')
+  background-repeat: no-repeat
+
+  &:hover
+    background-image: url('../images/icons/categories/keyboard-active.svg')
+
+.icon--microphone
+  background-image: url('../images/icons/categories/microphone.svg')
+  background-repeat: no-repeat
+
+  &:hover
+    background-image: url('../images/icons/categories/microphone-active.svg')
+
+.icon--monitor
+  background-image: url('../images/icons/categories/monitor.svg')
+  background-repeat: no-repeat
+
+  &:hover
+    background-image: url('../images/icons/categories/monitor-active.svg')
+
+.icon--mouse
+  background-image: url('../images/icons/categories/mouse.svg')
+  background-repeat: no-repeat
+
+  &:hover
+    background-image: url('../images/icons/categories/mouse-active.svg')
+
+.icon--parts
+  background-image: url('../images/icons/categories/parts.svg')
+  background-repeat: no-repeat
+
+  &:hover
+    background-image: url('../images/icons/categories/parts-active.svg')
+
+.icon--account
+  background-image: url("../images/icons/tzm-icon.svg")
+  background-repeat: no-repeat
+  background-position: 50% 50%
+
+.icon--avatar
+  background-image: url('../images/icons/logo-avatar.svg')
+  background-repeat: no-repeat
+  background-position: 50% 50%
 
 .link--grey
   color: $grey-dark1
@@ -499,7 +604,7 @@ dialog
   justify-content: right
 
 .link_icon--account
-  background-image: url("../images/icons/tzm-icon.svg")
+  background-image: url("../images/icons/tzm-icon-white.svg")
   transition: .2s linear
 
   &:hover
@@ -513,14 +618,14 @@ dialog
     background-image: url("../images/icons/search-pink.svg")
 
 .link_icon--favourites
-  background-image: url("../images/icons/heart.svg")
+  background-image: url("../images/icons/heart-white.svg")
   transition: .2s linear
 
   &:hover
     background-image: url("../images/icons/heart-pink.svg")
 
 .link_icon--cart
-  background-image: url("../images/icons/cart.svg")
+  background-image: url("../images/icons/cart-white.svg")
   transition: .2s linear
 
   &:hover
@@ -650,7 +755,7 @@ dialog
   white-space: nowrap
 
 .breadcrumbs__menu__item--active
-  color: $violet
+  color: $purple
 
   @media screen and (max-width: $tablet)
     padding-right: 2rem
@@ -749,35 +854,88 @@ dialog
   &:hover ~ .header__bottom__container__column__services__item__cart_tooltip
     display: flex
 
-.header__mobile
+.header__categories
+  height: 8.1rem
+  color: $grey-dark2
+  background-color: $black
+  box-shadow: inset 0rem .4rem 1rem 0 rgba(0, 0, 0, .2)
+
+.header__categories__container
+  display: flex
+  justify-content: space-between
+  gap: 4rem
+  margin: 0 auto
+  padding: 1.8rem 0 1.4rem
+  max-width: 138rem
+  width: calc( 100% - 1.5rem )
+  height: 100%
+  scroll-snap-type: x mandatory
+  overflow-x: scroll
+  scrollbar-width: none
 
   @media screen and (max-width: $tablet)
-    padding: 1.2rem 1.5rem
-    grid-template-columns: 4.4rem 4.4rem auto 4.4rem 4.4rem
+    margin: 0 0 0 1.5rem
+    padding: 1.2rem 0
+
+.header__categories__container__item
+  display: inline-block
+  padding: .4rem + 2.8rem 0 0
+  height: 4.8rem
+  width: fit-content
+  white-space: nowrap
+  font-size: 1.3rem
+  font-weight: 500
+  line-height: 130%
+  background-position-x: center
+  background-size: 2.8rem 2.8rem
+  transition: .2s linear
+  scroll-snap-align: start
+  
+  &:hover
+    color: #fff
+
+.header__categories__container__item__image
+  margin: 0 auto
+  width: 2.8rem
+  height: 2.8rem
+
+.header__categories__container__item__title
+  margin: 0 auto
+
+.header_mobile
+  display: none
+
+  @media screen and (max-width: $tablet)
+    position: sticky
+    top: 0
+    display: flex
+    justify-content: space-between
     justify-items: center
     align-items: center
     gap: .4rem
+    padding: .8rem 1.5rem
+    height: 6rem
     background-color: $black
+    z-index: 10
 
-    .header__mobile__item
-      padding: 1.2rem
+    .header_mobile__item
 
-    .header__mobile__item__icon
+    .header_mobile__item__icon
       display: block
       width: 2rem
       height: 2rem
       cursor: pointer
 
-    .header__mobile__item--logo
+    .header_mobile__item--logo
       justify-self: center
       align-self: center
 
-    .header__mobile__item__logo
+    .header_mobile__item__logo
       display: block
 
-    .header__mobile__item__logo__image
+    .header_mobile__item__logo__image
       width: 10rem
-      height: 5rem
+      height: 4.7rem
 
 .header__bottom__container__column__services__item__cart_tooltip
   position: absolute
@@ -1510,6 +1668,21 @@ dialog
     flex-direction: column
     gap: 1rem
     justify-content: flex-start
+
+.footer_mobile
+  position: sticky
+  bottom: 0
+  display: flex
+  gap: 2rem
+  justify-content: space-between
+  padding: .8rem 1.5rem
+  height: 6rem
+  background-color: $white
+
+.footer_mobile__item
+  display: block
+  width: 4.4rem
+  height: 4.4rem
 /* Footer end */
 
 /* Cart */
@@ -5087,6 +5260,7 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   flex-wrap: nowrap
   justify-content: flex-start
   align-items: stretch
+  gap: 1rem
   margin-left: 2rem
   overflow: hidden
   z-index: 1
@@ -5096,7 +5270,10 @@ a.product__tabs__content__block__characteristics_group__list__item__value
       height: 0
   
   @media screen and (max-width: $tablet)
-    align-items: stretch
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 1rem
+    z-index: 1
     margin-left: 0
 
 .popup_search__suggestions__container__list__item
@@ -5116,7 +5293,7 @@ a.product__tabs__content__block__characteristics_group__list__item__value
     color: $pink
 
   @media screen and (max-width: $tablet)
-    min-width: 20rem
+    min-width: unset
     gap: 1rem
 
 .popup_search__suggestions__container__list__item__link
@@ -5146,8 +5323,8 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   
   @media screen and (max-width: $tablet)
     margin: 1rem 1rem 0
-    width: 18rem
-    height: 18rem
+    // width: 18rem
+    // height: 18rem
 
 .popup_search__container_suggestions__list__item__images__link
   display: block
@@ -5307,7 +5484,7 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   border-radius: $radius
 
   @media screen and (max-width: $tablet)
-    margin: 10.2rem auto 0
+    margin: 6rem auto 0
     border-top-left-radius: 0
     border-top-right-radius: 0
     border-bottom-left-radius: $radius
@@ -5577,6 +5754,61 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   font-weight: 500
   line-height: 130%
   text-align: center
+
+.popup_menu2
+  // display: flex
+  flex-direction: column
+  padding: 0 1.5rem
+  width: 100%
+  height: calc( 100% - 6rem )
+  background-color: $white
+  box-shadow: none
+
+  &::backdrop
+    background: none
+
+.popup_menu2__heading
+  display: flex
+  justify-content: space-between
+  align-items: center
+  gap: 2rem
+  padding: .8rem 0
+  height: 6rem
+  color: $black
+
+.popup_menu2__heading__title
+  font-size: 2rem
+  font-weight: 700
+  line-height: 130%
+
+.popup_menu2__heading__back, .popup_menu2__heading__close, .popup_menu2__heading__search
+  width: 4.4rem
+  height: 4.4rem
+
+.popup_menu2__2nd_heading
+  display: flex
+  justify-content: space-between
+  margin: 1.2rem 0
+  color: $purple
+  font-size: 1.4rem
+  font-weight: 500
+  line-height: 130%
+
+.popup_menu2__2nd_heading__city
+  padding-left: 1.6rem + .8rem
+  background-image: url('../images/icons/location-purple.svg')
+  background-repeat: no-repeat
+
+.popup_menu2__menu
+  display: flex
+  flex-direction: column
+
+.popup_menu2__menu__item
+  padding: 2rem 0
+  font-size: 1.6rem
+  font-weight: 500
+  cursor: pointer
+
 /* MENU */
 
 /* Блог */
@@ -6693,7 +6925,7 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   font-size: 1.2rem
   font-weight: 400
   line-height: 130%
-  color: $violet
+  color: $purple
 
 .account_orders__list__item__spoiler__details__products__sku__information__code
   font-size: 1.4rem

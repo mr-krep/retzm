@@ -30,6 +30,19 @@
     <!-- /Библиотеки -->
   </head>
   <body>
+    <div class="header_mobile mobile--grid">
+      <div class="header_mobile__item">
+        <a class="header_mobile__item__icon icon--phone-white" href="tel:+74996476144"></a>
+      </div>
+      <div class="header_mobile__item">
+        <a class="header_mobile__item__logo" href="/" alt="ТехноЗум">
+          <svg class="header_mobile__item__logo__image"><use href="./images/sprite.svg#logo"></use></svg>
+        </a>
+      </div>
+      <div class="header_mobile__item">
+        <span class="header_mobile__item__icon icon--search-white popup__opener" onclick="openDialog('Search');" aria-controls="Search" alt="Поиск"></span>
+      </div>
+    </div>
     <header class="header">
       <div class="header__top desktop--block">
         <div class="header__top__container section wrapper--global">
@@ -163,25 +176,34 @@
           </div>
         </div>
       </div>
-      <div class="header__mobile mobile--grid">
-        <div class="header__mobile__item">
-          <span class="header__mobile__item__icon icon--search-white popup__opener" onclick="openDialog('Search');" aria-controls="Search" alt="Поиск"></span>
-        </div>
-        <div class="header__mobile__item">
-          <span class="header__mobile__item__icon icon--heart-white"></span>
-        </div>
-        <div class="header__mobile__item">
-          <a class="header__mobile__item__logo" href="/" alt="ТехноЗум">
-            <svg class="header__mobile__item__logo__image"><use href="./images/sprite.svg#logo"></use></svg>
+      <nav class="header__categories">
+        <div class="header__categories__container">
+          <a class="header__categories__container__item icon--headphones" href="../catalogue--level2.html">
+            <span class="header__categories__container__item__title">Игровые наушники</span>
+          </a>
+          <a class="header__categories__container__item icon--mouse" href="../catalogue--level2.html">
+            <span class="header__categories__container__item__title">Игровые мыши</span>
+          </a>
+          <a class="header__categories__container__item icon--keyboard" href="../catalogue--level2.html">
+            <span class="header__categories__container__item__title">Игровые клавиатуры</span>
+          </a>
+          <a class="header__categories__container__item icon--acoustic" href="../catalogue--level2.html">
+            <span class="header__categories__container__item__title">Игровые колонки</span>
+          </a>
+          <a class="header__categories__container__item icon--microphone" href="../catalogue--level2.html">
+            <span class="header__categories__container__item__title">Микрофоны</span>
+          </a>
+          <a class="header__categories__container__item icon--monitor" href="../catalogue--level2.html">
+            <span class="header__categories__container__item__title">Игровые мониторы</span>
+          </a>
+          <a class="header__categories__container__item icon--accessories" href="../catalogue--level2.html">
+            <span class="header__categories__container__item__title">Консоли и аксессуары</span>
+          </a>
+          <a class="header__categories__container__item icon--parts" href="../catalogue--level2.html">
+            <span class="header__categories__container__item__title">Игровые комплектующие</span>
           </a>
         </div>
-        <div class="header__mobile__item">
-          <a class="header__mobile__item__icon icon--cart-white" href="../cart.html"></a>
-        </div>
-        <div class="header__mobile__item">
-          <span class="header__mobile__item__icon icon--nav-white popup__opener" onclick="openDialog('Menu');" aria-controls="Menu" alt="Каталог"></span>
-        </div>
-      </div>
+      </nav>
     </header>
     <main class="main">
       <section class="banner">
@@ -267,7 +289,7 @@
             </a>
           </li>
           <li class="categories__tiles__item">
-            <a class="categories__tiles__item__link" href="../catcatalogueegory.html">
+            <a class="categories__tiles__item__link" href="../catalogue.html">
               <img class="categories__tiles__item__link__image" src="./images/main-tiles/tv.png" alt="Телевизоры и аксессуары" />
               <span class="categories__tiles__item__link__text">Телевизоры и&nbsp;аксессуары</span>
             </a>
@@ -688,6 +710,13 @@
         </div>
       </div>
     </footer>
+    <nav class="footer_mobile">
+      <span class="footer_mobile__item icon--nav popup__opener" onclick="openDialog('Menu2');" aria-controls="Menu2" alt="Меню2"></span>
+      <span class="footer_mobile__item icon--account popup__opener" onclick="openDialog('Authorization');" aria-controls="Authorization" alt="Авторизация"></span>
+      <a class="footer_mobile__item icon--avatar" href="/"></a>
+      <a class="footer_mobile__item icon--heart" href="../favourites.html"></a>
+      <a class="footer_mobile__item icon--cart" href="../cart.html"></a>
+    </nav>
     <dialog class="popup_authorization popup_authorization__getcode popup" aria-label="Автризация" id="Authorization">
       <div class="popup_authorization__container popup__container">
         <span class="popup_authorization__container__heading">Вход или регистрация</span>
@@ -1062,6 +1091,53 @@
           </li>
         </ul>
       </div>
+    </dialog>
+    <dialog class="popup_menu2 popup__container popup" aria-label="Меню2" id="Menu2">
+      <div class="popup_menu2__heading">
+        <span class="popup_menu2__heading__back icon--left-grey" onclick="closeDialog()"></span>
+        <span class="popup_menu2__heading__title">Каталог</span>
+        <span class="popup_menu2__heading__search icon--search-grey popup__opener" onclick="closeDialog(); openDialog('Search');" aria-controls="Search" alt="Поиск"></span>
+      </div>
+      <div class="popup_menu2__2nd_heading">
+        <span class="popup_menu2__2nd_heading__city popup__opener" onclick="closeDialog(); openDialog('City');" aria-controls="City" alt="Выбрать город">Москва</span>
+        <span class="popup_menu2__2nd_heading__menu_link popup__opener" onclick="closeDialog(); openDialog('Menu-buyers');" aria-controls="Menu-buyers" alt="Покупателям">Покупателям</span>
+      </div>
+      <nav class="popup_menu2__menu">
+        <a class="popup_menu2__menu__item" href="../catalogue-level2.html">Игровые наушники</a>
+        <a class="popup_menu2__menu__item" href="../catalogue-level2.html">Игровые мыши</a>
+        <a class="popup_menu2__menu__item" href="../catalogue-level2.html">Игровые клавиатуры</a>
+        <a class="popup_menu2__menu__item" href="../catalogue-level2.html">Игровые колонки</a>
+        <a class="popup_menu2__menu__item" href="../catalogue-level2.html">Микрофоны</a>
+        <a class="popup_menu2__menu__item" href="../catalogue-level2.html">Консоли и аксессуары</a>
+        <a class="popup_menu2__menu__item" href="../catalogue-level2.html">Игровые комплектующие</a>
+        <span class="popup_menu2__menu__item popup__opener" onclick="closeDialog(); openDialog('Menu-electronics');" aria-controls="Menu-electronics" alt="Электроника">Электроника</span>
+        <a class="popup_menu2__menu__item" href="../catalogue-level2.html">Уценка</a>
+      </nav>
+    </dialog>
+    <dialog class="popup_menu2 popup__container popup" aria-label="Электроника" id="Menu-electronics">
+      <div class="popup_menu2__heading">
+        <span class="popup_menu2__heading__back icon--left-grey popup__opener" onclick="closeDialog(); openDialog('Menu2');" aria-controls="Menu2" alt="Меню"></span>
+        <span class="popup_menu2__heading__title">Электроника</span>
+        <span class="popup_menu2__heading__search icon--search-grey popup__opener" onclick="openDialog('Search');" aria-controls="Search" alt="Поиск"></span>
+      </div>
+      <nav class="popup_menu2__menu">
+        <a class="popup_menu2__menu__item" href="../catalogue-level2.html">Гирлянды</a>
+        <a class="popup_menu2__menu__item" href="../catalogue-level2.html">Кофемашины</a>
+        <a class="popup_menu2__menu__item" href="../catalogue-level2.html">Светильники</a>
+        <a class="popup_menu2__menu__item" href="../catalogue-level2.html">Умные весы</a>
+      </nav>
+    </dialog>
+    <dialog class="popup_menu2 popup__container popup" aria-label="Покупателям" id="Menu-buyers">
+      <div class="popup_menu2__heading">
+        <span class="popup_menu2__heading__title">Покупателям</span>
+        <span class="popup_menu2__heading__close icon--close-grey" onclick="closeDialog()"></span>
+      </div>
+      <nav class="popup_menu2__menu">
+        <a class="popup_menu2__menu__item" href="../contacts.html">Контакты</a>
+        <a class="popup_menu2__menu__item" href="../guarantee.html">Гарантия</a>
+        <a class="popup_menu2__menu__item" href="../pickup.html">Самовывоз</a>
+        <a class="popup_menu2__menu__item" href="../delivery.html">Доставка</a>
+      </nav>
     </dialog>
     <script src="./js/custom.js"></script>
     <script src="./js/index.js"></script>
