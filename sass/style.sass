@@ -1156,22 +1156,25 @@ dialog
   display: flex
   flex-direction: column
   justify-content: space-between
-  gap: 2rem
-  background-color: #fff
+  // gap: 2rem
+  // background-color: #fff
   background-clip: content-box
   border-radius: $radius
 
   @media screen and (max-width: $tablet)
     min-width: 20rem
-    gap: 1rem
+    // gap: 1rem
 
 .suggestions__container__list__item__images
-  margin: 2.2rem 2.2rem 0
+  padding: 2.2rem 2.2rem 0
   display: flex
   flex-wrap: nowrap
   justify-content: flex-start
-  width: 21.8rem
-  height: 21.8rem
+  width: 26.2rem
+  height: 24rem
+  background-color: #fff
+  border-top-left-radius: $radius
+  border-top-right-radius: $radius
   overflow-x: auto
   -ms-overflow-style: none
   scrollbar-width: none
@@ -1181,9 +1184,9 @@ dialog
       height: 0
   
   @media screen and (max-width: $tablet)
-    margin: 1rem 1rem 0
-    width: 18rem
-    height: 18rem
+    padding: 1rem 1rem
+    width: 20rem
+    height: 20rem
 
 .suggestions__container__list__item__images__link
   display: block
@@ -1204,13 +1207,13 @@ dialog
     height: 18rem
 
 .suggestions__container__list__item__text
-  margin: 0 2.2rem
+  padding: 2rem 2.2rem
   display: flex
   flex-direction: column
   justify-content: space-between
-  margin-top: 2rem
   flex: 1 0 10rem
   gap: 1rem
+  background-color: #fff
   
 .suggestions__container__list__item__text__title
   font-size: 1.4rem
@@ -1264,10 +1267,12 @@ dialog
   align-items: center
   gap: .5rem
   width: 100%
-  height: 5rem
+  height: 5rem  
   text-align: center
   align-content: center
-  border-radius: $radius
+  background-color: #fff
+  border-bottom-left-radius: $radius
+  border-bottom-right-radius: $radius
   transition: .2s linear
   z-index: 10
 
@@ -1300,7 +1305,7 @@ dialog
   position: absolute
   display: block
   top: 1.6rem
-  right: 1.6rem
+  right: 2.6rem
   width: 1.6rem
   height: 1.6rem
   z-index: 10
@@ -1314,11 +1319,16 @@ dialog
     background-image: url("../images/icons/heart-pink.svg")
     cursor: pointer
 
+  @media screen and (max-width: $tablet)
+    top: .8rem
+    right: 1.8rem
+
+
 .suggestions__container__list__item__add_to_favourites--added
   position: absolute
   display: block
   top: 1.6rem
-  right: 1.6rem
+  right: 2.6rem
   width: 1.6rem
   height: 1.6rem
   z-index: 10
@@ -1331,6 +1341,11 @@ dialog
   &:hover
     background-image: url("../images/icons/heart-grey.svg")
     cursor: pointer
+
+  @media screen and (max-width: $tablet)
+    top: .8rem
+    right: 1.8rem
+    
 /* Main -- Suggestions end */
 
 /* Sets start */  
@@ -2819,18 +2834,20 @@ dialog
   flex-direction: column
   gap: 1rem
   margin-top: 1.5rem
+  overflow-x: hidden
   overflow-y: auto
   max-height: 15rem
-  scrollbar-color: $grey #fff
 
   &::-webkit-scrollbar
-    width: .8rem
-    background-color: #fff
-    border-radius: .4rem
+    width: .4rem
+    background-color: transparent
 
   &::-webkit-scrollbar-thumb
-    width: .8rem
-    background-color: $grey
+    background-color: $grey-dark1
+    border-radius: .4rem
+
+  &::-webkit-scrollbar-track
+    background-color: transparent
     border-radius: .4rem
 
 .catalogue__filters__container__feature__heading, .catalogue__filters__container__feature--label
