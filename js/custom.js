@@ -23,18 +23,22 @@ function ListenPopupClicks(element)
   if (!element.closest('.popup__container') && !element.closest('.popup__opener')){closeDialog ()}
 }
 /* Открываем модальноео окно и включаем прослушку кликов */
-function openDialog(item){
+function openDialog(item, DialogType=""){
+  if (typeof window.scrollPosition == undefined) window.scrollPosition = 0
   window.scrollPosition = window.scrollY
   window.scrollTo(0, 0)
   window.addEventListener('click', function(e){ListenPopupClicks(e.target)})
-  document.getElementById(item).showModal()
-  return scrollPosition
+  closeDialog ()
+  if (typeof DialogType != undefined && DialogType == 'popup') document.getElementById(item).show()
+  else document.getElementById(item).showModal()
+  return window.scrollPosition
 }
 
 /* Закрываем модальное окно и отключаем прослушку кликов */
 function closeDialog (){
+  if (typeof window.scrollPosition == undefined) window.scrollPosition = 0
   const elements = document.querySelectorAll("dialog")
-  window.scrollTo(0, scrollPosition)
+  window.scrollTo(0, window.scrollPosition)
   elements.forEach((item, index, arr) => {document.querySelectorAll("dialog")[index].close()})
   window.removeEventListener('click', ListenPopupClicks)
 }
@@ -105,20 +109,20 @@ class HvrSlider {
   }
 }
 
-// var slider = tns({
-//   container: '.popup_search__suggestions__container__list',
-//   responsive: {
-//     "1350": {
-//       fixedWidth: 210,
-//       items: 6
-//     }
-//   },
-//   fixedWidth: 200,
-//   items: 2,
-//   loop: true,
-//   mouseDrag: true,
-//   nav: false,
-//   controls: true,
-//   controlsContainer: '.popup_search__suggestions__container__arrows',
-//   gutter: 10
-// });
+var slider = tns({
+  container: '.popup_search__suggestions__container__list',
+  responsive: {
+    "1350": {
+      fixedWidth: 210,
+      items: 6
+    }
+  },
+  fixedWidth: 200,
+  items: 2,
+  loop: true,
+  mouseDrag: true,
+  nav: false,
+  controls: true,
+  controlsContainer: '.popup_search__suggestions__container__arrows',
+  gutter: 10
+});

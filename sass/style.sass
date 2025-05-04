@@ -819,12 +819,18 @@ dialog
   display: flex
   align-items: center
 
-.header__bottom__container__column__button
-  padding: 1rem 1.8rem 1rem 1.8 + 1.6 + .5rem
-  background-image: url("../images/icons/nav-white.svg")
-  background-position: 1rem center
+.header__bottom__container__column__search
+  padding: .9rem 1.4rem .9rem .9+.8+2rem
+  width: 38.1rem
+  font-size: 1.4rem
+  font-weight: 500
+  line-height: 130%
+  color: $grey-dark1
+  background-color: #2A2A2A
+  background-image: url('../images/icons/search-grey.svg')
+  background-position: left .9rem top 50%
   background-repeat: no-repeat
-  background-size: 1.6rem 1.6rem
+  border-radius: $radius
 
 .header__bottom__container__column__logo__image
   width: 9.2rem
@@ -841,10 +847,15 @@ dialog
   padding-left: 2.8rem
   font-size: 1.6rem
   line-height: 2rem
+  color: #fff
   background-position: left top
   background-repeat: no-repeat
   background-size: 2rem 2rem
   cursor: pointer
+  transition: 500ms
+
+  &:hover
+    color: $pink
 
 .header__bottom__container__column__services__item__link.link_icon--cart
   position: relative
@@ -856,7 +867,7 @@ dialog
 
 .header__categories
   height: 8.1rem
-  color: $grey-dark2
+  color: $grey-dark1
   background-color: $black
   box-shadow: inset 0rem .4rem 1rem 0 rgba(0, 0, 0, .2)
 
@@ -1670,14 +1681,18 @@ dialog
     justify-content: flex-start
 
 .footer_mobile
-  position: sticky
-  bottom: 0
-  display: flex
-  gap: 2rem
-  justify-content: space-between
-  padding: .8rem 1.5rem
-  height: 6rem
-  background-color: $white
+  display: none
+
+  @media screen and (max-width: $tablet)
+    position: sticky
+    bottom: 0
+    display: flex
+    gap: 2rem
+    justify-content: space-between
+    padding: .8rem 1.5rem
+    height: 6rem
+    background-color: $white
+    z-index: 99999
 
 .footer_mobile__item
   display: block
@@ -4485,10 +4500,12 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   border-radius: $radius
   box-shadow: $shadow
 
-  &::backdrop
-    position: absolute
-    margin-top: 10rem
-    background: rgba(0, 0, 0, .5)
+  @media screen and (min-width: $tablet+1)
+    
+    &::backdrop
+      position: absolute
+      margin-top: 10rem
+      background: rgba(0, 0, 0, .5)      
 
   &:focus-visible, &:focus
     outline: none
@@ -4501,6 +4518,13 @@ a.product__tabs__content__block__characteristics_group__list__item__value
     border-top-left-radius: 0
     border-top-right-radius: 0
     z-index: 1000
+
+    &::backdrop
+      position: absolute
+      top: 0
+      // margin-bottom: 6rem
+      // height: calc(100% - 6rem)
+      background: rgba(0, 0, 0, .5)
 
 .popup__container
   
@@ -4654,6 +4678,9 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   width: 100%
 
 .popup_authorization
+  margin: auto 2rem
+  width: calc(100% - 4rem)
+  border-radius: $radius
 
   @media screen and (min-width: $tablet+1)
     margin: auto auto
@@ -4714,6 +4741,9 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   color: $grey-dark1
 
 .popup_city
+  margin: auto 2rem
+  width: calc(100% - 4rem)
+  border-radius: $radius
 
   @media screen and (min-width: $tablet+1)
     margin: 11rem auto
@@ -4780,7 +4810,6 @@ a.product__tabs__content__block__characteristics_group__list__item__value
 .popup_notify__container__heading, 
 .popup_review__container__heading, 
 .popup_pickup__container__heading, 
-.popup_delivery__container__heading,
 .popup_problem__container__heading
   grid-area: heading
   font-size: 2.8rem
@@ -4789,6 +4818,16 @@ a.product__tabs__content__block__characteristics_group__list__item__value
 
   @media screen and (max-width: $tablet)
     position: sticky
+    top: 0
+    font-size: 2rem
+
+.popup_delivery__container__heading
+  grid-area: heading
+  font-size: 2.8rem
+  font-weight: 700
+  line-height: 130%
+
+  @media screen and (max-width: $tablet)
     top: 0
     font-size: 2rem
 
@@ -5108,10 +5147,8 @@ a.product__tabs__content__block__characteristics_group__list__item__value
 
   @media screen and (max-width: $tablet)
     margin: 0 auto
-    border-top-left-radius: 0
-    border-top-right-radius: 0
-    border-bottom-left-radius: $radius
-    border-bottom-right-radius: $radius
+    height: 100%
+    border-radius: 0
 
 .popup_search__container
   display: grid
@@ -5200,7 +5237,11 @@ a.product__tabs__content__block__characteristics_group__list__item__value
 
 .popup_search__container_suggestions
   grid-area: suggestions
-  margin: 0
+  margin: 0 2rem
+  width: unset
+
+  @media screen and (max-width: $tablet)
+    margin: 0 0 2rem
 
 .popup_search__suggestions__container__heading
   margin: 0 0 2rem
@@ -5251,6 +5292,9 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   @media screen and (max-width: $tablet)
     margin: 4rem auto
 
+.popup_search__suggestions__container__arrows
+  padding: 0 2rem
+
 .popup_search__suggestions__container .tns-item
   display: flex !important
 
@@ -5261,7 +5305,7 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   justify-content: flex-start
   align-items: stretch
   gap: 1rem
-  margin-left: 2rem
+  // margin-left: 2rem
   overflow: hidden
   z-index: 1
 
@@ -5270,7 +5314,7 @@ a.product__tabs__content__block__characteristics_group__list__item__value
       height: 0
   
   @media screen and (max-width: $tablet)
-    display: grid
+    // display: grid
     grid-template-columns: 1fr 1fr
     gap: 1rem
     z-index: 1
@@ -5476,285 +5520,6 @@ a.product__tabs__content__block__characteristics_group__list__item__value
 /* POPUP */
 
 /* MENU */
-.popup_menu
-  margin: 10rem auto 0
-  width: 100%
-  max-width: $desktop
-  background-color: $white
-  border-radius: $radius
-
-  @media screen and (max-width: $tablet)
-    margin: 6rem auto 0
-    border-top-left-radius: 0
-    border-top-right-radius: 0
-    border-bottom-left-radius: $radius
-    border-bottom-right-radius: $radius
-
-.popup_menu__container
-  width: 100%
-  padding: 2rem
-
-  @media screen and (max-width: $tablet)
-    display: grid
-    grid-template-areas: "buttons" "tiles"
-    grid-template-columns: 100%
-    gap: 2rem
-
-.popup_menu__container > .popup_menu__container__radio
-  display: none
-
-.popup_menu__container__navigation
-  grid-area: buttons
-  display: grid
-  grid-template-areas: "none" "tiles"
-  gap: 1rem
-  width: 100%
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-columns: 28.4rem auto
-    grid-template-areas: "none tiles"
-    gap: 0
-
-#content__1:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__2:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__3:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__4:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__5:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__6:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__7:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__8:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__9:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "none" "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__10:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__11:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__12:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__13:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__14:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__15:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__16:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__17:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__18:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__19:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-#content__20:checked ~ .popup_menu__container__navigation
-  grid-template-areas: "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "none" "tiles"
-
-  @media screen and (min-width: $tablet+1)
-    grid-template-areas: "none tiles"
-
-.popup_menu__container__navigation__item
-  width: 100%
-
-  @media screen and (min-width: $tablet+1)
-    margin-bottom: 1rem
-
-.popup_menu__container__navigation__item__label
-  width: 100%
-  padding: 1.4rem
-  text-align: left
-  cursor: pointer
-
-  &:hover
-    color: $white
-    background-color: $black
-
-#content__1:checked ~ .popup_menu__container__navigation .content__1 .popup_menu__container__navigation__item__label,
-#content__2:checked ~ .popup_menu__container__navigation .content__2 .popup_menu__container__navigation__item__label,
-#content__3:checked ~ .popup_menu__container__navigation .content__3 .popup_menu__container__navigation__item__label,
-#content__4:checked ~ .popup_menu__container__navigation .content__4 .popup_menu__container__navigation__item__label,
-#content__5:checked ~ .popup_menu__container__navigation .content__5 .popup_menu__container__navigation__item__label,
-#content__6:checked ~ .popup_menu__container__navigation .content__6 .popup_menu__container__navigation__item__label,
-#content__7:checked ~ .popup_menu__container__navigation .content__7 .popup_menu__container__navigation__item__label,
-#content__8:checked ~ .popup_menu__container__navigation .content__8 .popup_menu__container__navigation__item__label,
-#content__9:checked ~ .popup_menu__container__navigation .content__9 .popup_menu__container__navigation__item__label,
-#content__10:checked ~ .popup_menu__container__navigation .content__10 .popup_menu__container__navigation__item__label,
-#content__11:checked ~ .popup_menu__container__navigation .content__11 .popup_menu__container__navigation__item__label,
-#content__12:checked ~ .popup_menu__container__navigation .content__12 .popup_menu__container__navigation__item__label,
-#content__13:checked ~ .popup_menu__container__navigation .content__13 .popup_menu__container__navigation__item__label,
-#content__14:checked ~ .popup_menu__container__navigation .content__14 .popup_menu__container__navigation__item__label,
-#content__15:checked ~ .popup_menu__container__navigation .content__15 .popup_menu__container__navigation__item__label,
-#content__16:checked ~ .popup_menu__container__navigation .content__16 .popup_menu__container__navigation__item__label,
-#content__17:checked ~ .popup_menu__container__navigation .content__17 .popup_menu__container__navigation__item__label,
-#content__18:checked ~ .popup_menu__container__navigation .content__18 .popup_menu__container__navigation__item__label,
-#content__19:checked ~ .popup_menu__container__navigation .content__19 .popup_menu__container__navigation__item__label,
-#content__20:checked ~ .popup_menu__container__navigation .content__20 .popup_menu__container__navigation__item__label
-  color: #fff
-  background-color: $black
-  cursor: default
-
-.popup_menu__container__content, .popup_menu__container__navigation__content
-  grid-area: tiles
-
-  @media screen and (min-width: $tablet+1)
-    grid-row: span 20
-    margin-left: 1rem
-
-.popup_menu__container__content__list
-  display: none
-
-#content__1:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__1,
-#content__2:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__2,
-#content__3:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__3,
-#content__4:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__4,
-#content__5:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__5,
-#content__6:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__6,
-#content__7:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__7,
-#content__8:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__8,
-#content__9:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__9,
-#content__10:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__10,
-#content__11:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__11,
-#content__12:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__12,
-#content__13:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__13,
-#content__14:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__14,
-#content__15:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__15,
-#content__16:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__16,
-#content__17:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__17,
-#content__18:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__18,
-#content__19:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__19,
-#content__20:checked ~ .popup_menu__container__navigation .popup_menu__container__navigation__content .content__20
-  margin: 0 auto
-  display: flex
-  flex-wrap: wrap
-  gap: 1rem
-
-  @media screen and (max-width: $tablet)
-    display: grid
-    grid-template-columns: repeat(2, 1fr)
-
-.popup_menu__container__content__list__item
-  padding: 1.6rem
-  width: 19.2rem
-  background-color: $grey1
-  border-radius: $radius
-
-  &:hover
-    background-image: url('../images/main-tiles/tile-bg-hover.svg')
-    background-size: cover
-    color: $white
-
-  @media screen and (max-width: $tablet)
-    padding: 1.6rem .8rem
-    width: auto
-
-.popup_menu__container__content__list__item__link
-  display: grid
-  gap: 1rem
-  width: 100%
-  height: 100%
-
-  @media screen and (max-width: $tablet)
-    display: block
-
-  @media screen and (max-width: $tablet)
-    gap: 1rem
-
-.popup_menu__container__content__list__item__link__image
-  display: block
-
-  @media screen and (max-width: $tablet)
-    margin: auto
-
-.popup_menu__container__content__list__item__link__name
-  margin: auto
-  display: block
-  font-size: 1.4rem
-  font-weight: 500
-  line-height: 130%
-  text-align: center
-
 .popup_menu2
   // display: flex
   flex-direction: column
@@ -5763,9 +5528,6 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   height: calc( 100% - 6rem )
   background-color: $white
   box-shadow: none
-
-  &::backdrop
-    background: none
 
 .popup_menu2__heading
   display: flex
@@ -5788,7 +5550,7 @@ a.product__tabs__content__block__characteristics_group__list__item__value
 .popup_menu2__2nd_heading
   display: flex
   justify-content: space-between
-  margin: 1.2rem 0
+  padding: 1.2rem 0
   color: $purple
   font-size: 1.4rem
   font-weight: 500
@@ -5798,6 +5560,29 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   padding-left: 1.6rem + .8rem
   background-image: url('../images/icons/location-purple.svg')
   background-repeat: no-repeat
+
+.popup_menu2__search
+  display: flex
+  justify-content: space-between
+  align-items: center
+  gap: .5rem
+  padding: 1.2rem 0
+
+.popup_menu2__search__input
+  padding: 1.4rem
+  width: 100%
+  height: 4.5rem
+  font-size: 1.4rem
+  font-weight: 400
+  color: $grey-dark2
+  background-color: #fff
+  border-radius: $radius
+
+.popup_menu2__search__button
+  padding: 1.2rem 2.2rem
+  height: 4.5rem
+  font-size: 1.6rem
+  font-weight: 500
 
 .popup_menu2__menu
   display: flex
