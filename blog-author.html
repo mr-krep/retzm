@@ -30,6 +30,19 @@
     <!-- /Библиотеки -->
   </head>
   <body>
+    <div class="header_mobile mobile--grid">
+      <div class="header_mobile__item">
+        <a class="header_mobile__item__icon icon--phone-white" href="tel:+74996476144"></a>
+      </div>
+      <div class="header_mobile__item">
+        <a class="header_mobile__item__logo" href="/" alt="ТехноЗум">
+          <svg class="header_mobile__item__logo__image"><use href="./images/sprite.svg#logo"></use></svg>
+        </a>
+      </div>
+      <div class="header_mobile__item">
+        <span class="header_mobile__item__icon icon--search-white popup__opener" onclick="openDialog('Search');" aria-controls="Search" alt="Поиск"></span>
+      </div>
+    </div>
     <header class="header">
       <div class="header__top desktop--block">
         <div class="header__top__container section wrapper--global">
@@ -63,7 +76,7 @@
       <div class="header__bottom desktop--block">
         <div class="header__bottom__container section wrapper--global">
           <div class="header__bottom__container__column column__left">
-            <span class="header__bottom__container__column__button button button--pink megamenu_button popup__opener" onclick="openDialog('Menu');" aria-controls="Menu" alt="Каталог">Каталог</span>
+            <input class="header__bottom__container__column__search popup__opener" onclick="openDialog('Search');" aria-controls="Search" alt="Поиск" name="search" placeholder="Найти" value="" />
           </div>
           <div class="header__bottom__container__column column__center">
             <a class="header__bottom__container__column__logo" href="/" alt="ТехноЗум">
@@ -73,13 +86,10 @@
           <div class="header__bottom__container__column column__right">
             <ul class="header__bottom__container__column__services">
               <li class="header__bottom__container__column__services__item">
-                <span class="header__bottom__container__column__services__item__link link--grey link_icon--search popup__opener" onclick="openDialog('Search');" aria-controls="Search" alt="Поиск">Поиск</s>
+                <a class="header__bottom__container__column__services__item__link link_icon--favourites" href="../favourites.html">Избранное</a>
               </li>
               <li class="header__bottom__container__column__services__item">
-                <a class="header__bottom__container__column__services__item__link link--grey link_icon--favourites" href="../favourites.html">Избранное</a>
-              </li>
-              <li class="header__bottom__container__column__services__item">
-                <a class="header__bottom__container__column__services__item__link link--grey link_icon--cart" href="#">Корзина</a>
+                <a class="header__bottom__container__column__services__item__link link_icon--cart" href="#">Корзина</a>
                 <div class="header__bottom__container__column__services__item__cart_tooltip">
                   <ul class="header__bottom__container__column__services__item__cart_tooltip__list">
                     <li class="header__bottom__container__column__services__item__cart_tooltip__list__item">
@@ -163,25 +173,34 @@
           </div>
         </div>
       </div>
-      <div class="header__mobile mobile--grid">
-        <div class="header__mobile__item">
-          <span class="header__mobile__item__icon icon--search-white popup__opener" onclick="openDialog('Search');" aria-controls="Search" alt="Поиск"></span>
-        </div>
-        <div class="header__mobile__item">
-          <span class="header__mobile__item__icon icon--heart-white"></span>
-        </div>
-        <div class="header__mobile__item">
-          <a class="header__mobile__item__logo" href="/" alt="ТехноЗум">
-            <svg class="header__mobile__item__logo__image"><use href="./images/sprite.svg#logo"></use></svg>
+      <nav class="header__categories">
+        <div class="header__categories__container">
+          <a class="header__categories__container__item icon--headphones" href="../catalogue--level2.html" onmouseenter="openCategoryPopup('headphones')" onmouseleave="closeCategoryPopup('headphones')">
+            <span class="header__categories__container__item__title">Игровые наушники</span>
+          </a>
+          <a class="header__categories__container__item icon--mouse" href="../catalogue--level2.html" onmouseenter="openCategoryPopup('mouse')" onmouseleave="closeCategoryPopup('mouse')">
+            <span class="header__categories__container__item__title">Игровые мыши</span>
+          </a>
+          <a class="header__categories__container__item icon--keyboard" href="../catalogue--level2.html" onmouseenter="openCategoryPopup('keyboard')" onmouseleave="closeCategoryPopup('keyboard')">
+            <span class="header__categories__container__item__title">Игровые клавиатуры</span>
+          </a>
+          <a class="header__categories__container__item icon--acoustic" href="../catalogue--level2.html" onmouseenter="openCategoryPopup('acoustic')" onmouseleave="closeCategoryPopup('acoustic')">
+            <span class="header__categories__container__item__title">Игровые колонки</span>
+          </a>
+          <a class="header__categories__container__item icon--microphone" href="../catalogue--level2.html" onmouseenter="openCategoryPopup('microphone')" onmouseleave="closeCategoryPopup('microphone')">
+            <span class="header__categories__container__item__title">Микрофоны</span>
+          </a>
+          <a class="header__categories__container__item icon--monitor" href="../catalogue--level2.html" onmouseenter="openCategoryPopup('monitor')" onmouseleave="closeCategoryPopup('monitor')">
+            <span class="header__categories__container__item__title">Игровые мониторы</span>
+          </a>
+          <a class="header__categories__container__item icon--accessories" href="../catalogue--level2.html" onmouseenter="openCategoryPopup('accessories')" onmouseleave="closeCategoryPopup('accessories')">
+            <span class="header__categories__container__item__title">Консоли и аксессуары</span>
+          </a>
+          <a class="header__categories__container__item icon--parts" href="../catalogue--level2.html" onmouseenter="openCategoryPopup('parts')" onmouseleave="closeCategoryPopup('parts')">
+            <span class="header__categories__container__item__title">Игровые комплектующие</span>
           </a>
         </div>
-        <div class="header__mobile__item">
-          <a class="header__mobile__item__icon icon--cart-white" href="../cart.html"></a>
-        </div>
-        <div class="header__mobile__item">
-          <span class="header__mobile__item__icon icon--nav-white popup__opener" onclick="openDialog('Menu');" aria-controls="Menu" alt="Каталог"></span>
-        </div>
-      </div>
+      </nav>
     </header>
     <main class="main">
       <section class="breadcrumbs wrapper--global">
@@ -392,6 +411,9 @@
             <li class="footer__navigation__about__menu__item">
               <a class="footer__navigation__help__menu__item__link footer__menu__link" href="../oferta.html">Оферта</a>
             </li>
+            <li class="footer__navigation__about__menu__item">
+              <a class="footer__navigation__help__menu__item__link footer__menu__link" href="../blog.html">Блог</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -403,6 +425,1205 @@
         </div>
       </div>
     </footer>
+    <nav class="footer_mobile">
+      <span class="footer_mobile__item icon--nav popup__opener" onclick="openDialog('Menu', 'popup');" aria-controls="Menu" alt="Меню2"></span>
+      <span class="footer_mobile__item icon--account popup__opener" onclick="closeDialog(); openDialog('Authorization');" aria-controls="Authorization" alt="Авторизация"></span>
+      <a class="footer_mobile__item icon--avatar" href="/"></a>
+      <a class="footer_mobile__item icon--heart" href="../favourites.html"></a>
+      <a class="footer_mobile__item icon--cart" href="../cart.html"></a>
+    </nav>
+    <div class="popup_category" id="category__headphones">
+      <div class="popup_category__container popup__container" onmouseenter="openCategoryPopup('headphones')" onmouseleave="closeCategoryPopup('headphones')">
+        <ul class="popup_category__container__queries">
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">часы Apple Watch</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">умные часы</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">apple</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">очень длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">еще один очень длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+        </ul>
+
+        <div class="popup_category__container_suggestions suggestions__container">
+          <span class="popup_category__suggestions__container__heading section_heading">Популярные товары / наушники</span>
+            <ul class="popup_category__suggestions__container__list" id="category__headphones__suggestions">
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images product-slider">
+                      <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/gamepad.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony DualSense PS5 Controller, «полуночный черный»</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images product-slider" id="product-slider-2">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/good-face.jpg" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-3">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/lego.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">LEGO Minifigures Marvel Series 2</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-4">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/case.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Чехол Apple MagSafe для iPhone 12/12 Pro, кожа, золотисто-коричневый</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT-qqq</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+            </ul>
+          <div class="popup_category__suggestions__container__arrows arrows" id="category__headphones__arrows">
+            <span class="popup_category__suggestions__container__arrows__left arrows--left"></span>
+            <span class="popup_category__suggestions__container__arrows__right arrows--right"></span>
+          </div>
+        </div>
+        <a class="popup_category__container__link_results" href="../catalogue--level2.html">Смотреть все результаты</a>
+      </div>
+    </div>
+    <div class="popup_category" id="category__mouse">
+      <div class="popup_category__container popup__container" onmouseenter="openCategoryPopup('mouse')" onmouseleave="closeCategoryPopup('mouse')">
+        <ul class="popup_category__container__queries">
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">часы Apple Watch</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">умные часы</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">apple</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">очень длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">еще один очень длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+        </ul>
+
+        <div class="popup_category__container_suggestions suggestions__container">
+          <span class="popup_category__suggestions__container__heading section_heading">Популярные товары / мыши</span>
+            <ul class="popup_category__suggestions__container__list" id="category__mouse__suggestions">
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images product-slider">
+                      <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/gamepad.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony DualSense PS5 Controller, «полуночный черный»</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images product-slider" id="product-slider-2">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/good-face.jpg" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-3">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/lego.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">LEGO Minifigures Marvel Series 2</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-4">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/case.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Чехол Apple MagSafe для iPhone 12/12 Pro, кожа, золотисто-коричневый</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT-qqq</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+            </ul>
+          <div class="popup_category__suggestions__container__arrows arrows" id="category__mouse__arrows">
+            <span class="popup_category__suggestions__container__arrows__left arrows--left"></span>
+            <span class="popup_category__suggestions__container__arrows__right arrows--right"></span>
+          </div>
+        </div>
+        <a class="popup_category__container__link_results" href="../catalogue--level2.html">Смотреть все результаты</a>
+      </div>
+    </div>
+    <div class="popup_category" id="category__keyboard">
+      <div class="popup_category__container popup__container" onmouseenter="openCategoryPopup('keyboard')" onmouseleave="closeCategoryPopup('keyboard')">
+        <ul class="popup_category__container__queries">
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">часы Apple Watch</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">умные часы</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">apple</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">очень длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">еще один очень длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+        </ul>
+
+        <div class="popup_category__container_suggestions suggestions__container">
+          <span class="popup_category__suggestions__container__heading section_heading">Популярные товары / клавы</span>
+            <ul class="popup_category__suggestions__container__list" id="category__keyboard__suggestions">
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images product-slider">
+                      <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/gamepad.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony DualSense PS5 Controller, «полуночный черный»</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images product-slider" id="product-slider-2">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/good-face.jpg" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-3">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/lego.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">LEGO Minifigures Marvel Series 2</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-4">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/case.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Чехол Apple MagSafe для iPhone 12/12 Pro, кожа, золотисто-коричневый</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT-qqq</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+            </ul>
+          <div class="popup_category__suggestions__container__arrows arrows" id="category__keyboard__arrows">
+            <span class="popup_category__suggestions__container__arrows__left arrows--left"></span>
+            <span class="popup_category__suggestions__container__arrows__right arrows--right"></span>
+          </div>
+        </div>
+        <a class="popup_category__container__link_results" href="../catalogue--level2.html">Смотреть все результаты</a>
+      </div>
+    </div>
+    <div class="popup_category" id="category__acoustic">
+      <div class="popup_category__container popup__container" onmouseenter="openCategoryPopup('acoustic')" onmouseleave="closeCategoryPopup('acoustic')">
+        <ul class="popup_category__container__queries">
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">часы Apple Watch</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">умные часы</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">apple</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">очень длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">еще один очень длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+        </ul>
+
+        <div class="popup_category__container_suggestions suggestions__container">
+          <span class="popup_category__suggestions__container__heading section_heading">Популярные товары</span>
+            <ul class="popup_category__suggestions__container__list" id="category__acoustic__suggestions">
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images product-slider">
+                      <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/gamepad.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony DualSense PS5 Controller, «полуночный черный»</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images product-slider" id="product-slider-2">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/good-face.jpg" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-3">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/lego.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">LEGO Minifigures Marvel Series 2</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-4">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/case.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Чехол Apple MagSafe для iPhone 12/12 Pro, кожа, золотисто-коричневый</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT-qqq</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+            </ul>
+          <div class="popup_category__suggestions__container__arrows arrows" id="category__acoustic__arrows">
+            <span class="popup_category__suggestions__container__arrows__left arrows--left"></span>
+            <span class="popup_category__suggestions__container__arrows__right arrows--right"></span>
+          </div>
+        </div>
+        <a class="popup_category__container__link_results" href="../catalogue--level2.html">Смотреть все результаты</a>
+      </div>
+    </div>
+    <div class="popup_category" id="category__microphone">
+      <div class="popup_category__container popup__container" onmouseenter="openCategoryPopup('microphone')" onmouseleave="closeCategoryPopup('microphone')">
+        <ul class="popup_category__container__queries">
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">часы Apple Watch</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">умные часы</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">apple</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">очень длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">еще один очень длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+        </ul>
+
+        <div class="popup_category__container_suggestions suggestions__container">
+          <span class="popup_category__suggestions__container__heading section_heading">Популярные товары</span>
+            <ul class="popup_category__suggestions__container__list" id="category__microphone__suggestions">
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images product-slider">
+                      <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/gamepad.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony DualSense PS5 Controller, «полуночный черный»</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images product-slider" id="product-slider-2">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/good-face.jpg" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-3">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/lego.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">LEGO Minifigures Marvel Series 2</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-4">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/case.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Чехол Apple MagSafe для iPhone 12/12 Pro, кожа, золотисто-коричневый</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT-qqq</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+            </ul>
+          <div class="popup_category__suggestions__container__arrows arrows" id="category__microphone__arrows">
+            <span class="popup_category__suggestions__container__arrows__left arrows--left"></span>
+            <span class="popup_category__suggestions__container__arrows__right arrows--right"></span>
+          </div>
+        </div>
+        <a class="popup_category__container__link_results" href="../catalogue--level2.html">Смотреть все результаты</a>
+      </div>
+    </div>
+    <div class="popup_category" id="category__monitor">
+      <div class="popup_category__container popup__container" onmouseenter="openCategoryPopup('monitor')" onmouseleave="closeCategoryPopup('monitor')">
+        <ul class="popup_category__container__queries">
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">часы Apple Watch</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">умные часы</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">apple</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">очень длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">еще один очень длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+        </ul>
+
+        <div class="popup_category__container_suggestions suggestions__container">
+          <span class="popup_category__suggestions__container__heading section_heading">Популярные товары</span>
+            <ul class="popup_category__suggestions__container__list" id="category__monitor__suggestions">
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images product-slider">
+                      <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/gamepad.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony DualSense PS5 Controller, «полуночный черный»</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images product-slider" id="product-slider-2">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/good-face.jpg" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-3">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/lego.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">LEGO Minifigures Marvel Series 2</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-4">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/case.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Чехол Apple MagSafe для iPhone 12/12 Pro, кожа, золотисто-коричневый</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT-qqq</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+            </ul>
+          <div class="popup_category__suggestions__container__arrows arrows" id="category__monitor__arrows">
+            <span class="popup_category__suggestions__container__arrows__left arrows--left"></span>
+            <span class="popup_category__suggestions__container__arrows__right arrows--right"></span>
+          </div>
+        </div>
+        <a class="popup_category__container__link_results" href="../catalogue--level2.html">Смотреть все результаты</a>
+      </div>
+    </div>
+    <div class="popup_category" id="category__accessories">
+      <div class="popup_category__container popup__container" onmouseenter="openCategoryPopup('accessories')" onmouseleave="closeCategoryPopup('accessories')">
+        <ul class="popup_category__container__queries">
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">часы Apple Watch</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">умные часы</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">apple</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">очень длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">еще один очень длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+        </ul>
+
+        <div class="popup_category__container_suggestions suggestions__container">
+          <span class="popup_category__suggestions__container__heading section_heading">Популярные товары</span>
+            <ul class="popup_category__suggestions__container__list" id="category__accessories__suggestions">
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images product-slider">
+                      <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/gamepad.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony DualSense PS5 Controller, «полуночный черный»</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images product-slider" id="product-slider-2">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/good-face.jpg" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-3">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/lego.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">LEGO Minifigures Marvel Series 2</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-4">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/case.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Чехол Apple MagSafe для iPhone 12/12 Pro, кожа, золотисто-коричневый</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT-qqq</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+            </ul>
+          <div class="popup_category__suggestions__container__arrows arrows" id="category__accessories__arrows">
+            <span class="popup_category__suggestions__container__arrows__left arrows--left"></span>
+            <span class="popup_category__suggestions__container__arrows__right arrows--right"></span>
+          </div>
+        </div>
+        <a class="popup_category__container__link_results" href="../catalogue--level2.html">Смотреть все результаты</a>
+      </div>
+    </div>
+    <div class="popup_category" id="category__parts">
+      <div class="popup_category__container popup__container" onmouseenter="openCategoryPopup('parts')" onmouseleave="closeCategoryPopup('parts')">
+        <ul class="popup_category__container__queries">
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">часы Apple Watch</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">умные часы</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">apple</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">очень длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">еще один очень длинный Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+          <li class="popup_category__container__queries__item"><a href="../catalogue--level2.html">Label</a></li>
+        </ul>
+
+        <div class="popup_category__container_suggestions suggestions__container">
+          <span class="popup_category__suggestions__container__heading section_heading">Популярные товары</span>
+            <ul class="popup_category__suggestions__container__list" id="category__parts__suggestions">
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images product-slider">
+                      <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/gamepad.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony DualSense PS5 Controller, «полуночный черный»</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images product-slider" id="product-slider-2">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/good-face.jpg" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Умные часы Apple Watch Ultra GPS + Cellular, 49 мм, корпус из титана, ремешок Alpine зеленого цвета S</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-3">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/lego.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">LEGO Minifigures Marvel Series 2</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-4">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/case.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Чехол Apple MagSafe для iPhone 12/12 Pro, кожа, золотисто-коричневый</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+              <li class="popup_category__suggestions__container__list__item">
+                <a class="popup_category__suggestions__container__list__item__link" href="../product.html">
+                  <div class="popup_category__suggestions__container__list__item__link__images" id="product-slider-5">
+                    <img class="popup_category__suggestions__container__list__item__link__images__image" src="./images/goods/vinil.png" />
+                  </div>
+                  <div class="popup_category__suggestions__container__list__item__link__text">
+                    <span class="popup_category__suggestions__container__list__item__link__text__title">Sony PS-LX310BT-qqq</span>
+                    <div class="popup_category__suggestions__container__list__item__link__text__info">
+                      <div class="popup_category__suggestions__container__list__item__link__text__info__prices">
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__price">645&nbsp;000&nbsp;₽</span>
+                        <span class="popup_category__suggestions__container__list__item__link__text__info__prices__oldprice">667&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <span class="popup_category__suggestions__container__list__item__add_to_favourites--added"></span>
+              </li>
+            </ul>
+          <div class="popup_category__suggestions__container__arrows arrows" id="category__parts__arrows">
+            <span class="popup_category__suggestions__container__arrows__left arrows--left"></span>
+            <span class="popup_category__suggestions__container__arrows__right arrows--right"></span>
+          </div>
+        </div>
+        <a class="popup_category__container__link_results" href="../catalogue--level2.html">Смотреть все результаты</a>
+      </div>
+    </div>
     <dialog class="popup_authorization popup_authorization__getcode popup" aria-label="Автризация" id="Authorization">
       <div class="popup_authorization__container popup__container">
         <span class="popup_authorization__container__heading">Вход или регистрация</span>
@@ -617,166 +1838,54 @@
         <a class="popup_search__container__link_results" href="../catalogue--level2.html">Смотреть все результаты</a>
       </div>
     </dialog>
-    <dialog class="popup_menu popup" aria-label="Меню каталога" id="Menu">
-      <div class="popup_menu__container popup__container">
-        <input class="popup_menu__container__radio" id="content__1" type="radio" name="popup_menu" />
-        <input class="popup_menu__container__radio" id="content__2" type="radio" name="popup_menu" />
-        <input class="popup_menu__container__radio" id="content__3" type="radio" name="popup_menu" />
-        <input class="popup_menu__container__radio" id="content__4" type="radio" name="popup_menu" />
-        <input class="popup_menu__container__radio" id="content__5" type="radio" name="popup_menu" />
-        <input class="popup_menu__container__radio" id="content__6" type="radio" name="popup_menu" />
-        <input class="popup_menu__container__radio" id="content__7" type="radio" name="popup_menu" />
-        <input class="popup_menu__container__radio" id="content__8" type="radio" name="popup_menu" />
-        <input class="popup_menu__container__radio" id="content__9" type="radio" name="popup_menu" />
-        <input class="popup_menu__container__radio" id="content__10" type="radio" name="popup_menu" />
-        <input class="popup_menu__container__radio" id="content__11" type="radio" name="popup_menu" />
-
-        <ul class="popup_menu__container__navigation">
-          <li class="popup_menu__container__navigation__content">
-            <ul class="popup_menu__container__content__list content__1">
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/girland.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Гирлянды</span>
-                </a>
-              </li>
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/coffe.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Кофемашины</span>
-                </a>
-              </li>
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/mixer.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Миксеры</span>
-                </a>
-              </li>
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/vc.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Бытовая техника</span>
-                </a>
-              </li>
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/lamp.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Светильники</span>
-                </a>
-              </li>
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/scales.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Умные весы</span>
-                </a>
-              </li>
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/kettle.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Бытовая техника</span>
-                </a>
-              </li>
-            </ul>
-            <ul class="popup_menu__container__content__list content__2">
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/girland.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Гирлянды2</span>
-                </a>
-              </li>
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/coffe.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Кофемашины2</span>
-                </a>
-              </li>
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/mixer.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Миксеры2</span>
-                </a>
-              </li>
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/vc.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Бытовая техника2</span>
-                </a>
-              </li>
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/lamp.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Светильники2</span>
-                </a>
-              </li>
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/scales.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Умные весы2</span>
-                </a>
-              </li>
-            </ul>
-            <ul class="popup_menu__container__content__list content__3">
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/girland.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Гирлянды3</span>
-                </a>
-              </li>
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/coffe.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Кофемашины3</span>
-                </a>
-              </li>
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/mixer.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Миксеры3</span>
-                </a>
-              </li>
-              <li class="popup_menu__container__content__list__item">
-                <a class="popup_menu__container__content__list__item__link" href="../catalogue--level2.html">
-                  <img class="popup_menu__container__content__list__item__link__image" src="../images/demo/catalogue/vc.png" />
-                  <span class="popup_menu__container__content__list__item__link__name">Бытовая техника3</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="popup_menu__container__navigation__item content__1">
-            <label class="popup_menu__container__navigation__item__label button" for="content__1">Бытовая техника</label>
-          </li>
-          <li class="popup_menu__container__navigation__item content__2">
-            <label class="popup_menu__container__navigation__item__label button" for="content__2">Смартфоны, планшеты и гаджеты</label>
-          </li>
-          <li class="popup_menu__container__navigation__item content__3">
-            <label class="popup_menu__container__navigation__item__label button" for="content__3">Компьютеры, ноутбуки, аксессуары</label>
-          </li>
-          <li class="popup_menu__container__navigation__item content__4">
-            <label class="popup_menu__container__navigation__item__label button" for="content__4">Игры и аксессуары</label>
-          </li>
-          <li class="popup_menu__container__navigation__item content__5">
-            <label class="popup_menu__container__navigation__item__label button" for="content__5">Игрушки и конструкторы</label>
-          </li>
-          <li class="popup_menu__container__navigation__item content__6">
-            <label class="popup_menu__container__navigation__item__label button" for="content__6">Красота и здоровье</label>
-          </li>
-          <li class="popup_menu__container__navigation__item content__7">
-            <label class="popup_menu__container__navigation__item__label button" for="content__7">Телевизоры и аксессуары</label>
-          </li>
-          <li class="popup_menu__container__navigation__item content__8">
-            <label class="popup_menu__container__navigation__item__label button" for="content__8">Аудиотехника</label>
-          </li>
-          <li class="popup_menu__container__navigation__item content__9">
-            <label class="popup_menu__container__navigation__item__label button" for="content__9">Фото и видео</label>
-          </li>
-          <li class="popup_menu__container__navigation__item content__10">
-            <label class="popup_menu__container__navigation__item__label button" for="content__10">Аксессуары для смартфонов и гаджетов</label>
-          </li>
-          <li class="popup_menu__container__navigation__item content__11">
-            <label class="popup_menu__container__navigation__item__label button" for="content__11">Туризм GPS навигаторы и эхолоты</label>
-          </li>
-        </ul>
+    <dialog class="popup_menu popup__container popup" aria-label="Меню" id="Menu">
+      <div class="popup_menu__heading">
+        <span class="popup_menu__heading__title">Каталог</span>
+        <span class="popup_menu__heading__close icon--close-grey" onclick="closeDialog()"></span>
       </div>
+      <div class="popup_menu__2nd_heading">
+        <span class="popup_menu__2nd_heading__city popup__opener" onclick="closeDialog(); openDialog('City');" aria-controls="City" alt="Выбрать город">Москва</span>
+        <span class="popup_menu__2nd_heading__menu_link popup__opener" onclick="openDialog('Menu-buyers', 'popup');" aria-controls="Menu-buyers" alt="Покупателям">Покупателям</span>
+      </div>
+      <div class="popup_menu__search">
+        <input class="popup_menu__search__input popup__opener" onclick="openDialog('Search');" aria-controls="Search" alt="Поиск" type="text" placeholder="Поиск" value="" name="search" />
+      </div>
+      <nav class="popup_menu__menu">
+        <a class="popup_menu__menu__item" href="../catalogue-level2.html">Игровые наушники</a>
+        <a class="popup_menu__menu__item" href="../catalogue-level2.html">Игровые мыши</a>
+        <a class="popup_menu__menu__item" href="../catalogue-level2.html">Игровые клавиатуры</a>
+        <a class="popup_menu__menu__item" href="../catalogue-level2.html">Игровые колонки</a>
+        <a class="popup_menu__menu__item" href="../catalogue-level2.html">Микрофоны</a>
+        <a class="popup_menu__menu__item" href="../catalogue-level2.html">Консоли и аксессуары</a>
+        <a class="popup_menu__menu__item" href="../catalogue-level2.html">Игровые комплектующие</a>
+        <span class="popup_menu__menu__item popup__opener" onclick="closeDialog(); openDialog('Menu-electronics');" aria-controls="Menu-electronics" alt="Электроника">Электроника</span>
+        <a class="popup_menu__menu__item" href="../catalogue-level2.html">Уценка</a>
+      </nav>
+    </dialog>
+    <dialog class="popup_menu popup__container popup" aria-label="Электроника" id="Menu-electronics">
+      <div class="popup_menu__heading">
+        <span class="popup_menu__heading__back icon--left-grey popup__opener" onclick="closeDialog(); openDialog('Menu');" aria-controls="Menu" alt="Меню"></span>
+        <span class="popup_menu__heading__title">Электроника</span>
+        <span class="popup_menu__heading__search icon--search-grey popup__opener" onclick="openDialog('Search');" aria-controls="Search" alt="Поиск"></span>
+      </div>
+      <nav class="popup_menu__menu">
+        <a class="popup_menu__menu__item" href="../catalogue-level2.html">Гирлянды</a>
+        <a class="popup_menu__menu__item" href="../catalogue-level2.html">Кофемашины</a>
+        <a class="popup_menu__menu__item" href="../catalogue-level2.html">Светильники</a>
+        <a class="popup_menu__menu__item" href="../catalogue-level2.html">Умные весы</a>
+      </nav>
+    </dialog>
+    <dialog class="popup_menu popup__container popup" aria-label="Покупателям" id="Menu-buyers">
+      <div class="popup_menu__heading">
+        <span class="popup_menu__heading__title">Покупателям</span>
+        <span class="popup_menu__heading__close icon--close-grey" onclick="closeDialog()"></span>
+      </div>
+      <nav class="popup_menu__menu">
+        <a class="popup_menu__menu__item" href="../contacts.html">Контакты</a>
+        <a class="popup_menu__menu__item" href="../guarantee.html">Гарантия</a>
+        <a class="popup_menu__menu__item" href="../pickup.html">Самовывоз</a>
+        <a class="popup_menu__menu__item" href="../delivery.html">Доставка</a>
+      </nav>
     </dialog>
     <script src="./js/custom.js"></script>
   </body>

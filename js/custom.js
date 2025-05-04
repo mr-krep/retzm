@@ -43,6 +43,14 @@ function closeDialog (){
   window.removeEventListener('click', ListenPopupClicks)
 }
 
+/* попап при наведении на категорию в меню */
+function openCategoryPopup (category) {
+  document.querySelector('#category__' + category).style.display = 'block'
+}
+function closeCategoryPopup (category) {
+  document.querySelector('#category__' + category).style.display = ''
+}
+
 class HvrSlider {
   constructor(selector) {
     const elements = document.querySelectorAll(selector);
@@ -124,5 +132,149 @@ var slider = tns({
   nav: false,
   controls: true,
   controlsContainer: '.popup_search__suggestions__container__arrows',
+  gutter: 10
+});
+
+var slider = tns({
+  container: '#category__headphones__suggestions',
+  responsive: {
+    "1350": {
+      fixedWidth: 210,
+      items: 6
+    }
+  },
+  fixedWidth: 200,
+  items: 2,
+  loop: true,
+  mouseDrag: true,
+  nav: false,
+  controls: true,
+  controlsContainer: '#category__headphones__arrows',
+  gutter: 10
+});
+
+var slider = tns({
+  container: '#category__mouse__suggestions',
+  responsive: {
+    "1350": {
+      fixedWidth: 210,
+      items: 6
+    }
+  },
+  fixedWidth: 200,
+  items: 2,
+  loop: true,
+  mouseDrag: true,
+  nav: false,
+  controls: true,
+  controlsContainer: '#category__mouse__arrows',
+  gutter: 10
+});
+
+var slider = tns({
+  container: '#category__keyboard__suggestions',
+  responsive: {
+    "1350": {
+      fixedWidth: 210,
+      items: 6
+    }
+  },
+  fixedWidth: 200,
+  items: 2,
+  loop: true,
+  mouseDrag: true,
+  nav: false,
+  controls: true,
+  controlsContainer: '#category__keyboard__arrows',
+  gutter: 10
+});
+
+var slider = tns({
+  container: '#category__acoustic__suggestions',
+  responsive: {
+    "1350": {
+      fixedWidth: 210,
+      items: 6
+    }
+  },
+  fixedWidth: 200,
+  items: 2,
+  loop: true,
+  mouseDrag: true,
+  nav: false,
+  controls: true,
+  controlsContainer: '#category__acoustic__arrows',
+  gutter: 10
+});
+
+var slider = tns({
+  container: '#category__microphone__suggestions',
+  responsive: {
+    "1350": {
+      fixedWidth: 210,
+      items: 6
+    }
+  },
+  fixedWidth: 200,
+  items: 2,
+  loop: true,
+  mouseDrag: true,
+  nav: false,
+  controls: true,
+  controlsContainer: '#category__microphone__arrows',
+  gutter: 10
+});
+
+var slider = tns({
+  container: '#category__monitor__suggestions',
+  responsive: {
+    "1350": {
+      fixedWidth: 210,
+      items: 6
+    }
+  },
+  fixedWidth: 200,
+  items: 2,
+  loop: true,
+  mouseDrag: true,
+  nav: false,
+  controls: true,
+  controlsContainer: '#category__monitor__arrows',
+  gutter: 10
+});
+
+var slider = tns({
+  container: '#category__accessories__suggestions',
+  responsive: {
+    "1350": {
+      fixedWidth: 210,
+      items: 6
+    }
+  },
+  fixedWidth: 200,
+  items: 2,
+  loop: true,
+  mouseDrag: true,
+  nav: false,
+  controls: true,
+  controlsContainer: '#category__accessories__arrows',
+  gutter: 10
+});
+
+var slider = tns({
+  container: '#category__parts__suggestions',
+  responsive: {
+    "1350": {
+      fixedWidth: 210,
+      items: 6
+    }
+  },
+  fixedWidth: 200,
+  items: 2,
+  loop: true,
+  mouseDrag: true,
+  nav: false,
+  controls: true,
+  controlsContainer: '#category__parts__arrows',
   gutter: 10
 });

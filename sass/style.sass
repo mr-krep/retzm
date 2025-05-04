@@ -882,6 +882,7 @@ dialog
   height: 100%
   scroll-snap-type: x mandatory
   overflow-x: scroll
+  overflow-y: hidden
   scrollbar-width: none
 
   @media screen and (max-width: $tablet)
@@ -890,7 +891,7 @@ dialog
 
 .header__categories__container__item
   display: inline-block
-  padding: .4rem + 2.8rem 0 0
+  padding: .4rem + 2.8rem 0 3.5rem
   height: 4.8rem
   width: fit-content
   white-space: nowrap
@@ -1058,8 +1059,17 @@ dialog
 /* Main -- Banner start */
 .banner
   position: relative
-  height: 45rem
+  margin-top: 3.5rem
+  margin-bottom: 2rem
+  padding: 0 1.5rem
+  // height: calc(35.5rem + 3.4rem + .6rem + 2rem)
   width: 100%
+  overflow: hidden
+
+  @media screen and (max-width: $tablet)
+    height: 39rem
+    margin-top: 0
+    padding: 0
 
 .banner__container
   position: relative
@@ -1071,16 +1081,24 @@ dialog
 .banner__container__item
   position: relative
   display: block
-  height: 45rem
-  width: 100%
+  height: 39rem
+  width: calc(100% - 2 * 4rem)
 
 .banner__container__item__image
-  position: absolute
-  top: 0
+  // position: absolute
+  // top: 0
+  margin: 0 auto
   height: 100%
-  width: 100%
+  width: calc(100% - 2 * 4rem)
+  border-radius: $radius
+  overflow: hidden
   object-fit: cover
-  z-index: -1
+  // z-index: -1
+
+  @media screen and (max-width: $tablet)
+    width: 100%
+    height: 39rem
+    border-radius: 0
   
 .banner__arrows
   position: absolute
@@ -1091,60 +1109,79 @@ dialog
   margin-left: auto
   margin-right: auto
   max-width: 138rem
-  height: 45rem
+  height: calc(100% - 3.4rem - 2rem)
 
 .banner__arrows__button
   position: absolute
-  top: var(--swiper-navigation-top-offset, 50%)
-  width: 2rem
-  height: 2rem
+  // top: var(--swiper-navigation-top-offset, 50%)
+  width: 4rem
+  height: 100%
   z-index: 10
   cursor: pointer
   display: flex
   align-items: center
   justify-content: center
-  background-size: cover
+  background-size: 50% 50%
   background-repeat: no-repeat
 
 .arrow--left
   background-image: url("../images/icons/arrow-left.svg")
-  left: var(--swiper-navigation-sides-offset, 1rem)
+  background-position: left center
+  left: var(--swiper-navigation-sides-offset, 2rem)
   right: auto
   
 .arrow--right
   background-image: url("../images/icons/arrow-right-black.svg")
-  right: var(--swiper-navigation-sides-offset, 1rem)
+  background-position: right center
+  right: var(--swiper-navigation-sides-offset, 2rem)
   left: auto
 
-.banner__container__item__content
-  padding: 0 1.5rem
-  width: 100%
-  text-align: center
+.banner__dots
+    width: 100% !important
+    text-align: center
+    transition: .3s opacity
+    transform: translate3d(0, 0, 0)
+    margin-top: 3.4rem
 
-.banner__container__item__content__heading
-  margin-top: 6rem
-  font-weight: 700
-  font-size: 6rem
-  line-height: 7.8rem
-  margin-bottom: 1rem
+    @media screen and (max-width: $tablet)
+      bottom: 2rem !important
+      top: auto !important
+      left: 0 !important
+      position: absolute
+      text-align: center
+      transition: .3s opacity
+      transform: translate3d(0, 0, 0)
+      z-index: 10
 
-  @media screen and (max-width: $tablet)
-    font-size: 4rem
-    line-height: 4.4rem
+// .banner__container__item__content
+//   padding: 0 1.5rem
+//   width: 100%
+//   text-align: center
 
-.banner__container__item__content__text
-  font-weight: 400
-  font-size: 2rem
-  line-height: 2.6rem
-  margin-bottom: 3rem
+// .banner__container__item__content__heading
+//   margin-top: 6rem
+//   font-weight: 700
+//   font-size: 6rem
+//   line-height: 7.8rem
+//   margin-bottom: 1rem
 
-  @media screen and (max-width: $tablet)
-    font-size: 1.6rem
-    line-height: 2.1rem
-    margin-bottom: 2rem
+//   @media screen and (max-width: $tablet)
+//     font-size: 4rem
+//     line-height: 4.4rem
 
-.banner__container__item__content__button
-  display: inline-block
+// .banner__container__item__content__text
+//   font-weight: 400
+//   font-size: 2rem
+//   line-height: 2.6rem
+//   margin-bottom: 3rem
+
+//   @media screen and (max-width: $tablet)
+//     font-size: 1.6rem
+//     line-height: 2.1rem
+//     margin-bottom: 2rem
+
+// .banner__container__item__content__button
+//   display: inline-block
 /* Main -- Banner end */
 
 /* Main -- Categories start */
@@ -4522,14 +4559,15 @@ a.product__tabs__content__block__characteristics_group__list__item__value
     &::backdrop
       position: absolute
       top: 0
-      // margin-bottom: 6rem
-      // height: calc(100% - 6rem)
       background: rgba(0, 0, 0, .5)
 
 .popup__container
   
 .popup_cart
   gap: 1rem
+  margin: auto 2rem
+  width: calc(100% - 4rem)
+  border-radius: .4rem
 
   @media screen and (min-width: $tablet+1)
     margin: 19rem auto
@@ -4780,6 +4818,9 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   text-align: center
 
 .popup_1click
+  margin: auto 2rem
+  width: calc(100% - 4rem)
+  border-radius: .4rem
 
   @media screen and (min-width: $tablet+1)
     margin: auto auto
@@ -4792,6 +4833,9 @@ a.product__tabs__content__block__characteristics_group__list__item__value
     width: 57.8rem
 
 .popup_review, .popup_problem
+  margin: auto 2rem
+  width: calc(100% - 4rem)
+  border-radius: .4rem
 
   @media screen and (min-width: $tablet+1)
     margin: auto auto
@@ -5517,10 +5561,342 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   &:hover
     background-image: url("../images/icons/heart-grey.svg")
     cursor: pointer
+
+.popup_category
+  display: none
+  position: absolute
+  top: 18.15rem
+  left: 0
+  // margin-top: 18.15rem
+  margin: 0 auto
+  width: 100%
+  height: 100%
+  border-radius: 0
+  z-index: 100
+  background: linear-gradient(180deg,rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0) 100%)
+
+.popup_category__container
+  position: relative
+  display: grid
+  grid-template-areas: "queries" "suggestions" "link"
+  row-gap: 2rem
+  column-gap: 1rem
+  margin: 0 auto
+  padding: 2rem
+  width: 100%
+  max-width: $desktop + 20px + 20px
+  background-color: $white
+  border-radius: $radius
+  overflow: hidden
+  box-shadow: 0.2rem 0.2rem 1.4rem 0 rgba(10, 10, 10, 0.1)
+
+.popup_category__container__top
+  display: none
+  
+.popup_category__container__top__heading
+  font-size: 2rem
+  font-weight: 700
+  line-height: 130%
+
+.popup_category__container__top__close
+  width: 2rem
+  height: 100%
+  background-image: url('../images/icons/close.svg')
+  background-size: contain
+  background-position: right 50%
+  background-repeat: no-repeat
+  cursor: pointer
+
+.popup_category__container__queries
+  grid-area: queries
+  display: flex
+  gap: 1rem
+  margin: 0 -2rem
+  padding: 0 2rem
+  flex-wrap: nowrap
+  overflow-x: auto
+  -ms-overflow-style: none
+  scrollbar-width: none
+
+  &::-webkit-scrollbar
+      width: 0
+      height: 0
+
+.popup_category__container__queries__item
+  white-space: nowrap
+  padding: .4rem 1.6rem .6rem
+  font-size: 1.4rem
+  font-weight: 400
+  line-height: 130%
+  color: $black
+  background-color: #fff
+  border-radius: $radius
+  cursor: pointer
+
+  &:hover
+    color: $pink
+
+.popup_category__container_suggestions
+  grid-area: suggestions
+  margin: 0
+  width: unset
+
+.popup_category__suggestions__container__heading
+  margin: 0 0 1rem
+  font-size: 1.6rem
+  font-weight: 700
+
+.popup_category__container__link_results
+  grid-area: link
+  display: inline-block
+  margin: 0
+  padding-right: calc( 1.6rem + .5rem )
+  padding-bottom: .3rem
+  width: fit-content
+  font-size: 1.4rem
+  font-weight: 500
+  line-height: 130%
+  color: $pink
+  cursor: pointer
+
+  &:hover
+    color: $black
+
+.popup_category__suggestions
+  margin-bottom: 6rem
+  
+.popup_category__suggestions__container
+  position: relative
+  margin: 6rem auto
+  width: 100%
+  overflow-x: hidden
+  -ms-overflow-style: none
+  scrollbar-width: none
+
+  &::-webkit-scrollbar
+      width: 0
+      height: 0
+
+  &:hover .arrows--left, 
+  &:hover .arrows--right 
+    display: block
+
+.popup_category__suggestions__container__arrows
+  padding: 0 2rem
+
+.popup_category__suggestions__container .tns-item
+  display: flex !important
+
+.popup_category__suggestions__container__list
+  position: relative
+  display: flex
+  flex-wrap: nowrap
+  justify-content: flex-start
+  align-items: stretch
+  gap: 1rem
+  // margin-left: 2rem
+  overflow: hidden
+  z-index: 1
+
+  &::-webkit-scrollbar
+      width: 0
+      height: 0
+
+.popup_category__suggestions__container__list__item
+  position: relative
+  padding: 0
+  margin: 0
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  gap: 2rem
+  min-width: 21rem
+  background-color: #fff
+  background-clip: content-box
+  border-radius: $radius
+
+  &:hover .popup_category__suggestions__container__list__item__link__text__title
+    color: $pink
+
+.popup_category__suggestions__container__list__item__link
+  position: relative
+  padding: 0
+  margin: 0
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  gap: 2rem
+  width: 100%
+  height: 100%
+
+  &:hover .popup_category__suggestions__container__list__item__link__text__info__prices
+    justify-content: center
+
+  &:hover .popup_category__suggestions__container__list__item__link__text__info__prices__oldprice
+    display: none
+
+  &:hover .popup_category__suggestions__container__list__item__link__text__info__prices__price
+    color: $pink
+    font-size: 1.6rem
+    font-weight: 700
+    line-height: 130%
+
+  &:hover .popup_category__suggestions__container__list__item__link__text__title
+    color: $pink
+
+.popup_category__suggestions__container__list__item__images, .popup_category__suggestions__container__list__item__link__images
+  margin: 2.2rem 2.2rem 0
+  display: flex
+  flex-wrap: nowrap
+  justify-content: flex-start
+  max-width: 21rem
+  overflow-x: auto
+  -ms-overflow-style: none
+  scrollbar-width: none
+
+  &::-webkit-scrollbar
+      width: 0
+      height: 0
+
+.popup_category__container_suggestions__list__item__images__link
+  display: block
+  width: 100%
+
+.popup_category__container_suggestions__list__item__images__link__image, .popup_category__suggestions__container__list__item__link__images__image
+  max-width: unset
+  width: 100%
+
+.popup_category__suggestions__container__list__item__text, .popup_category__suggestions__container__list__item__link__text
+  margin: 0 2rem 2rem
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  margin-top: 2rem
+  flex: 1 0 10rem
+  gap: 1rem
+  
+.popup_category__suggestions__container__list__item__text__title, .popup_category__suggestions__container__list__item__link__text__title
+  font-size: 1.4rem
+  font-weight: 500
+  line-height: 1.8rem
+  text-align: center
+  width: 100%
+  transition: .2s linear
+
+  &:hover
+    color: $pink
+
+.popup_category__suggestions__container__list__item__text__info, .popup_category__suggestions__container__list__item__link__text__info
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  flex-wrap: wrap
+  gap: 1rem
+
+.popup_category__suggestions__container__list__item__text__info__prices, .popup_category__suggestions__container__list__item__link__text__info__prices
+  display: flex
+  gap: .4rem
+  align-items: center
+  justify-content: space-between
+  width: 100%
+
+.popup_category__suggestions__container__list__item__text__info__prices__price, .popup_category__suggestions__container__list__item__link__text__info__prices__price
+  font-size: 1.6rem
+  line-height: 130%
+  font-weight: 700
+  color: $black
+
+.popup_category__suggestions__container__list__item__text__info__prices__oldprice, .popup_category__suggestions__container__list__item__link__text__info__prices__oldprice
+  font-size: 1.2rem
+  line-height: 130%
+  font-weight: 400
+  color: $grey-dark2
+  text-decoration: line-through
+
+.popup_category__suggestions__container__list__item__text__info__label, .popup_category__suggestions__container__list__item__link__text__info__label
+  padding: .3rem .8rem
+  background-color: $grey1
+  border-radius: $radius
+  color: $grey-dark2
+  font-size: 1.2rem
+  line-height: 130%
+  font-weight: 400
+
+.popup_category__suggestions__container__list__item__add_to_cart, .popup_category__suggestions__container__list__item__link__add_to_cart
+  display: flex
+  justify-content: center
+  align-items: center
+  gap: .5rem
+  width: 100%
+  height: 5rem
+  text-align: center
+  align-content: center
+  border-radius: $radius
+  transition: .2s linear
+
+  &:hover
+    background-color: $pink
+
+  &:hover .popup_category__suggestions__container__list__item__add_to_cart__text, .popup_category__suggestions__container__list__item__link__add_to_cart__text
+    color: $white
+
+  &:hover .icon--add-to-cart-pink
+    background-image: url("../images/icons/cart-white.svg")
+
+.popup_category__suggestions__container__list__item__add_to_cart__text, .popup_category__suggestions__container__list__item__link__add_to_cart__text
+  color: $pink
+  font-size: 1.6rem
+  font-weight: 500
+  line-height: 1.6rem
+  transition: .2s linear
+
+.popup_category__suggestions__container__list__item__add_to_cart__icon, .popup_category__suggestions__container__list__item__link__add_to_cart__icon
+  display: inline-block
+  width: 1.6rem
+  height: 1.6rem
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: 1.6rem 1.6rem
+
+.popup_category__suggestions__container__list__item__add_to_favourites
+  position: absolute
+  display: block
+  top: 1.6rem
+  right: 1.6rem
+  width: 1.6rem
+  height: 1.6rem
+  z-index: 10
+  background-image: url("../images/icons/heart-grey.svg")
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  transition: .2s linear
+
+  &:hover
+    background-image: url("../images/icons/heart-pink.svg")
+    cursor: pointer
+
+.popup_category__suggestions__container__list__item__add_to_favourites--added
+  position: absolute
+  display: block
+  top: 1.6rem
+  right: 1.6rem
+  width: 1.6rem
+  height: 1.6rem
+  z-index: 10
+  background-image: url("../images/icons/heart-pink-filled.svg")
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  transition: .2s linear
+
+  &:hover
+    background-image: url("../images/icons/heart-grey.svg")
+    cursor: pointer
 /* POPUP */
 
 /* MENU */
-.popup_menu2
+.popup_menu
   // display: flex
   flex-direction: column
   padding: 0 1.5rem
@@ -5529,7 +5905,7 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   background-color: $white
   box-shadow: none
 
-.popup_menu2__heading
+.popup_menu__heading
   display: flex
   justify-content: space-between
   align-items: center
@@ -5538,16 +5914,16 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   height: 6rem
   color: $black
 
-.popup_menu2__heading__title
+.popup_menu__heading__title
   font-size: 2rem
   font-weight: 700
   line-height: 130%
 
-.popup_menu2__heading__back, .popup_menu2__heading__close, .popup_menu2__heading__search
+.popup_menu__heading__back, .popup_menu__heading__close, .popup_menu__heading__search
   width: 4.4rem
   height: 4.4rem
 
-.popup_menu2__2nd_heading
+.popup_menu__2nd_heading
   display: flex
   justify-content: space-between
   padding: 1.2rem 0
@@ -5556,19 +5932,19 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   font-weight: 500
   line-height: 130%
 
-.popup_menu2__2nd_heading__city
+.popup_menu__2nd_heading__city
   padding-left: 1.6rem + .8rem
   background-image: url('../images/icons/location-purple.svg')
   background-repeat: no-repeat
 
-.popup_menu2__search
+.popup_menu__search
   display: flex
   justify-content: space-between
   align-items: center
   gap: .5rem
   padding: 1.2rem 0
 
-.popup_menu2__search__input
+.popup_menu__search__input
   padding: 1.4rem
   width: 100%
   height: 4.5rem
@@ -5578,17 +5954,17 @@ a.product__tabs__content__block__characteristics_group__list__item__value
   background-color: #fff
   border-radius: $radius
 
-.popup_menu2__search__button
+.popup_menu__search__button
   padding: 1.2rem 2.2rem
   height: 4.5rem
   font-size: 1.6rem
   font-weight: 500
 
-.popup_menu2__menu
+.popup_menu__menu
   display: flex
   flex-direction: column
 
-.popup_menu2__menu__item
+.popup_menu__menu__item
   padding: 2rem 0
   font-size: 1.6rem
   font-weight: 500
@@ -6498,6 +6874,9 @@ a.product__tabs__content__block__characteristics_group__list__item__value
 
 .popup_delete_address
   width: 100%
+  margin: auto 2rem
+  width: calc(100% - 4rem)
+  border-radius: .4rem
 
   @media screen and (min-width: $tablet+1)
     margin: 11rem auto
