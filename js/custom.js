@@ -45,6 +45,12 @@ function closeDialog (){
   return true
 }
 
+/* Одноразовые попапы */
+
+function closePopup(element){
+  document.querySelector('.'+element).style.display = 'none';
+}
+
 /* попап при наведении на категорию в меню */
 function openCategoryPopup (category) {
   document.querySelector('#category__' + category).style.display = 'block'
