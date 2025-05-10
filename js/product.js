@@ -1,17 +1,3 @@
-document.querySelector('.product__gallery').addEventListener('click', function(e){
-  if ( e.target.classList.contains('product__gallery__preview__list__item__image') ){
-    var image_id = e.target.getAttribute('data-preview')
-    var preview = document.getElementsByClassName('product__gallery__preview__list__item__image')
-
-    document.querySelector('.product__gallery__big__item--active').classList.remove('product__gallery__big__item--active')
-    document.querySelector('[data-image="'+image_id+'"]').classList.add('product__gallery__big__item--active')
-    
-    document.querySelector('.product__gallery__preview__list__item__image--active').classList.remove('product__gallery__preview__list__item__image--active')
-    e.target.classList.add('product__gallery__preview__list__item__image--active')
-  }
-})
-
-
 var slider_preview = tns({
   container: '.product__gallery__preview__list',
   items: 5,
@@ -70,3 +56,19 @@ $link.addEventListener('click', e => {
 document.querySelector('.product__guarantee__button').addEventListener('click', () => {
   document.querySelector('.product__guarantee__tooltip').style.display = (document.querySelector('.product__guarantee__tooltip').style.display == 'block') ? '' : 'block'
 })
+
+/* Галерея фото товара с превью */
+let productPreviews = document.querySelectorAll('.product__gallery__preview__list__item__image');
+productPreviews.forEach(function (img) {
+    img.onclick = function(e) {
+    var image_id = e.target.getAttribute('data-preview')
+    console.log('image_id: ', image_id)
+    productPreviews.forEach(function (PreviewsImg) {
+          PreviewsImg.classList.remove('product__gallery__preview__list__item__image--active');
+        });
+        document.querySelector('.product__gallery__big__item--active').classList.remove('product__gallery__big__item--active')
+        e.target.classList.add('product__gallery__preview__list__item__image--active');
+        document.querySelector('[data-image="'+image_id+'"]').classList.add('product__gallery__big__item--active')
+        
+    };
+});

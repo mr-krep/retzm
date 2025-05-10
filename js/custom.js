@@ -24,23 +24,25 @@ function ListenPopupClicks(element)
 }
 /* Открываем модальноео окно и включаем прослушку кликов */
 function openDialog(item, DialogType=""){
-  if (typeof window.scrollPosition == undefined) window.scrollPosition = 0
-  window.scrollPosition = window.scrollY
-  window.scrollTo(0, 0)
+  const elements = document.querySelectorAll("dialog")
+  elements.forEach((item, index, arr) => {document.querySelectorAll("dialog")[index].close()})
+  // window.scrollPosition = window.scrollY
+  // window.scrollTo(0, 0)
   window.addEventListener('click', function(e){ListenPopupClicks(e.target)})
-  closeDialog ()
   if (typeof DialogType != undefined && DialogType == 'popup') document.getElementById(item).show()
   else document.getElementById(item).showModal()
-  return window.scrollPosition
+  return true
 }
 
 /* Закрываем модальное окно и отключаем прослушку кликов */
 function closeDialog (){
   if (typeof window.scrollPosition == undefined) window.scrollPosition = 0
   const elements = document.querySelectorAll("dialog")
-  window.scrollTo(0, window.scrollPosition)
+  // window.scrollTo(0, window.scrollPosition)
   elements.forEach((item, index, arr) => {document.querySelectorAll("dialog")[index].close()})
   window.removeEventListener('click', ListenPopupClicks)
+  // window.scrollPosition = undefined
+  return true
 }
 
 /* попап при наведении на категорию в меню */
