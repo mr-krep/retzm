@@ -62,7 +62,6 @@ let productPreviews = document.querySelectorAll('.product__gallery__preview__lis
 productPreviews.forEach(function (img) {
     img.onclick = function(e) {
     var image_id = e.target.getAttribute('data-preview')
-    console.log('image_id: ', image_id)
     productPreviews.forEach(function (PreviewsImg) {
           PreviewsImg.classList.remove('product__gallery__preview__list__item__image--active');
         });
@@ -72,3 +71,56 @@ productPreviews.forEach(function (img) {
         
     };
 });
+
+
+/**
+ * Слайдер с превью, стрелками, автопрокруткой
+ */
+const slides = document.querySelector('.popup_gallery__wrapper__big')
+const slideCount = document.querySelectorAll('.popup_gallery__wrapper__big__item').length // Количество слайдов
+const prevButton = document.querySelector('.product__gallery__preview__arrows__left')
+const nextButton = document.querySelector('.product__gallery__preview__arrows__right')
+const gallery = document.querySelector('.popup_gallery__wrapper')
+let galleryPreviews = document.querySelectorAll('.popup_gallery__wrapper__preview__list__item') // массив превью картинок
+
+let currentIndex = 0 // Текущий индекс слайда
+
+/* Функция смены слайда. @param {number} index - Индекс слайда, на который нужно перейти. */
+function goToSlide(index) {
+    var current_img = document.querySelector('[data-popup_image="'+currentIndex+'"]')
+    var current_preview = document.querySelector('[data-popup_preview="'+currentIndex+'"]')
+
+    var index = index % slideCount
+    if (index < 0) {index = index + slideCount}
+
+    var new_img = document.querySelector('[data-popup_image="'+index+'"]')
+    var new_preview = document.querySelector('[data-popup_preview="'+index+'"]')
+
+    current_preview.classList.remove('active')
+    new_preview.classList.add('active')
+
+    currentIndex = index
+    slides.style.transform = `translateX(${-index * 100}%)` // Смещение слайдов
+}
+// Обработчик кликов на превью
+galleryPreviews.forEach(function (img) {
+    img.onclick = function(e) {
+    var image_id = e.target.getAttribute('data-popup_preview')
+    goToSlide(image_id)
+  }
+})
+// Обработчики кликов для кнопок
+prevButton.addEventListener('click', () => goToSlide(currentIndex - 1))
+nextButton.addEventListener('click', () => goToSlide(currentIndex + 1))
+
+// Обработчики свайпов для мобильной версии
+document.querySelector('.popup_gallery__wrapper__big').addEventListener('swiped', function(e) {
+  if ( e.detail.dir == 'right' ) {goToSlide(currentIndex - 1)}
+  else if ( e.detail.dir == 'left' ) {goToSlide(currentIndex + 1)}
+})
+
+document.querySelectorAll('.product__gallery__big__item__image').forEach(el => 
+  el.onclick = function() {
+    document.getElementById('Gallery').showModal()
+  }
+)

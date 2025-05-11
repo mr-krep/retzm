@@ -26,8 +26,6 @@ function ListenPopupClicks(element)
 function openDialog(item, DialogType=""){
   const elements = document.querySelectorAll("dialog")
   elements.forEach((item, index, arr) => {document.querySelectorAll("dialog")[index].close()})
-  // window.scrollPosition = window.scrollY
-  // window.scrollTo(0, 0)
   window.addEventListener('click', function(e){ListenPopupClicks(e.target)})
   if (typeof DialogType != undefined && DialogType == 'popup') document.getElementById(item).show()
   else document.getElementById(item).showModal()
@@ -36,17 +34,13 @@ function openDialog(item, DialogType=""){
 
 /* Закрываем модальное окно и отключаем прослушку кликов */
 function closeDialog (){
-  if (typeof window.scrollPosition == undefined) window.scrollPosition = 0
   const elements = document.querySelectorAll("dialog")
-  // window.scrollTo(0, window.scrollPosition)
   elements.forEach((item, index, arr) => {document.querySelectorAll("dialog")[index].close()})
   window.removeEventListener('click', ListenPopupClicks)
-  // window.scrollPosition = undefined
   return true
 }
 
 /* Одноразовые попапы */
-
 function closePopup(element){
   document.querySelector('.'+element).style.display = 'none';
 }

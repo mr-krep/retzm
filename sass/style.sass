@@ -3574,6 +3574,7 @@ dialog
     padding: 0
 
 .product__gallery__big
+  max-height: 43rem
   
   @media screen and (max-width: $tablet)
     scroll-snap-type: x mandatory
@@ -3606,6 +3607,8 @@ dialog
 
 .product__gallery__big__item__image
   display: flex
+  margin: 0 auto
+  max-height: 100%
   background-color: #fff
   cursor: pointer
   border-radius: $radius
@@ -3680,6 +3683,173 @@ dialog
     display: flex
     margin: 0 auto
     padding: 0 1rem 0
+
+.popup_gallery
+  padding: 0
+  margin: 0
+  width: 100%
+  height: 100%
+  background-color: #fff
+  z-index: 1000
+
+.popup_gallery__wrapper
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  gap: 2rem
+  margin: 0 auto
+  max-width: 60rem
+  height: 100%
+  overflow: hidden
+  
+  @media screen and (max-width: $tablet)
+    justify-content: center
+    height: calc(100% - 4.4rem - 2rem)
+
+.popup_gallery__top
+  margin: 0 auto
+  width: 100%
+  max-width: $desktop
+  text-align: right
+  
+  @media screen and (max-width: $tablet)
+    height: calc(4.4rem + 2rem)
+
+.popup_gallery__top__close
+  position: relative
+  display: inline-block
+  margin-top: 4rem
+  width: 4.4rem
+  height: 4.4rem
+  background-image: url('../images/icons/close.svg')
+  background-size: 2rem 2rem
+  background-position: right 1.2rem top 50%
+  background-repeat: no-repeat
+  cursor: pointer
+  z-index: 1000
+
+  @media screen and (max-width: $tablet)
+    margin-top: 2rem
+    margin-right: 1.5rem
+
+.popup_gallery__wrapper__big
+  position: relative
+  display: flex
+  margin: 0 auto
+  width: 100%
+  max-width: 60rem
+  max-height: 60rem
+  text-align: center
+  transition: transform 0.5s ease-in-out
+
+.popup_gallery__wrapper__big__item
+  flex-shrink: 0
+  position: relative
+  width: 100%
+
+.popup_gallery__wrapper__big__item__image
+  display: block
+  width: 100%
+  height: auto
+
+.popup_gallery__wrapper__preview
+  position: relative
+  margin: 0 auto
+  max-width: $desktop
+  height: 7.6rem
+  z-index: 1000
+
+  @media screen and (max-width: $tablet)
+    margin: 4rem auto 0
+    height: .6rem
+
+.popup_gallery__wrapper__preview__list
+  position: relative
+  display: flex
+  flex-direction: row
+  gap: 1rem
+  white-space: nowrap
+  width: 100%
+  height: 7.6rem
+  overflow: hidden
+
+  @media screen and (max-width: $tablet)
+    gap: .4rem
+    height: .6rem
+
+.popup_gallery__wrapper__preview__list__item
+  display: contents
+  width: 7.6rem
+  height: 7.6rem
+
+  @media screen and (max-width: $tablet)
+    width: .6rem
+    height: .6rem
+
+.popup_gallery__wrapper__preview__list__item__image
+  padding: .8rem
+  width: 7.6rem
+  height: 7.6rem
+  border-radius: $radius
+  cursor: pointer
+  border: .1rem solid transparent
+
+  @media screen and (max-width: $tablet)
+    padding: 0
+    width: .6rem
+    height: .6rem
+    border: .3rem solid $grey3
+    border-radius: 0
+
+  &.active
+    border: .1rem solid $pink
+
+    @media screen and (max-width: $tablet)
+      border: .3rem solid $pink
+
+.popup_gallery__wrapper__bottom
+
+  @media screen and (max-width: $tablet)
+    display: none
+
+.popup_gallery__wrapper__arrows
+  position: absolute
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin: 0 auto
+  width: 100%
+  max-width: $desktop
+  height: 100%
+  top: 0
+  left: 0
+  right: 0
+  z-index: 1
+
+  @media screen and (max-width: $tablet)
+    display: none
+
+.product__gallery__preview__arrows__left
+  position: relative
+  width: 4rem
+  height: 4rem
+  background-image: url('../images/icons/arrow-left-black.svg')
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  cursor: pointer
+  opacity: .5
+  z-index: 10
+
+.product__gallery__preview__arrows__right
+  display: block
+  width: 4rem
+  height: 4rem
+  background-image: url('../images/icons/arrow-right-black.svg')
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  cursor: pointer
+  opacity: .5
+  z-index: 10
 
 .product__guarantee
   grid-area: guarantee

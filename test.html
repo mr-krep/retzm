@@ -1,156 +1,242 @@
-
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <title>TEST</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="./fonts/fonts.css" rel="stylesheet" />
-    <link href="./css/reset.css" rel="stylesheet" />
-    <link href="./css/style.css" rel="stylesheet" />
-    <style>
-      .product__gallery__preview
-      {
-        width: 100px
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слайдер</title>
+<style>
+/* Основной контейнер слайдера */
+.slider {
+            width: 100%; /* Занимает всю доступную ширину */
+            max-width: 600px; /* Ограничиваем максимальную ширину */
+            overflow: hidden; /* Скрываем выходящие за границы элементы */
+            position: relative; /* Позволяет позиционировать кнопки поверх */
+            margin: auto; /* Центрируем слайдер на странице */
+            text-align: center; /* Центрируем подписи под слайдами */
+        }
 
-      .container {
-        position: relative;
-        height: 200px;
-        overflow: hidden;
-      }
+        /* Контейнер, который содержит все слайды */
+        .slides {
+            display: flex; /* Располагаем слайды в одну линию */
+            transition: transform 0.5s ease-in-out; /* Плавное перелистывание */
+        }
 
-      .sliders {
-        width: 100%;
-        height: 100%;
-        transition: 500ms;
-      }
+        /* Каждый отдельный слайд */
+        .slide {
+            flex-shrink: 0; /* Запрещаем уменьшение слайдов */
+            width: 100%; /* Каждый слайд занимает всю ширину контейнера */
+            position: relative; /* Для позиционирования подписей */
+        }
 
-      .slide-block {
-        display: flex;
-        height: 100%;
-      }
+        /* Изображения слайдов */
+        .slide img {
+            width: 100%; /* Картинка заполняет всю ширину контейнера */
+            height: auto; /* Сохраняет пропорции */
+            display: block; /* Убираем отступы снизу */
+        }
 
-      .slide-left-side {
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 32px;
-      }
+        /* Подписи к слайдам */
+        .caption {
+            position: absolute; /* Размещаем поверх изображения */
+            bottom: 10px; /* Отступ от нижнего края */
+            left: 50%; /* Центрируем по горизонтали */
+            transform: translateX(-50%); /* Корректируем смещение влево на 50% ширины */
+            background: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный фон */
+            color: white; /* Белый текст */
+            padding: 5px 10px; /* Отступы */
+            font-size: 14px; /* Размер шрифта */
+            border-radius: 5px; /* Скругляем углы */
+        }
 
-      .slide-right-side {
-        width: 60%;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-      }
+        /* Кнопки "Назад" и "Вперед" */
+        .prev, .next {
+            position: absolute; /* Размещаем поверх слайдов */
+            top: 50%; /* Выравниваем по вертикали */
+            transform: translateY(-50%); /* Смещаем вверх для точного центрирования */
+            background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+            color: white; /* Белый текст */
+            border: none; /* Без границ */
+            padding: 10px; /* Внутренние отступы */
+            cursor: pointer; /* Курсор в виде указателя */
+            font-size: 18px; /* Увеличиваем размер текста */
+            font-weight: bold; /* Делаем текст жирным */
+            z-index: 2; /* Размещаем поверх всех элементов */
+        }
 
-      .slide-buttons {
-        position: absolute;
-        display: flex;
-        top: 50%;
-        left: 40%;
-        transform: translate(-50%, -50%);
-      }
+        /* Позиционируем кнопку "Назад" слева */
+        .prev {
+            left: 10px;
+        }
 
-      .slide-buttons button {
-        background-color: #fff;
-        border: none;
-        color: #AAA;
-        cursor: pointer;
-        font-size: 16px;
-        padding: 15px;
-      }
+        /* Позиционируем кнопку "Вперед" справа */
+        .next {
+            right: 10px;
+        }
 
-      #down {
-        transform: translateY(50%);
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-      }
+        /* Адаптивные стили для мобильных устройств */
+        @media (max-width: 480px) {
+            .slider {
+                max-width: 100%; /* Растягиваем слайдер на всю ширину экрана */
+            }
 
-      #up {
-        transform: translateY(-50%);
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-      }
-    </style>
+            .prev, .next {
+                padding: 5px; /* Уменьшаем размер кнопок */
+                font-size: 14px; /* Делаем шрифт поменьше */
+            }
+
+            .caption {
+                font-size: 12px; /* Уменьшаем текст подписи */
+                padding: 3px 6px; /* Уменьшаем отступы */
+            }
+        }
+        
+        /* Контейнер для точек управления (индикаторов) */
+        .controls {
+            text-align: center; /* Размещаем точки по центру */
+            margin-top: 10px; /* Добавляем отступ сверху */
+        }
+
+        /* Стиль для точек переключения */
+        .controls label {
+            display: inline-block; /* Размещаем точки в строку */
+            width: 50px; /* Размер точки */
+            height: 50px;
+            background: gray; /* Серый цвет точки */
+            /*border-radius: 50%; /* Делаем точки круглыми */
+            margin: 5px; /* Добавляем небольшой отступ между ними */
+            cursor: pointer; /* Делаем курсор в виде руки при наведении */
+        }
+
+        .controls label img {
+          width: 100%;
+          height: 100%;
+        }
+
+        .active {
+          border: 3px solid red
+        }
+</style>
 </head>
-  <body>
-    <div class="product__gallery__preview">
-      <span class="product__gallery__preview__up" id="up1"></span>
-      <ul class="product__gallery__preview__list sliders">
-        <li class="product__gallery__preview__list__item slide-block">
-          <img class="product__gallery__preview__list__item__image product__gallery__preview__list__item__image--active" data-preview="1" src="../images/demo/product/product-priview.jpg" />
-        </li>
-        <li class="product__gallery__preview__list__item slide-block">
-          <img class="product__gallery__preview__list__item__image" data-preview="2" src="../images/demo/product/ipad.jpg" />
-        </li>
-        <li class="product__gallery__preview__list__item slide-block">
-          <img class="product__gallery__preview__list__item__image" data-preview="3" src="../images/demo/product/watch.jpg" />
-        </li>
-        <li class="product__gallery__preview__list__item slide-block">
-          <img class="product__gallery__preview__list__item__image" data-preview="4" src="../images/demo/product/belkin.jpg" />
-        </li>
-        <li class="product__gallery__preview__list__item slide-block">
-          <img class="product__gallery__preview__list__item__image" data-preview="5" src="../images/demo/product/airpods.jpg" />
-        </li>
-        <li class="product__gallery__preview__list__item slide-block">
-          <img class="product__gallery__preview__list__item__image" data-preview="6" src="../images/demo/product/airtag.jpg" />
-        </li>
-      </ul>
-      <span class="product__gallery__preview__down" id="down1"></span>
+<body>
+
+<!-- Основной контейнер слайдера -->
+<div class="slider">
+    <!-- Контейнер всех слайдов -->
+    <div class="slides">
+        <div class="slide" data-image="0">
+            <img src=https://sun9-54.userapi.com/impg/y3j3HwsbFRO1ivYXU9bdypjoC7nqEaxayHmcaw/iJ8ggQkq874.jpg?size=1024x1024&quality=95&sign=4f27278b274b8aada259757275785723&type=album>
+            <div class="caption">Описание слайда 1</div>
+        </div>
+        <div class="slide" data-image="1">
+            <img src=https://sun9-38.userapi.com/impg/UM8IgRoFQRbInhA68NsqvqgZvHJ2szGqy4DVlQ/yWhFngBwsKs.jpg?size=1024x1024&quality=95&sign=6e8b1a1e0d2874e4c576e5b2cc4c5e0a&type=album>
+            <div class="caption">Описание слайда 2</div>
+        </div>
+        <div class="slide" data-image="2">
+            <img src=https://sun9-14.userapi.com/impg/V91y2Ns4bUvtjBurIir-TyO4xsPLeCA_bRfhKw/X4u8lP367vo.jpg?size=1024x1024&quality=95&sign=6581081ef770e58921b444e56cf28b27&type=album>
+            <div class="caption">Описание слайда 3</div>
+        </div>
     </div>
-    <script>
-      const slider = document.querySelector('.sliders');
-      const sliders = document.querySelectorAll('.slide-block');
-      const up = document.getElementById('up1');
-      const down = document.getElementById('down1');
 
-      let slidersCount = sliders.length - 1;
-      let currentPosition = 0;
+    <!-- Кнопки управления -->
+    <button class="prev">&#10094;</button> <!-- Кнопка "Назад" -->
+    <button class="next">&#10095;</button> <!-- Кнопка "Вперед" -->    
+    
+    
+    <div class="controls">
+        <label class="preview"><img class="active" data-preview="0" src=https://sun9-54.userapi.com/impg/y3j3HwsbFRO1ivYXU9bdypjoC7nqEaxayHmcaw/iJ8ggQkq874.jpg?size=1024x1024&quality=95&sign=4f27278b274b8aada259757275785723&type=album></label>
+        <label class="preview"><img data-preview="1" src=https://sun9-38.userapi.com/impg/UM8IgRoFQRbInhA68NsqvqgZvHJ2szGqy4DVlQ/yWhFngBwsKs.jpg?size=1024x1024&quality=95&sign=6e8b1a1e0d2874e4c576e5b2cc4c5e0a&type=album></label>
+        <label class="preview"><img data-preview="2" src=https://sun9-14.userapi.com/impg/V91y2Ns4bUvtjBurIir-TyO4xsPLeCA_bRfhKw/X4u8lP367vo.jpg?size=1024x1024&quality=95&sign=6581081ef770e58921b444e56cf28b27&type=album></label>
+    </div>
+</div>
 
-      up.addEventListener('click', () => {
-        move(1);
-      });
+<button class="testbtn">TEST</button>
+<button class="testbtn">TEST</button>
+<button class="testbtn">TEST</button>
+<button class="testbtn">TEST</button>
+<button type="button" id="my-btn">Нажми на меня</button>
 
-      down.addEventListener('click', () => {
-        move(-1);
-      });
 
-      for (let slide of sliders) {
-        slide.style.background = getRandomGradient();
-      }
 
-      function move(step) {
-        currentPosition += step;
+<script>
+/**
+ * Слайдер с превью, стрелками, автопрокруткой
+ */
+const slides = document.querySelector('.slides')
+const slideCount = document.querySelectorAll('.slide').length // Количество слайдов
+const prevButton = document.querySelector('.prev')
+const nextButton = document.querySelector('.next')
+const slider = document.querySelector('.slider')
+let productPreviews = document.querySelectorAll('.preview') // массив превью картинок
 
-        if (currentPosition > 0) {
-          currentPosition = -slidersCount;
-        }
+let currentIndex = 0 // Текущий индекс слайда
+let autoPlayInterval // Интервал для автопрокрутки
 
-        if (currentPosition < -slidersCount) {
-          currentPosition = 0;
-        }
+/* Функция смены слайда. @param {number} index - Индекс слайда, на который нужно перейти. */
+function goToSlide(index) {
+    var current_img = document.querySelector('[data-image="'+currentIndex+'"]')
+    var current_preview = document.querySelector('[data-preview="'+currentIndex+'"]')
 
-        slider.style.transform = `translateY(calc(${currentPosition} * 100%))`;
-      }
+    var index = index % slideCount
+    if (index < 0) {index = index + slideCount}
 
-      function getRandomGradient() {
-        let deg = Math.floor(Math.random() * 360);
-        let a = Math.floor(Math.random() * 255);
-        let b = Math.floor(Math.random() * 255);
-        let c = Math.floor(Math.random() * 255);
-        let d = Math.floor(Math.random() * 255);
-        let e = Math.floor(Math.random() * 255);
-        let f = Math.floor(Math.random() * 255);
-        return `linear-gradient(${deg}deg, rgba(${a},${b},${c},1) 0%, rgba(${e},${f},${d},1) 100%)`
-      }
-    </script>
-  </body>
+    var new_img = document.querySelector('[data-image="'+index+'"]')
+    var new_preview = document.querySelector('[data-preview="'+index+'"]')
+
+    currentIndex = index
+    slides.style.transform = `translateX(${-index * 100}%)` // Смещение слайдов
+    current_preview.classList.remove('active')
+    new_preview.classList.add('active')
+}
+
+// Запускает автоматическая прокрутку слайдов.
+function startAutoPlay() {
+    autoPlayInterval = setInterval(() => goToSlide(currentIndex + 1), 3000)
+}
+//Останавливает автоматическую прокрутку.
+function stopAutoPlay() {
+    clearInterval(autoPlayInterval)
+}
+
+// Обработчик кликов на превью
+productPreviews.forEach(function (img) {
+    img.onclick = function(e) {
+    var image_id = e.target.getAttribute('data-preview')
+    goToSlide(image_id)
+  }
+})
+
+// Обработчики кликов для кнопок
+prevButton.addEventListener('click', () => goToSlide(currentIndex - 1))
+nextButton.addEventListener('click', () => goToSlide(currentIndex + 1))
+
+startAutoPlay(); // Запускаем автопрокрутку
+slider.addEventListener('mouseenter', stopAutoPlay) // Остановка при наведении мыши
+slider.addEventListener('mouseleave', startAutoPlay) // Возобновление при уходе мыши
+
+// document.getElementsByClassName('testbtn').onclick = function() {
+//   alert('Вы кликнули на кнопку!')
+//   // document.getElementById('Gallery').showModal()
+// }
+
+// function changeBgColor() {
+//       document.body.style.backgroundColor = `rgb(${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)})`;
+//     }
+
+//     document.onclick = changeBgColor;
+
+
+// получим кнопку и сохраним ссылку на неё в переменную
+const $btn = document.querySelectorAll('.testbtn')
+// добавим к $btn обработчик события click
+$btn.onclick = function() {
+  alert('Вы кликнули на кнопку!')
+}
+
+document.getElementsByClassName('testbtn').forEach(el => 
+  el.onclick = function() {
+    alert('Вы кликнули на кнопку!')
+  }
+)
+</script>
+</body>
 </html>

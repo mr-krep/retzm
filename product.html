@@ -27,6 +27,7 @@
     <!-- Библиотеки -->
     <link rel="stylesheet" href="./libs/tiny-slider/tiny-slider.css" />
     <script src="./libs/tiny-slider/tiny-slider.js"></script>
+    <script src="./libs/swiped-events.min.js"></script>
     <!-- /Библиотеки -->
   </head>
   <body>
@@ -246,19 +247,19 @@
                 <img class="product__gallery__preview__list__item__image product__gallery__preview__list__item__image--active" data-preview="1" src="../images/demo/product/product-priview.jpg" />
               </li>
               <li class="product__gallery__preview__list__item">
-                <img class="product__gallery__preview__list__item__image" data-preview="2" src="../images/demo/product/ipad.jpg" />
+                <img class="product__gallery__preview__list__item__image" src="../images/demo/product/ipad.jpg" data-preview="2" />
               </li>
               <li class="product__gallery__preview__list__item">
-                <img class="product__gallery__preview__list__item__image" data-preview="3" src="../images/demo/product/watch.jpg" />
+                <img class="product__gallery__preview__list__item__image" src="../images/demo/product/watch.jpg" data-preview="3" />
               </li>
               <li class="product__gallery__preview__list__item">
-                <img class="product__gallery__preview__list__item__image" data-preview="4" src="../images/demo/product/belkin.jpg" />
+                <img class="product__gallery__preview__list__item__image" src="../images/demo/product/belkin.jpg" data-preview="4" />
               </li>
               <li class="product__gallery__preview__list__item">
-                <img class="product__gallery__preview__list__item__image" data-preview="5" src="../images/demo/product/airpods.jpg" />
+                <img class="product__gallery__preview__list__item__image" src="../images/demo/product/airpods.jpg" data-preview="5" />
               </li>
               <li class="product__gallery__preview__list__item">
-                <img class="product__gallery__preview__list__item__image" data-preview="6" src="../images/demo/product/airtag.jpg" />
+                <img class="product__gallery__preview__list__item__image" src="../images/demo/product/airtag.jpg" data-preview="6" />
               </li>
             </ul>
             <div class="product__gallery__preview__arrows">
@@ -267,22 +268,22 @@
             </div>
           </div>
           <ul class="product__gallery__big">
-            <li class="product__gallery__big__item product__gallery__big__item--active" data-image="1">
+            <li class="product__gallery__big__item product__gallery__big__item--active" 1onclick="document.getElementById('Gallery').showModal()" data-image="1">
               <img class="product__gallery__big__item__image" src="../images/demo/product/product-main.jpg" />
             </li>
-            <li class="product__gallery__big__item" data-image="2">
+            <li class="product__gallery__big__item" 1onclick="document.getElementById('Gallery').showModal()" data-image="2">
               <img class="product__gallery__big__item__image" src="../images/demo/product/ipad.jpg" />
             </li>
-            <li class="product__gallery__big__item" data-image="3">
+            <li class="product__gallery__big__item" 1onclick="document.getElementById('Gallery').showModal()" data-image="3">
               <img class="product__gallery__big__item__image" src="../images/demo/product/watch.jpg" />
             </li>
-            <li class="product__gallery__big__item" data-image="4">
+            <li class="product__gallery__big__item" 1onclick="document.getElementById('Gallery').showModal()" data-image="4">
               <img class="product__gallery__big__item__image" src="../images/demo/product/belkin.jpg" />
             </li>
-            <li class="product__gallery__big__item" data-image="5">
+            <li class="product__gallery__big__item" 1onclick="document.getElementById('Gallery').showModal()" data-image="5">
               <img class="product__gallery__big__item__image" src="../images/demo/product/airpods.jpg" />
             </li>
-            <li class="product__gallery__big__item" data-image="6">
+            <li class="product__gallery__big__item" 1onclick="document.getElementById('Gallery').showModal()" data-image="6">
               <img class="product__gallery__big__item__image" src="../images/demo/product/airtag.jpg" />
             </li>
           </ul>
@@ -2749,6 +2750,66 @@
         </div>
         <div class="popup_pickup__info__map" id="popup_pickup__map"></div>
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A95f762cd1b2901d9765805705d3a5c157235081e11f563b4d8b358b06b0ce2bc&amp;width=100%25&amp;height=450&amp;id=popup_pickup__map&amp;lang=ru_RU&amp;scroll=true"></script>
+      </div>
+    </dialog>
+    <dialog class="popup_gallery" aria-label="Увеличить изображение" id="Gallery">
+      <div class="popup_gallery__top">
+        <span class="popup_gallery__top__close icon--close" onclick="closeDialog()"></span>
+      </div>
+      <div class="popup_gallery__wrapper wrapper--global">
+        <ul class="popup_gallery__wrapper__big">
+          <li class="popup_gallery__wrapper__big__item popup_gallery__wrapper__big__item--active" data-popup_image="0">
+            <img class="popup_gallery__wrapper__big__item__image" src="../images/demo/product/product-main.jpg" />
+          </li>
+          <li class="popup_gallery__wrapper__big__item" data-popup_image="1">
+            <img class="popup_gallery__wrapper__big__item__image" src="../images/demo/product/ipad.jpg" />
+          </li>
+          <li class="popup_gallery__wrapper__big__item" data-popup_image="2">
+            <img class="popup_gallery__wrapper__big__item__image" src="../images/demo/product/watch.jpg" />
+          </li>
+          <li class="popup_gallery__wrapper__big__item" data-popup_image="3">
+            <img class="popup_gallery__wrapper__big__item__image" src="../images/demo/product/belkin.jpg" />
+          </li>
+          <li class="popup_gallery__wrapper__big__item" data-popup_image="4">
+            <img class="popup_gallery__wrapper__big__item__image" src="../images/demo/product/airpods.jpg" />
+          </li>
+          <li class="popup_gallery__wrapper__big__item" data-popup_image="5">
+            <img class="popup_gallery__wrapper__big__item__image" src="../images/demo/product/airtag.jpg" />
+          </li>
+          <li class="popup_gallery__wrapper__big__item" data-popup_image="6">
+            <img class="popup_gallery__wrapper__big__item__image" src="../images/demo/product/belkin.jpg" />
+          </li>
+        </ul>
+        <div class="popup_gallery__wrapper__preview">
+          <ul class="popup_gallery__wrapper__preview__list">
+            <li class="popup_gallery__wrapper__preview__list__item">
+              <img class="popup_gallery__wrapper__preview__list__item__image active" data-popup_preview="0" src="../images/demo/product/product-priview.jpg" />
+            </li>
+            <li class="popup_gallery__wrapper__preview__list__item">
+              <img class="popup_gallery__wrapper__preview__list__item__image" data-popup_preview="1" src="../images/demo/product/ipad.jpg" />
+            </li>
+            <li class="popup_gallery__wrapper__preview__list__item">
+              <img class="popup_gallery__wrapper__preview__list__item__image" data-popup_preview="2" src="../images/demo/product/watch.jpg" />
+            </li>
+            <li class="popup_gallery__wrapper__preview__list__item">
+              <img class="popup_gallery__wrapper__preview__list__item__image" data-popup_preview="3" src="../images/demo/product/belkin.jpg" />
+            </li>
+            <li class="popup_gallery__wrapper__preview__list__item">
+              <img class="popup_gallery__wrapper__preview__list__item__image" data-popup_preview="4" src="../images/demo/product/airpods.jpg" />
+            </li>
+            <li class="popup_gallery__wrapper__preview__list__item">
+              <img class="popup_gallery__wrapper__preview__list__item__image" data-popup_preview="5" src="../images/demo/product/airtag.jpg" />
+            </li>
+            <li class="popup_gallery__wrapper__preview__list__item">
+              <img class="popup_gallery__wrapper__preview__list__item__image" data-popup_preview="6" src="../images/demo/product/belkin.jpg" />
+            </li>
+          </ul>
+        </div>
+        <div class="popup_gallery__wrapper__bottom"></div>
+      </div>
+      <div class="popup_gallery__wrapper__arrows">
+        <span class="product__gallery__preview__arrows__left arrow--left"></span>
+        <span class="product__gallery__preview__arrows__right arrow--right"></span>   
       </div>
     </dialog>
     <script src="./js/custom.js"></script>
