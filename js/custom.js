@@ -27,7 +27,10 @@ function openDialog(item, DialogType=""){
   const elements = document.querySelectorAll("dialog")
   elements.forEach((item, index, arr) => {document.querySelectorAll("dialog")[index].close()})
   window.addEventListener('click', function(e){ListenPopupClicks(e.target)})
-  if (typeof DialogType != undefined && DialogType == 'popup') document.getElementById(item).show()
+  if (typeof DialogType != undefined && DialogType == 'popup') {
+    document.getElementById(item).show()
+    document.getElementById('custom_backdrop').show()
+  }
   else document.getElementById(item).showModal()
   return true
 }
@@ -40,6 +43,11 @@ function closeDialog (){
   return true
 }
 
+document.onkeydown = function(e) {
+  if (e.key === "Escape") {
+    closeDialog ()
+  }
+}
 /* Одноразовые попапы */
 function closePopup(element){
   document.querySelector('.'+element).style.display = 'none';
