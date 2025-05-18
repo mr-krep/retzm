@@ -3629,7 +3629,7 @@ dialog
   flex-direction: column
   gap: .3rem
   overflow-y: hidden
-  z-index: 100
+  z-index: 10
 
 .product__gallery__preview__list__item
 
@@ -4905,7 +4905,7 @@ a.product__tabs__content__block__characteristics_group__list__item__value
 
 .popup_authorization
   margin: auto 2rem
-  top: 18rem
+  top: 2rem
   width: calc(100% - 4rem)
   border-radius: $radius
   z-index: 100
@@ -5024,27 +5024,36 @@ a.product__tabs__content__block__characteristics_group__list__item__value
     grid-column: span 2
 
 .popup_1click
+  top: 2rem
   margin: auto 2rem
   width: calc(100% - 4rem)
   border-radius: .4rem
+  z-index: 100
 
   @media screen and (min-width: $tablet+1)
     margin: auto auto
+    top: 18.5rem
     width: 57.8rem
 
 .popup_notify
+  top: 2rem
+  z-index: 100
 
   @media screen and (min-width: $tablet+1)
     margin: auto auto
+    top: 18.5rem
     width: 57.8rem
 
 .popup_review, .popup_problem
+  top: 2rem
   margin: auto 2rem
   width: calc(100% - 4rem)
   border-radius: .4rem
+  z-index: 100
 
   @media screen and (min-width: $tablet+1)
     margin: auto auto
+    top: 18.5rem
     width: 48rem
 
 .popup_1click__container, 

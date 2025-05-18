@@ -68,7 +68,7 @@
               <a class="header__top__getintouch__item__link link--grey getintouch__phone change_phone" href="tel:+74996476144" alt="Телефон">+ 7 499 647-61-44</a>
             </li>
             <li class="header__top__container__getintouch__item">
-              <span class="header__top__getintouch__item__link link--grey link_icon--account getintouch__account popup__opener" onclick="openDialog('Authorization');" aria-controls="Authorization" alt="Авторизация">Личный кабинет</span>
+              <span class="header__top__getintouch__item__link link--grey link_icon--account getintouch__account popup__opener" onclick="openDialog('Authorization', 'popup');" aria-controls="Authorization" alt="Авторизация">Личный кабинет</span>
             </li>
           </ul>
         </div>
@@ -392,7 +392,7 @@
     </footer>
     <nav class="footer_mobile">
       <span class="footer_mobile__item icon--nav popup__opener" onclick="openDialog('Menu', 'popup');" aria-controls="Menu" alt="Меню2"></span>
-      <span class="footer_mobile__item icon--account popup__opener" onclick="closeDialog(); openDialog('Authorization');" aria-controls="Authorization" alt="Авторизация"></span>
+      <span class="footer_mobile__item icon--account popup__opener" onclick="closeDialog(); openDialog('Authorization', 'popup');" aria-controls="Authorization" alt="Авторизация"></span>
       <a class="footer_mobile__item icon--avatar" href="/"></a>
       <a class="footer_mobile__item icon--heart" href="../favourites.html"></a>
       <a class="footer_mobile__item icon--cart" href="../cart.html"></a>
@@ -1897,6 +1897,7 @@
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A95f762cd1b2901d9765805705d3a5c157235081e11f563b4d8b358b06b0ce2bc&amp;width=100%25&amp;height=450&amp;id=popup_pickup__map&amp;lang=ru_RU&amp;scroll=true"></script>
       </div>
     </dialog>
+    <dialog class="custom_backdrop" id="custom_backdrop"></dialog>
     <script src="./js/custom.js"></script>
   </body>
 </html>
